@@ -1,0 +1,14 @@
+/.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Streamlit cache / logs (있을 경우)
+.streamlit/.cache/
+
+# Streamlit UI theme config는 제외(원하면 별도 커밋)
+.streamlit/
+
+# 이전 템플릿 데이터(대시보드에서는 사용하지 않음)
+/data/
+
