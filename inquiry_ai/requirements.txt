@@ -1,0 +1,9 @@
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+pydantic==2.8.2
+python-dotenv==1.0.1
+
+streamlit==1.37.1
+# Python 3.13 환경에서 최신 numpy 소스 빌드 실패 가능성이 있어, 호환성 있는 버전으로 고정
+numpy==1.26.4
+
