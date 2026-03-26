@@ -1,5 +1,5 @@
 """
-포스코 홀딩스(=POSCO Holdings) 주가 데이터 대시보드 (Streamlit)
+주가 데이터 대시보드 (Streamlit, yfinance 기반)
 
 - 데이터: `yfinance`
 - 실행: `streamlit run app.py`
@@ -21,7 +21,7 @@ import yfinance as yf
 from plotly.subplots import make_subplots
 
 
-DEFAULT_TICKER = "005490.KS"  # 포스코홀딩스(한국거래소)로 알려진 대표 티커
+DEFAULT_TICKER = "005490.KS"  # 예시 티커(사용자가 변경 가능): KR 거래소 형식 또는 US 티커 등
 
 
 def default_ma_windows(interval: str) -> list[int]:
@@ -206,18 +206,25 @@ def build_candlestick_with_volume(hist: pd.DataFrame, ma_windows: list[int]) -> 
 
 def main() -> None:
     st.set_page_config(
-        page_title="포스코 홀딩스 주가 대시보드",
+        page_title="주가 데이터 대시보드",
         page_icon="📈",
         layout="wide",
         initial_sidebar_state="expanded",
     )
 
-    st.title("📈 포스코 홀딩스 주가 데이터 대시보드")
-    st.caption("`yfinance`로 최근 가격/변동/거래량 및 캔들 차트를 제공합니다.")
+    st.title("📈 주가 데이터 대시보드")
+    st.caption(
+        "`yfinance`로 티커의 가격/거래량을 시각화하고, 최근 변동/52주 범위 같은 요약 지표를 표시합니다. "
+        "투자 권유가 아닙니다."
+    )
 
     with st.sidebar:
         st.header("설정")
-        ticker = st.text_input("티커 (예: 005490.KS)", value=DEFAULT_TICKER).strip()
+        ticker = st.text_input(
+            "티커 (예: 005490.KS, AAPL, MSFT)",
+            value=DEFAULT_TICKER,
+            help="yfinance 티커를 그대로 입력하세요.",
+        ).strip()
 
         end_default = date.today()
         start_default = end_default - timedelta(days=365 * 2)
@@ -231,6 +238,9 @@ def main() -> None:
             index=0,
             help="1d=일봉, 1wk=주봉, 1mo=월봉",
         )
+
+        show_52w = st.checkbox("52주 최저/최고 표시", value=True)
+        company_name_on = st.checkbox("회사명 표시(추가 조회)", value=False)
 
         ma_on = st.checkbox("이동평균 표시", value=True)
         ma_windows = default_ma_windows(interval) if ma_on else []
@@ -251,41 +261,41 @@ def main() -> None:
         st.error("시작일은 종료일보다 이전이어야 합니다.")
         st.stop()
 
-    company_name = fetch_company_name(ticker)
-
     with st.spinner("주가 데이터를 불러오는 중..."):
         hist = fetch_history(ticker, start_date, end_date, interval)
 
     if hist is None or hist.empty:
         st.warning(
-            "데이터를 가져오지 못했습니다. 티커/기간을 변경해 보세요. "
+            "데이터를 가져오지 못했습니다. 티커/기간/간격을 확인해 주세요. "
             "특히 interval=1wk/1mo에서 거래일이 적으면 공백이 될 수 있습니다."
         )
         st.stop()
 
-    # 52주 범위 계산용: 1d 기준으로 별도 조회 (캐시 적용)
-    # end_date가 오늘 근처이고, interval이 1d이며, 시작일이 52주 이전이면
-    # 불필요한 추가 조회를 줄이기 위해 기존 hist를 재사용합니다.
-    today = date.today()
-    should_reuse_1y = (
-        interval == "1d"
-        and start_date <= (today - timedelta(days=370))
-        and end_date >= (today - timedelta(days=1))
-    )
-    hist_1y = hist if should_reuse_1y else fetch_history(ticker, today - timedelta(days=370), today, "1d")
-    hist_1y = hist_1y.dropna(subset=["High", "Low"]) if not hist_1y.empty else hist_1y
+    company_name = fetch_company_name(ticker) if company_name_on else None
 
     current, change_pct, volume_latest, _prev = compute_metrics(hist)
 
-    week52_low = float(hist_1y["Low"].min()) if (not hist_1y.empty and "Low" in hist_1y.columns) else None
-    week52_high = float(hist_1y["High"].max()) if (not hist_1y.empty and "High" in hist_1y.columns) else None
-
     # 최근 거래량(일봉 기준) 평균: 20개 구간
     avg_volume_20 = None
-    if not hist_1y.empty and "Volume" in hist_1y.columns:
-        vol = hist_1y["Volume"].dropna()
+    if "Volume" in hist.columns:
+        vol = hist["Volume"].dropna()
         if len(vol) >= 20:
             avg_volume_20 = float(vol.tail(20).mean())
+
+    week52_low = None
+    week52_high = None
+    if show_52w:
+        # 52주 범위 계산용: 1d 기준으로 별도 조회 (캐시 적용)
+        today = date.today()
+        should_reuse_1y = (
+            interval == "1d"
+            and start_date <= (today - timedelta(days=370))
+            and end_date >= (today - timedelta(days=1))
+        )
+        hist_1y = hist if should_reuse_1y else fetch_history(ticker, today - timedelta(days=370), today, "1d")
+        hist_1y = hist_1y.dropna(subset=["High", "Low"]) if not hist_1y.empty else hist_1y
+        week52_low = float(hist_1y["Low"].min()) if (not hist_1y.empty and "Low" in hist_1y.columns) else None
+        week52_high = float(hist_1y["High"].max()) if (not hist_1y.empty and "High" in hist_1y.columns) else None
 
     header = f"{company_name} ({ticker})" if company_name else f"{ticker}"
     st.subheader(header)
@@ -296,7 +306,7 @@ def main() -> None:
         c2.metric("최근 변동률", "-")
     else:
         sign = "+" if change_pct >= 0 else ""
-        c2.metric("최근 변동률", f"{sign}{change_pct:.2f}%")
+        c2.metric("최근 변동률(직전 대비)", f"{sign}{change_pct:.2f}%")
     c3.metric("최근 거래량 (Volume)", "-" if volume_latest is None else f"{volume_latest:,.0f}")
     if avg_volume_20 is None:
         c4.metric("거래량 평균 (최근 20)", "-")
@@ -337,7 +347,7 @@ def main() -> None:
         mime="text/csv",
     )
 
-    st.caption("데이터 소스: yfinance. 투자 목적의 참고/판단은 본인 책임입니다.")
+    st.caption("데이터 소스: yfinance. 본 대시보드는 참고/시각화 목적이며 투자 판단의 책임은 사용자에게 있습니다.")
 
 
 if __name__ == "__main__":
