@@ -6,6 +6,9 @@ __pycache__/
 # Streamlit cache / logs (있을 경우)
 .streamlit/.cache/
 
+# gh 설치/압축 해제 등 임시 바이너리
+.bin/
+
 # Streamlit UI theme config는 제외(원하면 별도 커밋)
 .streamlit/
 

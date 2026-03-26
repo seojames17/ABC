@@ -24,6 +24,21 @@ from plotly.subplots import make_subplots
 DEFAULT_TICKER = "005490.KS"  # 포스코홀딩스(한국거래소)로 알려진 대표 티커
 
 
+def default_ma_windows(interval: str) -> list[int]:
+    """
+    interval에 맞춰 이동평균 윈도우(“봉 개수”)를 합리적인 크기로 조정합니다.
+    - 1d: 5/20/60일
+    - 1wk: 2/6/12주
+    - 1mo: 2/6/12개월
+    """
+
+    if interval == "1wk":
+        return [2, 6, 12]
+    if interval == "1mo":
+        return [2, 6, 12]
+    return [5, 20, 60]
+
+
 def _to_date(d: date | str) -> date:
     if isinstance(d, date):
         return d
@@ -218,7 +233,7 @@ def main() -> None:
         )
 
         ma_on = st.checkbox("이동평균 표시", value=True)
-        ma_windows = [5, 20, 60] if ma_on else []
+        ma_windows = default_ma_windows(interval) if ma_on else []
 
         chart_type = st.selectbox(
             "차트 유형",
@@ -249,7 +264,15 @@ def main() -> None:
         st.stop()
 
     # 52주 범위 계산용: 1d 기준으로 별도 조회 (캐시 적용)
-    hist_1y = fetch_history(ticker, date.today() - timedelta(days=370), date.today(), "1d")
+    # end_date가 오늘 근처이고, interval이 1d이며, 시작일이 52주 이전이면
+    # 불필요한 추가 조회를 줄이기 위해 기존 hist를 재사용합니다.
+    today = date.today()
+    should_reuse_1y = (
+        interval == "1d"
+        and start_date <= (today - timedelta(days=370))
+        and end_date >= (today - timedelta(days=1))
+    )
+    hist_1y = hist if should_reuse_1y else fetch_history(ticker, today - timedelta(days=370), today, "1d")
     hist_1y = hist_1y.dropna(subset=["High", "Low"]) if not hist_1y.empty else hist_1y
 
     current, change_pct, volume_latest, _prev = compute_metrics(hist)
@@ -294,7 +317,7 @@ def main() -> None:
     else:
         fig = build_line_chart(chart_hist, ma_windows=ma_windows)
 
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
     # 데이터 테이블
     st.subheader("최근 데이터")
@@ -304,7 +327,7 @@ def main() -> None:
             show_cols.append(c)
     latest = hist.tail(30).copy()
     latest.index.name = "Date"
-    st.dataframe(latest[show_cols], use_container_width=True, height=280)
+    st.dataframe(latest[show_cols], width="stretch", height=280)
 
     csv = latest.reset_index().to_csv(index=False).encode("utf-8")
     st.download_button(
