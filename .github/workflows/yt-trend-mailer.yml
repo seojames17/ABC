@@ -1,0 +1,26 @@
+name: YouTube 트렌드 아침 브리핑
+
+on:
+  schedule:
+    # 매일 06:50 KST (21:50 UTC). GitHub 스케줄은 수 분~수십 분 늦게 시작할 수 있어 7시 전으로 잡았다.
+    - cron: "50 21 * * *"
+  workflow_dispatch:
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r yt_trend_mailer/requirements.txt
+      - run: python -m yt_trend_mailer
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+          REGIONS: ${{ vars.REGIONS || 'KR' }}
