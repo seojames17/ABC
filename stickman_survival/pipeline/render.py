@@ -39,6 +39,23 @@ def font(assets, name, size, bold=False):
     return f
 
 
+def resolve(spec, vote=None):
+    """투표 갈래(vote)가 있는 장면 중 선택된 것만 남기고, battery "vote"는 그 장면의 값으로 채운다."""
+    scenes, batt = [], None
+    for sc in spec["scenes"]:
+        if "vote" in sc:
+            if sc["vote"] != vote:
+                continue
+            batt = sc.get("battery")
+        scenes.append(dict(sc, battery=batt) if sc.get("battery") == "vote" else sc)
+    return dict(spec, scenes=scenes)
+
+
+def spoken(b, lang):
+    """녹음에 쓴 텍스트. 자막과 읽는 법이 다르면 비트의 tts에 적어 둔다."""
+    return (b.get("tts") or {}).get(lang) or b.get(lang, "")
+
+
 def duration(path):
     return float(subprocess.check_output(
         ["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", path]))
@@ -51,7 +68,7 @@ def words_of(path, lang, model):
 
 def beat_starts(beats, lang, words):
     """비트별 대사 글자 수 누적 비율에 가장 가까운 단어 경계의 시작 시각(장면 내 상대 시간)."""
-    lens = [nchars(b.get(lang, "")) for b in beats]
+    lens = [nchars(spoken(b, lang)) for b in beats]
     total_b = sum(lens) or 1
     wl = [nchars(w[0]) for w in words]
     total_w = sum(wl) or 1
@@ -222,8 +239,9 @@ def main():
     ap.add_argument("--assets", required=True)
     ap.add_argument("--out", required=True)
     ap.add_argument("--work", default=None)
+    ap.add_argument("--vote", default=None, help="지난 화 투표 결과 (vote 갈래가 있는 화)")
     a = ap.parse_args()
-    spec = json.load(open(a.spec, encoding="utf-8"))
+    spec = resolve(json.load(open(a.spec, encoding="utf-8")), a.vote)
     render(spec, a.lang, a.assets, a.out, a.work or f"work_{a.lang}")
 
 

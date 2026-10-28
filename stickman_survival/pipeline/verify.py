@@ -14,6 +14,8 @@ import os
 import re
 import sys
 
+from render import resolve, spoken
+
 _KEEP = re.compile(r"[^\w가-힣]")
 
 
@@ -26,15 +28,16 @@ def main():
     ap.add_argument("spec")
     ap.add_argument("--lang", required=True)
     ap.add_argument("--assets", required=True)
+    ap.add_argument("--vote", default=None)
     a = ap.parse_args()
-    spec = json.load(open(a.spec, encoding="utf-8"))
+    spec = resolve(json.load(open(a.spec, encoding="utf-8")), a.vote)
 
     from faster_whisper import WhisperModel
     model = WhisperModel("small", compute_type="int8")
     bad = []
     for si, scene in enumerate(spec["scenes"], 1):
         path = os.path.join(a.assets, "aud", a.lang, f"{si}.mp3")
-        expected = " ".join(b.get(a.lang, "") for b in scene["beats"])
+        expected = " ".join(spoken(b, a.lang) for b in scene["beats"])
         segs, _ = model.transcribe(path, language=a.lang, word_timestamps=True)
         words = [w for s in segs for w in s.words if w.word.strip()]
         heard = " ".join(w.word.strip() for w in words)

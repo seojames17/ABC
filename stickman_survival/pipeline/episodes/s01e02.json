@@ -1,0 +1,133 @@
+{
+  "title": {"ko": "1203호 2화 — DAY 3: 마트 앞의 줄", "en": "Unit 1203 Ep.2 — Day 3: The Line"},
+  "badge": {"ko": "1203호 | DAY 3", "en": "UNIT 1203 | DAY 3"},
+  "voice": {"model": "seed_audio", "voice_id": "95429266-c0ac-4137-a209-63b8812b0f23", "speech_rate": {"ko": 20, "en": 10}},
+  "lead_in": 0.2,
+  "scene_gap": 0.3,
+  "tail": 1.6,
+  "refs": {
+    "minsu": "719dd12e-5a62-4b7e-8824-e36ae4648f3c",
+    "minsu_poses": "406af5ab-9d83-4bb3-b115-bbb5e2c5c112",
+    "grandma": "f3ea0e5e-c389-403b-a446-0bd473b0f738"
+  },
+  "scenes": [
+    {"beats": [
+      {"cut": "e2_01", "ko": "정전 사흘째, 마트 앞 줄이", "en": "Day three of the blackout. The line outside the store", "zoom": "out", "sfx": "sting",
+       "key": {"ko": "DAY 3 | 마트 앞 줄", "en": "DAY 3: THE LINE"},
+       "prompt": "Wide shot: an extremely long queue of simple stick-figure people snaking along the sidewalk in front of a dark supermarket with lights off, grey daytime sky, Korean apartment towers in the background",
+       "refs": ["minsu"]},
+      {"cut": "e2_02", "ko": "끝이 안 보입니다.", "en": "went on forever.", "cont": true, "zoom": "push",
+       "prompt": "View from the back of the queue: rows of stick-figure backs stretching to a tiny supermarket far away, strong perspective, the line disappears into the distance",
+       "refs": ["@e2_01"]},
+      {"cut": "e2_03", "ko": "맨 끝엔 민수.", "en": "Minsu, at the very back.", "sfx": "pop",
+       "prompt": "Minsu standing alone at the very end of the queue, slumped shoulders, tired face, holding an empty reusable shopping bag",
+       "refs": ["minsu", "minsu_poses", "@e2_01"]},
+      {"cut": "e2_04", "ko": "맨 앞엔, 옆집 할머니.", "en": "And at the very front... the lady next door.", "zoom": "push", "sfx": "sting",
+       "prompt": "The grandma neighbor standing first in line right at the supermarket door, calm and smug, cane in one hand, small wave",
+       "refs": ["grandma", "@e2_01"]}
+    ]},
+    {"vote": "A", "battery": 3, "beats": [
+      {"cut": "e2_05A", "ko": "지난 화 투표대로, 민수는 엄마에게 전화했어요.", "en": "Just like you voted, Minsu called his mom.", "sfx": "click",
+       "prompt": "Flashback at night in a dark apartment: Minsu sitting on the floor talking on his phone, relieved smile, phone screen glow on his face",
+       "refs": ["minsu", "minsu_poses"]},
+      {"cut": "e2_06A", "ko": "덕분에 배터리는 3%.", "en": "Now his battery is at 3%.", "zoom": "push", "sfx": "lowbat",
+       "prompt": "Close-up of Minsu's hand holding a phone, the screen shows a nearly empty red battery icon (no numbers), Minsu sweating in the background",
+       "refs": ["minsu"]}
+    ]},
+    {"vote": "B", "battery": 12, "beats": [
+      {"cut": "e2_05B", "ko": "지난 화 투표대로, 민수는 손전등으로 밤을 버텼어요.", "en": "Just like you voted, Minsu used his phone as a flashlight.", "sfx": "click",
+       "prompt": "Flashback at night in a dark apartment: Minsu holding up his phone's flashlight beam, nervous, shadows on the wall",
+       "refs": ["minsu", "minsu_poses"]},
+      {"cut": "e2_06B", "ko": "그런데 엄마 부재중 전화가 스무 통.", "en": "But he has twenty missed calls from Mom.", "zoom": "push", "sfx": "error",
+       "prompt": "Close-up of Minsu's phone screen covered in a long stack of missed-call notifications (blank bars, no readable text), Minsu's guilty face behind it",
+       "refs": ["minsu"]}
+    ]},
+    {"battery": "vote", "beats": [
+      {"cut": "e2_07", "ko": "두 시간 만에 차례가 왔고,", "en": "Two hours later, it was finally his turn.", "sfx": "chime",
+       "prompt": "Inside a dim supermarket with no power, half-empty shelves, daylight from the entrance only, Minsu stepping in with his shopping bag",
+       "refs": ["minsu", "@e2_01"]},
+      {"cut": "e2_08", "ko": "민수가 고른 건,", "en": "And Minsu grabbed", "zoom": "out",
+       "prompt": "Minsu sweeping instant ramen packets off a shelf into his arms, excited, the noodle aisle is the only full shelf",
+       "refs": ["minsu", "minsu_poses", "@e2_07"]},
+      {"cut": "e2_09", "ko": "라면 열 봉지!", "en": "ten packs of instant ramen!", "cont": true, "zoom": "push", "sfx": "pop",
+       "prompt": "Close-up of Minsu's arms overflowing with a tall stack of colorful instant ramen packets (no text on packets)",
+       "refs": ["minsu"]},
+      {"cut": "e2_10", "ko": "\"이거면 일주일 버티지!\"", "en": "\"That's a whole week of food!\"",
+       "prompt": "Minsu proudly holding his tower of ramen packets, big confident grin, thumbs up",
+       "refs": ["minsu", "minsu_poses", "@e2_07"]}
+    ]},
+    {"battery": "vote", "beats": [
+      {"cut": "e2_10", "ko": "잠깐!", "en": "Wait!", "zoom": "none", "sfx": "stop",
+       "draw": [{"text": {"ko": "잠깐!", "en": "WAIT!"}, "xy": [540, 760], "size": 260, "fill": [230, 40, 40], "stroke": 14, "stroke_fill": "white"}]},
+      {"cut": "63", "ko": "라면은 물을 끓여야 하는데, 수도는 끊겼고", "en": "Ramen needs boiling water. His taps are dry,", "sfx": "drip",
+       "reuse": "cd18cbb8-f20a-40d4-905c-b5ccee43adcf"},
+      {"cut": "e2_12", "ko": "민수 집 인덕션은 전기로 켜지죠.", "en": "and his stove runs on electricity.", "cont": true, "sfx": "error",
+       "key": {"ko": "물 X  불 X", "en": "NO WATER. NO HEAT."},
+       "prompt": "Close-up of a dark, dead induction cooktop in a Korean apartment kitchen with an empty pot on it, Minsu's hand pressing the button with nothing happening",
+       "refs": ["minsu"]},
+      {"cut": "e2_13", "ko": "게다가 라면은 짜서, 목만 더 마르게 해요.", "en": "And all that salt just makes you thirstier.", "zoom": "push", "sfx": "sad",
+       "key": {"ko": "짠 음식 = 갈증", "en": "SALTY = THIRSTY"},
+       "prompt": "Minsu with his tongue out, very thirsty, sweat drops, holding a ramen packet, wavy heat lines",
+       "refs": ["minsu", "minsu_poses"]}
+    ]},
+    {"battery": "vote", "beats": [
+      {"cut": "e2_14", "ko": "할머니 장바구니엔 생수, 통조림, 크래커,", "en": "Her basket? Water, canned food, crackers,", "sfx": "pop",
+       "prompt": "Top-down close-up of the grandma's shopping basket: bottled water, canned food, crackers, a jar of peanut butter, plain labels without text",
+       "refs": ["grandma"]},
+      {"cut": "e2_15", "ko": "그리고 손으로 돌리는 캔따개.", "en": "and a manual can opener.", "cont": true, "zoom": "push", "sfx": "click",
+       "prompt": "Close-up of the grandma's wrinkled hand holding up a manual can opener like a treasure, tiny sparkle",
+       "refs": ["grandma"]},
+      {"cut": "e2_16", "ko": "비상식량은 불도 물도 없이, 바로 먹을 수 있는 걸로.", "en": "Emergency food should be ready to eat. No heat, no water.", "zoom": "out",
+       "key": {"ko": "조리 없이 바로 먹기", "en": "NO COOKING NEEDED"},
+       "prompt": "The grandma raising one finger and explaining wisely to Minsu inside the dim supermarket, Minsu listening with ramen in his arms",
+       "refs": ["grandma", "minsu", "@e2_07"]}
+    ]},
+    {"battery": "vote", "beats": [
+      {"cut": "e2_17", "ko": "물은 한 사람이 하루 3리터쯤 필요해요.", "en": "And plan on about a gallon of water per person, per day.", "sfx": "drip",
+       "key": {"ko": "1인 하루 약 3L", "en": "1 GALLON / PERSON / DAY"},
+       "prompt": "The grandma holding two large plastic water bottles, one in each hand, firm expression",
+       "refs": ["grandma"]},
+      {"cut": "e2_18", "ko": "사흘이면 9리터. 민수 집엔, 0리터.", "en": "Three days, three gallons. Minsu had zero.", "zoom": "push", "sfx": "sad",
+       "prompt": "Minsu counting on his fingers with a shocked face, eyes wide behind his big round glasses, an empty water bottle at his feet",
+       "refs": ["minsu", "minsu_poses"]}
+    ]},
+    {"battery": "vote", "beats": [
+      {"cut": "74", "ko": "게다가 여전히 현금은 0원.", "en": "And he still had zero cash.", "zoom": "push", "sfx": "sad",
+       "reuse": "a81d42b4-a01e-4633-abc7-2fd9e8ace014"},
+      {"cut": "e2_20", "ko": "할머니가 슬쩍 만 원을 건넸어요.", "en": "The lady next door slipped him a ten.", "sfx": "chime",
+       "prompt": "At the supermarket counter, the grandma quietly handing Minsu a folded banknote without looking at him, Minsu teary-eyed and grateful",
+       "refs": ["grandma", "minsu", "@e2_07"]},
+      {"cut": "e2_21", "ko": "민수는 라면을 내려놓고, 물과 통조림을 샀습니다.", "en": "He put the ramen back, and bought water and cans.", "zoom": "out", "sfx": "whoosh",
+       "prompt": "Minsu walking out of the supermarket carrying a bag with water bottles and cans, the ramen pile left behind on the counter, grandma beside him",
+       "refs": ["minsu", "grandma", "@e2_01"]}
+    ]},
+    {"battery": "vote", "beats": [
+      {"cut": "81", "ko": "민수의 3일차 생존 점수는,", "en": "Minsu's day three survival score:", "zoom": "out",
+       "reuse": "3dd781f4-5172-4a75-aadb-da699b8228c6"},
+      {"cut": "82", "ko": "45점.", "en": "forty-five out of a hundred.", "sfx": "ding",
+       "reuse": "f2b041aa-fb95-4a60-8913-2277ba4fda0b",
+       "draw": [{"text": "45", "xy": [540, 580], "size": 280, "fill": [255, 150, 0]},
+                {"text": "/ 100", "xy": [540, 760], "size": 80, "fill": "black"}]}
+    ]},
+    {"battery": "vote", "beats": [
+      {"cut": "e2_22", "ko": "오늘 밤, 어둠을 밝힐 건?", "en": "Tonight, how will he light the dark?", "sfx": "lowbat",
+       "prompt": "Split vertical composition, dark apartment at night: left half Minsu holding an unlit candle and a lighter, right half Minsu holding his phone with the flashlight on, empty space at top for big letters",
+       "refs": ["minsu", "minsu_poses"]},
+      {"cut": "e2_22", "ko": "A, 양초.", "en": "A: a candle.", "zoom": "none", "sfx": "whoosh",
+       "draw": [{"text": "A", "xy": [270, 250], "size": 200, "stroke": 10},
+                {"text": "B", "xy": [810, 250], "size": 200, "stroke": 10},
+                {"text": {"ko": "댓글로 A or B!", "en": "Comment A or B!"}, "xy": [540, 1355], "size": 76, "fill": [255, 230, 0], "box": true}]},
+      {"cut": "e2_22", "ko": "B, 휴대폰 손전등.", "en": "B: the phone flashlight.", "zoom": "none", "sfx": "pop",
+       "draw": [{"text": "A", "xy": [270, 250], "size": 200, "stroke": 10},
+                {"text": "B", "xy": [810, 250], "size": 200, "stroke": 10},
+                {"text": {"ko": "댓글로 A or B!", "en": "Comment A or B!"}, "xy": [540, 1355], "size": 76, "fill": [255, 230, 0], "box": true}]}
+    ]},
+    {"beats": [
+      {"cut": "e2_23", "ko": "다음 화, DAY 7. 밤이 추워지기 시작합니다.", "en": "Next time: Day 7. The nights turn cold.", "zoom": "out", "sfx": "sting",
+       "tts": {"ko": "다음 화, 데이 세븐. 밤이 추워지기 시작합니다.", "en": "Next time, Day seven. The nights turn cold."},
+       "key": {"ko": "NEXT: DAY 7", "en": "NEXT: DAY 7"},
+       "prompt": "Night, Minsu wrapped in a thick blanket by a dark window, shivering, visible breath puffs, frost in the window corners",
+       "refs": ["minsu", "minsu_poses"]}
+    ]}
+  ]
+}
