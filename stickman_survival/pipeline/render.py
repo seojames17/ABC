@@ -145,8 +145,17 @@ def overlay(spec, lang, assets, b, subtitle):
         d.text((x0 + 140, 110), f"{p}%", font=font(assets, "bhs", 56), fill="white", anchor="lm")
     key = (b.get("key") or {}).get(lang)
     if key:
-        kf = font(assets, "bhs", 84 if len(key) <= 16 else 70)
-        d.text((W // 2, 300), key, font=kf, fill=(255, 230, 0), anchor="mm", stroke_width=9, stroke_fill="black")
+        # 화면 폭(1000px)에 맞을 때까지 글자를 줄이고, 그래도 넘치면 두 줄로 나눈다 (영어 문구가 잘린 적 있음)
+        size = 84 if len(key) <= 16 else 70
+        kf = font(assets, "bhs", size)
+        while d.textlength(key, font=kf) > 1000 and size > 58:
+            size -= 2
+            kf = font(assets, "bhs", size)
+        lines = [key] if d.textlength(key, font=kf) <= 1000 else wrap(d, key, kf, 1000)
+        y = 300 - (len(lines) - 1) * size * 0.55
+        for ln in lines:
+            d.text((W // 2, y), ln, font=kf, fill=(255, 230, 0), anchor="mm", stroke_width=9, stroke_fill="black")
+            y += size * 1.1
     for o in b.get("draw", []):
         text = o["text"][lang] if isinstance(o["text"], dict) else o["text"]
         of = font(assets, "bhs", o.get("size", 80))

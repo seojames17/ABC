@@ -5,7 +5,7 @@
   "lead_in": 0.2,
   "scene_gap": 0.3,
   "tail": 1.6,
-  "speed": {"ko": 1.12},
+  "speed": {"ko": 1.12, "en": 1.2},
   "refs": {
     "minsu": "719dd12e-5a62-4b7e-8824-e36ae4648f3c",
     "minsu_poses": "406af5ab-9d83-4bb3-b115-bbb5e2c5c112",
