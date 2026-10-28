@@ -46,11 +46,17 @@ def main():
                 if words[i + 1].start - words[i].end > 1.5]
         first = norm(expected.split()[0]) if expected.split() else ""
         prefix = bool(words) and first and not norm(words[0].word).startswith(first[:2]) and words[0].end > 0.8
+        # 첫 대사가 통째로 빠진 경우 (실제로 "할머니 말씀."을 건너뛰고 녹음된 적 있음)
+        lead = norm(" ".join(expected.split()[:2]))
+        missing = bool(words) and lead and difflib.SequenceMatcher(
+            None, lead, norm("".join(w.word for w in words[:4]))[:len(lead)]).ratio() < 0.5
         problems = []
         if ratio < 0.75:
             problems.append(f"내용 불일치({ratio:.2f})")
         if prefix:
             problems.append("앞에 이상한 소리")
+        if missing and not prefix:
+            problems.append("첫머리 누락")
         if gaps:
             problems.append(f"긴 정적 {gaps}")
         status = "FAIL" if problems else "ok"
