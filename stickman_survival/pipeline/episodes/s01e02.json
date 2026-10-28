@@ -67,13 +67,13 @@
        "refs": ["minsu"]}
     ]},
     {"vote": "B", "battery": 12, "beats": [
-      {"cut": "e2_B3", "ko": "할머니 말씀. \"휴대폰 손전등은 배터리를 금방 먹어.\"", "en": "She said, \"A phone flashlight eats your battery.\"", "sfx": "click",
-       "key": {"ko": "손전등·건전지는 따로", "en": "REAL FLASHLIGHT + BATTERIES"},
-       "prompt": "The grandma in the queue holding up a small real flashlight and a pack of spare batteries, wise look, Minsu holding his phone",
+      {"cut": "e2_B3", "ko": "할머니 말씀. \"신호가 약하면, 휴대폰은 신호 찾느라 배터리를 더 먹어.\"", "en": "She said, \"When the signal's weak, your phone burns battery hunting for it.\"", "sfx": "error",
+       "key": {"ko": "신호 약함 = 배터리 광탈", "en": "WEAK SIGNAL = DEAD BATTERY"},
+       "prompt": "In the queue, the grandma pointing at Minsu's phone: its signal bars are empty and blinking, the battery icon draining fast, Minsu shocked",
        "refs": ["grandma", "minsu", "@e2_04"]},
-      {"cut": "e2_B4", "ko": "\"엄마한텐 문자 한 통 보내. 전화보다 잘 들어가.\"", "en": "\"And text your mom. Texts get through when calls can't.\"", "zoom": "push",
-       "key": {"ko": "재난 땐 전화보다 문자", "en": "TEXT, DON'T CALL"},
-       "prompt": "Minsu typing a short message on his phone with both thumbs, relieved, one blank chat bubble on the screen",
+      {"cut": "e2_B4", "ko": "\"엄마한테 문자 한 통 보내고, 바로 비행기 모드.\"", "en": "\"Text your mom, then switch to airplane mode.\"", "zoom": "push",
+       "key": {"ko": "안 쓸 땐 비행기 모드", "en": "AIRPLANE MODE SAVES BATTERY"},
+       "prompt": "Close-up of Minsu's thumb tapping a big airplane icon on his phone screen after sending one short blank chat bubble, relieved face",
        "refs": ["minsu", "minsu_poses"]}
     ]},
 
