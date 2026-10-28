@@ -36,9 +36,21 @@ def analyze(videos: list[Video], now: datetime) -> dict:
 
     shorts = [v for v in videos if v.is_short]
     fresh = [v for v in videos if v.hours_since_publish(now) <= 24]
-    rising = sorted(videos, key=lambda v: v.views_per_hour(now), reverse=True)[:5]
+
+    # 같은 영상이 여러 지역 차트에 오르면 순위 목록에서는 한 번만 보여준다.
+    unique: dict[str, Video] = {}
+    regions_by_id: dict[str, list[str]] = {}
+    for v in videos:
+        unique.setdefault(v.video_id, v)
+        regions_by_id.setdefault(v.video_id, []).append(v.region)
+    global_hits = sorted(
+        ((unique[vid], regs) for vid, regs in regions_by_id.items() if len(regs) > 1),
+        key=lambda pair: (-len(pair[1]), -pair[0].views),
+    )[:5]
+
+    rising = sorted(unique.values(), key=lambda v: v.views_per_hour(now), reverse=True)[:5]
     engaging = sorted(
-        (v for v in videos if v.views >= 10_000),
+        (v for v in unique.values() if v.views >= 10_000),
         key=lambda v: (v.likes + v.comments) / v.views,
         reverse=True,
     )[:5]
@@ -57,6 +69,7 @@ def analyze(videos: list[Video], now: datetime) -> dict:
             (v for v in videos if v.rank <= max(10 // len({v.region for v in videos}), 3)),
             key=lambda v: (v.region, v.rank),
         ),
+        "global_hits": global_hits,
         "rising": rising,
         "engaging": engaging,
     }

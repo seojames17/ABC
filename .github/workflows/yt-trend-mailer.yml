@@ -23,4 +23,4 @@ jobs:
           SMTP_USER: ${{ secrets.SMTP_USER }}
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           MAIL_TO: ${{ secrets.MAIL_TO }}
-          REGIONS: ${{ vars.REGIONS || 'KR' }}
+          REGIONS: ${{ vars.REGIONS || 'KR,US,JP' }}
