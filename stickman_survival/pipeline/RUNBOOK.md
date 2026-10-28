@@ -12,6 +12,27 @@
 
 ①~⑦은 자동, ⑧부터는 사람. 인스타 업로드는 API 계정 설정 전까지 사람이 한다.
 
+## 자동 실행 방식 (주 2회, 대본 승인제)
+
+1. 예약 작업이 새 세션을 띄운다. 세션은 `claude/stickman-survival` 브랜치를 받고 이 문서와 `SERIES.md`를 읽는다.
+2. **①만 한다**: 다음 화 설계도(`episodes/sNNeNN.json`)와 설명서(`episodes/sNNeNN.md`: 줄거리, 컷 목록, 사실 확인 표, 게시 캡션 ko/en)를 쓰고 브랜치에 커밋·푸시한다.
+3. 사용자에게 한국어로 대본 요약을 보여주고 **승인**과 **지난 화 A/B 투표 결과**를 묻는다. 승인 전에는 그림·음성을 만들지 않는다(크레딧 보호).
+4. 승인(필요하면 수정 반영) 후 ②~⑦을 진행하고 ⑧로 보고한다. `SERIES.md`의 화별 기록을 갱신해 커밋·푸시한다.
+5. Higgsfield 크레딧이 30 미만이면 제작을 시작하지 말고 사용자에게 알린다.
+
+## 작업 서버 준비 (Higgsfield sandbox_exec)
+
+작업 서버 파일은 24시간 지나면 사라질 수 있으니 매번 확인하고 없으면 다시 만든다.
+
+```
+mkdir -p ~/pipe/assets/{cut,sfx,fonts,aud/ko,aud/en} ~/pipe/episodes
+cd ~/pipe/assets/fonts
+curl -sfL -o NotoSansKR.ttf "https://github.com/google/fonts/raw/main/ofl/notosanskr/NotoSansKR%5Bwght%5D.ttf"
+curl -sfL -o BlackHanSans.ttf "https://github.com/google/fonts/raw/main/ofl/blackhansans/BlackHanSans-Regular.ttf"
+```
+
+`render.py`, `verify.py`, 설계도 JSON, `../tools/make_sfx.sh`는 저장소에서 읽어 heredoc으로 작업 서버에 쓴다(작업 서버는 비공개 저장소에 접근할 수 없음). 효과음은 `assets/` 안에서 `make_sfx.sh`를 실행하면 `assets/sfx/`에 생긴다. 이전 화 컷을 재사용할 때는 해당 job id의 결과 URL을 `curl`로 받는다.
+
 ## ① 설계도 작성 규칙
 
 - 형식은 `episodes/s01e01.json` 참고. 장면(scenes) → 비트(beats). 비트 하나 = 컷 하나.
@@ -22,6 +43,7 @@
 - 금지: 피·잔혹 묘사, 실존 작품 설정 모방, 비니·모자 캐릭터(Beanie Survives와 구분)
 - 생존 지식마다 사실 확인 표를 `episodes/sNNeNN.md`에 남긴다. 확신도 "중간" 이하가 있으면 ⑧에서 사람에게 꼭 알린다.
 - 지난 화 A/B 투표 결과가 주어지면 첫 장면에 반영한다.
+- 새 컷에는 비트에 그림 정보를 함께 적는다: `"prompt": "<영문 장면 묘사>"`, `"refs": ["<참고 job id>", ...]`. 이전 화 컷을 그대로 쓰면 `"reuse": "<job id>"`. 그림 생성 후 `"job": "<생성된 job id>"`를 채운다.
 
 ## ② 그림 생성 (Higgsfield `gpt_image_2_5`, 9:16, quality medium, 장당 0.5크레딧)
 
