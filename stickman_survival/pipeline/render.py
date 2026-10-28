@@ -82,14 +82,20 @@ def beat_starts(beats, lang, words):
     return starts
 
 
-def build_timeline(spec, lang, assets):
+def build_timeline(spec, lang, assets, work):
     from faster_whisper import WhisperModel
     model = WhisperModel("small", compute_type="int8")
     t = spec.get("lead_in", 0.3)
     gap = spec.get("scene_gap", 0.35)
+    # 내레이션 배속 (음높이 유지). 대사가 길어 영상이 늘어질 때 쓴다. 예: "speed": {"ko": 1.12}
+    speed = (spec.get("speed") or {}).get(lang, 1.0)
     narr, beats_out = [], []
     for si, scene in enumerate(spec["scenes"], 1):
         aud = os.path.join(assets, "aud", lang, f"{si}.mp3")
+        if speed != 1.0:
+            fast = os.path.join(work, f"narr{si:02d}.wav")
+            subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", aud, "-filter:a", f"atempo={speed}", fast], check=True)
+            aud = fast
         d = duration(aud)
         words = words_of(aud, lang, model)
         starts = beat_starts(scene["beats"], lang, words)
@@ -163,7 +169,7 @@ def overlay(spec, lang, assets, b, subtitle):
 
 def render(spec, lang, assets, out, work):
     os.makedirs(work, exist_ok=True)
-    narr, beats, total = build_timeline(spec, lang, assets)
+    narr, beats, total = build_timeline(spec, lang, assets, work)
 
     # 자막: cont=true인 비트는 같은 줄에 이어 붙여 말하는 대로 글자가 늘어나게 한다
     line = ""

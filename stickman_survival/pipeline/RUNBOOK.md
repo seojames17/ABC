@@ -78,7 +78,9 @@ python3 verify.py episodes/sNNeNN.json --lang ko --assets assets
 python3 verify.py episodes/sNNeNN.json --lang en --assets assets
 ```
 
-FAIL 장면만 다시 녹음하고 다시 검증한다. AI 음성은 가끔 문장 앞에 알아들을 수 없는 소리를 붙이거나 긴 정적을 만든다.
+FAIL 장면만 다시 녹음하고 다시 검증한다. AI 음성은 가끔 문장 앞뒤에 알아들을 수 없는 소리를 붙이거나, 첫 문장을 빼먹거나, 긴 정적을 만든다.
+- 녹음용 텍스트에서는 따옴표를 빼고 쉼표로 이어 쓴다. 따옴표로 나뉜 두 문장 사이에 4초 정적이 생기거나(2화 영어 3번) 따옴표 앞 문장이 통째로 빠진 적이 있다(2화 한국어 3번). 자막에는 따옴표를 그대로 둬도 된다.
+- verify가 ok여도 받아쓴 문장을 눈으로 한 번 읽는다. 첫머리 누락·끝 잡음은 유사도만으로는 못 잡을 때가 있다.
 
 ## ⑤ 렌더링
 
@@ -87,6 +89,8 @@ bash ../tools/make_sfx.sh            # 처음 한 번 (assets/sfx 생성)
 python3 render.py episodes/sNNeNN.json --lang ko --assets assets --out sNNeNN_ko.mp4
 python3 render.py episodes/sNNeNN.json --lang en --assets assets --out sNNeNN_en.mp4
 ```
+
+- 영상이 70초를 넘으면 설계도에 `"speed": {"ko": 1.12}`처럼 내레이션 배속을 준다(음높이 유지). 2화 한국어는 1.12배.
 
 컷 전환 시점은 내레이션을 받아 적은 단어 타이밍으로 자동 계산된다. Higgsfield `sandbox_exec`(ffmpeg, faster-whisper 설치됨)에서 실행한다. 폰트는 `assets/fonts/`에 Black Han Sans, Noto Sans KR.
 
