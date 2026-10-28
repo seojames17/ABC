@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # 장면 이미지 + 오버레이 + 내레이션을 장면별 mp4로 만든 뒤 하나로 이어 붙인다.
-# make_overlays.py를 먼저 실행해 ov/ 와 durs.json을 만들어 둘 것.
+# make_overlays.py ko|en 을 먼저 실행해 ov/ 와 durs.json을 만들어 둘 것.
 set -e
 mkdir -p seg
 for k in $(seq 1 10); do

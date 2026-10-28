@@ -1,37 +1,57 @@
 """s01e01 자막·DAY 카운터·배터리 오버레이(투명 PNG)와 장면별 길이(durs.json)를 만든다.
 
+사용법: python3 make_overlays.py ko|en
 작업 폴더 구조: img/{1..10}.png, aud/{1..10}.mp3, fonts/BlackHanSans.ttf, fonts/NotoSansKR.ttf
-다음 화에서는 NARR / BATT / KEY와 8·9번 장면 전용 그리기 부분만 바꾸면 된다.
+다음 화에서는 TEXT / BATT와 8·9번 장면 전용 그리기 부분만 바꾸면 된다.
 """
-import json, subprocess
+import json, os, subprocess, sys
 from PIL import Image, ImageDraw, ImageFont
 W, H = 1080, 1920
 BHS = "fonts/BlackHanSans.ttf"
+LANG = sys.argv[1] if len(sys.argv) > 1 else "ko"
+
 def noto(size):
     f = ImageFont.truetype("fonts/NotoSansKR.ttf", size)
     try: f.set_variation_by_name("Bold")
     except Exception: pass
     return f
 
-NARR = {
- 1: ["밤 9시. 전기가 나갔습니다.", "그리고… 다시는 들어오지 않았습니다."],
- 2: ["민수는 생각했죠.", "\"곧 들어오겠지.\""],
- 3: ["심심해서 맥주나 마시려고", "냉장고를 열었는데—"],
- 4: ["잠깐!", "냉장고는 문을 닫아 두면 네 시간 정도 차갑게 버팁니다.", "꽉 찬 냉동실은 이틀 가까이요.", "문을 열 때마다 그 시간이 줄어들어요."],
- 5: ["그때 옆집 할머니는 욕조에 물을 받고 계셨어요.", "민수는 웃었죠.", "\"에이, 수돗물이 왜 끊겨요.\""],
- 6: ["다음 날 아침.", "수도꼭지에서 물이 졸졸… 멈췄습니다.", "많은 고층 아파트는 전기 펌프로 물을 끌어올려요.", "펌프가 멈추면 물도 멈춥니다."],
- 7: ["편의점에 갔더니 카드 단말기가 꺼져 있었어요.", "\"현금만 돼요.\"", "민수 지갑엔… 0원."],
- 8: ["민수의 1일차 생존 점수는…", "30점."],
- 9: ["남은 배터리 21%.", "당신이라면 어디에 쓰겠어요?", "A, 가족에게 연락.", "B, 밤에 쓸 손전등."],
- 10: ["다음 화, DAY 3.", "마트 앞에 줄이 생기기 시작합니다."],
-}
+TEXT = {
+ "ko": {
+  "narr": {
+   1: ["밤 9시. 전기가 나갔습니다.", "그리고… 다시는 들어오지 않았습니다."],
+   2: ["민수는 생각했죠.", "\"곧 들어오겠지.\""],
+   3: ["심심해서 맥주나 마시려고", "냉장고를 열었는데—"],
+   4: ["잠깐!", "냉장고는 문을 닫아 두면 네 시간 정도 차갑게 버팁니다.", "꽉 찬 냉동실은 이틀 가까이요.", "문을 열 때마다 그 시간이 줄어들어요."],
+   5: ["그때 옆집 할머니는 욕조에 물을 받고 계셨어요.", "민수는 웃었죠.", "\"에이, 수돗물이 왜 끊겨요.\""],
+   6: ["다음 날 아침.", "수도꼭지에서 물이 졸졸… 멈췄습니다.", "많은 고층 아파트는 전기 펌프로 물을 끌어올려요.", "펌프가 멈추면 물도 멈춥니다."],
+   7: ["편의점에 갔더니 카드 단말기가 꺼져 있었어요.", "\"현금만 돼요.\"", "민수 지갑엔… 0원."],
+   8: ["민수의 1일차 생존 점수는…", "30점."],
+   9: ["남은 배터리 21%.", "당신이라면 어디에 쓰겠어요?", "A, 가족에게 연락.", "B, 밤에 쓸 손전등."],
+   10: ["다음 화, DAY 3.", "마트 앞에 줄이 생기기 시작합니다."],
+  },
+  "key": {4: ["냉장실 약 4시간", "냉동실(가득) 약 48시간"], 6: ["전기 = 물"], 7: ["현금만 가능"], 10: ["NEXT: DAY 3"]},
+  "comment": "댓글로 A or B!",
+ },
+ "en": {
+  "narr": {
+   1: ["9 p.m. The power went out.", "And it never came back."],
+   2: ["Minsu thought,", "\"It'll be back any minute.\""],
+   3: ["Bored, he opened the fridge", "to grab a beer—"],
+   4: ["Wait!", "A closed fridge stays cold for about 4 hours.", "A full freezer, about 2 days.", "Every time you open the door, that time gets shorter."],
+   5: ["Meanwhile, the old lady next door was filling her bathtub.", "Minsu laughed.", "\"Why would the water ever stop?\""],
+   6: ["Next morning, the tap sputtered… and stopped.", "High-rises pump water up with electricity —", "and so do homes on a well.", "No power, no pump. No pump, no water."],
+   7: ["At the corner store, the card reader was dead.", "\"Cash only.\"", "Minsu's wallet… $0."],
+   8: ["Minsu's Day 1 survival score…", "30 out of 100."],
+   9: ["21% battery left.", "What would you use it for?", "A: call your family.", "B: a flashlight for tonight."],
+   10: ["Next time — Day 3.", "A line starts forming outside the supermarket."],
+  },
+  "key": {4: ["Fridge: 4 hours", "Full freezer: 48 hours"], 6: ["POWER = WATER"], 7: ["CASH ONLY"], 10: ["NEXT: DAY 3"]},
+  "comment": "Comment A or B!",
+ },
+}[LANG]
+NARR, KEY = TEXT["narr"], TEXT["key"]
 BATT = {2:62,3:62,4:62,5:62,6:41,7:41,8:21,9:21}
-KEY = {
- 4: ["냉장실 약 4시간", "냉동실(가득) 약 48시간"],
- 6: ["전기 = 물"],
- 7: ["현금만 가능"],
- 10: ["NEXT: DAY 3"],
-}
 PAD = 0.4
 
 def wrap(draw, text, font, maxw):
@@ -59,7 +79,7 @@ def base(k):
         d.rectangle((x0+8, y0+18, x0+8+int(94*p/100), y0+52), fill=col)
         d.text((x0+140, 110), f"{p}%", font=ImageFont.truetype(BHS, 56), fill="white", anchor="lm")
     if k in KEY:
-        f2 = ImageFont.truetype(BHS, 84 if len(KEY[k]) < 3 else 70)
+        f2 = ImageFont.truetype(BHS, 84 if max(len(s) for s in KEY[k]) <= 16 else 70)
         y = 300
         for line in KEY[k]:
             d.text((W//2, y), line, font=f2, fill=(255,230,0), anchor="mm", stroke_width=8, stroke_fill="black")
@@ -74,7 +94,7 @@ def base(k):
         d.text((837, 792), "B", font=fb, fill=(230,120,0), anchor="mm")
         f3 = ImageFont.truetype(BHS, 76)
         d.rounded_rectangle((190, 1290, 890, 1400), 24, fill=(0,0,0,200))
-        d.text((W//2, 1345), "댓글로 A or B!", font=f3, fill=(255,230,0), anchor="mm")
+        d.text((W//2, 1345), TEXT["comment"], font=f3, fill=(255,230,0), anchor="mm")
     return im
 
 def scene(k):
@@ -99,7 +119,7 @@ def scene(k):
         fh.write(f"file '{lst[-1][0].split('/')[-1]}'\n")
     return total
 
-import os; os.makedirs("ov", exist_ok=True)
+os.makedirs("ov", exist_ok=True)
 durs = {k: scene(k) for k in range(1, 11)}
 json.dump(durs, open("durs.json","w"))
 print(durs, sum(durs.values()))
