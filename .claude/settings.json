@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Higgsfield__balance",
+      "mcp__Higgsfield__generate_image",
+      "mcp__Higgsfield__generate_image_batch",
+      "mcp__Higgsfield__generate_audio",
+      "mcp__Higgsfield__generate_audio_batch",
+      "mcp__Higgsfield__jobs_wait",
+      "mcp__Higgsfield__show_generation_by_ids",
+      "mcp__Higgsfield__show_medias",
+      "mcp__Higgsfield__sandbox_exec",
+      "mcp__Higgsfield__media_upload",
+      "mcp__Higgsfield__media_confirm",
+      "mcp__Higgsfield__get_project",
+      "mcp__Higgsfield__list_project_assets",
+      "mcp__Higgsfield__attach_project_asset"
+    ]
+  }
+}
