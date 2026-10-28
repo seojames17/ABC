@@ -1,0 +1,81 @@
+{
+  "title": {"ko": "1203호 1화 — DAY 1: 곧 들어오겠지", "en": "Unit 1203 Ep.1 — Day 1: It'll Be Back Any Minute"},
+  "badge": {"ko": "1203호 | DAY 1", "en": "UNIT 1203 | DAY 1"},
+  "voice": {"model": "seed_audio", "voice_id": "95429266-c0ac-4137-a209-63b8812b0f23", "speech_rate": {"ko": 20, "en": 10}},
+  "lead_in": 0.3,
+  "scene_gap": 0.35,
+  "tail": 1.8,
+  "scenes": [
+    {"beats": [
+      {"cut": "01", "ko": "밤 9시.", "en": "9 p.m."},
+      {"cut": "02", "ko": "전기가", "en": "The power", "cont": true, "sfx": "hum"},
+      {"cut": "03", "ko": "나갔습니다.", "en": "went out.", "cont": true, "zoom": "shake", "sfx": "thunk"},
+      {"cut": "04", "ko": "그리고… 다시는 들어오지 않았습니다.", "en": "And it never came back.", "zoom": "out"}
+    ]},
+    {"battery": 62, "beats": [
+      {"cut": "05", "ko": "민수는 생각했죠.", "en": "Minsu thought,", "sfx": "click"},
+      {"cut": "06", "ko": "\"곧 들어오겠지.\"", "en": "\"It'll be back any minute.\""}
+    ]},
+    {"battery": 62, "beats": [
+      {"cut": "07", "ko": "심심해서", "en": "Bored,", "zoom": "out"},
+      {"cut": "08", "ko": "맥주나 마시려고", "en": "he opened the fridge", "cont": true, "sfx": "whoosh"},
+      {"cut": "09", "ko": "냉장고를", "en": "to grab", "sfx": "creak"},
+      {"cut": "10", "ko": "열었는데—", "en": "a beer—", "cont": true, "zoom": "push", "sfx": "sting"}
+    ]},
+    {"battery": 62, "beats": [
+      {"cut": "10", "ko": "잠깐!", "en": "Wait!", "zoom": "none", "sfx": "stop",
+       "draw": [{"text": {"ko": "잠깐!", "en": "WAIT!"}, "xy": [540, 760], "size": 260, "fill": [230, 40, 40], "stroke": 14, "stroke_fill": "white"}]},
+      {"cut": "41", "ko": "냉장고는 문을 닫아 두면 네 시간 정도 차갑게 버팁니다.", "en": "A closed fridge stays cold for about four hours.", "sfx": "click",
+       "key": {"ko": "냉장실 약 4시간", "en": "Fridge: 4 hours"}},
+      {"cut": "42", "ko": "꽉 찬 냉동실은 이틀 가까이요.", "en": "A full freezer, about two days.", "zoom": "out",
+       "key": {"ko": "냉동실(가득) 약 48시간", "en": "Full freezer: 48 hours"}},
+      {"cut": "43", "ko": "문을 열 때마다 그 시간이 줄어들어요.", "en": "Every time you open the door, that time gets shorter.", "sfx": "whoosh",
+       "key": {"ko": "열수록 줄어요!", "en": "Open = less time!"}}
+    ]},
+    {"battery": 62, "beats": [
+      {"cut": "51", "ko": "그때 옆집", "en": "Meanwhile,", "sfx": "creak"},
+      {"cut": "52", "ko": "할머니는 욕조에 물을 받고 계셨어요.", "en": "the old lady next door was filling her bathtub with water.", "cont": true},
+      {"cut": "53", "ko": "민수는 웃었죠.", "en": "Minsu laughed.", "zoom": "out"},
+      {"cut": "54", "ko": "\"에이, 수돗물이 왜 끊겨요.\"", "en": "\"Why would the water ever stop?\"", "sfx": "whoosh"}
+    ]},
+    {"battery": 41, "beats": [
+      {"cut": "61", "ko": "다음 날 아침.", "en": "Next morning,", "sfx": "chirp"},
+      {"cut": "62", "ko": "수도꼭지에서 물이 졸졸…", "en": "the tap sputtered,", "cont": true, "sfx": "drip"},
+      {"cut": "63", "ko": "멈췄습니다.", "en": "and stopped.", "cont": true, "zoom": "shake", "sfx": "thunk"},
+      {"cut": "64", "ko": "많은 고층 아파트는 전기 펌프로 물을 끌어올려요.", "en": "High-rises pump water up with electricity, and so do homes on a well.", "zoom": "out", "sfx": "hum",
+       "key": {"ko": "전기 = 물", "en": "POWER = WATER"}},
+      {"cut": "65", "ko": "펌프가 멈추면 물도 멈춥니다.", "en": "No power, no pump. No pump, no water.", "sfx": "error",
+       "key": {"ko": "전기 = 물", "en": "POWER = WATER"}}
+    ]},
+    {"battery": 41, "beats": [
+      {"cut": "71", "ko": "편의점에 갔더니", "en": "At the corner store,", "sfx": "chime"},
+      {"cut": "72", "ko": "카드 단말기가 꺼져 있었어요.", "en": "the card reader was dead.", "cont": true, "sfx": "error"},
+      {"cut": "73", "ko": "\"현금만 돼요.\"", "en": "\"Cash only.\"",
+       "draw": [{"text": {"ko": "현금만", "en": "CASH ONLY"}, "xy": [825, 1110], "size": 52, "fill": "black"}]},
+      {"cut": "74", "ko": "민수 지갑엔… 0원.", "en": "Minsu's wallet… zero dollars.", "zoom": "push", "sfx": "sad"}
+    ]},
+    {"battery": 21, "beats": [
+      {"cut": "81", "ko": "민수의 1일차 생존 점수는…", "en": "Minsu's day one survival score:", "zoom": "out"},
+      {"cut": "82", "ko": "30점.", "en": "thirty out of a hundred.", "sfx": "ding",
+       "draw": [{"text": "30", "xy": [540, 580], "size": 280, "fill": [220, 40, 40]},
+                {"text": "/ 100", "xy": [540, 760], "size": 80, "fill": "black"}]}
+    ]},
+    {"battery": 21, "beats": [
+      {"cut": "91", "ko": "남은 배터리 21%.", "en": "21% battery left.", "sfx": "lowbat"},
+      {"cut": "92", "ko": "당신이라면 어디에 쓰겠어요?", "en": "What would you use it for?"},
+      {"cut": "93", "ko": "A, 가족에게 연락.", "en": "A: call your family.", "zoom": "none", "sfx": "whoosh",
+       "draw": [{"text": "A", "xy": [270, 250], "size": 200, "stroke": 10},
+                {"text": "B", "xy": [810, 250], "size": 200, "stroke": 10},
+                {"text": {"ko": "댓글로 A or B!", "en": "Comment A or B!"}, "xy": [540, 1355], "size": 76, "fill": [255, 230, 0], "box": true}]},
+      {"cut": "93", "ko": "B, 밤에 쓸 손전등.", "en": "B: a flashlight for tonight.", "zoom": "none", "sfx": "pop",
+       "draw": [{"text": "A", "xy": [270, 250], "size": 200, "stroke": 10},
+                {"text": "B", "xy": [810, 250], "size": 200, "stroke": 10},
+                {"text": {"ko": "댓글로 A or B!", "en": "Comment A or B!"}, "xy": [540, 1355], "size": 76, "fill": [255, 230, 0], "box": true}]}
+    ]},
+    {"beats": [
+      {"cut": "100", "ko": "다음 화, DAY 3.", "en": "Next time: Day 3.", "zoom": "out", "sfx": "sting"},
+      {"cut": "101", "ko": "마트 앞에 줄이 생기기 시작합니다.", "en": "A line starts forming outside the supermarket.", "sfx": "whoosh",
+       "key": {"ko": "NEXT: DAY 3", "en": "NEXT: DAY 3"}}
+    ]}
+  ]
+}
