@@ -104,6 +104,9 @@ python3 render.py episodes/sNNeNN.json --lang en --assets assets --out sNNeNN_en
 
 ## ⑧ 사람에게 넘기기
 
+**아이폰으로 받을 수 있게 ZIP 링크를 함께 준다.** 영상(mp4) 링크는 사파리·크롬에서 재생만 되고 저장이 안 되며, 업로드한 영상은 Higgsfield 앱 화면에도 보이지 않는다. 작업 서버에서 `zip -0 sNNeNN_ko.zip sNNeNN_ko.mp4`로 감싼 뒤 `media_upload`(파일명 .zip, `source_type: file_input`) → PUT → `media_confirm`(type file)으로 올리고, 그 cloudfront 주소를 준다. 사파리에서 열면 다운로드 → 파일 앱에서 ZIP을 눌러 풀기 → 영상 공유 → "비디오 저장".
+
+
 다음을 정리해 보고한다: 두 영상 링크, 사실 확인 표(확신도 중간 이하 강조), 게시 캡션(ko/en), 커버로 쓸 컷, 사용 크레딧.
 
 ## 비용 기준 (1화 실측)
