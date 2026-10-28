@@ -24,7 +24,51 @@ Beanie Survives와 겹치지 않도록 비니 민수·"Minsu Survives" 이름은
 🤖 그림·목소리는 AI로 만들어요
 ```
 
-## 1화 게시물
+## 영어 계정
+
+- 프로필 사진: 한국어 계정과 같은 2b (문패 "1203"은 영어권에서도 그대로 통함)
+- 사용자 이름(@) 후보: `unit1203.daily` / `unit_1203` / `unit1203.survival`
+- 이름(검색에 잡힘): Unit 1203 | Blackout Survival Comic
+- 소개 (144자, 한도 150):
+
+```
+🚪 Blackout in Unit 1203. Can Minsu survive?
+🧓 Real survival tips from the lady next door
+🗳️ Vote A/B → it shapes the next episode
+🤖 Made with AI
+```
+
+### 1화 게시물 (영어)
+
+- 영상: UNIT 1203 Ep.1 영문판 (Higgsfield 「1203호 생존툰」 프로젝트, media `76dd51d1-1780-45b4-9053-5c5dec9221c5`)
+- 커버 문구: Day 1 of the blackout. What's Unit 1203's survival score?
+- 캡션:
+
+```
+The power's out in your apartment. How long would you last? 🔋
+
+Minsu's Day 1 survival score: 30/100.
+He opened the fridge, didn't store water, and had zero cash 😅
+(The lady next door seemed to know all of it already…)
+
+📌 Today's survival tips
+• A closed fridge stays cold about 4 hours; a full freezer about 48
+• High-rises pump water up with electricity, so a blackout can cut your water too
+• Card readers die in a blackout → keep a little emergency cash
+
+🗳️ 21% battery left. What would you do?
+A) Call your family
+B) Save it as a flashlight for tonight
+Comment A or B! The result shapes Day 3.
+
+#unit1203 #blackout #poweroutage #survivaltips #emergencyprep #stickman #whatif #survival #apocalypse
+```
+
+- 고정 첫 댓글: Voting's open! A or B? 👇
+- 스토리: 1화 공유 + 투표 스티커 (A Call family / B Flashlight)
+- 한국어 계정과 투표가 따로 모이므로, 다음 화에는 두 계정 결과를 합쳐 반영한다(언어별로 갈리면 그것도 소재가 됨).
+
+## 1화 게시물 (한국어)
 
 - 커버 문구: 정전 첫날, 1203호의 생존 점수는?
 - 캡션:
