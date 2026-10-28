@@ -1,0 +1,482 @@
+{
+ "_note": "오프라인 미리보기용 가상 데이터입니다. 실제 영상이 아닙니다.",
+ "fetched_at": "2026-10-27T21:50:00+00:00",
+ "categories": {
+  "10": "음악",
+  "20": "게임",
+  "24": "엔터테인먼트",
+  "17": "스포츠",
+  "22": "인물/블로그",
+  "26": "노하우/스타일",
+  "28": "과학기술",
+  "25": "뉴스/정치",
+  "23": "코미디"
+ },
+ "items": [
+  {
+   "id": "sample0001",
+   "region": "KR",
+   "rank": 1,
+   "snippet": {
+    "publishedAt": "2026-10-27T07:50:00Z",
+    "title": "[MV] 샘플그룹 - 가을 신호등",
+    "channelTitle": "샘플엔터",
+    "categoryId": "10",
+    "tags": [
+     "샘플그룹",
+     "컴백",
+     "가을"
+    ],
+    "description": "(샘플 데이터 — 실제 영상이 아닙니다)",
+    "thumbnails": {}
+   },
+   "statistics": {
+    "viewCount": "4210000",
+    "likeCount": "105250",
+    "commentCount": "4677"
+   },
+   "contentDetails": {
+    "duration": "PT3M42S"
+   }
+  },
+  {
+   "id": "sample0002",
+   "region": "KR",
+   "rank": 2,
+   "snippet": {
+    "publishedAt": "2026-10-27T01:50:00Z",
+    "title": "샘플그룹 컴백 무대 직캠 4K",
+    "channelTitle": "음악방송샘플",
+    "categoryId": "10",
+    "tags": [
+     "샘플그룹",
+     "직캠",
+     "컴백"
+    ],
+    "description": "(샘플 데이터 — 실제 영상이 아닙니다)",
+    "thumbnails": {}
+   },
+   "statistics": {
+    "viewCount": "1330000",
+    "likeCount": "33250",
+    "commentCount": "1477"
+   },
+   "contentDetails": {
+    "duration": "PT3M50S"
+   }
+  },
+  {
+   "id": "sample0003",
+   "region": "KR",
+   "rank": 3,
+   "snippet": {
+    "publishedAt": "2026-10-27T12:50:00Z",
+    "title": "월드시리즈 5차전 하이라이트",
+    "channelTitle": "스포츠샘플TV",
+    "categoryId": "17",
+    "tags": [
+     "월드시리즈",
+     "야구",
+     "하이라이트"
+    ],
+    "description": "(샘플 데이터 — 실제 영상이 아닙니다)",
+    "thumbnails": {}
+   },
+   "statistics": {
+    "viewCount": "980000",
+    "likeCount": "24500",
+    "commentCount": "1088"
+   },
+   "contentDetails": {
+    "duration": "PT8M12S"
+   }
+  },
+  {
+   "id": "sample0004",
+   "region": "KR",
+   "rank": 4,
+   "snippet": {
+    "publishedAt": "2026-10-26T15:50:00Z",
+    "title": "한국시리즈 우승 확정 순간",
+    "channelTitle": "스포츠샘플TV",
+    "categoryId": "17",
+    "tags": [
+     "한국시리즈",
+     "야구",
+     "우승"
+    ],
+    "description": "(샘플 데이터 — 실제 영상이 아닙니다)",
+    "thumbnails": {}
+   },
+   "statistics": {
+    "viewCount": "2150000",
+    "likeCount": "53750",
+    "commentCount": "2388"
+   },
+   "contentDetails": {
+    "duration": "PT4M05S"
+   }
+  },
+  {
+   "id": "sample0005",
+   "region": "KR",
+   "rank": 5,
+   "snippet": {
+    "publishedAt": "2026-10-27T03:50:00Z",
+    "title": "할로윈 분장 10분 완성 #shorts",
+    "channelTitle": "뷰티샘플",
+    "categoryId": "26",
+    "tags": [
+     "할로윈",
+     "분장",
+     "메이크업"
+    ],
+    "description": "(샘플 데이터 — 실제 영상이 아닙니다)",
+    "thumbnails": {}
+   },
+   "statistics": {
+    "viewCount": "1870000",
+    "likeCount": "46750",
+    "commentCount": "2077"
+   },
+   "contentDetails": {
+    "duration": "PT45S"
+   }
+  },
+  {
+   "id": "sample0006",
+   "region": "KR",
+   "rank": 6,
+   "snippet": {
+    "publishedAt": "2026-10-26T05:50:00Z",
+    "title": "할로윈 파티 몰래카메라",
+    "channelTitle": "코미디샘플",
+    "categoryId": "23",
+    "tags": [
+     "할로윈",
+     "몰카",
+     "파티"
+    ],
+    "description": "(샘플 데이터 — 실제 영상이 아닙니다)",
+    "thumbnails": {}
+   },
+   "statistics": {
+    "viewCount": "760000",
+    "likeCount": "19000",
+    "commentCount": "844"
+   },
+   "contentDetails": {
+    "duration": "PT12M30S"
+   }
+  },
+  {
+   "id": "sample0007",
+   "region": "KR",
+   "rank": 7,
+   "snippet": {
+    "publishedAt": "2026-10-26T19:50:00Z",
+    "title": "신작 RPG 첫인상 리뷰 (스포 없음)",
+    "channelTitle": "게임샘플",
+    "categoryId": "20",
+    "tags": [
+     "신작게임",
+     "RPG",
+     "리뷰"
+    ],
+    "description": "(샘플 데이터 — 실제 영상이 아닙니다)",
+    "thumbnails": {}
+   },
+   "statistics": {
+    "viewCount": "540000",
+    "likeCount": "13500",
+    "commentCount": "600"
+   },
+   "contentDetails": {
+    "duration": "PT18M02S"
+   }
+  },
+  {
+   "id": "sample0008",
+   "region": "KR",
+   "rank": 8,
+   "snippet": {
+    "publishedAt": "2026-10-27T10:50:00Z",
+    "title": "신작 RPG 보스 1트 클리어 #shorts",
+    "channelTitle": "게임샘플2",
+    "categoryId": "20",
+    "tags": [
+     "신작게임",
+     "RPG",
+     "보스"
+    ],
+    "description": "(샘플 데이터 — 실제 영상이 아닙니다)",
+    "thumbnails": {}
+   },
+   "statistics": {
+    "viewCount": "1120000",
+    "likeCount": "28000",
+    "commentCount": "1244"
+   },
+   "contentDetails": {
+    "duration": "PT58S"
+   }
+  },
+  {
+   "id": "sample0009",
+   "region": "KR",
+   "rank": 9,
+   "snippet": {
+    "publishedAt": "2026-10-26T12:50:00Z",
+    "title": "새 스마트폰 언박싱: 이게 진짜 바뀌었다",
+    "channelTitle": "테크샘플",
+    "categoryId": "28",
+    "tags": [
+     "스마트폰",
+     "언박싱",
+     "리뷰"
+    ],
+    "description": "(샘플 데이터 — 실제 영상이 아닙니다)",
+    "thumbnails": {}
+   },
+   "statistics": {
+    "viewCount": "890000",
+    "likeCount": "22250",
+    "commentCount": "988"
+   },
+   "contentDetails": {
+    "duration": "PT14M44S"
+   }
+  },
+  {
+   "id": "sample0010",
+   "region": "KR",
+   "rank": 10,
+   "snippet": {
+    "publishedAt": "2026-10-25T09:50:00Z",
+    "title": "스마트폰 배터리 실사용 테스트",
+    "channelTitle": "테크샘플",
+    "categoryId": "28",
+    "tags": [
+     "스마트폰",
+     "배터리",
+     "테스트"
+    ],
+    "description": "(샘플 데이터 — 실제 영상이 아닙니다)",
+    "thumbnails": {}
+   },
+   "statistics": {
+    "viewCount": "410000",
+    "likeCount": "10250",
+    "commentCount": "455"
+   },
+   "contentDetails": {
+    "duration": "PT11M10S"
+   }
+  },
+  {
+   "id": "sample0011",
+   "region": "KR",
+   "rank": 11,
+   "snippet": {
+    "publishedAt": "2026-10-27T13:50:00Z",
+    "title": "오늘 아침 주요 뉴스 정리",
+    "channelTitle": "뉴스샘플",
+    "categoryId": "25",
+    "tags": [
+     "뉴스",
+     "정리"
+    ],
+    "description": "(샘플 데이터 — 실제 영상이 아닙니다)",
+    "thumbnails": {}
+   },
+   "statistics": {
+    "viewCount": "350000",
+    "likeCount": "8750",
+    "commentCount": "388"
+   },
+   "contentDetails": {
+    "duration": "PT6M30S"
+   }
+  },
+  {
+   "id": "sample0012",
+   "region": "KR",
+   "rank": 12,
+   "snippet": {
+    "publishedAt": "2026-10-25T19:50:00Z",
+    "title": "가을 캠핑 브이로그 | 첫 단풍",
+    "channelTitle": "브이로그샘플",
+    "categoryId": "22",
+    "tags": [
+     "캠핑",
+     "브이로그",
+     "단풍"
+    ],
+    "description": "(샘플 데이터 — 실제 영상이 아닙니다)",
+    "thumbnails": {}
+   },
+   "statistics": {
+    "viewCount": "290000",
+    "likeCount": "7250",
+    "commentCount": "322"
+   },
+   "contentDetails": {
+    "duration": "PT21M15S"
+   }
+  },
+  {
+   "id": "sample0013",
+   "region": "KR",
+   "rank": 13,
+   "snippet": {
+    "publishedAt": "2026-10-26T23:50:00Z",
+    "title": "단풍 명소 TOP5 #shorts",
+    "channelTitle": "여행샘플",
+    "categoryId": "22",
+    "tags": [
+     "단풍",
+     "여행",
+     "가을"
+    ],
+    "description": "(샘플 데이터 — 실제 영상이 아닙니다)",
+    "thumbnails": {}
+   },
+   "statistics": {
+    "viewCount": "1450000",
+    "likeCount": "36250",
+    "commentCount": "1611"
+   },
+   "contentDetails": {
+    "duration": "PT40S"
+   }
+  },
+  {
+   "id": "sample0014",
+   "region": "KR",
+   "rank": 14,
+   "snippet": {
+    "publishedAt": "2026-10-26T09:50:00Z",
+    "title": "예능 샘플쇼 EP.12 레전드 장면",
+    "channelTitle": "엔터샘플",
+    "categoryId": "24",
+    "tags": [
+     "예능",
+     "레전드"
+    ],
+    "description": "(샘플 데이터 — 실제 영상이 아닙니다)",
+    "thumbnails": {}
+   },
+   "statistics": {
+    "viewCount": "1640000",
+    "likeCount": "41000",
+    "commentCount": "1822"
+   },
+   "contentDetails": {
+    "duration": "PT9M20S"
+   }
+  },
+  {
+   "id": "sample0015",
+   "region": "KR",
+   "rank": 15,
+   "snippet": {
+    "publishedAt": "2026-10-27T05:50:00Z",
+    "title": "예능 샘플쇼 비하인드 #shorts",
+    "channelTitle": "엔터샘플",
+    "categoryId": "24",
+    "tags": [
+     "예능",
+     "비하인드"
+    ],
+    "description": "(샘플 데이터 — 실제 영상이 아닙니다)",
+    "thumbnails": {}
+   },
+   "statistics": {
+    "viewCount": "980000",
+    "likeCount": "24500",
+    "commentCount": "1088"
+   },
+   "contentDetails": {
+    "duration": "PT55S"
+   }
+  },
+  {
+   "id": "sample0016",
+   "region": "KR",
+   "rank": 16,
+   "snippet": {
+    "publishedAt": "2026-10-26T17:50:00Z",
+    "title": "컴백 기념 라이브 방송 다시보기",
+    "channelTitle": "샘플엔터",
+    "categoryId": "10",
+    "tags": [
+     "샘플그룹",
+     "라이브",
+     "컴백"
+    ],
+    "description": "(샘플 데이터 — 실제 영상이 아닙니다)",
+    "thumbnails": {}
+   },
+   "statistics": {
+    "viewCount": "620000",
+    "likeCount": "15500",
+    "commentCount": "688"
+   },
+   "contentDetails": {
+    "duration": "PT58M00S"
+   }
+  },
+  {
+   "id": "sample0017",
+   "region": "KR",
+   "rank": 17,
+   "snippet": {
+    "publishedAt": "2026-10-26T21:50:00Z",
+    "title": "편의점 신상 할로윈 디저트 리뷰",
+    "channelTitle": "먹방샘플",
+    "categoryId": "22",
+    "tags": [
+     "할로윈",
+     "편의점",
+     "디저트"
+    ],
+    "description": "(샘플 데이터 — 실제 영상이 아닙니다)",
+    "thumbnails": {}
+   },
+   "statistics": {
+    "viewCount": "470000",
+    "likeCount": "11750",
+    "commentCount": "522"
+   },
+   "contentDetails": {
+    "duration": "PT10M05S"
+   }
+  },
+  {
+   "id": "sample0018",
+   "region": "KR",
+   "rank": 18,
+   "snippet": {
+    "publishedAt": "2026-10-27T09:50:00Z",
+    "title": "야구 우승 팀 라커룸 영상 #shorts",
+    "channelTitle": "스포츠샘플TV",
+    "categoryId": "17",
+    "tags": [
+     "야구",
+     "우승",
+     "라커룸"
+    ],
+    "description": "(샘플 데이터 — 실제 영상이 아닙니다)",
+    "thumbnails": {}
+   },
+   "statistics": {
+    "viewCount": "1980000",
+    "likeCount": "49500",
+    "commentCount": "2200"
+   },
+   "contentDetails": {
+    "duration": "PT35S"
+   }
+  }
+ ]
+}
