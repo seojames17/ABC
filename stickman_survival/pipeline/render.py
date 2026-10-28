@@ -40,15 +40,10 @@ def font(assets, name, size, bold=False):
 
 
 def resolve(spec, vote=None):
-    """투표 갈래(vote)가 있는 장면 중 선택된 것만 남기고, battery "vote"는 그 장면의 값으로 채운다."""
-    scenes, batt = [], None
-    for sc in spec["scenes"]:
-        if "vote" in sc:
-            if sc["vote"] != vote:
-                continue
-            batt = sc.get("battery")
-        scenes.append(dict(sc, battery=batt) if sc.get("battery") == "vote" else sc)
-    return dict(spec, scenes=scenes)
+    """투표 갈래(vote)가 있는 장면 중 선택된 것만 남기고, battery "vote"는 선택된 갈래의 배터리 값으로 채운다."""
+    chosen = [sc for sc in spec["scenes"] if "vote" not in sc or sc["vote"] == vote]
+    batt = next((sc["battery"] for sc in chosen if "vote" in sc and isinstance(sc.get("battery"), int)), None)
+    return dict(spec, scenes=[dict(sc, battery=batt) if sc.get("battery") == "vote" else sc for sc in chosen])
 
 
 def spoken(b, lang):
