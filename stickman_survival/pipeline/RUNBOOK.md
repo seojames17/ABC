@@ -104,6 +104,8 @@ python3 render.py episodes/sNNeNN.json --lang en --assets assets --out sNNeNN_en
 
 ## ⑧ 사람에게 넘기기
 
+**커버 이미지도 만들어 준다.** 맨 위에 빨간 배지 "1203호 N화", 가장 크게 노란 "정전 N일째", 그 아래 흰색으로 그 화의 갈고리 한 줄(예: "라면 10봉지의 최후"). 시리즈의 축은 "정전 며칠째"이므로 표지에서 그게 먼저 보여야 한다. 글자는 프로필 격자(가운데 3:4, y 240~1680) 안에 둔다.
+
 **아이폰으로 받을 수 있게 ZIP 링크를 함께 준다.** 영상(mp4) 링크는 사파리·크롬에서 재생만 되고 저장이 안 되며, 업로드한 영상은 Higgsfield 앱 화면에도 보이지 않는다. 작업 서버에서 `zip -0 sNNeNN_ko.zip sNNeNN_ko.mp4`로 감싼 뒤 `media_upload`(파일명 .zip, `source_type: file_input`) → PUT → `media_confirm`(type file)으로 올리고, 그 cloudfront 주소를 준다. 사파리에서 열면 다운로드 → 파일 앱에서 ZIP을 눌러 풀기 → 영상 공유 → "비디오 저장".
 
 
