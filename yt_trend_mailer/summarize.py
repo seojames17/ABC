@@ -23,6 +23,7 @@ SYSTEM_PROMPT = """당신은 유튜브 트렌드 애널리스트입니다. 매�
 - 개별 영상 나열이 아니라, 여러 영상을 관통하는 흐름(테마)을 찾으세요.
 - 근거가 되는 영상은 video_id로 연결하세요. 목록에 없는 id는 쓰지 마세요.
 - 조회수 속도(views_per_hour), 업로드 후 경과 시간, 쇼츠 여부를 함께 고려하세요.
+- 여러 지역 데이터가 있으면 지역별로 다른 관심사와, 여러 지역에서 동시에 뜬 흐름을 함께 짚으세요.
 - 데이터로 확인되지 않는 사실(사건의 배경 등)은 단정하지 말고 '~로 보입니다'처럼 쓰세요.
 - 모든 문장은 자연스러운 한국어로, 간결하게 씁니다."""
 
@@ -108,6 +109,7 @@ def _summarize_with_claude(videos: list[Video], stats: dict, now: datetime) -> d
         "top_keywords": stats["keywords"],
         "shorts_ratio": round(stats["shorts_ratio"], 2),
         "uploaded_within_24h": stats["fresh_count"],
+        "multi_region_hits": [{"video_id": v.video_id, "regions": regs} for v, regs in stats["global_hits"]],
     }
     user_content = (
         f"기준 시각(UTC): {now:%Y-%m-%d %H:%M}\n\n"

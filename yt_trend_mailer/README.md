@@ -27,7 +27,7 @@ YouTube Data API (mostPopular)  →  통계 분석  →  Claude 트렌드 요약
 | `SMTP_USER` / `SMTP_PASSWORD` | Gmail 주소 + [앱 비밀번호](https://myaccount.google.com/apppasswords) (2단계 인증 필요, 일반 비밀번호 아님) |
 | `MAIL_TO` | 받는 주소. 쉼표로 여러 명 가능 (생략 시 `SMTP_USER`) |
 
-선택 설정: `REGIONS` (기본 `KR`, 예: `KR,US,JP`), `MAX_RESULTS` (지역당 최대 50), `CLAUDE_MODEL` (기본 `claude-opus-5-5`), `TIMEZONE` (기본 `Asia/Seoul`), `SMTP_HOST`/`SMTP_PORT` (기본 Gmail 465).
+선택 설정: `REGIONS` (로컬 실행 기본 `KR`, GitHub Actions 기본 `KR,US,JP`), `MAX_RESULTS` (지역당 최대 50), `CLAUDE_MODEL` (기본 `claude-opus-5-5`), `TIMEZONE` (기본 `Asia/Seoul`), `SMTP_HOST`/`SMTP_PORT` (기본 Gmail 465).
 
 ## 로컬에서 실행
 
@@ -52,7 +52,7 @@ python -m yt_trend_mailer
 
 1. 저장소 → Settings → Secrets and variables → Actions → **Secrets**에
    `YOUTUBE_API_KEY`, `ANTHROPIC_API_KEY`, `SMTP_USER`, `SMTP_PASSWORD`, `MAIL_TO` 등록
-2. (선택) **Variables**에 `REGIONS` 등록 (예: `KR,US`)
+2. (선택) 지역을 바꾸려면 **Variables**에 `REGIONS` 등록 (기본 `KR,US,JP`, 예: `KR` 또는 `KR,US`)
 3. Actions 탭 → *YouTube 트렌드 아침 브리핑* → **Run workflow**로 바로 한 번 테스트
 
 참고: 스케줄 워크플로는 기본 브랜치에 있어야 동작하고, 저장소에 60일간 활동이 없으면 GitHub가 자동으로 일시 중지합니다.
@@ -61,4 +61,4 @@ python -m yt_trend_mailer
 
 - 모델: `claude-opus-5-5`, effort `medium`, 구조화 출력(JSON 스키마)으로 테마/추천을 받아 템플릿에 채웁니다.
 - 안전 분류기가 요청을 거절하는 드문 경우를 위해 서버 측 대체 모델(`fallbacks: "default"`)을 켜 두었습니다.
-- 하루 1회 호출(입력 약 1~2만 토큰)로 비용은 대략 하루 $0.1~0.2 수준입니다. 더 아끼려면 `CLAUDE_MODEL=claude-sonnet-5-5`.
+- 하루 1회 호출로 비용은 지역 1개면 하루 약 $0.1~0.2, 지역 3개(KR,US,JP)면 약 $0.2~0.4 수준입니다(추정치). 더 아끼려면 `CLAUDE_MODEL=claude-sonnet-5-5`.

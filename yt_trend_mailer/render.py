@@ -87,6 +87,10 @@ def render(summary: dict, stats: dict, videos: list[Video], now_local: datetime,
         )
     )
 
+    if stats.get("global_hits"):
+        hits = "".join(_video_row(v, now_utc, f"{', '.join(regs)} 동시 인기") for v, regs in stats["global_hits"])
+        parts.append(_section("여러 나라에서 동시에 뜬 영상", f'<table cellpadding="0" cellspacing="0" width="100%">{hits}</table>'))
+
     rising = "".join(_video_row(v, now_utc) for v in stats["rising"])
     parts.append(_section("가장 빠르게 뜨는 영상 (시간당 조회수)", f'<table cellpadding="0" cellspacing="0" width="100%">{rising}</table>'))
 
