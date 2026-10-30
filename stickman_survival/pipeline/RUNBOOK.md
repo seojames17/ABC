@@ -74,6 +74,7 @@ cd .. && bash ../make_sfx.sh       # assets/sfx/*.wav 생성
   - 할머니: `f3ea0e5e-c389-403b-a446-0bd473b0f738`
 - 같은 공간의 컷은 그 공간의 첫 컷을 참고 이미지로 함께 넣어 배경을 유지한다.
 - 프롬프트 공통: `Same simple thick black doodle style as the reference ... flat colors, no shading, vertical composition, no text, no letters, no watermark`
+- 강조 문구(`key`/`draw`)에 가운뎃점 `·`, `≈`, `→`를 쓰지 않는다. Black Han Sans에 없는 글자라 빈칸으로 나온다(4화에서 실제로 생김). 쉼표나 띄어쓰기로 바꾼다.
 - 그림에 글자를 넣지 않는다. 숫자·문구는 설계도의 `key`/`draw`로 편집 단계에서 얹는다(빈 점수판, 빈 쪽지 등을 그리게 할 것).
 - 한 번에 3장까지만 제출(그 이상은 429 속도 제한). 결과는 `assets/cut/<컷 이름>.png`로 내려받는다.
 - `generate_*` 호출에 프로젝트 폴더 `folder_id`를 넘겨 「1203호 생존툰」 프로젝트에 쌓이게 한다.
