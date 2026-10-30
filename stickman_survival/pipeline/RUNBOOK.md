@@ -10,28 +10,42 @@
 →  ⑥ 프레임 검수  →  ⑦ Higgsfield 프로젝트 「1203호 생존툰」에 저장  →  ⑧ 사람에게 검토 요청 (업로드는 사람이)
 ```
 
-①~⑦은 자동, ⑧부터는 사람. 인스타 업로드는 API 계정 설정 전까지 사람이 한다.
+①~⑦은 자동, ⑧은 노션 「1203호 업로드 보드」에 올리는 것까지 자동. 인스타 업로드와 투표 결과·조회수 입력은 사람이 한다.
 
-## 자동 실행 방식 (주 2회, 대본 승인제)
+## 자동 실행 방식 (매일 17:47 KST, 승인 없이 끝까지)
 
-1. 예약 작업이 새 세션을 띄운다. 세션은 `claude/stickman-survival` 브랜치를 받고 이 문서와 `SERIES.md`를 읽는다.
-2. **①만 한다**: 다음 화 설계도(`episodes/sNNeNN.json`)와 설명서(`episodes/sNNeNN.md`: 줄거리, 컷 목록, 사실 확인 표, 게시 캡션 ko/en)를 쓰고 브랜치에 커밋·푸시한다.
-3. 사용자에게 한국어로 대본 요약(두 갈래 모두)을 보여주고 **승인**과 **지난 화 A/B 투표 결과**를 묻는다. 승인 전에는 그림·음성을 만들지 않는다(크레딧 보호).
-4. 승인(필요하면 수정 반영) 후 ②~⑦을 진행하고 ⑧로 보고한다. `SERIES.md`의 화별 기록을 갱신해 커밋·푸시한다.
-5. Higgsfield 크레딧이 30 미만이면 제작을 시작하지 말고 사용자에게 알린다.
+매일 한 화씩 올린다. 사람은 저녁에 올리고, 다음 날 17시 전까지 노션에 투표 결과를 고른다. 17:47에 예약 작업이 새 세션을 띄워 다음 화를 끝까지 만든다.
+
+1. 저장소 `seojames17/ABC`의 `claude/stickman-survival` 브랜치를 받고 이 문서와 `SERIES.md`를 읽는다.
+2. 노션 보드(data source `collection://c273277b-4c03-4d91-b726-1945fa4f2367`)를 조회한다.
+   - 상태가 "업로드 대기"인 행이 2개 이상이면 사람이 밀려 있는 것이다. 새로 만들지 말고 멈춘다(크레딧 낭비 방지).
+   - 가장 최근 화의 **투표 결과**를 읽는다. 비어 있으면 이야기상 더 좋은 쪽을 고르되, 영상에서 "여러분의 선택"이라고 하지 말고 "민수의 선택"이라고 하고, 노션 행의 **갈래**에 "투표 없음"을 적는다.
+   - 지난 화들의 조회수·스킵률이 적혀 있으면 참고한다(스킵률이 높으면 첫 2초를 더 세게).
+3. Higgsfield 크레딧을 확인한다. 40 미만이면 만들지 말고 노션에 상태 "확인 필요" 행을 만들어 이유를 적는다.
+4. 노션에 새 행을 상태 "제작 중"으로 먼저 만든다(제목, DAY, 갈래).
+5. ① 다음 화 설계도는 **고른 갈래 하나만** 쓴다(투표 결과를 이미 알고 있으므로 두 갈래를 쓰지 않는다). 그 화의 A/B 질문은 두 선택지가 다음 화를 실제로 바꾸도록 설계하고, 갈래별 결과 계획을 `episodes/sNNeNN.md`에 적어 둔다.
+6. ②~⑦을 진행한다. 사람 승인을 기다리지 않는다. 사실 확인에서 확신도 "낮음"인 지식은 쓰지 않는다.
+7. ⑧ 노션 행을 채우고 상태를 "업로드 대기"로 바꾼다. 형식은 보드의 2화 페이지를 그대로 따른다.
+8. `SERIES.md`(상태 표·화별 기록)와 설계도·설명서를 커밋·푸시한다.
+9. 중간에 막히면(생성 실패 반복, 검증 계속 실패 등) 노션 행 상태를 "확인 필요"로 바꾸고 메모에 어디서 막혔는지 적은 뒤 끝낸다.
 
 ## 작업 서버 준비 (Higgsfield sandbox_exec)
 
-작업 서버 파일은 24시간 지나면 사라질 수 있으니 매번 확인하고 없으면 다시 만든다.
+작업 서버는 초기화될 수 있다(2화 다음 날 실제로 모든 파일이 사라졌다). 매번 `ls ~/pipe/render.py`로 확인하고 없으면 아래를 그대로 실행한다. 저장소가 공개라 작업 서버에서 GitHub에서 바로 받을 수 있다.
 
 ```
-mkdir -p ~/pipe/assets/{cut,sfx,fonts,aud/ko,aud/en} ~/pipe/episodes
-cd ~/pipe/assets/fonts
+R=https://raw.githubusercontent.com/seojames17/ABC/claude/stickman-survival/stickman_survival
+mkdir -p ~/pipe/episodes ~/pipe/assets/cut ~/pipe/assets/aud/ko ~/pipe/assets/aud/en ~/pipe/assets/fonts
+cd ~/pipe && curl -sf -O $R/pipeline/render.py && curl -sf -O $R/pipeline/verify.py && curl -sf -o make_sfx.sh $R/tools/make_sfx.sh
+cd assets/fonts
 curl -sfL -o NotoSansKR.ttf "https://github.com/google/fonts/raw/main/ofl/notosanskr/NotoSansKR%5Bwght%5D.ttf"
 curl -sfL -o BlackHanSans.ttf "https://github.com/google/fonts/raw/main/ofl/blackhansans/BlackHanSans-Regular.ttf"
+cd .. && bash ../make_sfx.sh       # assets/sfx/*.wav 생성
 ```
 
-`render.py`, `verify.py`, 설계도 JSON, `../tools/make_sfx.sh`는 저장소에서 읽어 heredoc으로 작업 서버에 쓴다(작업 서버는 비공개 저장소에 접근할 수 없음). 효과음은 `assets/` 안에서 `make_sfx.sh`를 실행하면 `assets/sfx/`에 생긴다. 이전 화 컷을 재사용할 때는 해당 job id의 결과 URL을 `curl`로 받는다.
+- 설계도도 푸시한 뒤 `curl -sf -o episodes/sNNeNN.json $R/pipeline/episodes/sNNeNN.json`으로 받는다. 스크립트를 고쳤으면 먼저 푸시하고 다시 받는다.
+- 이전 화 컷을 재사용할 때는 `jobs_wait`(timeout 0)에 그 job id를 넣어 `result_url`을 얻고 `curl`로 `assets/cut/<컷 이름>.png`에 받는다.
+- 작업 서버로 파일을 base64로 넘기면 거부된다. 위처럼 URL에서 받는다.
 
 ## ① 설계도 작성 규칙
 
@@ -48,8 +62,8 @@ curl -sfL -o BlackHanSans.ttf "https://github.com/google/fonts/raw/main/ofl/blac
   2. 그 갈래에서만 배우는 생존 지식 한 가지
   3. 자원(`SERIES.md`의 상태 표: 배터리, 현금, 물, 빚, 관계)과 생존 점수
 - 두 선택지 모두 그럴듯하고 득실이 있어야 한다(한쪽이 뻔한 정답이면 투표할 이유가 없음).
-- 다음 화 설계도에는 두 갈래를 모두 쓰고 장면에 `"vote": "A"|"B"`를 단다. 갈래와 무관한 장면은 공통. 배터리를 갈래에 따라 바꾸려면 공통 장면에 `"battery": "vote"`.
-- 투표 결과가 나오면 그 갈래만 그림·음성을 만든다(`verify.py`/`render.py`에 `--vote A`). 그래서 갈래를 크게 벌려도 비용은 거의 늘지 않는다.
+- 매일 자동 실행에서는 투표 결과를 이미 알고 쓰므로 **고른 갈래만** 쓴다.
+- 결과가 나오기 전에 미리 쓸 때만 두 갈래를 모두 쓰고 장면에 `"vote": "A"|"B"`를 단다. 갈래와 무관한 장면은 공통. 배터리를 갈래에 따라 바꾸려면 공통 장면에 `"battery": "vote"`. 렌더링 때 `--vote A`로 그 갈래만 만든다.
 - 숫자처럼 자막과 읽는 법이 다른 대사는 비트에 `"tts": {"ko": "..."}`로 녹음용 텍스트를 따로 적는다.
 - 새 컷에는 비트에 그림 정보를 함께 적는다: `"prompt": "<영문 장면 묘사>"`, `"refs": ["<참고 job id>", ...]`. 이전 화 컷을 그대로 쓰면 `"reuse": "<job id>"`. 그림 생성 후 `"job": "<생성된 job id>"`를 채운다.
 
@@ -109,7 +123,12 @@ python3 render.py episodes/sNNeNN.json --lang en --assets assets --out sNNeNN_en
 **아이폰으로 받을 수 있게 ZIP 링크를 함께 준다.** 영상(mp4) 링크는 사파리·크롬에서 재생만 되고 저장이 안 되며, 업로드한 영상은 Higgsfield 앱 화면에도 보이지 않는다. 작업 서버에서 `zip -0 sNNeNN_ko.zip sNNeNN_ko.mp4`로 감싼 뒤 `media_upload`(파일명 .zip, `source_type: file_input`) → PUT → `media_confirm`(type file)으로 올리고, 그 cloudfront 주소를 준다. 사파리에서 열면 다운로드 → 파일 앱에서 ZIP을 눌러 풀기 → 영상 공유 → "비디오 저장".
 
 
-다음을 정리해 보고한다: 두 영상 링크, 사실 확인 표(확신도 중간 이하 강조), 게시 캡션(ko/en), 커버로 쓸 컷, 사용 크레딧.
+커버 이미지는 `media_upload`(image/jpeg) → PUT → `media_confirm`(type image)으로 올린다. jpg 링크는 아이폰 사파리에서 길게 눌러 사진 앱에 저장할 수 있다.
+
+**노션 보드 행 채우기** (2화 페이지 `https://app.notion.com/p/409295818b0e811680fdc1b192a8a881`과 같은 형식)
+- 속성: 화(`N화 — 정전 N일째: 부제`), 게시일(오늘), 상태(업로드 대기), DAY, 갈래, 영상 한국어(ZIP), 영상 영어(ZIP), 표지(jpg), 다음 투표(A/B 질문 한 줄), 생존 점수, 메모(길이, 사용 크레딧, 특이사항)
+- 본문: 맨 위 노란 콜아웃(게시 후 할 일) → 1. 영상·표지 받기(링크 + 표지 이미지) → 2. 캡션(한국어, 복사용 코드 블록) → 3. 첫 댓글 → 4. 스토리 투표 → 5. 올릴 때 체크(음악 X, 커버, AI 레이블, 고정 댓글) → 6. 사실 확인(확신도 중간 이하만) → 7. 영어 캡션
+- 해시태그는 5개(`#1203호 #정전 #재난대비 #생존꿀팁 #생존툰`, 영어는 `#unit1203 #blackout #survivaltips #emergencyprep #stickman`).
 
 ## 비용 기준 (1화 실측)
 
