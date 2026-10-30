@@ -14,7 +14,12 @@
       "mcp__Higgsfield__media_confirm",
       "mcp__Higgsfield__get_project",
       "mcp__Higgsfield__list_project_assets",
-      "mcp__Higgsfield__attach_project_asset"
+      "mcp__Higgsfield__attach_project_asset",
+      "mcp__Notion__notion-fetch",
+      "mcp__Notion__notion-search",
+      "mcp__Notion__notion-query-data-sources",
+      "mcp__Notion__notion-create-pages",
+      "mcp__Notion__notion-update-page"
     ]
   }
 }
