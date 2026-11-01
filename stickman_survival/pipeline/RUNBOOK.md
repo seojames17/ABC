@@ -104,6 +104,8 @@ python3 verify.py episodes/sNNeNN.json --lang en --assets assets
 
 FAIL 장면만 다시 녹음하고 다시 검증한다. AI 음성은 가끔 문장 앞뒤에 알아들을 수 없는 소리를 붙이거나, 첫 문장을 빼먹거나, 긴 정적을 만든다.
 - 녹음용 텍스트에서는 따옴표를 빼고 쉼표로 이어 쓴다. 따옴표로 나뉜 두 문장 사이에 4초 정적이 생기거나(2화 영어 3번) 따옴표 앞 문장이 통째로 빠진 적이 있다(2화 한국어 3번). 자막에는 따옴표를 그대로 둬도 된다.
+- 영어에서 "Grandma clicked her tongue." 같은 짧은 첫 문장은 두 번 녹음해도 통째로 빠졌다(5화). 짧은 첫 문장 뒤에 긴 문장이 오면 녹음용 텍스트를 "Grandma clicked her tongue and said, ..."처럼 한 문장으로 잇고, 비트의 `tts.en`도 같이 맞춘다.
+- 작업 서버에 긴 업로드 URL을 heredoc으로 파일에 저장했다가 다음 호출에서 읽는 방식은 파일이 사라져 실패했다(5화). 업로드 URL은 PUT하는 그 명령 안에 그대로 붙여 넣는다.
 - verify가 ok여도 받아쓴 문장을 눈으로 한 번 읽는다. 첫머리 누락·끝 잡음은 유사도만으로는 못 잡을 때가 있다.
 
 ## ⑤ 렌더링
@@ -124,7 +126,7 @@ python3 render.py episodes/sNNeNN.json --lang en --assets assets --out sNNeNN_en
 
 ## ⑦ 저장
 
-`media_upload` → `media_confirm` → `attach_project_asset`으로 「1203호 생존툰」 프로젝트(`8b843777-b07f-43f6-8e0f-87d3adbb477e`, workspace `f1357b6e-9e22-4f9c-a4e4-034f8e6683cb`)에 두 영상을 넣는다.
+`media_upload` → `media_confirm` → `attach_project_asset`(folder_id는 프로젝트 id와 같음)으로 「1203호 생존툰」 프로젝트(`8b843777-b07f-43f6-8e0f-87d3adbb477e`, workspace `f1357b6e-9e22-4f9c-a4e4-034f8e6683cb`)에 두 영상을 넣는다.
 
 ## ⑧ 사람에게 넘기기
 
