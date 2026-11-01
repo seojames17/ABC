@@ -5,7 +5,7 @@
  "lead_in": 0.2,
  "scene_gap": 0.3,
  "tail": 1.6,
- "speed": {"ko": 1.15, "en": 1.2},
+ "speed": {"ko": 1.2, "en": 1.2},
  "scenes": [
   {"battery": 7, "beats": [
    {"cut": "e5_01", "ko": "정전 아흐레째. 통조림은 두 개.", "en": "Day nine of the blackout. Two cans left.", "zoom": "out", "sfx": "sting", "key": {"ko": "DAY 9 | 냉동실의 비밀", "en": "DAY 9: FREEZER SECRET"}},
@@ -23,8 +23,8 @@
     "prompt": "Close-up of Minsu (red hoodie, big round glasses, no hat) holding a soft pink raw chicken pack right under his nose and sniffing it, eyebrows raised, hopeful smile, small stink lines coming off the pack, dim blue night kitchen background. Same simple thick black doodle style as the reference, flat colors, no shading, vertical composition, no text, no letters, no watermark", "refs": ["minsu", "kitchen"]}
   ]},
   {"battery": 7, "beats": [
-   {"cut": "e4_10", "ko": "할머니가 혀를 찼어요.", "en": "Grandma clicked her tongue.", "sfx": "sad"},
-   {"cut": "e5_05", "ko": "\"녹고 있는 게 아니라 녹은 지 일주일이야. 냉동실은 이틀이면 끝.\"", "en": "\"It isn't melting. It melted a week ago. A freezer lasts two days.\"", "zoom": "push", "key": {"ko": "냉동실은 48시간 (1화 복습)", "en": "FREEZER: 48 HOURS (EP.1)"}, "tts": {"ko": "녹고 있는 게 아니라 녹은 지 일주일이야. 냉동실은 이틀이면 끝.", "en": "It isn't melting. It melted a week ago. A freezer lasts two days."}},
+   {"cut": "e4_10", "ko": "할머니가 혀를 찼어요.", "en": "Grandma clicked her tongue.", "sfx": "sad", "tts": {"en": "Grandma clicked her tongue and said,"}},
+   {"cut": "e5_05", "ko": "\"녹고 있는 게 아니라 녹은 지 일주일이야. 냉동실은 이틀이면 끝.\"", "en": "\"It isn't melting. It melted a week ago. A freezer lasts two days.\"", "zoom": "push", "key": {"ko": "냉동실은 48시간 (1화 복습)", "en": "FREEZER: 48 HOURS (EP.1)"}, "tts": {"ko": "녹고 있는 게 아니라 녹은 지 일주일이야. 냉동실은 이틀이면 끝.", "en": "it isn't melting, it melted a week ago. A freezer lasts two days."}},
    {"cut": "e5_07", "ko": "\"냄새 멀쩡해도 버려. 탈 나는 균은 냄새가 안 나.\"", "en": "\"Even if it smells fine, toss it. The germs that make you sick have no smell.\"", "zoom": "in", "sfx": "click", "key": {"ko": "냄새로 판단 금지", "en": "NEVER TRUST THE SMELL"}, "tts": {"ko": "냄새 멀쩡해도 버려. 탈 나는 균은 냄새가 안 나.", "en": "Even if it smells fine, toss it. The germs that make you sick have no smell."}}
   ]},
   {"battery": 7, "beats": [

@@ -74,9 +74,9 @@ def main():
         first = norm(expected.split()[0]) if expected.split() else ""
         prefix = bool(words) and first and not norm(words[0].word).startswith(first[:2]) and words[0].end > 0.8
         # 첫 대사가 통째로 빠진 경우 (실제로 "할머니 말씀."을 건너뛰고 녹음된 적 있음)
-        lead = norm(" ".join(expected.split()[:2]))
+        lead = words_to_compare(" ".join(expected.split()[:2]), a.lang)
         missing = bool(words) and lead and difflib.SequenceMatcher(
-            None, lead, norm("".join(w.word for w in words[:4]))[:len(lead)]).ratio() < 0.5
+            None, lead, words_to_compare(" ".join(w.word for w in words[:4]), a.lang)[:len(lead)]).ratio() < 0.5
         problems = []
         if ratio < 0.75:
             problems.append(f"내용 불일치({ratio:.2f})")
