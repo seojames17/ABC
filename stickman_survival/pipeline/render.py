@@ -135,13 +135,14 @@ def overlay(spec, lang, assets, b, subtitle):
     d.rounded_rectangle((40, 60, 40 + bw, 160), 20, fill=(0, 0, 0, 220))
     d.text((40 + bw / 2, 110), badge, font=bf, fill="white", anchor="mm")
     p = b.get("batt")
-    if p:
+    if p is not None:   # 0%도 그린다 (5화 끝에서 휴대폰이 꺼짐)
         x0, y0 = 760, 75
         col = (220, 40, 40) if p <= 25 else (255, 190, 0) if p <= 45 else (60, 200, 90)
         d.rounded_rectangle((x0 - 20, 60, 1040, 160), 20, fill=(0, 0, 0, 220))
         d.rectangle((x0, y0 + 10, x0 + 110, y0 + 60), outline="white", width=5)
         d.rectangle((x0 + 110, y0 + 25, x0 + 120, y0 + 45), fill="white")
-        d.rectangle((x0 + 8, y0 + 18, x0 + 8 + int(94 * p / 100), y0 + 52), fill=col)
+        if p > 0:
+            d.rectangle((x0 + 8, y0 + 18, x0 + 8 + int(94 * p / 100), y0 + 52), fill=col)
         d.text((x0 + 140, 110), f"{p}%", font=font(assets, "bhs", 56), fill="white", anchor="lm")
     key = (b.get("key") or {}).get(lang)
     if key:
