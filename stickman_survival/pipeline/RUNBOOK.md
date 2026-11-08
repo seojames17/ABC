@@ -40,7 +40,7 @@ cd ~/pipe && curl -sf -O $R/pipeline/render.py && curl -sf -O $R/pipeline/verify
 cd assets/fonts
 curl -sfL -o NotoSansKR.ttf "https://cdn.jsdelivr.net/gh/google/fonts@main/ofl/notosanskr/NotoSansKR%5Bwght%5D.ttf"
 curl -sfL -o BlackHanSans.ttf "https://cdn.jsdelivr.net/gh/google/fonts@main/ofl/blackhansans/BlackHanSans-Regular.ttf"
-curl -sfL -o NotoSerifKR.ttf "https://cdn.jsdelivr.net/gh/google/fonts@main/ofl/notoserifkr/NotoSerifKR%5Bwght%5D.ttf"   # 시즌 2 명조
+curl -sfL -o NotoSerifKR.ttf "https://raw.githubusercontent.com/google/fonts/main/ofl/notoserifkr/NotoSerifKR%5Bwght%5D.ttf"   # 시즌 2 명조 (24MB라 jsDelivr는 403, raw 주소로)
 cd .. && bash ../make_sfx.sh       # assets/sfx/*.wav 생성
 ```
 
@@ -48,6 +48,8 @@ cd .. && bash ../make_sfx.sh       # assets/sfx/*.wav 생성
 - 이전 화 컷을 재사용할 때는 `jobs_wait`(timeout 0)에 그 job id를 넣어 `result_url`을 얻고 `curl`로 `assets/cut/<컷 이름>.png`에 받는다.
 - 작업 서버로 파일을 base64로 넘기면 거부된다. 위처럼 URL에서 받는다.
 - 작업 서버는 하루 넘게 쉬면 초기화된다(12화 때 확인). github.com/google/fonts/raw 주소는 실패해 jsDelivr 주소로 바꿨다.
+- 음성을 받기 전에 `assets/aud`에 지난 화 파일이 남아 있으면 `aud_eNN`으로 옮긴다(13화 때 12화 음성 위에 받은 줄 알고 verify를 돌릴 뻔했다). `curl -o ko/1.wav`는 `raw/ko` 폴더가 없으면 조용히 실패하니 `mkdir -p` 먼저.
+- seed_audio는 한 번에 6줄 넘게 보내면 429(rate_limit_reached)가 난다. 3~4줄씩, 거절된 줄은 1분쯤 뒤 다시 보낸다.
 - 확인 창을 줄이려면 음성을 모두 먼저 만든 뒤, 서버 작업(다운로드 → verify → 렌더 → 프레임 검수 → 표지 → zip → 업로드)을 백그라운드 명령 한 번으로 묶는다.
 
 ## ① 설계도 작성 규칙
@@ -109,6 +111,7 @@ python3 verify.py episodes/sNNeNN.json --lang en --assets assets
 
 FAIL 장면만 다시 녹음하고 다시 검증한다. AI 음성은 가끔 문장 앞뒤에 알아들을 수 없는 소리를 붙이거나, 첫 문장을 빼먹거나, 긴 정적을 만든다.
 - 녹음용 텍스트에서는 따옴표를 빼고 쉼표로 이어 쓴다. 따옴표로 나뉜 두 문장 사이에 4초 정적이 생기거나(2화 영어 3번) 따옴표 앞 문장이 통째로 빠진 적이 있다(2화 한국어 3번). 자막에는 따옴표를 그대로 둬도 된다.
+- 영어는 문장 중간의 짧은 문장도 빠진다(13화 "Minsu jumped up."이 통째로 누락). 짧은 문장은 앞뒤 문장과 "and said,"로 잇는다.
 - 영어에서 "Grandma clicked her tongue." 같은 짧은 첫 문장은 두 번 녹음해도 통째로 빠졌다(5화). 짧은 첫 문장 뒤에 긴 문장이 오면 녹음용 텍스트를 "Grandma clicked her tongue and said, ..."처럼 한 문장으로 잇고, 비트의 `tts.en`도 같이 맞춘다.
 - 작업 서버에 긴 업로드 URL을 heredoc으로 파일에 저장했다가 다음 호출에서 읽는 방식은 파일이 사라져 실패했다(5화). 업로드 URL은 PUT하는 그 명령 안에 그대로 붙여 넣는다.
 - 영어 음성 앞에 알아들을 수 없는 잡음이 자주 붙는다. 재녹음보다 받아쓰기 단어 타이밍으로 앞부분을 잘라 내는 게 빠르다(10~12화).
@@ -138,7 +141,7 @@ python3 render.py episodes/sNNeNN.json --lang en --assets assets --out sNNeNN_en
 
 ## ⑧ 사람에게 넘기기
 
-**커버 이미지도 만들어 준다.** 맨 위에 빨간 배지 "1203호 N화", 가장 크게 노란 "정전 N일째", 그 아래 흰색으로 그 화의 갈고리 한 줄(예: "라면 10봉지의 최후"). 시리즈의 축은 "정전 며칠째"이므로 표지에서 그게 먼저 보여야 한다. 글자는 프로필 격자(가운데 3:4, y 240~1680) 안에 둔다.
+**커버 이미지도 만들어 준다.** `python3 make_cover.py assets/cut/<컷>.png s01eNN_cover.jpg --badge "1203호 N화" --big "정전 N일째" --sub "<갈고리>" --assets assets` (`tools/make_cover.py`, 시즌 2는 `--font serif --dark`). 맨 위에 빨간 배지 "1203호 N화", 가장 크게 노란 "정전 N일째", 그 아래 흰색으로 그 화의 갈고리 한 줄(예: "라면 10봉지의 최후"). 시리즈의 축은 "정전 며칠째"이므로 표지에서 그게 먼저 보여야 한다. 글자는 프로필 격자(가운데 3:4, y 240~1680) 안에 둔다.
 
 **아이폰으로 받을 수 있게 ZIP 링크를 함께 준다.** 영상(mp4) 링크는 사파리·크롬에서 재생만 되고 저장이 안 되며, 업로드한 영상은 Higgsfield 앱 화면에도 보이지 않는다. 작업 서버에서 `zip -0 sNNeNN_ko.zip sNNeNN_ko.mp4`로 감싼 뒤 `media_upload`(파일명 .zip, `source_type: file_input`) → PUT → `media_confirm`(type file)으로 올리고, 그 cloudfront 주소를 준다. 사파리에서 열면 다운로드 → 파일 앱에서 ZIP을 눌러 풀기 → 영상 공유 → "비디오 저장".
 
