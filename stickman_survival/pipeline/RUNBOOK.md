@@ -38,14 +38,16 @@ R=https://raw.githubusercontent.com/seojames17/ABC/claude/stickman-survival/stic
 mkdir -p ~/pipe/episodes ~/pipe/assets/cut ~/pipe/assets/aud/ko ~/pipe/assets/aud/en ~/pipe/assets/fonts
 cd ~/pipe && curl -sf -O $R/pipeline/render.py && curl -sf -O $R/pipeline/verify.py && curl -sf -o make_sfx.sh $R/tools/make_sfx.sh
 cd assets/fonts
-curl -sfL -o NotoSansKR.ttf "https://github.com/google/fonts/raw/main/ofl/notosanskr/NotoSansKR%5Bwght%5D.ttf"
-curl -sfL -o BlackHanSans.ttf "https://github.com/google/fonts/raw/main/ofl/blackhansans/BlackHanSans-Regular.ttf"
+curl -sfL -o NotoSansKR.ttf "https://cdn.jsdelivr.net/gh/google/fonts@main/ofl/notosanskr/NotoSansKR%5Bwght%5D.ttf"
+curl -sfL -o BlackHanSans.ttf "https://cdn.jsdelivr.net/gh/google/fonts@main/ofl/blackhansans/BlackHanSans-Regular.ttf"
 cd .. && bash ../make_sfx.sh       # assets/sfx/*.wav 생성
 ```
 
 - 설계도도 푸시한 뒤 `curl -sf -o episodes/sNNeNN.json $R/pipeline/episodes/sNNeNN.json`으로 받는다. 스크립트를 고쳤으면 먼저 푸시하고 다시 받는다.
 - 이전 화 컷을 재사용할 때는 `jobs_wait`(timeout 0)에 그 job id를 넣어 `result_url`을 얻고 `curl`로 `assets/cut/<컷 이름>.png`에 받는다.
 - 작업 서버로 파일을 base64로 넘기면 거부된다. 위처럼 URL에서 받는다.
+- 작업 서버는 하루 넘게 쉬면 초기화된다(12화 때 확인). github.com/google/fonts/raw 주소는 실패해 jsDelivr 주소로 바꿨다.
+- 확인 창을 줄이려면 음성을 모두 먼저 만든 뒤, 서버 작업(다운로드 → verify → 렌더 → 프레임 검수 → 표지 → zip → 업로드)을 백그라운드 명령 한 번으로 묶는다.
 
 ## ① 설계도 작성 규칙
 
@@ -82,6 +84,7 @@ cd .. && bash ../make_sfx.sh       # assets/sfx/*.wav 생성
   - 민수: `719dd12e-5a62-4b7e-8824-e36ae4648f3c` (+ 포즈 시트 `406af5ab-9d83-4bb3-b115-bbb5e2c5c112`)
   - 할머니: `f3ea0e5e-c389-403b-a446-0bd473b0f738`
 - 같은 공간의 컷은 그 공간의 첫 컷을 참고 이미지로 함께 넣어 배경을 유지한다.
+- 군중·이웃이 나오는 컷은 다른 사람이 민수 옷(빨간 후드, 안경)으로 나오는 일이 반복됐다(2·11화). 다른 이웃마다 옷 색·머리·나이를 구체적으로 적고 "only Minsu wears the red hoodie and glasses"를 넣는다.
 - 프롬프트 공통: `Same simple thick black doodle style as the reference ... flat colors, no shading, vertical composition, no text, no letters, no watermark`
 - 강조 문구(`key`/`draw`)에 가운뎃점 `·`, `≈`, `→`를 쓰지 않는다. Black Han Sans에 없는 글자라 빈칸으로 나온다(4화에서 실제로 생김). 쉼표나 띄어쓰기로 바꾼다.
 - 그림에 글자를 넣지 않는다. 숫자·문구는 설계도의 `key`/`draw`로 편집 단계에서 얹는다(빈 점수판, 빈 쪽지 등을 그리게 할 것).
@@ -106,6 +109,9 @@ FAIL 장면만 다시 녹음하고 다시 검증한다. AI 음성은 가끔 문�
 - 녹음용 텍스트에서는 따옴표를 빼고 쉼표로 이어 쓴다. 따옴표로 나뉜 두 문장 사이에 4초 정적이 생기거나(2화 영어 3번) 따옴표 앞 문장이 통째로 빠진 적이 있다(2화 한국어 3번). 자막에는 따옴표를 그대로 둬도 된다.
 - 영어에서 "Grandma clicked her tongue." 같은 짧은 첫 문장은 두 번 녹음해도 통째로 빠졌다(5화). 짧은 첫 문장 뒤에 긴 문장이 오면 녹음용 텍스트를 "Grandma clicked her tongue and said, ..."처럼 한 문장으로 잇고, 비트의 `tts.en`도 같이 맞춘다.
 - 작업 서버에 긴 업로드 URL을 heredoc으로 파일에 저장했다가 다음 호출에서 읽는 방식은 파일이 사라져 실패했다(5화). 업로드 URL은 PUT하는 그 명령 안에 그대로 붙여 넣는다.
+- 영어 음성 앞에 알아들을 수 없는 잡음이 자주 붙는다. 재녹음보다 받아쓰기 단어 타이밍으로 앞부분을 잘라 내는 게 빠르다(10~12화).
+- 숫자(예: "84점", "13일째")만 다르게 받아써서 FAIL이면, 내용이 맞을 때 그대로 쓴다.
+- seed_audio가 크레딧이 충분한데도 "Out of credits"로 일부를 거절할 때가 있다. 같은 요청을 다시 보내면 된다.
 - verify가 ok여도 받아쓴 문장을 눈으로 한 번 읽는다. 첫머리 누락·끝 잡음은 유사도만으로는 못 잡을 때가 있다.
 
 ## ⑤ 렌더링
