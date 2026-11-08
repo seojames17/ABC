@@ -21,4 +21,9 @@ sox -n -r 44100 -c 2 s3.wav     synth 0.6 triangle 349 vol 0.3 fade 0 0.6 0.4 &&
 sox -n -r 44100 -c 2 ding.wav   synth 0.7 sine 1320 sine 1980 vol 0.3 fade 0 0.7 0.6
 sox -n -r 44100 -c 2 pop.wav    synth 0.07 sine 450-1100 vol 0.45 fade 0 0.07 0.04 pad 0 0.1
 sox -n -r 44100 -c 2 lowbat.wav synth 0.12 sine 1800 vol 0.2 pad 0 0.1 synth 0.12 sine 1800
-rm -f c1.wav e1.wav h1.wav h2.wav s1.wav s2.wav s3.wav
+# 13화(시즌 1 마지막 화)에서 추가: 라디오 잡음, 먼 울림, 사이렌(작게)
+sox -n -r 44100 -c 2 r1.wav     synth 0.5 whitenoise bandpass 1800 600 vol 0.18 fade 0.02 0.5 0.1
+sox -n -r 44100 -c 2 r2.wav     synth 0.15 sine 1000 vol 0.2 fade 0 0.15 0.05 && sox r1.wav r2.wav radio.wav
+sox -n -r 44100 -c 2 rumble.wav synth 1.6 brownnoise lowpass 90 vol 0.7 fade 0.3 1.6 1.0
+sox -n -r 44100 -c 2 siren.wav  synth 2.2 sine 420-760 vol 0.22 fade 0.3 2.2 0.6
+rm -f c1.wav e1.wav h1.wav h2.wav s1.wav s2.wav s3.wav r1.wav r2.wav

@@ -1,0 +1,180 @@
+{
+ "title": {
+  "ko": "1203호 13화 — DAY 21: 불이 들어오는 날 (시즌 1 마지막 화)",
+  "en": "Unit 1203 Ep.13 — Day 21: The Day the Lights Came Back (Season Finale)"
+ },
+ "badge": {
+  "ko": "1203호 | DAY 21",
+  "en": "UNIT 1203 | DAY 21"
+ },
+ "voice": {
+  "model": "seed_audio",
+  "voice_id": "95429266-c0ac-4137-a209-63b8812b0f23",
+  "speech_rate": {"ko": 20, "en": 10}
+ },
+ "lead_in": 0.2,
+ "scene_gap": 0.3,
+ "tail": 1.8,
+ "speed": {"ko": 1.3, "en": 1.4},
+ "_note": "12화 투표 결과가 비어 있어 B(이웃과 베란다 그늘 공동 보관)를 '민수의 선택'으로 썼다. 결과가 A로 들어오면 장면 1~2만 교체(쓰레기장에 버림 → 벌레·이웃 항의 → 할머니가 다시 가져오게 함). 장면 7부터 DAY 22, 장면 9부터 1년 후라 배지는 장면별 badge로 덮어쓴다.",
+ "refs_legend": {
+  "minsu": "719dd12e-5a62-4b7e-8824-e36ae4648f3c",
+  "minsu_pose": "406af5ab-9d83-4bb3-b115-bbb5e2c5c112",
+  "grandma": "f3ea0e5e-c389-403b-a446-0bd473b0f738",
+  "balcony": "<e13_02 생성 후 그 job id>",
+  "livingroom": "<e13_07 생성 후 그 job id>"
+ },
+ "scenes": [
+  {
+   "battery": 19,
+   "beats": [
+    {"cut": "e13_01", "ko": "정전 스무하루째. 뚜껑 통이 넘쳤어요.", "en": "Day twenty-one of the blackout. The lidded bin is overflowing.", "zoom": "out", "sfx": "sting",
+     "key": {"ko": "DAY 21 | 마지막 화", "en": "DAY 21: FINALE"},
+     "tts": {"ko": "정전 이십일 일째. 뚜껑 통이 넘쳤어요.", "en": "Day twenty-one of the blackout. The lidded bin is overflowing."},
+     "prompt": "Minsu (red hoodie, big round glasses, no hat) standing in a dim apartment bathroom doorway, pinching his nose, in front of a plastic bin whose lid is pushed up by a pile of tightly tied plastic bags spilling over the rim, a few wavy stink lines rising, dim daylight. Same simple thick black doodle style as the reference, flat colors, no shading, vertical composition, no text, no letters, no watermark", "refs": ["minsu"]},
+    {"cut": "e13_01", "ko": "수거차는 3주째 안 왔죠.", "en": "No garbage truck for three weeks.", "zoom": "push", "sfx": "sad",
+     "tts": {"ko": "수거차는 삼 주째 안 왔죠."}}
+   ]
+  },
+  {
+   "battery": 19,
+   "beats": [
+    {"cut": "e13_02", "ko": "민수의 선택은 B, 이웃들과 베란다 그늘에 모아 두기.", "en": "Minsu's choice: B, store it with the neighbors in the shade of the balcony.", "zoom": "none", "sfx": "click",
+     "key": {"ko": "민수의 선택: B", "en": "MINSU'S CHOICE: B"},
+     "tts": {"ko": "민수의 선택은 비, 이웃들과 베란다 그늘에 모아 두기."},
+     "prompt": "A shaded apartment balcony seen from inside, three neighbors and Minsu carrying lidded plastic bins and tied bags: Minsu (red hoodie, big round glasses, no hat), a middle-aged man in a gray sweater and short dark hair, a young woman in a green windbreaker with long hair, a small boy in a yellow shirt. Only Minsu wears a red hoodie and glasses. Daylight outside, the balcony side is in shadow. Same simple thick black doodle style as the reference, flat colors, no shading, vertical composition, no text, no letters, no watermark", "refs": ["minsu"]},
+    {"cut": "e13_03", "ko": "그런데 민수는 봉투를 한 겹 그대로, 햇볕 드는 쪽에 쌓았어요.", "en": "But Minsu stacked his bags single-layered, right where the sun hits.", "zoom": "in", "sfx": "pop",
+     "prompt": "Close-up of Minsu (red hoodie, big round glasses, no hat) proudly patting a heap of thin, loosely knotted single plastic bags piled in a bright sunny corner of the balcony, no lid, two small flies circling, a bag leaking a dark drip. Same simple thick black doodle style as the reference, flat colors, no shading, vertical composition, no text, no letters, no watermark", "refs": ["minsu", "balcony"]},
+    {"cut": "e13_03", "ko": "한 시간 뒤, 파리 떼.", "en": "An hour later: flies.", "zoom": "push", "sfx": "sting"}
+   ]
+  },
+  {
+   "battery": 19,
+   "beats": [
+    {"cut": "e13_04", "ko": "할머니가 봉투를 집어 들었어요. \"음식물이랑 변기 봉투는 두 겹, 꽉 묶어서, 뚜껑 통에.\"", "en": "Grandma picked up a bag and said, food waste and toilet bags go in two layers, tied tight, in a lidded bin.", "zoom": "push",
+     "key": {"ko": "두 겹, 꽉, 뚜껑", "en": "TWO BAGS, TIGHT, LID"},
+     "tts": {"ko": "할머니가 봉투를 집어 들었어요. 음식물이랑 변기 봉투는 두 겹, 꽉 묶어서, 뚜껑 통에."},
+     "prompt": "The grandma neighbor (gray hair bun, half-moon glasses, mustard yellow cardigan, cane hooked on her arm) holding up a thin leaking plastic bag at arm's length with a stern face, Minsu (red hoodie, big round glasses, no hat) behind her looking sheepish, shaded balcony. Same simple thick black doodle style as the reference, flat colors, no shading, vertical composition, no text, no letters, no watermark", "refs": ["grandma", "minsu", "balcony"]},
+    {"cut": "e13_05", "ko": "\"그늘에 둬. 햇볕은 냄새랑 벌레를 키워.\"", "en": "Keep it in the shade. Sun feeds the smell and the bugs.", "zoom": "in", "sfx": "click",
+     "key": {"ko": "그늘, 뚜껑 닫기", "en": "SHADE, LID CLOSED"},
+     "tts": {"ko": "그늘에 둬. 햇볕은 냄새랑 벌레를 키워."},
+     "prompt": "A neat row of closed lidded plastic bins lined up along the shaded wall of the balcony, each bin with a small chalk mark, a hand-drawn sun on the far side of the balcony with the shadow line clearly between sun and bins, no people. Same simple thick black doodle style as the reference, flat colors, no shading, vertical composition, no text, no letters, no watermark", "refs": ["balcony"]},
+    {"cut": "e13_05", "ko": "\"쓰레기장에 그냥 버리면, 수거 올 때까지 온 동이 벌레판이야.\"", "en": "Dump it downstairs now, and the whole building is a bug nest until the trucks return.", "zoom": "push", "sfx": "sad",
+     "tts": {"ko": "쓰레기장에 그냥 버리면, 수거 올 때까지 온 동이 벌레판이야."}}
+   ]
+  },
+  {
+   "battery": 19,
+   "beats": [
+    {"cut": "e13_06", "ko": "민수는 배운 대로 봉투 두 겹, 꽉 묶어 통에. 이웃들도 따라 했어요.", "en": "Minsu did it the way he learned: two bags, tied tight, into the bin. The neighbors followed.", "zoom": "push", "sfx": "pop",
+     "key": {"ko": "4화 복습: 두 겹, 꽉 묶기", "en": "EP.4 SKILL: TWO BAGS, TIE TIGHT"},
+     "prompt": "Minsu (red hoodie, big round glasses, no hat) kneeling and double-bagging waste, tying a tight knot, while the gray-sweater man, the green-windbreaker woman and the yellow-shirt boy copy him in a line along the shaded balcony, everyone focused, lidded bins open beside them. Only Minsu wears a red hoodie and glasses. Same simple thick black doodle style as the reference, flat colors, no shading, vertical composition, no text, no letters, no watermark", "refs": ["minsu", "balcony"]},
+    {"cut": "e13_06", "ko": "3주 만에 처음으로, 1203호가 아니라 12층이 같이 움직였어요.", "en": "For the first time in three weeks, it wasn't unit 1203 moving. It was the whole twelfth floor.", "zoom": "in", "sfx": "ding",
+     "tts": {"ko": "삼 주 만에 처음으로, 천이백삼 호가 아니라 십이 층이 같이 움직였어요."}}
+   ]
+  },
+  {
+   "battery": 19,
+   "beats": [
+    {"cut": "e13_07", "ko": "그날 저녁, 할머니의 라디오. \"내일 오전, 이 지역 전기 복구 예정.\"", "en": "That evening, on Grandma's radio: power to this district is scheduled to return tomorrow morning.", "zoom": "out", "sfx": "radio",
+     "key": {"ko": "내일 오전 복구 (7화 라디오)", "en": "POWER BACK TOMORROW (EP.7 RADIO)"},
+     "tts": {"ko": "그날 저녁, 할머니의 라디오. 내일 오전, 이 지역 전기 복구 예정."},
+     "prompt": "Grandma's dim living room at dusk, Grandma (gray hair bun, half-moon glasses, mustard yellow cardigan) and Minsu (red hoodie, big round glasses, no hat) sitting on the floor leaning toward a small battery radio on a low table, a blanket hung over the window, a single small candle-less lantern, both faces lit with surprise. Same simple thick black doodle style as the reference, flat colors, no shading, vertical composition, no text, no letters, no watermark", "refs": ["grandma", "minsu"]},
+    {"cut": "e13_07", "ko": "민수가 벌떡 일어났어요. \"그럼 다 켜 두고 기다리면 되겠네!\"", "en": "Minsu jumped up. So I just leave everything switched on and wait!", "zoom": "push", "sfx": "pop",
+     "tts": {"ko": "민수가 벌떡 일어났어요. 그럼 다 켜 두고 기다리면 되겠네!"}}
+   ]
+  },
+  {
+   "battery": 19,
+   "beats": [
+    {"cut": "e13_08", "ko": "\"반대야. 들어오기 전에 큰 가전이랑 전열기구 플러그를 뽑아.\"", "en": "The opposite. Before it comes back, unplug the big appliances and anything that heats.", "zoom": "push",
+     "key": {"ko": "복전 전: 플러그 뽑기", "en": "BEFORE POWER: UNPLUG"},
+     "tts": {"ko": "반대야. 들어오기 전에 큰 가전이랑 전열기구 플러그를 뽑아."},
+     "prompt": "Close-up of Minsu's hands (red hoodie sleeves) pulling the plug of a space heater and a microwave out of a wall outlet in a dim living room, a fridge and a TV with their cords also lying unplugged on the floor, Grandma's cane visible at the edge. Same simple thick black doodle style as the reference, flat colors, no shading, vertical composition, no text, no letters, no watermark", "refs": ["minsu", "livingroom"]},
+    {"cut": "e13_08", "ko": "\"온 동네가 한꺼번에 켜지면 전압이 튀고, 켜져 있던 난로가 그대로 달아올라.\"", "en": "When a whole district switches on at once, the power surges, and a heater left on just starts burning.", "zoom": "in", "sfx": "click",
+     "tts": {"ko": "온 동네가 한꺼번에 켜지면 전압이 튀고, 켜져 있던 난로가 그대로 달아올라."}},
+    {"cut": "e13_09", "ko": "\"냉장고는 비우고 닦아서 켜. 수도는 처음 나오는 물은 그냥 흘려보내.\"", "en": "Empty and wipe the fridge before you turn it on. And let the first water from the tap run out.", "zoom": "push", "sfx": "click",
+     "key": {"ko": "냉장고 닦기, 첫 물 흘리기", "en": "WIPE FRIDGE, FLUSH THE TAP"},
+     "tts": {"ko": "냉장고는 비우고 닦아서 켜. 수도는 처음 나오는 물은 그냥 흘려보내."},
+     "prompt": "Minsu (red hoodie, big round glasses, no hat) wiping the inside of an empty open fridge with a rag by lantern light, Grandma (gray hair bun, half-moon glasses, mustard yellow cardigan, cane) pointing at the kitchen tap with her cane, dim night kitchen. Same simple thick black doodle style as the reference, flat colors, no shading, vertical composition, no text, no letters, no watermark", "refs": ["minsu", "grandma"]}
+   ]
+  },
+  {
+   "battery": 19,
+   "badge": {"ko": "1203호 | DAY 22", "en": "UNIT 1203 | DAY 22"},
+   "beats": [
+    {"cut": "e13_10", "ko": "스무이틀째 아침 10시 14분.", "en": "Day twenty-two, ten fourteen in the morning.", "zoom": "none", "sfx": "sting",
+     "key": {"ko": "DAY 22 | 10:14", "en": "DAY 22, 10:14 AM"},
+     "tts": {"ko": "이십이 일째 아침 열 시 십사 분.", "en": "Day twenty-two, ten fourteen in the morning."},
+     "prompt": "Minsu (red hoodie, big round glasses, no hat) and Grandma (gray hair bun, half-moon glasses, mustard yellow cardigan, cane) standing silently side by side in the middle of a dim gray living room, looking up at a dark ceiling light, blanket half pulled off the window, morning light at the edges. Same simple thick black doodle style as the reference, flat colors, no shading, vertical composition, no text, no letters, no watermark", "refs": ["minsu", "grandma", "livingroom"]},
+    {"cut": "e13_11", "ko": "불이 들어왔어요.", "en": "The lights came on.", "zoom": "push", "sfx": "ding",
+     "prompt": "The same living room suddenly bright, the ceiling light glowing warm yellow with small radiating lines, Minsu (red hoodie, big round glasses, no hat) with both arms raised and mouth wide open, Grandma (gray hair bun, half-moon glasses, mustard yellow cardigan) standing calm with a small smile, both looking up. Same simple thick black doodle style as the reference, flat colors, no shading, vertical composition, no text, no letters, no watermark", "refs": ["minsu", "grandma", "livingroom"]},
+    {"cut": "e13_11", "ko": "둘은 아무 말도 안 했어요. 할머니만 한 번, 끄덕.", "en": "Neither of them said a word. Grandma just nodded, once.", "zoom": "in", "sfx": "sad",
+     "tts": {"ko": "둘은 아무 말도 안 했어요. 할머니만 한 번, 끄덕."}}
+   ]
+  },
+  {
+   "battery": 41,
+   "badge": {"ko": "1203호 | DAY 22", "en": "UNIT 1203 | DAY 22"},
+   "beats": [
+    {"cut": "e13_12", "ko": "수도꼭지에선 뿌연 물이 한참 나왔고, 민수는 배운 대로 흘려보냈어요.", "en": "Cloudy water ran from the tap for a long while, and Minsu let it run, the way he learned.", "zoom": "push", "sfx": "drip",
+     "key": {"ko": "첫 물은 흘려보내기", "en": "LET THE FIRST WATER RUN"},
+     "prompt": "Close-up of a kitchen tap running cloudy brownish water into a sink, Minsu's hand (red hoodie sleeve) resting on the counter beside it, patiently waiting, bright daytime kitchen. Same simple thick black doodle style as the reference, flat colors, no shading, vertical composition, no text, no letters, no watermark", "refs": ["minsu"]},
+    {"cut": "e13_13", "ko": "충전기를 꽂고 41퍼센트. 3주 만에 엄마 목소리.", "en": "Phone plugged in, forty-one percent. Mom's voice, for the first time in three weeks.", "zoom": "in", "sfx": "ding",
+     "key": {"ko": "3주 만의 통화", "en": "FIRST CALL IN 3 WEEKS"},
+     "tts": {"ko": "충전기를 꽂고 사십일 퍼센트. 삼 주 만에 엄마 목소리.", "en": "Phone plugged in, forty-one percent. Mom's voice, for the first time in three weeks."},
+     "prompt": "Minsu (red hoodie, big round glasses, no hat) sitting on the floor against the wall with a charging cable running from the phone at his ear to a wall outlet, eyes squeezed shut, one tear, a tiny smile, bright daytime living room. Same simple thick black doodle style as the reference, flat colors, no shading, vertical composition, no text, no letters, no watermark", "refs": ["minsu", "livingroom"]}
+   ]
+  },
+  {
+   "battery": 41,
+   "badge": {"ko": "1203호 | DAY 22", "en": "UNIT 1203 | DAY 22"},
+   "beats": [
+    {"cut": "81", "ko": "민수의 마지막 생존 점수는,", "en": "Minsu's final survival score:", "zoom": "out",
+     "reuse": "3dd781f4-5172-4a75-aadb-da699b8228c6"},
+    {"cut": "82", "ko": "90점. 첫날은 30점이었죠.", "en": "Ninety. On day one, it was thirty.", "zoom": "push", "sfx": "ding",
+     "tts": {"ko": "구십 점. 첫날은 삼십 점이었죠.", "en": "Ninety. On day one, it was thirty."},
+     "reuse": "f2b041aa-fb95-4a60-8913-2277ba4fda0b",
+     "draw": [
+      {"text": "90", "xy": [540, 580], "size": 280, "fill": [255, 150, 0]},
+      {"text": "/ 100", "xy": [540, 760], "size": 80, "fill": "black"}
+     ]}
+   ]
+  },
+  {
+   "battery": 100,
+   "badge": {"ko": "1203호 | 1년 후", "en": "UNIT 1203 | ONE YEAR LATER"},
+   "beats": [
+    {"cut": "e13_14", "ko": "1년 후. 민수의 냉동실엔 얼린 생수가, 욕조엔 마개가, 서랍엔 라디오와 현금이.", "en": "One year later. Frozen bottles in Minsu's freezer, a plug in the bathtub, a radio and cash in the drawer.", "zoom": "out", "sfx": "whoosh",
+     "key": {"ko": "1년 후", "en": "ONE YEAR LATER"},
+     "tts": {"ko": "일 년 후. 민수의 냉동실엔 얼린 생수가, 욕조엔 마개가, 서랍엔 라디오와 현금이."},
+     "prompt": "A bright tidy apartment kitchen, an open freezer packed with frozen water bottles, next to it an open drawer showing a small battery radio, a flashlight, a stack of folded bills, a hand-crank charger, Minsu (red hoodie, big round glasses, no hat) standing beside it with arms crossed, calm confident face. Same simple thick black doodle style as the reference, flat colors, no shading, vertical composition, no text, no letters, no watermark", "refs": ["minsu"]},
+    {"cut": "e13_15", "ko": "통조림과 캔따개, 봉투와 신문지, 깨끗한 물통, 약 이름 적은 종이.", "en": "Cans and a can opener, bags and newspaper, a clean water jug, a paper list of medicines.", "zoom": "push", "sfx": "click",
+     "key": {"ko": "1203호 체크리스트", "en": "UNIT 1203 CHECKLIST"},
+     "prompt": "A hallway shelf shot straight on, neatly arranged: stacked cans with a manual can opener on top, a roll of large plastic bags, a folded stack of newspapers, a clean blue water jug with a lid, a small folded paper note, a box of batteries, a first-aid pouch, no people. Same simple thick black doodle style as the reference, flat colors, no shading, vertical composition, no text, no letters, no watermark", "refs": ["minsu"]},
+    {"cut": "e13_16", "ko": "그리고 1204호 문 앞엔, 매주 수요일 민수가 들고 가는 저녁.", "en": "And at the door of 1204, the dinner Minsu brings over every Wednesday.", "zoom": "in", "sfx": "ding",
+     "tts": {"ko": "그리고 천이백사 호 문 앞엔, 매주 수요일 민수가 들고 가는 저녁."},
+     "prompt": "Apartment hallway, Minsu (red hoodie, big round glasses, no hat) holding a covered pot with both hands, standing at an open door where Grandma (gray hair bun, half-moon glasses, mustard yellow cardigan, cane) smiles and waves him in, warm light from inside, a small blank nameplate beside the door. Same simple thick black doodle style as the reference, flat colors, no shading, vertical composition, no text, no letters, no watermark", "refs": ["minsu", "grandma"]}
+   ]
+  },
+  {
+   "battery": 100,
+   "badge": {"ko": "1203호 | 시즌 2", "en": "UNIT 1203 | SEASON 2"},
+   "beats": [
+    {"cut": "e13_17", "ko": "그해 가을, 어느 밤. 멀리서 하늘이 번쩍였고,", "en": "That autumn, one night, the sky flashed far away,", "zoom": "push", "sfx": "rumble",
+     "tts": {"ko": "그해 가을, 어느 밤. 멀리서 하늘이 번쩍였고,"},
+     "prompt": "Minsu (red hoodie, big round glasses, no hat) seen from behind at a dark apartment window at night, the city skyline below, a faint pale flash lighting the clouds on the far horizon, the room nearly black. Drawn in a quieter, more serious version of the simple thick black doodle style: muted dark blue and gray palette, no comic expressions, no sweat drops, vertical composition, no text, no letters, no watermark", "refs": ["minsu"]},
+    {"cut": "e13_17", "ko": "사이렌이 울렸어요.", "en": "and the sirens began.", "zoom": "in", "sfx": "siren",
+     "key": {"ko": "시즌 2: 사이렌", "en": "SEASON 2: SIRENS"}},
+    {"cut": "e13_ab", "ko": "민수는, A, 집에 머문다. B, 지하 대피소로 간다. 댓글로!", "en": "Minsu: A, stays home. B, heads for the underground shelter. Comment below!", "zoom": "none", "sfx": "whoosh",
+     "tts": {"ko": "민수는, 에이, 집에 머문다. 비, 지하 대피소로 간다. 댓글로!", "en": "Minsu, A, stays home. B, heads for the underground shelter. Comment below!"},
+     "prompt": "Split vertical composition on a dark night background: left half, Minsu (red hoodie, big round glasses, no hat) sitting still inside a dark apartment with a blanket over the window; right half, Minsu running down a concrete stairwell toward a lit doorway with an arrow sign shape (blank), both halves separated by a thin vertical line, large blank space at the top of each half. Quieter serious version of the simple thick black doodle style, muted palette, vertical composition, no text, no letters, no watermark", "refs": ["minsu"],
+     "draw": [
+      {"text": "A", "xy": [270, 250], "size": 200, "stroke": 10},
+      {"text": "B", "xy": [810, 250], "size": 200, "stroke": 10},
+      {"text": {"ko": "댓글로 A or B!", "en": "Comment A or B!"}, "xy": [540, 1355], "size": 76, "fill": [255, 230, 0], "box": true}
+     ]}
+   ]
+  }
+ ]
+}

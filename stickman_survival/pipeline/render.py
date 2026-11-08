@@ -103,6 +103,7 @@ def build_timeline(spec, lang, assets, work):
         narr.append((aud, t))
         for bi, b in enumerate(scene["beats"]):
             beats_out.append(dict(b, scene=si, batt=scene.get("battery"),
+                                  badge=(scene.get("badge") or {}).get(lang),   # 장면별 배지 덮어쓰기 (13화 DAY 22, 1년 후)
                                   t0=(start if bi == 0 else t + starts[bi])))
         t = t + d + gap
     total = t - gap + spec.get("tail", 1.8)
@@ -129,7 +130,7 @@ def wrap(d, text, f, maxw):
 def overlay(spec, lang, assets, b, subtitle):
     im = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
-    badge = spec["badge"][lang]
+    badge = b.get("badge") or spec["badge"][lang]
     bf = font(assets, "bhs", 54)
     bw = d.textlength(badge, font=bf) + 70
     d.rounded_rectangle((40, 60, 40 + bw, 160), 20, fill=(0, 0, 0, 220))
