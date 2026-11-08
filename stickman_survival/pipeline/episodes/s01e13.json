@@ -227,7 +227,7 @@
      "sfx": "pop",
      "tts": {
       "ko": "민수가 벌떡 일어났어요. 그럼 다 켜 두고 기다리면 되겠네!",
-      "en": "Minsu jumped up and said, so I just leave everything switched on and wait!"
+      "en": "Minsu jumped to his feet and shouted, so I just leave everything switched on and wait!"
      }
     }
    ]
@@ -304,7 +304,7 @@
       "en": "DAY 22, 10:14 AM"
      },
      "tts": {
-      "ko": "이십이 일째 아침 열 시 십사 분.",
+      "ko": "이십이 일째 아침, 열 시 십사 분.",
       "en": "Day twenty-two, ten fourteen in the morning."
      },
      "prompt": "Minsu (red hoodie, big round glasses, no hat) and Grandma (gray hair bun, half-moon glasses, mustard yellow cardigan, cane) standing silently side by side in the middle of a dim gray living room, looking up at a dark ceiling light, blanket half pulled off the window, morning light at the edges. Same simple thick black doodle style as the reference, flat colors, no shading, vertical composition, no text, no letters, no watermark",
@@ -395,11 +395,10 @@
    },
    "beats": [
     {
-     "cut": "81",
+     "cut": "e13_13",
      "ko": "민수의 마지막 생존 점수는,",
      "en": "Minsu's final survival score:",
-     "zoom": "out",
-     "reuse": "3dd781f4-5172-4a75-aadb-da699b8228c6"
+     "zoom": "push"
     },
     {
      "cut": "82",
@@ -597,7 +596,7 @@
    "4": "cf25318a-95af-4910-92ff-544152fec752",
    "5": "a8dda658-032a-447c-9951-19ccf7efd28e",
    "6": "ec6ab4ff-c8a9-4860-9b56-fc8fb0ab0bdc",
-   "7": "62cb09ce-b311-4255-8ba7-9c2c761a9c22",
+   "7": "c4e18fef-49b9-4a0b-b837-2854277a74f1",
    "8": "0e89e623-aee8-42aa-aed5-2098ce1adee8",
    "9": "bec3ca37-c16a-4b8b-9edb-0efe820664e8",
    "10": "daa7f212-5116-4051-8c1b-d1f0a1566637",
@@ -608,7 +607,7 @@
    "2": "f27c30cf-4c0a-49a4-bbab-32b79d7a3e71",
    "3": "317c4655-08b7-4f6d-a11f-41da0a792015",
    "4": "2b49da60-b63e-48fc-80c9-8dd4711b0def",
-   "5": "b31060f2-b31e-41be-a11d-6ae93db5de10",
+   "5": "5d07fe00-c55f-4c2a-8762-e0096566c7a2",
    "6": "115abc24-86b7-4c77-982e-99a490a59c72",
    "7": "50604a91-3341-46f0-b184-5c2e318c251c",
    "8": "ad30b618-21e4-473c-bd49-5eac6769dc29",
