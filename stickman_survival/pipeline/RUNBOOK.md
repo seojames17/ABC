@@ -40,6 +40,7 @@ cd ~/pipe && curl -sf -O $R/pipeline/render.py && curl -sf -O $R/pipeline/verify
 cd assets/fonts
 curl -sfL -o NotoSansKR.ttf "https://cdn.jsdelivr.net/gh/google/fonts@main/ofl/notosanskr/NotoSansKR%5Bwght%5D.ttf"
 curl -sfL -o BlackHanSans.ttf "https://cdn.jsdelivr.net/gh/google/fonts@main/ofl/blackhansans/BlackHanSans-Regular.ttf"
+curl -sfL -o NotoSerifKR.ttf "https://cdn.jsdelivr.net/gh/google/fonts@main/ofl/notoserifkr/NotoSerifKR%5Bwght%5D.ttf"   # 시즌 2 명조
 cd .. && bash ../make_sfx.sh       # assets/sfx/*.wav 생성
 ```
 

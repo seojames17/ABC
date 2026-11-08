@@ -28,14 +28,21 @@ def nchars(text):
     return len(_CHAR_RE.findall(text or ""))
 
 
+_FONTS = {"bhs": "BlackHanSans.ttf", "noto": "NotoSansKR.ttf", "serif": "NotoSerifKR.ttf"}
+
+
 def font(assets, name, size, bold=False):
-    path = os.path.join(assets, "fonts", "BlackHanSans.ttf" if name == "bhs" else "NotoSansKR.ttf")
+    # "serif"(Noto Serif KR, 가장 굵게)는 시즌 2의 차분한 톤용. 설계도 최상위나 장면·비트에 "font": "serif"
+    path = os.path.join(assets, "fonts", _FONTS.get(name, "NotoSansKR.ttf"))
     f = ImageFont.truetype(path, size)
-    if bold:
+    if bold or name == "serif":
         try:
-            f.set_variation_by_name("Bold")
+            f.set_variation_by_name("Black" if name == "serif" else "Bold")
         except Exception:
-            pass
+            try:
+                f.set_variation_by_name("Bold")
+            except Exception:
+                pass
     return f
 
 
@@ -104,6 +111,7 @@ def build_timeline(spec, lang, assets, work):
         for bi, b in enumerate(scene["beats"]):
             beats_out.append(dict(b, scene=si, batt=scene.get("battery"),
                                   badge=(scene.get("badge") or {}).get(lang),   # 장면별 배지 덮어쓰기 (13화 DAY 22, 1년 후)
+                                  font=b.get("font") or scene.get("font"),
                                   t0=(start if bi == 0 else t + starts[bi])))
         t = t + d + gap
     total = t - gap + spec.get("tail", 1.8)
@@ -131,7 +139,8 @@ def overlay(spec, lang, assets, b, subtitle):
     im = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
     badge = b.get("badge") or spec["badge"][lang]
-    bf = font(assets, "bhs", 54)
+    kname = b.get("font") or spec.get("font") or "bhs"   # 강조 글꼴: bhs(시즌 1) / serif(시즌 2)
+    bf = font(assets, kname, 54)
     bw = d.textlength(badge, font=bf) + 70
     d.rounded_rectangle((40, 60, 40 + bw, 160), 20, fill=(0, 0, 0, 220))
     d.text((40 + bw / 2, 110), badge, font=bf, fill="white", anchor="mm")
@@ -144,15 +153,15 @@ def overlay(spec, lang, assets, b, subtitle):
         d.rectangle((x0 + 110, y0 + 25, x0 + 120, y0 + 45), fill="white")
         if p > 0:
             d.rectangle((x0 + 8, y0 + 18, x0 + 8 + int(94 * p / 100), y0 + 52), fill=col)
-        d.text((x0 + 140, 110), f"{p}%", font=font(assets, "bhs", 56), fill="white", anchor="lm")
+        d.text((x0 + 140, 110), f"{p}%", font=font(assets, kname, 56), fill="white", anchor="lm")
     key = (b.get("key") or {}).get(lang)
     if key:
         # 화면 폭(1000px)에 맞을 때까지 글자를 줄이고, 그래도 넘치면 두 줄로 나눈다 (영어 문구가 잘린 적 있음)
         size = 84 if len(key) <= 16 else 70
-        kf = font(assets, "bhs", size)
+        kf = font(assets, kname, size)
         while d.textlength(key, font=kf) > 1000 and size > 58:
             size -= 2
-            kf = font(assets, "bhs", size)
+            kf = font(assets, kname, size)
         lines = [key] if d.textlength(key, font=kf) <= 1000 else wrap(d, key, kf, 1000)
         y = 300 - (len(lines) - 1) * size * 0.55
         for ln in lines:
@@ -160,7 +169,7 @@ def overlay(spec, lang, assets, b, subtitle):
             y += size * 1.1
     for o in b.get("draw", []):
         text = o["text"][lang] if isinstance(o["text"], dict) else o["text"]
-        of = font(assets, "bhs", o.get("size", 80))
+        of = font(assets, kname, o.get("size", 80))
         x, y = o["xy"]
         if o.get("box"):
             tw = d.textlength(text, font=of)
