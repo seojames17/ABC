@@ -19,16 +19,16 @@
  "scene_gap": 0.3,
  "tail": 1.8,
  "speed": {
-  "ko": 1.3,
-  "en": 1.4
+  "ko": 1.38,
+  "en": 1.5
  },
  "_note": "12화 투표 결과가 비어 있어 B(이웃과 베란다 그늘 공동 보관)를 '민수의 선택'으로 썼다. 결과가 A로 들어오면 장면 1~2만 교체(쓰레기장에 버림 → 벌레·이웃 항의 → 할머니가 다시 가져오게 함). 장면 7부터 DAY 22, 장면 9부터 1년 후라 배지는 장면별 badge로 덮어쓴다. 장면 11(시즌 2 예고)은 font serif(Noto Serif KR)로 시즌 2 글꼴을 시험한다.",
  "refs_legend": {
   "minsu": "719dd12e-5a62-4b7e-8824-e36ae4648f3c",
   "minsu_pose": "406af5ab-9d83-4bb3-b115-bbb5e2c5c112",
   "grandma": "f3ea0e5e-c389-403b-a446-0bd473b0f738",
-  "balcony": "<e13_02 생성 후 그 job id>",
-  "livingroom": "<e13_07 생성 후 그 job id>"
+  "balcony": "b8b54204-13cd-45f8-a130-5a1b256a1c02",
+  "livingroom": "4c2567cd-3120-422b-b266-dbb46326a71e"
  },
  "scenes": [
   {
@@ -51,7 +51,8 @@
      "prompt": "Minsu (red hoodie, big round glasses, no hat) standing in a dim apartment bathroom doorway, pinching his nose, in front of a plastic bin whose lid is pushed up by a pile of tightly tied plastic bags spilling over the rim, a few wavy stink lines rising, dim daylight. Same simple thick black doodle style as the reference, flat colors, no shading, vertical composition, no text, no letters, no watermark",
      "refs": [
       "minsu"
-     ]
+     ],
+     "job": "ac89ef4b-c6e0-4b7a-bb02-5638f63e2385"
     },
     {
      "cut": "e13_01",
@@ -84,7 +85,8 @@
      "prompt": "A shaded apartment balcony seen from inside, three neighbors and Minsu carrying lidded plastic bins and tied bags: Minsu (red hoodie, big round glasses, no hat), a middle-aged man in a gray sweater and short dark hair, a young woman in a green windbreaker with long hair, a small boy in a yellow shirt. Only Minsu wears a red hoodie and glasses. Daylight outside, the balcony side is in shadow. Same simple thick black doodle style as the reference, flat colors, no shading, vertical composition, no text, no letters, no watermark",
      "refs": [
       "minsu"
-     ]
+     ],
+     "job": "b8b54204-13cd-45f8-a130-5a1b256a1c02"
     },
     {
      "cut": "e13_03",
@@ -96,7 +98,8 @@
      "refs": [
       "minsu",
       "balcony"
-     ]
+     ],
+     "job": "83579064-1836-4df8-979e-ece12f06aade"
     },
     {
      "cut": "e13_03",
@@ -127,7 +130,8 @@
       "grandma",
       "minsu",
       "balcony"
-     ]
+     ],
+     "job": "d26fd879-8ee6-45d9-abde-d893101b2ff5"
     },
     {
      "cut": "e13_05",
@@ -145,7 +149,8 @@
      "prompt": "A neat row of closed lidded plastic bins lined up along the shaded wall of the balcony, each bin with a small chalk mark, a hand-drawn sun on the far side of the balcony with the shadow line clearly between sun and bins, no people. Same simple thick black doodle style as the reference, flat colors, no shading, vertical composition, no text, no letters, no watermark",
      "refs": [
       "balcony"
-     ]
+     ],
+     "job": "611c226e-0fd2-4ec8-9890-0a5bc95f8b69"
     },
     {
      "cut": "e13_05",
@@ -176,7 +181,8 @@
      "refs": [
       "minsu",
       "balcony"
-     ]
+     ],
+     "job": "87a04e89-a565-4108-a5b5-2dd67758276d"
     },
     {
      "cut": "e13_06",
@@ -210,7 +216,8 @@
      "refs": [
       "grandma",
       "minsu"
-     ]
+     ],
+     "job": "4c2567cd-3120-422b-b266-dbb46326a71e"
     },
     {
      "cut": "e13_07",
@@ -219,7 +226,8 @@
      "zoom": "push",
      "sfx": "pop",
      "tts": {
-      "ko": "민수가 벌떡 일어났어요. 그럼 다 켜 두고 기다리면 되겠네!"
+      "ko": "민수가 벌떡 일어났어요. 그럼 다 켜 두고 기다리면 되겠네!",
+      "en": "Minsu jumped up and said, so I just leave everything switched on and wait!"
      }
     }
    ]
@@ -243,7 +251,8 @@
      "refs": [
       "minsu",
       "livingroom"
-     ]
+     ],
+     "job": "5fdd2090-7f9f-4a99-9dbf-265021578860"
     },
     {
      "cut": "e13_08",
@@ -272,7 +281,8 @@
      "refs": [
       "minsu",
       "grandma"
-     ]
+     ],
+     "job": "00c4ecd2-0d43-4257-9d73-9d0e0077cd29"
     }
    ]
   },
@@ -302,7 +312,8 @@
       "minsu",
       "grandma",
       "livingroom"
-     ]
+     ],
+     "job": "a71b28fa-3e5d-4137-8404-e7d752438fdb"
     },
     {
      "cut": "e13_11",
@@ -315,7 +326,8 @@
       "minsu",
       "grandma",
       "livingroom"
-     ]
+     ],
+     "job": "abb5e362-8ec9-4de4-80a8-5224723ad304"
     },
     {
      "cut": "e13_11",
@@ -324,7 +336,7 @@
      "zoom": "in",
      "sfx": "sad",
      "tts": {
-      "ko": "둘은 아무 말도 안 했어요. 할머니만 한 번, 끄덕."
+      "ko": "둘은 아무 말도 안 했어요. 할머니만 한 번, 고개를 끄덕였죠."
      }
     }
    ]
@@ -349,7 +361,8 @@
      "prompt": "Close-up of a kitchen tap running cloudy brownish water into a sink, Minsu's hand (red hoodie sleeve) resting on the counter beside it, patiently waiting, bright daytime kitchen. Same simple thick black doodle style as the reference, flat colors, no shading, vertical composition, no text, no letters, no watermark",
      "refs": [
       "minsu"
-     ]
+     ],
+     "job": "7bc8ad00-3545-4008-bd20-1bf073abbcb4"
     },
     {
      "cut": "e13_13",
@@ -369,7 +382,8 @@
      "refs": [
       "minsu",
       "livingroom"
-     ]
+     ],
+     "job": "68ad30fc-6e7d-406c-97f5-7f2c79edc56d"
     }
    ]
   },
@@ -448,7 +462,8 @@
      "prompt": "A bright tidy apartment kitchen, an open freezer packed with frozen water bottles, next to it an open drawer showing a small battery radio, a flashlight, a stack of folded bills, a hand-crank charger, Minsu (red hoodie, big round glasses, no hat) standing beside it with arms crossed, calm confident face. Same simple thick black doodle style as the reference, flat colors, no shading, vertical composition, no text, no letters, no watermark",
      "refs": [
       "minsu"
-     ]
+     ],
+     "job": "06d4915c-4495-418d-a878-8b9747588414"
     },
     {
      "cut": "e13_15",
@@ -463,7 +478,8 @@
      "prompt": "A hallway shelf shot straight on, neatly arranged: stacked cans with a manual can opener on top, a roll of large plastic bags, a folded stack of newspapers, a clean blue water jug with a lid, a small folded paper note, a box of batteries, a first-aid pouch, no people. Same simple thick black doodle style as the reference, flat colors, no shading, vertical composition, no text, no letters, no watermark",
      "refs": [
       "minsu"
-     ]
+     ],
+     "job": "d49c4a31-9a73-4c17-8108-afee0de7eae1"
     },
     {
      "cut": "e13_16",
@@ -478,7 +494,8 @@
      "refs": [
       "minsu",
       "grandma"
-     ]
+     ],
+     "job": "71d8ed4e-9447-4c37-b1da-820b1489b966"
     }
    ]
   },
@@ -501,7 +518,8 @@
      "prompt": "Minsu (red hoodie, big round glasses, no hat) seen from behind at a dark apartment window at night, the city skyline below, a faint pale flash lighting the clouds on the far horizon, the room nearly black. Drawn in a quieter, more serious version of the simple thick black doodle style: muted dark blue and gray palette, no comic expressions, no sweat drops, vertical composition, no text, no letters, no watermark",
      "refs": [
       "minsu"
-     ]
+     ],
+     "job": "9dfc12e7-7856-454f-864a-e2dc11227adb"
     },
     {
      "cut": "e13_17",
@@ -564,10 +582,39 @@
        ],
        "box": true
       }
-     ]
+     ],
+     "job": "4d279a59-d2f9-49cd-b359-d13501bc671e"
     }
    ],
    "font": "serif"
   }
- ]
+ ],
+ "audio_jobs": {
+  "ko": {
+   "1": "2ddcd477-12ef-4bd6-83ca-f2ee014fb939",
+   "2": "a2df0886-11d5-4a6e-8222-ed621ec88366",
+   "3": "07ee3d07-7cac-4fca-965a-7e73aecca917",
+   "4": "cf25318a-95af-4910-92ff-544152fec752",
+   "5": "a8dda658-032a-447c-9951-19ccf7efd28e",
+   "6": "ec6ab4ff-c8a9-4860-9b56-fc8fb0ab0bdc",
+   "7": "62cb09ce-b311-4255-8ba7-9c2c761a9c22",
+   "8": "0e89e623-aee8-42aa-aed5-2098ce1adee8",
+   "9": "bec3ca37-c16a-4b8b-9edb-0efe820664e8",
+   "10": "daa7f212-5116-4051-8c1b-d1f0a1566637",
+   "11": "a4e414b3-9a3e-4669-a24d-efac06e4b345"
+  },
+  "en": {
+   "1": "af1ec99b-596e-4572-b54e-c00b694f417f",
+   "2": "f27c30cf-4c0a-49a4-bbab-32b79d7a3e71",
+   "3": "317c4655-08b7-4f6d-a11f-41da0a792015",
+   "4": "2b49da60-b63e-48fc-80c9-8dd4711b0def",
+   "5": "b31060f2-b31e-41be-a11d-6ae93db5de10",
+   "6": "115abc24-86b7-4c77-982e-99a490a59c72",
+   "7": "50604a91-3341-46f0-b184-5c2e318c251c",
+   "8": "ad30b618-21e4-473c-bd49-5eac6769dc29",
+   "9": "436158ef-c9fb-44fc-985c-04066b02e621",
+   "10": "e4c0a661-90e1-48f4-826d-c19eaeed554a",
+   "11": "3b56ecb5-c9ad-42e2-961b-47dc729e19f8"
+  }
+ }
 }
