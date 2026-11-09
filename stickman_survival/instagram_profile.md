@@ -120,13 +120,13 @@ B) 밤에 쓸 손전등
 
 ### 영어 계정
 - 이름 후보: `Unit 1203 | Emergency Prep` (권장) / `Unit 1203 | Survival Comic` / `Unit 1203 | Prep Comic Daily`
-- 소개 (183자, 한도 150):
+- 소개 (149자, 한도 150):
 
 ```
-🚨 The sirens went off. What does Minsu in Unit 1203 do now?
+🚨 Sirens at night. What does Minsu do?
 🧓 Real emergency prep from the lady next door
-🗳️ Your A/B vote shapes the next episode
-📼 S1 Blackout: 13 eps · Made with AI
+🗳️ Your A/B vote picks what's next
+📼 S1 Blackout: done · AI-made
 ```
 
 ### 같이 하면 좋은 것 (글로 못 고치는 부분)
