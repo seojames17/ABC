@@ -1,94 +1,444 @@
 {
- "title": {"ko": "1203호 S2 1화 — 사이렌 첫날: 평탄한 1분", "en": "Unit 1203 S2 Ep.1 — Night of the Sirens: One Flat Minute"},
- "badge": {"ko": "1203호 S2 | DAY 0", "en": "UNIT 1203 S2 | DAY 0"},
+ "title": {
+  "ko": "1203호 S2 1화 — 사이렌 첫날: 평탄한 1분",
+  "en": "Unit 1203 S2 Ep.1 — Night of the Sirens: One Flat Minute"
+ },
+ "badge": {
+  "ko": "1203호 S2 | DAY 0",
+  "en": "UNIT 1203 S2 | DAY 0"
+ },
  "font": "serif",
- "voice": {"model": "seed_audio", "voice_id": "1ad38ba4-9cc4-4f2f-9fde-b0fefdf67ae5", "voice_name": "Gideon", "speech_rate": {"ko": 10, "en": 5}},
+ "voice": {
+  "model": "seed_audio",
+  "voice_id": "1ad38ba4-9cc4-4f2f-9fde-b0fefdf67ae5",
+  "voice_name": "Gideon",
+  "speech_rate": {
+   "ko": 10,
+   "en": 5
+  }
+ },
  "lead_in": 0.4,
  "scene_gap": 0.5,
  "tail": 2.0,
- "speed": {"ko": 1.15, "en": 1.2},
+ "speed": {
+  "ko": 1.22,
+  "en": 1.4
+ },
  "_note": "시즌 2 첫 화. 13화 투표 결과가 비어 있어 A(집에 머문다)를 '민수의 선택'으로 썼다. 참고 시트는 시즌 2용(s2_minsu, s2_grandma)만 쓴다. 효과음은 sting/rumble/siren/radio/click/thunk/hum만.",
  "refs_legend": {
   "minsu": "3be1e101-6989-4400-9688-7c7c0650c115",
   "grandma": "22c13de9-c43e-404d-8eec-70f1d222a3df",
   "room": "9dfc12e7-7856-454f-864a-e2dc11227adb",
-  "hall": "<e201_04 생성 후>"
+  "hall": "f91485a0-acfc-4bfe-883d-f80f0c82f54c"
  },
  "scenes": [
-  {"battery": 100, "beats": [
-   {"cut": "e201_01", "ko": "사이렌이 울린 지 40초. 민수는 창가에 서 있었어요.", "en": "Forty seconds since the sirens started. Minsu was standing at the window.", "zoom": "push", "sfx": "siren",
-    "key": {"ko": "시즌 2 | 사이렌 첫날", "en": "SEASON 2: NIGHT OF THE SIRENS"},
-    "tts": {"ko": "사이렌이 울린 지 사십 초. 민수는 창가에 서 있었어요."},
-    "reuse": "9dfc12e7-7856-454f-864a-e2dc11227adb"},
-   {"cut": "e201_01", "ko": "1년 전 3주 정전을 버틴 민수지만, 이 소리는 처음이었죠.", "en": "He had lived through a three-week blackout a year ago. This sound was new.", "zoom": "in",
-    "tts": {"ko": "일 년 전 삼 주 정전을 버틴 민수지만, 이 소리는 처음이었죠."}}
-  ]},
-  {"battery": 100, "beats": [
-   {"cut": "e201_02", "ko": "민수의 선택은 A, 집에 머문다.", "en": "Minsu's choice: A, stay home.", "zoom": "none", "sfx": "click",
-    "key": {"ko": "민수의 선택: A", "en": "MINSU'S CHOICE: A"},
-    "tts": {"ko": "민수의 선택은 에이, 집에 머문다.", "en": "Minsu's choice, A, stay home."},
-    "prompt": "Minsu (dark brick-red hoodie, big round glasses, no hat) sitting on the edge of a sofa in a dim living room at night, hunched over his phone, the phone screen the only bright light on his face, a blanket half hung over the window behind him. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, dark brick red, one cold phone-screen light), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no watermark", "refs": ["minsu", "room"]},
-   {"cut": "e201_02", "ko": "휴대폰엔 벌써 소문이 떴어요. 훈련이래, 오발령이래.", "en": "The phone was already full of rumors. A drill, they said. A false alarm.", "zoom": "push"}
-  ]},
-  {"battery": 100, "beats": [
-   {"cut": "e201_03", "ko": "민수는 거실 불을 다 켜고, 창문을 활짝 열어 하늘을 내다봤어요.", "en": "Minsu turned on every light in the living room and threw the window wide open to look at the sky.", "zoom": "push", "sfx": "rumble",
-    "prompt": "Minsu (dark brick-red hoodie, big round glasses, no hat) leaning out of a wide-open apartment window at night, the living room behind him fully lit with warm ceiling light spilling out, the dark city below, a faint pale flash on the far horizon. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, dark brick red, warm amber room light), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no watermark", "refs": ["minsu", "room"]}
-  ]},
-  {"battery": 100, "beats": [
-   {"cut": "e201_04", "ko": "문 두드리는 소리. 할머니였어요. 가방을 메고, 라디오를 들고.", "en": "A knock at the door. It was Grandma, with a bag on her shoulder and a radio in her hand.", "zoom": "push", "sfx": "thunk",
-    "prompt": "Dim apartment hallway at night lit by one amber emergency light, the grandma (gray hair bun, half-moon glasses, muted ochre cardigan, cane) standing at an open door with a small packed backpack on her shoulder and a battery radio in her hand, calm steady face; Minsu (dark brick-red hoodie, big round glasses) in the doorway, the bright room behind him. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, muted ochre, dark brick red, one warm amber light), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no watermark", "refs": ["grandma", "minsu"]},
-   {"cut": "e201_05", "ko": "\"불 꺼. 창문 닫고.\"", "en": "Lights off, she said. And close the window.", "zoom": "in",
-    "tts": {"ko": "불 꺼. 창문 닫고."},
-    "prompt": "Close-up of the grandma (gray hair bun, half-moon glasses, muted ochre cardigan) looking straight ahead with a stern, steady face, eyes narrowed slightly, lit from one side by warm amber light, dark hallway background. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette, soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no watermark", "refs": ["grandma", "hall"]}
-  ]},
-  {"battery": 100, "beats": [
-   {"cut": "e201_06", "ko": "\"잘 들어. 평탄하게 1분이면 경계경보. 준비하라는 거야.\"", "en": "Listen, she said. One flat minute of siren is an alert warning. It means get ready.", "zoom": "push", "sfx": "radio",
-    "key": {"ko": "평탄한 1분 = 경계경보, 준비", "en": "ONE FLAT MINUTE = ALERT, GET READY"},
-    "tts": {"ko": "잘 들어. 평탄하게 일 분이면 경계경보. 준비하라는 거야."},
-    "prompt": "Close-up of the grandma's hand holding a small battery radio up near her ear in a dark living room, its dial faintly lit, Minsu (dark brick-red hoodie, big round glasses) listening in the background in shadow, the ceiling light now off, only a thin amber glow from the hallway. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette, soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no watermark", "refs": ["grandma", "minsu", "room"]},
-   {"cut": "e201_06", "ko": "\"물결치듯 오르내리면 공습경보. 그땐 바로 지하야.\"", "en": "If it rises and falls like a wave, that's an air-raid warning. Then you go underground, right away.", "zoom": "in",
-    "key": {"ko": "오르내리는 사이렌 = 공습경보, 바로 지하", "en": "RISING, FALLING SIREN = AIR RAID, GO DOWN"},
-    "tts": {"ko": "물결치듯 오르내리면 공습경보. 그땐 바로 지하야."}}
-  ]},
-  {"battery": 100, "beats": [
-   {"cut": "e201_07", "ko": "민수는 소문 대신 재난문자를 열었어요. 경계경보 발령, 대피 준비.", "en": "Minsu closed the rumors and opened the emergency alert. Alert warning issued. Prepare to evacuate.", "zoom": "push", "sfx": "click",
-    "key": {"ko": "소문 말고 공식 (시즌 1 복습)", "en": "OFFICIAL, NOT RUMORS (S1 REVIEW)"},
-    "prompt": "Close-up of Minsu's hands (dark brick-red hoodie sleeves) holding a phone in a dark room, the screen showing a plain emergency alert banner with a bold warning triangle icon and empty text lines, no readable text, the cold screen light on his hands. Same simple thick black line stick-figure design as the reference, drawn quietly and seriously: muted palette, soft heavy shadows, no comic symbols, cinematic vertical composition, no text, no letters, no watermark", "refs": ["minsu"]}
-  ]},
-  {"battery": 100, "beats": [
-   {"cut": "e201_08", "ko": "\"경계경보엔 할 일이 있어. 아이와 노인부터 대피 준비, 불 날 것 치우고, 밤이면 불빛 안 새게.\"", "en": "An alert warning has its own list, she said. Children and the elderly get ready first. Put away anything that can catch fire. And at night, let no light leak out.", "zoom": "push",
-    "key": {"ko": "경계경보 = 준비하는 시간", "en": "ALERT WARNING = TIME TO PREPARE"},
-    "tts": {"ko": "경계경보엔 할 일이 있어. 아이와 노인부터 대피 준비, 불 날 것 치우고, 밤이면 불빛 안 새게."},
-    "prompt": "In a dark living room with the blanket now fully covering the window, the grandma (gray hair bun, half-moon glasses, muted ochre cardigan, cane) stands and points with her cane at a small packed backpack set by the door, Minsu (dark brick-red hoodie, big round glasses) standing beside her, a single small battery lantern on the floor as the only light. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, muted ochre, dark brick red, one warm amber light), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no watermark", "refs": ["grandma", "minsu", "room"]}
-  ]},
-  {"battery": 100, "beats": [
-   {"cut": "e201_09", "ko": "민수는 불을 끄고, 창문에서 떨어진 안쪽 벽에 앉아 라디오를 켰어요.", "en": "Minsu turned off the lights, sat against the inner wall away from the window, and switched on the radio.", "zoom": "push", "sfx": "radio",
-    "key": {"ko": "오늘 밤 할 일: 듣기", "en": "TONIGHT'S ONE TASK: LISTEN"},
-    "prompt": "Minsu (dark brick-red hoodie, big round glasses, no hat) sitting on the floor with his back against an inner wall far from the covered window, knees up, a small battery radio beside him glowing faintly, the room almost completely dark, a thin line of blue night light at the edge of the blanket. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, dark brick red, one faint amber radio glow), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no watermark", "refs": ["minsu", "room"]},
-   {"cut": "e201_09", "ko": "오늘 밤 할 수 있는 건 이거 하나예요. 듣는 것.", "en": "Tonight there is one thing he can do. Listen.", "zoom": "in"}
-  ]},
-  {"battery": 100, "beats": [
-   {"cut": "e201_sc", "ko": "민수의 준비 점수는,", "en": "Minsu's readiness score:", "zoom": "push",
-    "tts": {"en": "Minsu's readiness score,"},
-    "prompt": "A plain dark slate-gray wall with a single blank rectangular signboard hanging on it, lit from above by one weak amber lamp, the board surface empty, nothing else in frame. Simple thick black line drawing, quiet and serious, muted palette, soft heavy shadows, no text, no letters, no numbers, no watermark", "refs": ["room"]},
-   {"cut": "e201_sc", "ko": "40점.", "en": "Forty.", "zoom": "in", "sfx": "sting",
-    "tts": {"ko": "사십 점.", "en": "Forty."},
-    "draw": [{"text": "40", "xy": [540, 760], "size": 260, "fill": [235, 200, 120]}, {"text": "/ 100", "xy": [540, 930], "size": 70, "fill": [200, 200, 200]}]}
-  ]},
-  {"battery": 100, "beats": [
-   {"cut": "e201_10", "ko": "새벽 4시. 라디오가 말했어요. 경계경보 해제.", "en": "Four in the morning. The radio spoke. Alert warning lifted.", "zoom": "push", "sfx": "radio",
-    "key": {"ko": "04:00 경계경보 해제", "en": "04:00 ALERT LIFTED"},
-    "tts": {"ko": "새벽 네 시. 라디오가 말했어요. 경계경보 해제."},
-    "prompt": "The same dark living room at the first gray light of dawn, the blanket pulled slightly aside letting in pale blue-gray light, Minsu (dark brick-red hoodie, big round glasses) and the grandma (gray hair bun, half-moon glasses, muted ochre cardigan) both sitting on the floor by the small radio, tired, looking at it. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (pale dawn blue, slate gray, muted ochre, dark brick red), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no watermark", "refs": ["minsu", "grandma", "room"]},
-   {"cut": "e201_ab", "ko": "민수는, A, 할머니처럼 가방을 싼다. B, 평소대로 출근한다. 댓글로.", "en": "Minsu: A, packs a bag like Grandma. B, goes to work as usual. Comment below.", "zoom": "none", "sfx": "click",
-    "tts": {"ko": "민수는, 에이, 할머니처럼 가방을 싼다. 비, 평소대로 출근한다. 댓글로.", "en": "Minsu, A, packs a bag like Grandma. B, goes to work as usual. Comment below."},
-    "prompt": "Split vertical composition divided by a thin vertical line on a dark slate background: left half, Minsu (dark brick-red hoodie, big round glasses) kneeling on the floor packing water bottles and a flashlight into an open backpack by lantern light; right half, the same Minsu in a gray coat over the hoodie standing at a bus stop in pale morning light with a work bag, looking at his phone. Large empty dark space at the top of each half. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette, soft heavy shadows, no exaggerated expressions, no comic symbols, vertical composition, no text, no letters, no watermark", "refs": ["minsu"],
-    "draw": [{"text": "A", "xy": [270, 250], "size": 200, "stroke": 8}, {"text": "B", "xy": [810, 250], "size": 200, "stroke": 8}, {"text": {"ko": "댓글로 A or B", "en": "Comment A or B"}, "xy": [540, 1355], "size": 70, "fill": [235, 200, 120], "box": true}]}
-  ]},
-  {"battery": 100, "beats": [
-   {"cut": "e201_11", "ko": "다음 화, 사이렌 다음 날. 아무 일 없다는 듯한 아침.", "en": "Next time: the day after the sirens. A morning that pretends nothing happened.", "zoom": "out", "sfx": "sting",
-    "key": {"ko": "NEXT: DAY 1", "en": "NEXT: DAY 1"},
-    "prompt": "A pale gray morning street below an apartment block, a few small stick-figure commuters in dark coats walking toward a bus stop as if it were any other day, seen from above from a window, Minsu (dark brick-red hoodie, big round glasses) small in the foreground at the window looking down. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (pale gray, slate, dark brick red), soft shadows, no exaggerated expressions, no comic symbols, cinematic vertical composition, no text, no letters, no watermark", "refs": ["minsu"]}
-  ]}
- ]
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e201_01",
+     "ko": "사이렌이 울린 지 40초. 민수는 창가에 서 있었어요.",
+     "en": "Forty seconds since the sirens started. Minsu was standing at the window.",
+     "zoom": "push",
+     "sfx": "siren",
+     "key": {
+      "ko": "시즌 2 | 사이렌 첫날",
+      "en": "SEASON 2: NIGHT OF THE SIRENS"
+     },
+     "tts": {
+      "ko": "사이렌이 울린 지 사십 초. 민수는 창가에 서 있었어요."
+     },
+     "reuse": "9dfc12e7-7856-454f-864a-e2dc11227adb"
+    },
+    {
+     "cut": "e201_01",
+     "ko": "1년 전 3주 정전을 버틴 민수지만, 이 소리는 처음이었죠.",
+     "en": "He had lived through a three-week blackout a year ago. This sound was new.",
+     "zoom": "in",
+     "tts": {
+      "ko": "일 년 전 삼 주 정전을 버틴 민수지만, 이 소리는 처음이었죠."
+     }
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e201_02",
+     "ko": "민수의 선택은 A, 집에 머문다.",
+     "en": "Minsu's choice: A, stay home.",
+     "zoom": "none",
+     "sfx": "click",
+     "key": {
+      "ko": "민수의 선택: A",
+      "en": "MINSU'S CHOICE: A"
+     },
+     "tts": {
+      "ko": "민수의 선택은 에이, 집에 머문다.",
+      "en": "Minsu's choice, A, stay home."
+     },
+     "prompt": "Minsu (dark brick-red hoodie, big round glasses, no hat) sitting on the edge of a sofa in a dim living room at night, hunched over his phone, the phone screen the only bright light on his face, a blanket half hung over the window behind him. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, dark brick red, one cold phone-screen light), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no watermark",
+     "refs": [
+      "minsu",
+      "room"
+     ],
+     "job": "cdd7f9a0-5388-4655-a806-589f72075c46"
+    },
+    {
+     "cut": "e201_02",
+     "ko": "휴대폰엔 벌써 소문이 떴어요. 훈련이래, 오발령이래.",
+     "en": "The phone was already full of rumors. A drill, they said. A false alarm.",
+     "zoom": "push"
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e201_03",
+     "ko": "민수는 거실 불을 다 켜고, 창문을 활짝 열어 하늘을 내다봤어요.",
+     "en": "Minsu turned on every light in the living room and threw the window wide open to look at the sky.",
+     "zoom": "push",
+     "sfx": "rumble",
+     "prompt": "Minsu (dark brick-red hoodie, big round glasses, no hat) leaning out of a wide-open apartment window at night, the living room behind him fully lit with warm ceiling light spilling out, the dark city below, a faint pale flash on the far horizon. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, dark brick red, warm amber room light), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no watermark",
+     "refs": [
+      "minsu",
+      "room"
+     ],
+     "job": "d692a3e0-ebeb-4269-bb72-fb77d65e41b7"
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e201_04",
+     "ko": "문 두드리는 소리. 할머니였어요. 가방을 메고, 라디오를 들고.",
+     "en": "A knock at the door. It was Grandma, with a bag on her shoulder and a radio in her hand.",
+     "zoom": "push",
+     "sfx": "thunk",
+     "prompt": "Dim apartment hallway at night lit by one amber emergency light, the grandma (gray hair bun, half-moon glasses, muted ochre cardigan, cane) standing at an open door with a small packed backpack on her shoulder and a battery radio in her hand, calm steady face; Minsu (dark brick-red hoodie, big round glasses) in the doorway, the bright room behind him. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, muted ochre, dark brick red, one warm amber light), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no watermark",
+     "refs": [
+      "grandma",
+      "minsu"
+     ],
+     "job": "f91485a0-acfc-4bfe-883d-f80f0c82f54c"
+    },
+    {
+     "cut": "e201_05",
+     "ko": "\"불 꺼. 창문 닫고.\"",
+     "en": "Lights off, she said. And close the window.",
+     "zoom": "in",
+     "tts": {
+      "ko": "불 꺼. 창문 닫고."
+     },
+     "prompt": "Close-up of the grandma (gray hair bun, half-moon glasses, muted ochre cardigan) looking straight ahead with a stern, steady face, eyes narrowed slightly, lit from one side by warm amber light, dark hallway background. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette, soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no watermark",
+     "refs": [
+      "grandma",
+      "hall"
+     ],
+     "job": "a1717a6f-cc8c-4048-84fe-eabee5e029db"
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e201_06",
+     "ko": "할머니는 말했어요. \"평탄하게 1분이면 경계경보, 준비하라는 거야.\"",
+     "en": "Listen, she said. One flat minute of siren is an alert warning. It means get ready.",
+     "zoom": "push",
+     "sfx": "radio",
+     "key": {
+      "ko": "평탄한 1분 = 경계경보, 준비",
+      "en": "ONE FLAT MINUTE = ALERT, GET READY"
+     },
+     "tts": {
+      "ko": "할머니는 말했어요. 평탄하게 일 분이면 경계경보, 준비하라는 거야."
+     },
+     "prompt": "Close-up of the grandma's hand holding a small battery radio up near her ear in a dark living room, its dial faintly lit, Minsu (dark brick-red hoodie, big round glasses) listening in the background in shadow, the ceiling light now off, only a thin amber glow from the hallway. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette, soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no watermark",
+     "refs": [
+      "grandma",
+      "minsu",
+      "room"
+     ],
+     "job": "38e633ab-4d05-4700-8421-0f9091dad8cf"
+    },
+    {
+     "cut": "e201_06",
+     "ko": "\"물결치듯 오르내리면 공습경보. 그때는 바로 지하야.\"",
+     "en": "If it rises and falls like a wave, that's an air-raid warning. Then you go underground, right away.",
+     "zoom": "in",
+     "key": {
+      "ko": "오르내리는 사이렌 = 공습경보, 바로 지하",
+      "en": "RISING, FALLING SIREN = AIR RAID, GO DOWN"
+     },
+     "tts": {
+      "ko": "물결치듯 오르내리면 공습경보. 그때는 바로 지하야."
+     }
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e201_07",
+     "ko": "민수는 소문 대신 재난문자를 열었어요. 경계경보 발령, 대피 준비.",
+     "en": "Minsu closed the rumors and opened the emergency alert. Alert warning issued. Prepare to evacuate.",
+     "zoom": "push",
+     "sfx": "click",
+     "key": {
+      "ko": "소문 말고 공식 (시즌 1 복습)",
+      "en": "OFFICIAL, NOT RUMORS (S1 REVIEW)"
+     },
+     "prompt": "Close-up of Minsu's hands (dark brick-red hoodie sleeves) holding a phone in a dark room, the screen showing a plain emergency alert banner with a bold warning triangle icon and empty text lines, no readable text, the cold screen light on his hands. Same simple thick black line stick-figure design as the reference, drawn quietly and seriously: muted palette, soft heavy shadows, no comic symbols, cinematic vertical composition, no text, no letters, no watermark",
+     "refs": [
+      "minsu"
+     ],
+     "job": "8bf97905-2fd9-4a75-87f0-f029b2ad85a6"
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e201_08",
+     "ko": "\"경계경보엔 할 일이 있어. 아이와 노인부터 대피 준비, 불 날 것 치우고, 밤이면 불빛 안 새게.\"",
+     "en": "An alert warning has its own list, she said. Children and the elderly get ready first. Put away anything that can catch fire. And at night, let no light leak out.",
+     "zoom": "push",
+     "key": {
+      "ko": "경계경보 = 준비하는 시간",
+      "en": "ALERT WARNING = TIME TO PREPARE"
+     },
+     "tts": {
+      "ko": "경계경보엔 할 일이 있어. 아이와 노인부터 대피 준비, 불 날 것 치우고, 밤이면 불빛 안 새게."
+     },
+     "prompt": "In a dark living room with the blanket now fully covering the window, the grandma (gray hair bun, half-moon glasses, muted ochre cardigan, cane) stands and points with her cane at a small packed backpack set by the door, Minsu (dark brick-red hoodie, big round glasses) standing beside her, a single small battery lantern on the floor as the only light. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, muted ochre, dark brick red, one warm amber light), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no watermark",
+     "refs": [
+      "grandma",
+      "minsu",
+      "room"
+     ],
+     "job": "7807dc04-a99f-4c79-aae3-1c7f9b020a10"
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e201_09",
+     "ko": "민수는 불을 끄고, 창문에서 떨어진 안쪽 벽에 앉아 라디오를 켰어요.",
+     "en": "Minsu turned off the lights, sat against the inner wall away from the window, and switched on the radio.",
+     "zoom": "push",
+     "sfx": "radio",
+     "key": {
+      "ko": "오늘 밤 할 일: 듣기",
+      "en": "TONIGHT'S ONE TASK: LISTEN"
+     },
+     "prompt": "Minsu (dark brick-red hoodie, big round glasses, no hat) sitting on the floor with his back against an inner wall far from the covered window, knees up, a small battery radio beside him glowing faintly, the room almost completely dark, a thin line of blue night light at the edge of the blanket. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, dark brick red, one faint amber radio glow), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no watermark",
+     "refs": [
+      "minsu",
+      "room"
+     ],
+     "job": "fab8fe24-2355-4c0c-97f6-d1d663e5bc0d"
+    },
+    {
+     "cut": "e201_09",
+     "ko": "오늘 밤 할 수 있는 건 이거 하나예요. 듣는 것.",
+     "en": "Tonight there is one thing he can do. Listen.",
+     "zoom": "in"
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e201_sc",
+     "ko": "민수의 준비 점수는,",
+     "en": "Minsu's readiness score:",
+     "zoom": "push",
+     "tts": {
+      "en": "Minsu's readiness score,"
+     },
+     "prompt": "A plain dark slate-gray wall with a single blank rectangular signboard hanging on it, lit from above by one weak amber lamp, the board surface empty, nothing else in frame. Simple thick black line drawing, quiet and serious, muted palette, soft heavy shadows, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "room"
+     ],
+     "job": "dd6cd6d1-77d3-4349-afe3-47b3ea56c4fe"
+    },
+    {
+     "cut": "e201_sc",
+     "ko": "40점.",
+     "en": "Forty.",
+     "zoom": "in",
+     "sfx": "sting",
+     "tts": {
+      "ko": "사십 점.",
+      "en": "Forty."
+     },
+     "draw": [
+      {
+       "text": "40",
+       "xy": [
+        540,
+        760
+       ],
+       "size": 260,
+       "fill": [
+        235,
+        200,
+        120
+       ]
+      },
+      {
+       "text": "/ 100",
+       "xy": [
+        540,
+        930
+       ],
+       "size": 70,
+       "fill": [
+        200,
+        200,
+        200
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e201_10",
+     "ko": "새벽 4시. 라디오가 말했어요. 경계경보 해제.",
+     "en": "Four in the morning. The radio spoke. Alert warning lifted.",
+     "zoom": "push",
+     "sfx": "radio",
+     "key": {
+      "ko": "04:00 경계경보 해제",
+      "en": "04:00 ALERT LIFTED"
+     },
+     "tts": {
+      "ko": "새벽 네 시. 라디오가 말했어요. 경계경보 해제."
+     },
+     "prompt": "The same dark living room at the first gray light of dawn, the blanket pulled slightly aside letting in pale blue-gray light, Minsu (dark brick-red hoodie, big round glasses) and the grandma (gray hair bun, half-moon glasses, muted ochre cardigan) both sitting on the floor by the small radio, tired, looking at it. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (pale dawn blue, slate gray, muted ochre, dark brick red), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no watermark",
+     "refs": [
+      "minsu",
+      "grandma",
+      "room"
+     ],
+     "job": "658e0743-29e7-4702-b1f2-6254a0df3d2c"
+    },
+    {
+     "cut": "e201_ab",
+     "ko": "민수는, A, 할머니처럼 가방을 싼다. B, 평소대로 출근한다. 댓글로.",
+     "en": "Minsu: A, packs a bag like Grandma. B, goes to work as usual. Comment below.",
+     "zoom": "none",
+     "sfx": "click",
+     "tts": {
+      "ko": "민수는, 에이, 할머니처럼 가방을 싼다. 비, 평소대로 출근한다. 댓글로.",
+      "en": "Minsu, A, packs a bag like Grandma. B, goes to work as usual. Comment below."
+     },
+     "prompt": "Split vertical composition divided by a thin vertical line on a dark slate background: left half, Minsu (dark brick-red hoodie, big round glasses) kneeling on the floor packing water bottles and a flashlight into an open backpack by lantern light; right half, the same Minsu in a gray coat over the hoodie standing at a bus stop in pale morning light with a work bag, looking at his phone. Large empty dark space at the top of each half. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette, soft heavy shadows, no exaggerated expressions, no comic symbols, vertical composition, no text, no letters, no watermark",
+     "refs": [
+      "minsu"
+     ],
+     "draw": [
+      {
+       "text": "A",
+       "xy": [
+        270,
+        250
+       ],
+       "size": 200,
+       "stroke": 8
+      },
+      {
+       "text": "B",
+       "xy": [
+        810,
+        250
+       ],
+       "size": 200,
+       "stroke": 8
+      },
+      {
+       "text": {
+        "ko": "댓글로 A or B",
+        "en": "Comment A or B"
+       },
+       "xy": [
+        540,
+        1355
+       ],
+       "size": 70,
+       "fill": [
+        235,
+        200,
+        120
+       ],
+       "box": true
+      }
+     ],
+     "job": "9f0a3e40-ba21-4630-b07f-7a827f34efec"
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e201_11",
+     "ko": "다음 화, 사이렌 다음 날. 아무 일 없다는 듯한 아침.",
+     "en": "Next time: the day after the sirens. A morning that pretends nothing happened.",
+     "zoom": "out",
+     "sfx": "sting",
+     "key": {
+      "ko": "NEXT: DAY 1",
+      "en": "NEXT: DAY 1"
+     },
+     "prompt": "A pale gray morning street below an apartment block, a few small stick-figure commuters in dark coats walking toward a bus stop as if it were any other day, seen from above from a window, Minsu (dark brick-red hoodie, big round glasses) small in the foreground at the window looking down. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (pale gray, slate, dark brick red), soft shadows, no exaggerated expressions, no comic symbols, cinematic vertical composition, no text, no letters, no watermark",
+     "refs": [
+      "minsu"
+     ],
+     "job": "c9404c2d-24f7-40cd-a026-a163cdb0a1a5"
+    }
+   ]
+  }
+ ],
+ "audio_jobs": {
+  "ko": {
+   "1": "25d755db-c66a-49a7-9a55-c5134eb34dac",
+   "2": "38ab7285-60b0-4078-802b-665b1ae2ab7e",
+   "3": "01d833a5-00e4-4a0a-992a-30a158a9c3b0",
+   "4": "9451cf1d-ec4c-4062-8fdc-f8f36b9865f7",
+   "5": "96eb8459-80d8-4468-868b-45c6ed37bdcf",
+   "6": "a98ebbbd-1ed5-420c-9323-25f5217792e5",
+   "7": "ae006c17-6d38-4796-a087-b67a12b776c9",
+   "8": "9b6c6b40-37ca-4235-b83f-092aa994b581",
+   "9": "2614b3ff-7ff9-46f2-8f91-3f30a4d10c0b",
+   "10": "8ea94bca-686e-4d37-975c-a10d34d2aac2",
+   "11": "1ff007cf-8740-44d0-9dac-994af43677fb"
+  },
+  "en": {
+   "1": "aa330c94-264d-416b-9ba3-9cca4c0e692e",
+   "2": "5e3b9306-cd98-4864-a86c-6b93412a64d1",
+   "3": "6a78ee0a-11d5-47f8-9051-aa9a64ed50d6",
+   "4": "a2276814-bd08-4957-9208-86304bd2605f",
+   "5": "574058f7-b945-42ce-bfd0-360f328a9008",
+   "6": "b690deb3-e301-46c0-b664-9f6124a02450",
+   "7": "f05a9b09-eebd-409a-bdda-b720e955102d",
+   "8": "ee20f4a0-7478-4908-8496-71fc70e1d365"
+  }
+ }
 }
