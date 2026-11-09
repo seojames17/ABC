@@ -27,10 +27,10 @@
 
 ## 그림 톤 (익살 제거)
 졸라맨 선 그림의 단순함은 유지해 브랜드가 끊기지 않게 하되, 연출을 바꾼다.
-- 공통 문구 초안: `Simple thick black line stick-figure drawing in the same character design as the reference, but drawn quietly and seriously: muted palette (dark blue, slate gray, warm amber from a single light source), heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no watermark`
+- 공통 문구(13화 마지막 두 컷·참고 시트에서 검증됨): `Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, dark brick red, muted ochre, one warm amber light source), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no watermark`
 - 민수 복장은 유지(빨간 후드, 안경)해서 알아볼 수 있게 한다. 다만 빨강은 채도를 낮춘다("dark brick-red hoodie").
 - 13화 마지막 두 컷(e13_17, e13_ab)이 이 톤의 시험이다. 결과를 보고 문구를 고친다.
-- 시즌 2 시작 전에 **민수·할머니 참고 시트를 새 톤으로 1장씩 다시 만든다**(약 1크레딧). 기존 참고 id는 시즌 1용으로 남긴다.
+- 시즌 2 참고 시트(11/9 생성, 결과 좋음): 민수 `3be1e101-6989-4400-9688-7c7c0650c115`, 할머니 `22c13de9-c43e-404d-8eec-70f1d222a3df`. 시즌 1 참고 id는 시즌 1용으로 남긴다. 시즌 2 컷은 이 두 장만 `image_references`로 쓴다(시즌 1 시트를 섞으면 톤이 돌아온다).
 - 글꼴: 강조용 Black Han Sans는 너무 쾌활하다. 후보는 Noto Serif KR Black 또는 Nanum Myeongjo ExtraBold. render.py의 `font()`에 `"serif"` 이름을 추가하고 설계도에서 `"font": "serif"`로 고르는 식으로 바꾼다(결정 뒤 작업).
 
 ## 세계 규칙 초안 (밝혀진 것만 쓴다)
@@ -72,5 +72,26 @@
 2. 민수·할머니 그대로.
 3. 강조 글꼴 **명조(Noto Serif KR Black)**. render.py에 `"font": "serif"` 추가됨(설계도 최상위·장면·비트). 13화 마지막 장면에서 먼저 시험.
 
-## 남은 결정
-- 1화 제작 시점: 13화 게시 다음 날 투표 결과를 보고 만들지, 미리 두 갈래를 다 써 둘지.
+4. (11/9) 1화는 13화 투표를 기다리지 않고 **민수의 선택**으로 바로 제작. 내레이션 목소리는 시즌 2부터 바꾼다(발음 좋고 차분·진지한 남성 목소리, 아래 "목소리").
+
+## 목소리 (시즌 2)
+- 시즌 1 Julian(`95429266-...`)은 밝고 빠르다. 시즌 2는 한국어 발음 정확도(whisper 받아쓰기 일치율)와 낮은 음높이로 고른다. 오디션 결과는 RUNBOOK ③에 적는다.
+- speech_rate는 시즌 1(ko 20 / en 10)보다 낮게 ko 10 / en 5. 문장 사이 정적을 살린다. 배속은 1.2 이하.
+
+## 상태 표 틀 (매화 갱신)
+| 항목 | 시즌 1 끝 | S2 1화 끝 | ... |
+|---|---|---|---|
+| 날짜 | 1년 후 가을 | DAY 0(사이렌 밤) | |
+| 배터리 | 100% | | |
+| 72시간 가방 | 없음(체크리스트 물건은 집 안 곳곳에 흩어져 있음) | | |
+| 물·식량 | 얼린 생수, 통조림, 캔따개 | | |
+| 현금 | 서랍에 비상 현금 | | |
+| 차 | 지하주차장, 기름 반 | | |
+| 가족 | 엄마 다른 도시, 집결지 안 정함 | | |
+| 할머니 | 1204호, 인슐린, 피난 경험 | | |
+| 준비 점수 | (시즌 1 생존 점수 90에서 새로 시작: 1화 끝 숫자부터) | | |
+
+## 확정된 사실 표 (시즌 2)
+| 화 | 확정된 사실 |
+|---|---|
+| S1 13화 | 가을밤 먼 하늘 번쩍, 사이렌. 민수는 창가에 서 있었다. |
