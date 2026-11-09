@@ -125,7 +125,10 @@
       "grandma",
       "minsu"
      ],
-     "job": "f91485a0-acfc-4bfe-883d-f80f0c82f54c"
+     "job": "f91485a0-acfc-4bfe-883d-f80f0c82f54c",
+     "tts": {
+      "en": "A knock at the door, and there was Grandma, with a bag on her shoulder and a radio in her hand,"
+     }
     },
     {
      "cut": "e201_05",
@@ -133,7 +136,8 @@
      "en": "Lights off, she said. And close the window.",
      "zoom": "in",
      "tts": {
-      "ko": "불 꺼. 창문 닫고."
+      "ko": "불 꺼. 창문 닫고.",
+      "en": "telling him lights off, and close the window."
      },
      "prompt": "Close-up of the grandma (gray hair bun, half-moon glasses, muted ochre cardigan) looking straight ahead with a stern, steady face, eyes narrowed slightly, lit from one side by warm amber light, dark hallway background. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette, soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no watermark",
      "refs": [
@@ -158,7 +162,8 @@
       "en": "ONE FLAT MINUTE = ALERT, GET READY"
      },
      "tts": {
-      "ko": "할머니는 말했어요. 평탄하게 일 분이면 경계경보, 준비하라는 거야."
+      "ko": "할머니는 말했어요. 평탄하게 일 분이면 경계경보, 준비하라는 거야.",
+      "en": "She said, one flat minute of siren is an alert warning, and it means get ready."
      },
      "prompt": "Close-up of the grandma's hand holding a small battery radio up near her ear in a dark living room, its dial faintly lit, Minsu (dark brick-red hoodie, big round glasses) listening in the background in shadow, the ceiling light now off, only a thin amber glow from the hallway. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette, soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no watermark",
      "refs": [
@@ -178,7 +183,8 @@
       "en": "RISING, FALLING SIREN = AIR RAID, GO DOWN"
      },
      "tts": {
-      "ko": "물결치듯 오르내리면 공습경보. 그때는 바로 지하야."
+      "ko": "물결치듯 오르내리면 공습경보. 그때는 바로 지하야.",
+      "en": "If it rises and falls like a wave, that is an air-raid warning, and then you go underground, right away."
      }
     }
    ]
@@ -247,13 +253,19 @@
       "minsu",
       "room"
      ],
-     "job": "fab8fe24-2355-4c0c-97f6-d1d663e5bc0d"
+     "job": "fab8fe24-2355-4c0c-97f6-d1d663e5bc0d",
+     "tts": {
+      "en": "Minsu turned off the lights, sat against the inner wall away from the window, and switched on the radio,"
+     }
     },
     {
      "cut": "e201_09",
      "ko": "오늘 밤 할 수 있는 건 이거 하나예요. 듣는 것.",
      "en": "Tonight there is one thing he can do. Listen.",
-     "zoom": "in"
+     "zoom": "in",
+     "tts": {
+      "en": "because tonight there is one thing he can do, and that is to listen."
+     }
     }
    ]
   },
