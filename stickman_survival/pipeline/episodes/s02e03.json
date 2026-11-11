@@ -52,7 +52,8 @@
      "refs": [
       "minsu",
       "room"
-     ]
+     ],
+     "job": "3516addb-3281-4afd-81b9-3b7dc4a3f3b0"
     },
     {
      "cut": "e203_01",
@@ -87,7 +88,8 @@
      "refs": [
       "minsu",
       "room"
-     ]
+     ],
+     "job": "c49836f1-8a6a-450c-8fab-cea9258dcda2"
     }
    ]
   },
@@ -104,7 +106,8 @@
       "minsu",
       "grandma",
       "hall"
-     ]
+     ],
+     "job": "7b9c30f5-7ac4-46e2-95c3-5e5a93b8746f"
     },
     {
      "cut": "e203_04",
@@ -120,7 +123,8 @@
      "refs": [
       "minsu",
       "room"
-     ]
+     ],
+     "job": "5c2f25b1-e3dd-4c27-b390-4b8f478c77fd"
     }
    ]
   },
@@ -141,7 +145,8 @@
       "minsu",
       "grandma",
       "hall"
-     ]
+     ],
+     "job": "c4206fc4-0b41-4cd4-aa56-fe283648b790"
     }
    ]
   },
@@ -163,7 +168,8 @@
       "minsu",
       "grandma",
       "hall"
-     ]
+     ],
+     "job": "83037c54-2df3-494b-95bb-f637f540e089"
     }
    ]
   },
@@ -180,7 +186,8 @@
      "refs": [
       "minsu",
       "grandma"
-     ]
+     ],
+     "job": "0c816aa2-d847-45f6-aed4-2f2646e4f972"
     },
     {
      "cut": "e203_07",
@@ -214,7 +221,8 @@
      "refs": [
       "minsu",
       "grandma"
-     ]
+     ],
+     "job": "e4ef9299-1eb5-40ef-adad-645e4f8e05bb"
     }
    ]
   },
@@ -322,7 +330,8 @@
      "refs": [
       "minsu",
       "grandma"
-     ]
+     ],
+     "job": "859c91bb-27f9-43ff-91b0-df23cba4af1d"
     }
    ]
   },
