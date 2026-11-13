@@ -24,7 +24,7 @@
   "ko": 1.2,
   "en": 1.4
  },
- "_note": "4화 투표 결과를 확인하지 못한 채(Notion 연결 끊김) A(집으로 올라간다)를 '민수의 선택'으로 썼다. 결과가 B면 1~2번 장면을 고친다. 그림·음성 job은 아직 비어 있음.",
+ "_note": "4화 투표 결과가 비어 있어 A(집으로 올라간다)를 '민수의 선택'으로. 효과음은 sting/rumble/siren/radio/click/thunk/hum만.",
  "refs_legend": {
   "minsu": "3be1e101-6989-4400-9688-7c7c0650c115",
   "grandma": "22c13de9-c43e-404d-8eec-70f1d222a3df",
@@ -51,7 +51,8 @@
      "refs": [
       "minsu",
       "room"
-     ]
+     ],
+     "job": "1e97488d-97cc-48dd-a286-358d671d3032"
     }
    ]
   },
@@ -74,7 +75,8 @@
      "prompt": "Close-up of a simple stick-figure hand in a dark brick-red hoodie sleeve holding a phone, the phone screen completely blank and dark except for one small round red hang-up button glowing at the bottom, dim gray morning room behind. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, dark brick red, muted ochre, one warm amber light source), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
      "refs": [
       "minsu"
-     ]
+     ],
+     "job": "26285beb-b117-44d6-92ee-6e53a3da9de2"
     }
    ]
   },
@@ -92,7 +94,8 @@
       "minsu",
       "grandma",
       "room"
-     ]
+     ],
+     "job": "31a2f872-7a59-4527-91dc-b562df8e0f37"
     }
    ]
   },
@@ -114,7 +117,8 @@
       "minsu",
       "grandma",
       "room"
-     ]
+     ],
+     "job": "c3679e5d-a43b-495d-8384-419da0e21dcf"
     }
    ]
   },
@@ -133,7 +137,8 @@
      "prompt": "Close-up of a small plain cream-colored card held in two simple hands (muted ochre cardigan sleeves), the card has only blank ruled lines and three small empty boxes in a column, one finger pointing at the boxes, warm amber light. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, dark brick red, muted ochre, one warm amber light source), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
      "refs": [
       "grandma"
-     ]
+     ],
+     "job": "7f2c5bd3-8fe8-4022-b4f5-a094a47de169"
     }
    ]
   },
@@ -151,7 +156,8 @@
       "minsu",
       "grandma",
       "room"
-     ]
+     ],
+     "job": "90c98157-e1f6-41dd-8cb4-f41478adf8c9"
     }
    ]
   },
@@ -173,7 +179,8 @@
       "minsu",
       "grandma",
       "room"
-     ]
+     ],
+     "job": "cd4a9e69-941a-4264-aab4-32941ab13192"
     }
    ]
   },
@@ -281,7 +288,8 @@
      "prompt": "Split vertical composition divided by a thin vertical line on a dark slate background: left half, Minsu (dark brick-red hoodie, big round glasses, no hat) with a backpack walking away along an empty gray morning street between apartment blocks, seen from behind; right half, Minsu (dark brick-red hoodie, big round glasses, no hat) standing at an apartment window in a dim room looking out, two cups on the windowsill. Leave the top quarter of both halves empty and dark. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, dark brick red, muted ochre, one warm amber light source), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
      "refs": [
       "minsu"
-     ]
+     ],
+     "job": "0304e255-791c-4fcf-b786-6759ad1979f9"
     }
    ]
   },
