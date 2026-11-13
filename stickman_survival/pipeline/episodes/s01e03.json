@@ -1,0 +1,71 @@
+{
+ "title": {"ko": "1203호 3화 — DAY 7: 추운 밤", "en": "Unit 1203 Ep.3 — Day 7: The Cold Night"},
+ "badge": {"ko": "1203호 | DAY 7", "en": "UNIT 1203 | DAY 7"},
+ "voice": {"model": "seed_audio", "voice_id": "95429266-c0ac-4137-a209-63b8812b0f23", "speech_rate": {"ko": 20, "en": 10}},
+ "lead_in": 0.2, "scene_gap": 0.3, "tail": 1.6,
+ "speed": {"ko": 1.12, "en": 1.2},
+ "scenes": [
+  {"battery": 9, "beats": [
+   {"cut": "e3_01", "ko": "정전 이레째, 한밤중.", "en": "Day seven of the blackout. Midnight.", "zoom": "out", "sfx": "sting", "key": {"ko": "DAY 7 | 추운 밤", "en": "DAY 7: THE COLD"}},
+   {"cut": "e3_02", "ko": "집 안이 얼음장 같아요.", "en": "The apartment felt like a freezer.", "zoom": "push", "cont": true},
+   {"cut": "e3_03", "ko": "이불을 세 겹 덮어도 덜덜.", "en": "Three blankets, and still shaking.", "sfx": "sad"}
+  ]},
+  {"battery": 9, "beats": [
+   {"cut": "e3_04", "ko": "결국 민수는 일어섰어요.", "en": "Finally, Minsu got up.", "zoom": "out"},
+   {"cut": "e3_05", "ko": "지난 화 여러분의 선택은 B, 할머니네 문 두드리기.", "en": "Last time, you voted B: knock on her door.", "zoom": "none", "sfx": "click",
+    "key": {"ko": "여러분의 선택: B", "en": "YOU CHOSE: B"},
+    "tts": {"ko": "지난 화 여러분의 선택은 비, 할머니네 문 두드리기.", "en": "Last time, you voted B, knock on her door."}},
+   {"cut": "e3_06", "ko": "\"들어와. 문부터 빨리 닫고.\"", "en": "\"Come in. Shut the door fast.\"", "zoom": "push", "sfx": "pop",
+    "tts": {"ko": "들어와. 문부터 빨리 닫고.", "en": "Come in. Shut the door fast."}}
+  ]},
+  {"battery": 9, "beats": [
+   {"cut": "e3_07", "ko": "할머니는 거실 한 칸만 쓰고 있었어요.", "en": "She was only using the living room.", "sfx": "chime"},
+   {"cut": "e3_08", "ko": "문틈엔 돌돌 만 수건,", "en": "A rolled towel at the door gap,", "cont": true, "zoom": "push"},
+   {"cut": "e3_09", "ko": "창문엔 담요.", "en": "a blanket over the window.", "cont": true, "zoom": "push", "sfx": "click"}
+  ]},
+  {"battery": 9, "beats": [
+   {"cut": "e3_11", "ko": "\"집 전체를 데울 수는 없어. 방을 줄이는 게 제일 싼 난로야.\"", "en": "\"You can't heat a whole home. A smaller room is the cheapest heater.\"", "zoom": "in",
+    "key": {"ko": "방을 줄이면 따뜻해진다", "en": "SMALLER ROOM = WARMER"},
+    "tts": {"ko": "집 전체를 데울 순 없어. 방을 줄이는 게 제일 싼 난로야.", "en": "You can't heat a whole home. A smaller room is the cheapest heater."}},
+   {"cut": "e3_12", "ko": "\"열은 창문이랑 틈으로 줄줄 새거든.\"", "en": "\"Heat leaks out through windows and gaps.\"", "zoom": "push", "sfx": "whoosh",
+    "key": {"ko": "열은 창과 틈으로 샌다", "en": "HEAT LEAKS OUT"},
+    "tts": {"ko": "열은 창문이랑 틈으로 줄줄 새거든.", "en": "Heat leaks out through windows and gaps."}}
+  ]},
+  {"battery": 9, "beats": [
+   {"cut": "e3_13", "ko": "그런데 민수 후드는 땀에 흠뻑 젖어 있었어요.", "en": "But Minsu's hoodie was soaked with sweat.", "zoom": "out", "sfx": "drip"},
+   {"cut": "e3_14", "ko": "\"젖은 옷부터 벗어. 젖으면 보온이 뚝 떨어져.\"", "en": "\"Take the wet clothes off first. Wet fabric stops keeping you warm.\"", "sfx": "stop",
+    "key": {"ko": "젖은 옷 = 더 춥다", "en": "WET CLOTHES = COLDER"},
+    "tts": {"ko": "젖은 옷부터 벗어. 젖으면 보온이 뚝 떨어져.", "en": "Take the wet clothes off first. Wet fabric stops keeping you warm."}},
+   {"cut": "e3_15", "ko": "\"마른 옷을 느슨하게 여러 겹. 공기가 갇혀야 따뜻해.\"", "en": "\"Dry layers, worn loose. Trapped air keeps you warm.\"", "zoom": "push", "sfx": "ding",
+    "key": {"ko": "느슨하게 여러 겹", "en": "LOOSE DRY LAYERS"},
+    "tts": {"ko": "마른 옷을 느슨하게 여러 겹. 공기가 갇혀야 따뜻해.", "en": "Dry layers, worn loose. Trapped air keeps you warm."}}
+  ]},
+  {"battery": 9, "beats": [
+   {"cut": "e3_16", "ko": "둘이 담요 하나를 나눠 덮으니,", "en": "Sharing a single blanket,", "zoom": "out"},
+   {"cut": "e3_17", "ko": "사람 몸도 작은 난로예요.", "en": "two bodies make a tiny heater.", "cont": true, "zoom": "push", "sfx": "chime", "key": {"ko": "몸도 작은 난로", "en": "BODIES ARE HEATERS"}},
+   {"cut": "e3_18", "ko": "그제야 민수의 떨림이 멈췄어요.", "en": "At last, Minsu stopped shivering.", "zoom": "in"}
+  ]},
+  {"battery": 9, "beats": [
+   {"cut": "e3_19", "ko": "방값은 내일, 물 나르기로 받겠다고 하셨죠.", "en": "Her rent: tomorrow, he carries her water.", "sfx": "sad", "key": {"ko": "빚 1만 원 + 물 나르기", "en": "OWES: $10 + WATER DUTY"}}
+  ]},
+  {"battery": 9, "beats": [
+   {"cut": "81", "ko": "민수의 7일차 생존 점수는,", "en": "Minsu's day seven survival score:", "zoom": "out", "tts": {"ko": "민수의 일곱째 날 생존 점수는,"}, "reuse": "3dd781f4-5172-4a75-aadb-da699b8228c6"},
+   {"cut": "82", "ko": "65점.", "en": "sixty-five out of a hundred.", "sfx": "ding", "tts": {"ko": "육십오 점."}, "reuse": "f2b041aa-fb95-4a60-8913-2277ba4fda0b",
+    "draw": [{"text": "65", "xy": [540, 580], "size": 280, "fill": [255, 150, 0]}, {"text": "/ 100", "xy": [540, 760], "size": 80, "fill": "black"}]}
+  ]},
+  {"battery": 9, "beats": [
+   {"cut": "e3_20", "ko": "다음 날 아침, 변기 물이 안 내려가요.", "en": "Next morning, the toilet won't flush.", "sfx": "lowbat"},
+   {"cut": "e3_22", "ko": "A, 욕조 물을 양동이로 한 번에 붓는다.", "en": "A: pour a bucket of tub water in, all at once.", "zoom": "none", "sfx": "whoosh",
+    "draw": [{"text": "A", "xy": [270, 250], "size": 200, "stroke": 10}, {"text": "B", "xy": [810, 250], "size": 200, "stroke": 10},
+             {"text": {"ko": "댓글로 A or B!", "en": "Comment A or B!"}, "xy": [540, 1355], "size": 76, "fill": [255, 230, 0], "box": true}]},
+   {"cut": "e3_22", "ko": "B, 비닐봉지로 비상 변기를 만든다.", "en": "B: make an emergency toilet from a bag.", "zoom": "none", "sfx": "pop",
+    "draw": [{"text": "A", "xy": [270, 250], "size": 200, "stroke": 10}, {"text": "B", "xy": [810, 250], "size": 200, "stroke": 10},
+             {"text": {"ko": "댓글로 A or B!", "en": "Comment A or B!"}, "xy": [540, 1355], "size": 76, "fill": [255, 230, 0], "box": true}]}
+  ]},
+  {"battery": 9, "beats": [
+   {"cut": "e3_23", "ko": "다음 화, DAY 8. 변기 대작전.", "en": "Next time: Day 8. The toilet crisis.", "zoom": "out", "sfx": "sting",
+    "tts": {"ko": "다음 화, 여덟째 날. 변기 대작전!", "en": "Next time, Day eight. The toilet crisis."},
+    "key": {"ko": "NEXT: DAY 8", "en": "NEXT: DAY 8"}}
+  ]}
+ ]
+}

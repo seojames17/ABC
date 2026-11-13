@@ -1,0 +1,316 @@
+{
+ "title": {
+  "ko": "1203호 S2 5화 — 사이렌 4일째: 걸리지 않는 전화",
+  "en": "Unit 1203 S2 Ep.5 — Day 4: The Call That Won't Connect"
+ },
+ "badge": {
+  "ko": "1203호 S2 | DAY 4",
+  "en": "UNIT 1203 S2 | DAY 4"
+ },
+ "font": "serif",
+ "voice": {
+  "model": "seed_audio",
+  "voice_id": "1ad38ba4-9cc4-4f2f-9fde-b0fefdf67ae5",
+  "voice_name": "Gideon",
+  "speech_rate": {
+   "ko": 10,
+   "en": 5
+  }
+ },
+ "lead_in": 0.4,
+ "scene_gap": 0.4,
+ "tail": 2.0,
+ "speed": {
+  "ko": 1.2,
+  "en": 1.4
+ },
+ "_note": "4화 투표 결과가 비어 있어 A(집으로 올라간다)를 '민수의 선택'으로. 효과음은 sting/rumble/siren/radio/click/thunk/hum만.",
+ "refs_legend": {
+  "minsu": "3be1e101-6989-4400-9688-7c7c0650c115",
+  "grandma": "22c13de9-c43e-404d-8eec-70f1d222a3df",
+  "room": "9dfc12e7-7856-454f-864a-e2dc11227adb"
+ },
+ "scenes": [
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e205_01",
+     "ko": "사이렌 4일째 아침, 12층 집. 엄마에게 건 전화가 연결되지 않았어요.",
+     "en": "Day four, morning, twelve floors up. The call to Mom would not go through.",
+     "zoom": "push",
+     "sfx": "hum",
+     "key": {
+      "ko": "사이렌 4일째 아침",
+      "en": "DAY 4, MORNING"
+     },
+     "tts": {
+      "ko": "사이렌 사 일째 아침, 십이 층 집. 엄마에게 건 전화가 연결되지 않았어요."
+     },
+     "prompt": "Minsu (dark brick-red hoodie, big round glasses, no hat) standing in the same small apartment living room as the reference in gray early-morning light, a thick blanket half pulled aside from the window, holding a phone to his ear and looking down, a packed backpack still on his back, a small radio on the low table. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, dark brick red, muted ochre, one warm amber light source), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu",
+      "room"
+     ],
+     "job": "1e97488d-97cc-48dd-a286-358d671d3032"
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e205_02",
+     "ko": "민수의 선택은 A, 집으로 올라왔죠. 열 번을 걸어도 신호음만 가다가 끊겼어요.",
+     "en": "Minsu's choice was A, back up home, and he called ten times, but every call rang and then dropped.",
+     "zoom": "in",
+     "sfx": "click",
+     "key": {
+      "ko": "민수의 선택: A",
+      "en": "MINSU'S CHOICE: A"
+     },
+     "tts": {
+      "ko": "민수의 선택은 에이, 집으로 올라왔죠. 열 번을 걸어도 신호음만 가다가 끊겼어요."
+     },
+     "prompt": "Close-up of a simple stick-figure hand in a dark brick-red hoodie sleeve holding a phone, the phone screen completely blank and dark except for one small round red hang-up button glowing at the bottom, dim gray morning room behind. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, dark brick red, muted ochre, one warm amber light source), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu"
+     ],
+     "job": "26285beb-b117-44d6-92ee-6e53a3da9de2"
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e205_03",
+     "ko": "할머니가 물었어요. 전화가 안 되면, 엄마랑 어디서 만나기로 했니? 민수는 대답하지 못했어요.",
+     "en": "Grandma asked him, if the phones are down, where did you and your mom agree to meet, and Minsu had no answer.",
+     "zoom": "push",
+     "sfx": "sting",
+     "prompt": "In the same small apartment living room as the reference in gray early-morning light, a thick blanket half pulled aside from the window, the grandma (gray hair bun, half-moon glasses, muted ochre cardigan, cane) standing in the open front doorway looking at Minsu (dark brick-red hoodie, big round glasses, no hat), who sits on the floor with the phone lowered in his hand and his head down. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, dark brick red, muted ochre, one warm amber light source), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu",
+      "grandma",
+      "room"
+     ],
+     "job": "31a2f872-7a59-4527-91dc-b562df8e0f37"
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e205_04",
+     "ko": "할머니가 가방에서 비상연락카드를 꺼냈어요. 거기엔 가족 말고 한 사람이 더 적혀 있었죠.",
+     "en": "Grandma took an emergency contact card out of her bag, and it had one more person on it who was not family.",
+     "zoom": "push",
+     "sfx": "click",
+     "key": {
+      "ko": "비상연락카드: 가족 외 비상연락망",
+      "en": "CONTACT CARD: ONE NON-FAMILY CONTACT"
+     },
+     "prompt": "In the same small apartment living room as the reference in gray early-morning light, a thick blanket half pulled aside from the window, the grandma (gray hair bun, half-moon glasses, muted ochre cardigan, cane) holding out a small plain cream-colored card with only blank ruled lines on it toward Minsu (dark brick-red hoodie, big round glasses, no hat), who leans in to look, her small backpack open beside her. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, dark brick red, muted ochre, one warm amber light source), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu",
+      "grandma",
+      "room"
+     ],
+     "job": "c3679e5d-a43b-495d-8384-419da0e21dcf"
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e205_05",
+     "ko": "서로 연락이 안 될 때를 위해서요. 그리고 가족이 만날 장소도 한 곳이 아니라 세 곳을 적게 돼 있어요.",
+     "en": "That is for when you cannot reach each other, and the card has room for three places to meet, not just one.",
+     "zoom": "in",
+     "key": {
+      "ko": "가족 만남의 장소는 세 곳",
+      "en": "THREE MEETING PLACES, NOT ONE"
+     },
+     "prompt": "Close-up of a small plain cream-colored card held in two simple hands (muted ochre cardigan sleeves), the card has only blank ruled lines and three small empty boxes in a column, one finger pointing at the boxes, warm amber light. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, dark brick red, muted ochre, one warm amber light source), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "grandma"
+     ],
+     "job": "7f2c5bd3-8fe8-4022-b4f5-a094a47de169"
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e205_06",
+     "ko": "민수는 이모가 떠올랐어요. 전화 대신 문자를 보냈죠. 엄마랑 연락 되세요?",
+     "en": "Minsu thought of his aunt, and instead of calling he sent her a text asking, can you reach Mom?",
+     "zoom": "push",
+     "sfx": "click",
+     "prompt": "In the same small apartment living room as the reference in gray early-morning light, a thick blanket half pulled aside from the window, Minsu (dark brick-red hoodie, big round glasses, no hat) sitting on the floor typing on his phone with both thumbs, the blank phone screen lighting his face, the grandma (gray hair bun, half-moon glasses, muted ochre cardigan, cane) sitting beside him on a cushion holding the small card. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, dark brick red, muted ochre, one warm amber light source), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu",
+      "grandma",
+      "room"
+     ],
+     "job": "90c98157-e1f6-41dd-8cb4-f41478adf8c9"
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e205_07",
+     "ko": "한참 뒤 답이 왔어요. 엄마는 무사하고, 엄마도 이모에게 민수 소식을 묻고 있었대요.",
+     "en": "A long while later the answer came, Mom was safe, and she had been asking his aunt about Minsu too.",
+     "zoom": "push",
+     "sfx": "radio",
+     "key": {
+      "ko": "연결해 주는 한 사람",
+      "en": "ONE PERSON WHO CONNECTS YOU"
+     },
+     "prompt": "In the same small apartment living room as the reference in gray early-morning light, a thick blanket half pulled aside from the window, a phone lying on the low table with its blank screen glowing softly, Minsu (dark brick-red hoodie, big round glasses, no hat) and the grandma (gray hair bun, half-moon glasses, muted ochre cardigan, cane) both leaning over it, Minsu's shoulders relaxed, a small radio beside the phone. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, dark brick red, muted ochre, one warm amber light source), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu",
+      "grandma",
+      "room"
+     ],
+     "job": "cd4a9e69-941a-4264-aab4-32941ab13192"
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e205_05",
+     "ko": "오늘 할 수 있는 일 한 가지. 가족 모두가 아는 연락받을 한 사람을 정해서 적어 두기.",
+     "en": "One thing you can do today is pick one person your whole family can contact, and write that name down.",
+     "zoom": "out",
+     "key": {
+      "ko": "오늘 할 일: 연락받을 한 사람 정하기",
+      "en": "TODAY: PICK ONE CONTACT PERSON"
+     }
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e201_sc",
+     "ko": "오늘 민수의 준비 점수는 75점으로 올랐어요.",
+     "en": "Minsu's readiness score went up to seventy-five.",
+     "zoom": "push",
+     "sfx": "sting",
+     "reuse": "dd6cd6d1-77d3-4349-afe3-47b3ea56c4fe",
+     "tts": {
+      "ko": "오늘 민수의 준비 점수는 칠십오 점으로 올랐어요.",
+      "en": "And today, Minsu's readiness score went up to seventy-five points."
+     },
+     "draw": [
+      {
+       "text": "75",
+       "xy": [
+        540,
+        760
+       ],
+       "size": 260,
+       "fill": [
+        235,
+        200,
+        120
+       ]
+      },
+      {
+       "text": "/ 100",
+       "xy": [
+        540,
+        930
+       ],
+       "size": 70,
+       "fill": [
+        200,
+        200,
+        200
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e205_ab",
+     "ko": "엄마는 다른 도시에 있어요. 민수는, A, 엄마에게 간다. B, 엄마를 이쪽으로 오시게 한다. 댓글로.",
+     "en": "Mom is in another city. Minsu: A, goes to her. B, asks her to come to him. Comment below.",
+     "zoom": "none",
+     "sfx": "click",
+     "tts": {
+      "ko": "엄마는 다른 도시에 있어요. 민수는, 에이, 엄마에게 간다. 비, 엄마를 이쪽으로 오시게 한다. 댓글로 알려 주세요.",
+      "en": "Mom is in another city, so does Minsu choose A, and go to her, or B, and ask her to come to him? Comment below."
+     },
+     "draw": [
+      {
+       "text": "A",
+       "xy": [
+        270,
+        300
+       ],
+       "size": 170,
+       "fill": [
+        235,
+        200,
+        120
+       ]
+      },
+      {
+       "text": "B",
+       "xy": [
+        810,
+        300
+       ],
+       "size": 170,
+       "fill": [
+        235,
+        200,
+        120
+       ]
+      }
+     ],
+     "prompt": "Split vertical composition divided by a thin vertical line on a dark slate background: left half, Minsu (dark brick-red hoodie, big round glasses, no hat) with a backpack walking away along an empty gray morning street between apartment blocks, seen from behind; right half, Minsu (dark brick-red hoodie, big round glasses, no hat) standing at an apartment window in a dim room looking out, two cups on the windowsill. Leave the top quarter of both halves empty and dark. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, dark brick red, muted ochre, one warm amber light source), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu"
+     ],
+     "job": "0304e255-791c-4fcf-b786-6759ad1979f9"
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e205_07",
+     "ko": "다음 화, 사이렌 5일째, 마트의 텅 빈 진열대 앞에서.",
+     "en": "Next time, day five, the empty shelves at the store.",
+     "zoom": "out",
+     "sfx": "sting",
+     "key": {
+      "ko": "NEXT: 텅 빈 진열대",
+      "en": "NEXT: EMPTY SHELVES"
+     },
+     "tts": {
+      "ko": "다음 화, 사이렌 오 일째, 마트의 텅 빈 진열대 앞에서."
+     }
+    }
+   ]
+  }
+ ]
+}

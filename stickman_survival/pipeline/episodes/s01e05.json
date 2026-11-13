@@ -1,0 +1,63 @@
+{
+ "title": {"ko": "1203호 5화 — DAY 9: 냉동실의 비밀", "en": "Unit 1203 Ep.5 — Day 9: The Freezer Secret"},
+ "badge": {"ko": "1203호 | DAY 9", "en": "UNIT 1203 | DAY 9"},
+ "voice": {"model": "seed_audio", "voice_id": "95429266-c0ac-4137-a209-63b8812b0f23", "speech_rate": {"ko": 20, "en": 10}},
+ "lead_in": 0.2,
+ "scene_gap": 0.3,
+ "tail": 1.6,
+ "speed": {"ko": 1.2, "en": 1.2},
+ "scenes": [
+  {"battery": 7, "beats": [
+   {"cut": "e5_01", "ko": "정전 아흐레째. 통조림은 두 개.", "en": "Day nine of the blackout. Two cans left.", "zoom": "out", "sfx": "sting", "key": {"ko": "DAY 9 | 냉동실의 비밀", "en": "DAY 9: FREEZER SECRET"}},
+   {"cut": "e5_01", "ko": "첫날 이후 처음 연 냉동실은,", "en": "The freezer, opened for the first time since day one,", "zoom": "push"},
+   {"cut": "e5_02", "ko": "녹은 지 한참이었죠.", "en": "had thawed long ago.", "zoom": "in", "sfx": "drip"}
+  ]},
+  {"battery": 7, "beats": [
+   {"cut": "e5_21", "ko": "지난 화 여러분의 선택은 B, 얼린 생수와 아이스박스!", "en": "Last time, you voted B: frozen bottles and a cooler!", "zoom": "none", "sfx": "click", "key": {"ko": "여러분의 선택: B", "en": "YOU CHOSE: B"}, "tts": {"ko": "지난 화 여러분의 선택은 비, 얼린 생수와 아이스박스!", "en": "Last time, you voted B, frozen bottles and a cooler!"},
+    "prompt": "Minsu (red hoodie, big round glasses, no hat) stands in a dim blue night kitchen in front of the open freezer that is dripping meltwater onto the floor, holding an open, completely empty blue cooler and looking inside it, confused, one sweat drop. Same simple thick black doodle style as the reference, flat colors, no shading, vertical composition, no text, no letters, no watermark", "refs": ["minsu", "kitchen"]},
+   {"cut": "e5_21", "ko": "그런데 민수 집엔 얼린 생수가 없었죠.", "en": "But Minsu had no frozen bottles.", "zoom": "push", "sfx": "sad"}
+  ]},
+  {"battery": 7, "beats": [
+   {"cut": "e5_04", "ko": "물렁한 닭고기.", "en": "Soft chicken.", "zoom": "push"},
+   {"cut": "e5_22", "ko": "킁킁, 냄새는 멀쩡한데? 구워 먹을까?", "en": "Sniff, sniff. Smells fine? Let's cook it!", "zoom": "in", "sfx": "pop", "tts": {"ko": "킁킁, 냄새는 멀쩡한데? 구워 먹을까?"},
+    "prompt": "Close-up of Minsu (red hoodie, big round glasses, no hat) holding a soft pink raw chicken pack right under his nose and sniffing it, eyebrows raised, hopeful smile, small stink lines coming off the pack, dim blue night kitchen background. Same simple thick black doodle style as the reference, flat colors, no shading, vertical composition, no text, no letters, no watermark", "refs": ["minsu", "kitchen"]}
+  ]},
+  {"battery": 7, "beats": [
+   {"cut": "e4_10", "ko": "할머니가 혀를 찼어요.", "en": "Grandma clicked her tongue.", "sfx": "sad", "tts": {"en": "Grandma clicked her tongue and said,"}},
+   {"cut": "e5_05", "ko": "\"녹고 있는 게 아니라 녹은 지 일주일이야. 냉동실은 이틀이면 끝.\"", "en": "\"It isn't melting. It melted a week ago. A freezer lasts two days.\"", "zoom": "push", "key": {"ko": "냉동실은 48시간 (1화 복습)", "en": "FREEZER: 48 HOURS (EP.1)"}, "tts": {"ko": "녹고 있는 게 아니라 녹은 지 일주일이야. 냉동실은 이틀이면 끝.", "en": "it isn't melting, it melted a week ago. A freezer lasts two days."}},
+   {"cut": "e5_07", "ko": "\"냄새 멀쩡해도 버려. 탈 나는 균은 냄새가 안 나.\"", "en": "\"Even if it smells fine, toss it. The germs that make you sick have no smell.\"", "zoom": "in", "sfx": "click", "key": {"ko": "냄새로 판단 금지", "en": "NEVER TRUST THE SMELL"}, "tts": {"ko": "냄새 멀쩡해도 버려. 탈 나는 균은 냄새가 안 나.", "en": "Even if it smells fine, toss it. The germs that make you sick have no smell."}}
+  ]},
+  {"battery": 7, "beats": [
+   {"cut": "e5_23", "ko": "\"나는 첫날 얼린 생수랑 고기를 아이스박스로 옮겨 이틀 더 먹었어.\"", "en": "\"On day one I moved my frozen bottles and meat into a cooler. Two more days of food.\"", "zoom": "push", "sfx": "whoosh", "key": {"ko": "얼린 생수 = 얼음팩", "en": "FROZEN BOTTLES = ICE PACKS"}, "tts": {"ko": "나는 첫날 얼린 생수랑 고기를 아이스박스로 옮겨 이틀 더 먹었어.", "en": "On day one I moved my frozen bottles and meat into a cooler. Two more days of food."},
+    "prompt": "The grandma neighbor (gray hair bun, half-moon glasses, mustard yellow cardigan, cane leaning on the counter) alone in her own bright daytime kitchen, lifting frozen water bottles and a pack of meat out of an open freezer into a blue cooler on the floor, calm and efficient, warm daylight from the window. Same simple thick black doodle style as the reference, flat colors, no shading, vertical composition, no text, no letters, no watermark", "refs": ["grandma"]},
+   {"cut": "e5_24", "ko": "\"평소에 빈칸은 얼린 생수로 채워. 꽉 차면 이틀, 반이면 하루야.\"", "en": "\"Fill the empty space with frozen water bottles. Full freezer: two days. Half full: one.\"", "zoom": "in", "sfx": "click", "key": {"ko": "꽉 찬 냉동실 2일, 반은 1일", "en": "FULL: 2 DAYS, HALF: 1 DAY"}, "tts": {"ko": "평소에 빈칸은 얼린 생수로 채워. 꽉 차면 이틀, 반이면 하루야.", "en": "Fill the empty space with frozen water bottles. Full freezer, two days. Half full, one."},
+    "prompt": "Open freezer interior seen straight on, completely packed: food containers and bags on the shelves with frozen plastic water bottles stuffed into every empty gap between them, frost on the edges, no people. Same simple thick black doodle style as the reference, flat colors, no shading, vertical composition, no text, no letters, no watermark", "refs": ["minsu"]}
+  ]},
+  {"battery": 7, "beats": [
+   {"cut": "e5_25", "ko": "민수는 배운 대로 봉투 두 겹, 꽉 묶어 뚜껑 통에.", "en": "Minsu did it the way he learned: two bags, tied tight, lidded bin.", "zoom": "push", "sfx": "pop", "key": {"ko": "4화 복습: 두 겹, 꽉 묶기", "en": "EP.4 SKILL: TWO BAGS, TIE TIGHT"},
+    "prompt": "Minsu (red hoodie, big round glasses, no hat) kneeling on the kitchen floor at night, pushing a tightly tied double plastic bag of spoiled food into a plastic bin with a lid held open in his other hand, serious focused face, dim blue night kitchen. Same simple thick black doodle style as the reference, flat colors, no shading, vertical composition, no text, no letters, no watermark", "refs": ["minsu", "kitchen"]},
+   {"cut": "e5_26", "ko": "할머니가 처음으로 끄덕였어요.", "en": "Grandma nodded for the first time.", "zoom": "in", "sfx": "ding",
+    "prompt": "The grandma neighbor (gray hair bun, half-moon glasses, mustard yellow cardigan, cane) standing in the kitchen doorway giving a small approving nod with a tiny smile, while Minsu (red hoodie, big round glasses, no hat) stands proudly next to a closed lidded bin in the background, dim blue night kitchen. Same simple thick black doodle style as the reference, flat colors, no shading, vertical composition, no text, no letters, no watermark", "refs": ["grandma", "minsu", "kitchen"]}
+  ]},
+  {"battery": 7, "beats": [
+   {"cut": "81", "ko": "민수의 아흐레째 생존 점수는,", "en": "Minsu's day nine survival score:", "zoom": "out", "tts": {"ko": "민수의 아홉째 날 생존 점수는,"}, "reuse": "3dd781f4-5172-4a75-aadb-da699b8228c6"},
+   {"cut": "82", "ko": "72점.", "en": "seventy-two out of a hundred.", "zoom": "push", "sfx": "ding", "tts": {"ko": "칠십이 점."}, "reuse": "f2b041aa-fb95-4a60-8913-2277ba4fda0b", "draw": [{"text": "72", "xy": [540, 580], "size": 280, "fill": [255, 150, 0]}, {"text": "/ 100", "xy": [540, 760], "size": 80, "fill": "black"}]}
+  ]},
+  {"battery": 7, "beats": [
+   {"cut": "e5_13", "ko": "휴대폰은 사흘째부터 꺼 두고 정오에 한 번만 켰어요. 그래도 7퍼센트.", "en": "His phone has been off since day three, switched on once at noon. Still, seven percent.", "zoom": "out", "sfx": "lowbat", "key": {"ko": "하루 한 번만 켜기", "en": "POWER ON ONCE A DAY"}, "tts": {"ko": "휴대폰은 사흘째부터 꺼 두고 정오에 한 번만 켰어요. 그래도 칠 퍼센트."}},
+   {"cut": "e5_27", "ko": "오늘은 재난문자. 전기 복구, 일정 미정.", "en": "Today: an emergency alert. Power restoration, no date.", "zoom": "in", "sfx": "sting", "tts": {"ko": "오늘은 재난문자. 전기 복구, 일정 미정.", "en": "Today, an emergency alert. Power restoration, no date."},
+    "prompt": "Close-up of Minsu's hands holding a smartphone in a dim blue night kitchen, the screen shows a blank white emergency alert banner with a bold warning triangle icon and a tiny red battery icon in the corner, no letters or words on the screen, Minsu's worried face with big round glasses partly visible above the phone. Same simple thick black doodle style as the reference, flat colors, no shading, vertical composition, no text, no letters, no watermark", "refs": ["minsu", "kitchen"]}
+  ]},
+  {"battery": 0, "beats": [
+   {"cut": "e5_28", "ko": "그리고, 화면이 꺼졌어요.", "en": "Then the screen went black.", "zoom": "push", "sfx": "lowbat", "key": {"ko": "배터리 0%", "en": "BATTERY 0%"},
+    "prompt": "Minsu (red hoodie, big round glasses, no hat) in a dark blue night kitchen staring at the smartphone in his hand whose screen is completely black and dead, his eyes huge with shock, mouth a small circle, the room almost dark. Same simple thick black doodle style as the reference, flat colors, no shading, vertical composition, no text, no letters, no watermark", "refs": ["minsu", "kitchen"]}
+  ]},
+  {"battery": 0, "beats": [
+   {"cut": "e5_ab", "ko": "A, 지하주차장 차에서 충전한다.", "en": "A: charge it in the car in the garage.", "zoom": "none", "sfx": "whoosh", "tts": {"ko": "에이, 지하주차장 차에서 충전한다.", "en": "A, charge it in the car in the garage."}, "draw": [{"text": "A", "xy": [270, 250], "size": 200, "stroke": 10}, {"text": "B", "xy": [810, 250], "size": 200, "stroke": 10}, {"text": {"ko": "댓글로 A or B!", "en": "Comment A or B!"}, "xy": [540, 1355], "size": 76, "fill": [255, 230, 0], "box": true}]},
+   {"cut": "e5_ab", "ko": "B, 1층 공용 충전 줄에 선다.", "en": "B: wait in line at the lobby charging spot.", "zoom": "none", "sfx": "pop", "tts": {"ko": "비, 일층 공용 충전 줄에 선다.", "en": "B, wait in line at the lobby charging spot."}, "draw": [{"text": "A", "xy": [270, 250], "size": 200, "stroke": 10}, {"text": "B", "xy": [810, 250], "size": 200, "stroke": 10}, {"text": {"ko": "댓글로 A or B!", "en": "Comment A or B!"}, "xy": [540, 1355], "size": 76, "fill": [255, 230, 0], "box": true}]}
+  ]},
+  {"battery": 0, "beats": [
+   {"cut": "e5_14", "ko": "다음 화, 열흘째. 충전 대작전.", "en": "Next time: Day ten. The charging mission.", "zoom": "out", "sfx": "sting", "key": {"ko": "NEXT: DAY 10", "en": "NEXT: DAY 10"}, "tts": {"ko": "다음 화, 열흘째. 충전 대작전!", "en": "Next time, Day ten. The charging mission!"}}
+  ]}
+ ]
+}

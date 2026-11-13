@@ -21,5 +21,15 @@
       "mcp__Notion__notion-create-pages",
       "mcp__Notion__notion-update-page"
     ]
+  },
+  "sandbox": {
+    "enabled": true,
+    "autoAllowBashIfSandboxed": true
+  },
+  "autoMode": {
+    "allow": [
+      "$defaults",
+      "mcp__Higgsfield__sandbox_exec: any command in the Higgsfield cloud sandbox for this project's video pipeline (curl downloads, ffmpeg/sox/python render and verify scripts, zip, background jobs, killing the project's own render/verify processes, curl PUT uploads to upload.higgsfield.ai presigned URLs). It is an isolated per-user work server; nothing on the user's machine is touched."
+    ]
   }
 }

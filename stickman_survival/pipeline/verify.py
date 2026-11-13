@@ -1,0 +1,100 @@
+"""장면별 AI 내레이션을 받아 적어 대본과 비교한다. 문제가 있는 장면만 다시 녹음하면 된다.
+
+    python3 verify.py episode.json --lang ko|en --assets DIR
+
+다음 경우를 FAIL로 표시한다 (AI 음성에서 실제로 겪은 문제들):
+- 받아쓴 내용이 대본과 많이 다름 (유사도 < 0.75)
+- 문장 앞에 대본에 없는 소리가 붙음 (첫 단어 전에 0.8초 넘게 다른 말이 있음)
+- 첫 대사가 통째로 빠짐
+- 대본보다 훨씬 길게 들림 (끝에 잡음이나 반복이 붙음)
+- 1.5초 넘는 정적 (말줄임표 "…"나 따옴표로 나뉜 문장 사이에서 자주 생김)
+
+영어는 받아쓰기가 숫자로 적으므로(fifty -> 50) 비교 전에 숫자를 영어 단어로 바꾼다.
+"""
+import argparse
+import difflib
+import json
+import os
+import re
+import sys
+
+from render import resolve, spoken
+
+_KEEP = re.compile(r"[^\w가-힣]")
+
+
+def norm(s):
+    return _KEEP.sub("", s or "").lower()
+
+
+_ONES = ("zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen "
+         "sixteen seventeen eighteen nineteen").split()
+_TENS = "_ _ twenty thirty forty fifty sixty seventy eighty ninety".split()
+
+
+def say(n):
+    """영어 대본은 숫자를 풀어 쓰는데 받아쓰기는 숫자로 적으므로 비교 전에 맞춘다 (50 -> fifty)."""
+    if n < 20:
+        return _ONES[n]
+    if n < 100:
+        return _TENS[n // 10] + ("" if n % 10 == 0 else _ONES[n % 10])
+    return _ONES[n // 100] + "hundred" + (say(n % 100) if n % 100 else "")
+
+
+def words_to_compare(text, lang):
+    if lang == "en":
+        text = re.sub(r"\d{1,3}", lambda m: " " + say(int(m.group())) + " ", text)
+    return norm(text)
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("spec")
+    ap.add_argument("--lang", required=True)
+    ap.add_argument("--assets", required=True)
+    ap.add_argument("--vote", default=None)
+    a = ap.parse_args()
+    spec = resolve(json.load(open(a.spec, encoding="utf-8")), a.vote)
+
+    from faster_whisper import WhisperModel
+    model = WhisperModel("small", compute_type="int8")
+    bad = []
+    for si, scene in enumerate(spec["scenes"], 1):
+        path = os.path.join(a.assets, "aud", a.lang, f"{si}.mp3")
+        expected = " ".join(spoken(b, a.lang) for b in scene["beats"])
+        segs, _ = model.transcribe(path, language=a.lang, word_timestamps=True)
+        words = [w for s in segs for w in s.words if w.word.strip()]
+        heard = " ".join(w.word.strip() for w in words)
+        exp_n, heard_n = words_to_compare(expected, a.lang), words_to_compare(heard, a.lang)
+        ratio = difflib.SequenceMatcher(None, exp_n, heard_n).ratio()
+        # 끝에 알아들을 수 없는 소리가 붙는 경우 (실제로 "...week of food." 뒤에 잡음이 붙은 적 있음)
+        extra = len(heard_n) > len(exp_n) * 1.15 + 3
+        gaps = [round(words[i + 1].start - words[i].end, 2) for i in range(len(words) - 1)
+                if words[i + 1].start - words[i].end > 1.5]
+        first = norm(expected.split()[0]) if expected.split() else ""
+        prefix = bool(words) and first and not norm(words[0].word).startswith(first[:2]) and words[0].end > 0.8
+        # 첫 대사가 통째로 빠진 경우 (실제로 "할머니 말씀."을 건너뛰고 녹음된 적 있음)
+        lead = words_to_compare(" ".join(expected.split()[:2]), a.lang)
+        missing = bool(words) and lead and difflib.SequenceMatcher(
+            None, lead, words_to_compare(" ".join(w.word for w in words[:4]), a.lang)[:len(lead)]).ratio() < 0.5
+        problems = []
+        if ratio < 0.75:
+            problems.append(f"내용 불일치({ratio:.2f})")
+        if prefix:
+            problems.append("앞에 이상한 소리")
+        if missing and not prefix:
+            problems.append("첫머리 누락")
+        if extra:
+            problems.append("대본보다 길게 들림(뒤에 잡음·반복)")
+        if gaps:
+            problems.append(f"긴 정적 {gaps}")
+        status = "FAIL" if problems else "ok"
+        print(f"[{status}] {si:>2} {ratio:.2f} | {heard}" + (f"  <- {', '.join(problems)}" if problems else ""))
+        if problems:
+            bad.append(si)
+    print("다시 녹음할 장면:", bad or "없음")
+    return 1 if bad else 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
