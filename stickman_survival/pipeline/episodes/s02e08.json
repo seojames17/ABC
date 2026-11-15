@@ -9,13 +9,10 @@
  },
  "font": "serif",
  "voice": {
-  "model": "seed_audio",
-  "voice_id": "1ad38ba4-9cc4-4f2f-9fde-b0fefdf67ae5",
-  "voice_name": "Gideon",
-  "speech_rate": {
-   "ko": 10,
-   "en": 5
-  }
+  "model": "text2speech_v2",
+  "variant": "elevenlabs",
+  "voice_id": "3c9d6053-6334-592c-8997-4e325286af3f",
+  "voice_name": "Holden"
  },
  "lead_in": 0.0,
  "scene_gap": 0.25,
@@ -76,7 +73,8 @@
      "prompt": "Minsu (dark brick-red hoodie, big round glasses, no hat) sitting on a sofa in a small apartment living room in the evening, turning his head sharply toward a large window, outside the window a dusk sky and a tall pole with a round siren loudspeaker between apartment blocks, a floor lamp lit beside the sofa. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), a warmly lit evening living room with clear visibility, soft shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
      "refs": [
       "minsu"
-     ]
+     ],
+     "job": "2e15755e-6c4d-4d14-b198-b7def1190f66"
     },
     {
      "cut": "e208_02",
@@ -105,7 +103,8 @@
      "prompt": "Close view of Minsu (dark brick-red hoodie, big round glasses, no hat) on a sofa holding a phone in one hand, looking at the phone and shrugging one shoulder, a window with a dusk sky behind him. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), a warmly lit evening living room with clear visibility, soft shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
      "refs": [
       "minsu"
-     ]
+     ],
+     "job": "28dc1a9c-ce00-45d8-bfc9-e3cf2f93e56f"
     }
    ]
   },
@@ -196,7 +195,8 @@
      "prompt": "Minsu (dark brick-red hoodie, big round glasses, no hat) standing in the middle of a small apartment living room with his head tilted and one hand cupped behind his ear, listening, the phone lowered in his other hand, a large window with a dusk sky behind him. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), a warmly lit evening living room with clear visibility, soft shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
      "refs": [
       "minsu"
-     ]
+     ],
+     "job": "2388f2c2-e5fc-4af1-91c5-7113405749ff"
     },
     {
      "cut": "e208_03",
@@ -292,7 +292,8 @@
      "prompt": "Minsu (dark brick-red hoodie, big round glasses, no hat) at an apartment front door pulling a packed backpack onto his shoulder with one hand and opening the door with the other, a lit hallway visible through the door. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), a warmly lit evening living room with clear visibility, soft shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
      "refs": [
       "minsu"
-     ]
+     ],
+     "job": "15592b29-78e2-4f9a-acea-30bd6ed18983"
     },
     {
      "cut": "e203_07",

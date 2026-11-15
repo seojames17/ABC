@@ -9,13 +9,10 @@
  },
  "font": "serif",
  "voice": {
-  "model": "seed_audio",
-  "voice_id": "1ad38ba4-9cc4-4f2f-9fde-b0fefdf67ae5",
-  "voice_name": "Gideon",
-  "speech_rate": {
-   "ko": 10,
-   "en": 5
-  }
+  "model": "text2speech_v2",
+  "variant": "elevenlabs",
+  "voice_id": "3c9d6053-6334-592c-8997-4e325286af3f",
+  "voice_name": "Holden"
  },
  "lead_in": 0.0,
  "scene_gap": 0.25,
