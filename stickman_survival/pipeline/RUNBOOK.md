@@ -99,6 +99,7 @@ cd .. && bash ../make_sfx.sh       # assets/sfx/*.wav 생성
 
 - 장면마다 1개 파일. 한국어 `speech_rate: 20`, 영어 `speech_rate: 10`. 줄당 0.2크레딧.
 - **시즌 2**: 목소리 Gideon `1ad38ba4-9cc4-4f2f-9fde-b0fefdf67ae5`(11/9 오디션: 한국어 받아쓰기 100%, 가장 낮고 느린 목소리. 표는 `episodes/s02e01.md`). 한국어 `speech_rate: 10`, 영어 `5`. 배속은 ko 1.15 / en 1.2 이하.
+- **11/15부터: ElevenLabs** (사용자 결정: "힉스필드 음성이 진짜 별로"). `model: "text2speech_v2"`, `variant: "elevenlabs"`, `voice_type: "preset"`, 목소리 **Holden** `3c9d6053-6334-592c-8997-4e325286af3f`(사용자가 다섯 후보 중 선택). speech_rate 같은 속도 파라미터는 없다. 줄당 0.3크레딧. 첫 28줄 중 27줄이 첫 녹음에서 통과했고 앞뒤 잡음이 없었다(seed_audio는 화마다 2~4줄 재녹음). 한 번에 12줄을 보내면 4줄쯤 429로 거절되니 거절된 줄만 다시 보낸다. 한 글자짜리 첫 문장("셋.")은 뭉개진다 → "세 번째,"처럼 늘린다. 문장 사이 정적이 1.5초 넘게 생기면 `ffmpeg -af silenceremove=stop_periods=-1:stop_duration=0.7:stop_threshold=-38dB:stop_silence=0.4`로 줄인다.
 - 숫자·약어는 소리 나는 대로 풀어 쓴다 ("4시간쯤" → "네 시간 정도", "DAY 3" → "데이 쓰리", "30" → "thirty").
 - "…"는 2~4초 정적을 만들 수 있으니 녹음용 텍스트에서는 쉼표로 바꾼다(자막은 그대로 둬도 됨).
 - 한 번에 3줄까지만 제출. `assets/aud/<lang>/<장면 번호>.mp3`로 저장.
