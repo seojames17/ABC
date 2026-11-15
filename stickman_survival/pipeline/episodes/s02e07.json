@@ -44,7 +44,7 @@
       {
        "text": {
         "ko": "운전 중 공습경보",
-        "en": "AIR-RAID SIREN"
+        "en": "AIR RAID"
        },
        "xy": [
         540,
@@ -61,7 +61,7 @@
       {
        "text": {
         "ko": "계속 달리면 안 됩니다",
-        "en": "NEVER KEEP DRIVING"
+        "en": "STOP DRIVING"
        },
        "xy": [
         540,
