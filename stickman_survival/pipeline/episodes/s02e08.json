@@ -705,7 +705,7 @@
       {
        "text": {
         "ko": "몇 개 알고 있었나요?",
-        "en": "HOW MANY DID YOU KNOW?"
+        "en": "HOW MANY?"
        },
        "xy": [
         540,
@@ -722,7 +722,7 @@
       {
        "text": {
         "ko": "댓글로",
-        "en": "COMMENT"
+        "en": "COMMENT BELOW"
        },
        "xy": [
         540,
