@@ -1,0 +1,743 @@
+{
+ "title": {
+  "ko": "1203호 — 지금 사이렌이 울린다면 (S2 8화, 단독형)",
+  "en": "Unit 1203 — If a Siren Went Off Right Now"
+ },
+ "badge": {
+  "ko": "1203호 생존툰",
+  "en": "UNIT 1203"
+ },
+ "font": "serif",
+ "voice": {
+  "model": "seed_audio",
+  "voice_id": "1ad38ba4-9cc4-4f2f-9fde-b0fefdf67ae5",
+  "voice_name": "Gideon",
+  "speech_rate": {
+   "ko": 10,
+   "en": 5
+  }
+ },
+ "lead_in": 0.0,
+ "scene_gap": 0.25,
+ "tail": 0.4,
+ "speed": {
+  "ko": 1.2,
+  "en": 1.4
+ },
+ "_note": "11/15 단독형(조회수 실험 2/3). 연재 순서에서 벗어나 1·3·4화에서 확인한 지식을 2인칭 가정으로 다시 묶었다. 날짜 배지·배터리·점수판·투표 없음. 엄마를 만나는 이야기는 9화로.",
+ "refs_legend": {
+  "minsu": "3be1e101-6989-4400-9688-7c7c0650c115"
+ },
+ "scenes": [
+  {
+   "beats": [
+    {
+     "cut": "e208_01",
+     "ko": "지금 사이렌이 울린다면,",
+     "en": "If a siren went off right now,",
+     "zoom": "push",
+     "sfx": "siren",
+     "draw": [
+      {
+       "text": {
+        "ko": "지금 사이렌이",
+        "en": "IF A SIREN"
+       },
+       "xy": [
+        540,
+        330
+       ],
+       "size": 120,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      },
+      {
+       "text": {
+        "ko": "울린다면?",
+        "en": "WENT OFF NOW?"
+       },
+       "xy": [
+        540,
+        480
+       ],
+       "size": 120,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      }
+     ],
+     "prompt": "Minsu (dark brick-red hoodie, big round glasses, no hat) sitting on a sofa in a small apartment living room in the evening, turning his head sharply toward a large window, outside the window a dusk sky and a tall pole with a round siren loudspeaker between apartment blocks, a floor lamp lit beside the sofa. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), a warmly lit evening living room with clear visibility, soft shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu"
+     ]
+    },
+    {
+     "cut": "e208_02",
+     "ko": "가장 먼저 뭘 해야 할까요?",
+     "en": "what should you do first?",
+     "zoom": "in",
+     "draw": [
+      {
+       "text": {
+        "ko": "가장 먼저 할 일은?",
+        "en": "WHAT FIRST?"
+       },
+       "xy": [
+        540,
+        330
+       ],
+       "size": 104,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      }
+     ],
+     "prompt": "Close view of Minsu (dark brick-red hoodie, big round glasses, no hat) on a sofa holding a phone in one hand, looking at the phone and shrugging one shoulder, a window with a dusk sky behind him. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), a warmly lit evening living room with clear visibility, soft shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu"
+     ]
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e208_02",
+     "ko": "민수는 훈련이겠지, 하고 휴대폰만 봤어요.",
+     "en": "Minsu thought it was just a drill and kept looking at his phone.",
+     "zoom": "shake",
+     "sfx": "thunk",
+     "draw": [
+      {
+       "text": {
+        "ko": "훈련이겠지",
+        "en": "JUST A DRILL"
+       },
+       "xy": [
+        540,
+        330
+       ],
+       "size": 110,
+       "fill": [
+        230,
+        60,
+        50
+       ],
+       "stroke": 12
+      },
+      {
+       "text": {
+        "ko": "X",
+        "en": "X"
+       },
+       "xy": [
+        540,
+        520
+       ],
+       "size": 200,
+       "fill": [
+        230,
+        60,
+        50
+       ],
+       "stroke": 12
+      }
+     ]
+    },
+    {
+     "cut": "e208_01",
+     "ko": "할 일은 네 가지, 마지막이 제일 중요합니다.",
+     "en": "There are four things to do, and the last one matters most.",
+     "zoom": "in",
+     "key": {
+      "ko": "할 일 네 가지, 마지막이 제일 중요",
+      "en": "FOUR THINGS. THE LAST MATTERS MOST"
+     }
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e208_03",
+     "ko": "먼저, 소리를 듣습니다.",
+     "en": "First, listen to the sound.",
+     "zoom": "push",
+     "sfx": "click",
+     "draw": [
+      {
+       "text": {
+        "ko": "1",
+        "en": "1"
+       },
+       "xy": [
+        540,
+        360
+       ],
+       "size": 220,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      }
+     ],
+     "prompt": "Minsu (dark brick-red hoodie, big round glasses, no hat) standing in the middle of a small apartment living room with his head tilted and one hand cupped behind his ear, listening, the phone lowered in his other hand, a large window with a dusk sky behind him. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), a warmly lit evening living room with clear visibility, soft shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu"
+     ]
+    },
+    {
+     "cut": "e208_03",
+     "ko": "평탄하게 이어지면 경계경보, 준비하라는 뜻이고요.",
+     "en": "A flat, steady tone is an alert warning, and it means get ready.",
+     "zoom": "in",
+     "key": {
+      "ko": "평탄한 소리는 경계경보, 준비",
+      "en": "FLAT TONE: GET READY"
+     }
+    },
+    {
+     "cut": "e208_01",
+     "ko": "오르내리면 공습경보, 지금 바로 지하로 가라는 뜻입니다.",
+     "en": "A tone that rises and falls is an air-raid warning, and it means go underground now.",
+     "zoom": "shake",
+     "key": {
+      "ko": "오르내리면 공습경보, 바로 지하로",
+      "en": "RISE AND FALL: GO UNDERGROUND"
+     }
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e203_04",
+     "ko": "둘째,",
+     "en": "Second,",
+     "zoom": "in",
+     "sfx": "click",
+     "reuse": "5c2f25b1-e3dd-4c27-b390-4b8f478c77fd",
+     "draw": [
+      {
+       "text": {
+        "ko": "2",
+        "en": "2"
+       },
+       "xy": [
+        540,
+        360
+       ],
+       "size": 220,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      }
+     ]
+    },
+    {
+     "cut": "e203_04",
+     "ko": "가스와 전원을 잠급니다.",
+     "en": "shut off the gas and the power.",
+     "zoom": "push",
+     "sfx": "thunk",
+     "key": {
+      "ko": "가스와 전원 잠그기",
+      "en": "GAS AND POWER OFF"
+     }
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e208_04",
+     "ko": "셋째,",
+     "en": "Third,",
+     "zoom": "in",
+     "sfx": "click",
+     "draw": [
+      {
+       "text": {
+        "ko": "3",
+        "en": "3"
+       },
+       "xy": [
+        540,
+        360
+       ],
+       "size": 220,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      }
+     ],
+     "prompt": "Minsu (dark brick-red hoodie, big round glasses, no hat) at an apartment front door pulling a packed backpack onto his shoulder with one hand and opening the door with the other, a lit hallway visible through the door. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), a warmly lit evening living room with clear visibility, soft shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu"
+     ]
+    },
+    {
+     "cut": "e203_07",
+     "ko": "엘리베이터 말고, 계단으로 지하까지 내려갑니다.",
+     "en": "skip the elevator, and take the stairs all the way down underground.",
+     "zoom": "push",
+     "sfx": "rumble",
+     "reuse": "0c816aa2-d847-45f6-aed4-2f2646e4f972",
+     "key": {
+      "ko": "엘리베이터 대신 계단",
+      "en": "STAIRS, NOT THE ELEVATOR"
+     }
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e204_05",
+     "ko": "그리고 마지막, 제일 중요한 것.",
+     "en": "And the last one, the one that matters most.",
+     "zoom": "in",
+     "sfx": "click",
+     "reuse": "f0c3ebd6-22b8-4027-bffb-e170d6c64417",
+     "draw": [
+      {
+       "text": {
+        "ko": "4",
+        "en": "4"
+       },
+       "xy": [
+        540,
+        360
+       ],
+       "size": 220,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      }
+     ]
+    },
+    {
+     "cut": "e204_05",
+     "ko": "소문 말고, 라디오와 재난문자를 믿습니다.",
+     "en": "Trust the radio and the emergency alerts, not rumors.",
+     "zoom": "push",
+     "sfx": "radio",
+     "key": {
+      "ko": "소문 말고 방송과 재난문자",
+      "en": "BROADCAST, NOT RUMORS"
+     }
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e201_sc",
+     "ko": "",
+     "en": "",
+     "zoom": "none",
+     "sfx": "click",
+     "reuse": "dd6cd6d1-77d3-4349-afe3-47b3ea56c4fe",
+     "tts": {
+      "ko": "저장해 두세요. 소리부터 듣고,",
+      "en": "Save this for later, listen to the sound first,"
+     },
+     "draw": [
+      {
+       "text": {
+        "ko": "저장해 두세요",
+        "en": "SAVE THIS"
+       },
+       "xy": [
+        540,
+        330
+       ],
+       "size": 96,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      },
+      {
+       "text": {
+        "ko": "사이렌이 울리면",
+        "en": "WHEN THE SIREN SOUNDS"
+       },
+       "xy": [
+        540,
+        580
+       ],
+       "size": 62,
+       "fill": [
+        235,
+        200,
+        120
+       ]
+      },
+      {
+       "text": {
+        "ko": "1. 소리부터 듣기",
+        "en": "1. Listen to the sound"
+       },
+       "xy": [
+        540,
+        690
+       ],
+       "size": 48,
+       "fill": [
+        235,
+        235,
+        235
+       ]
+      }
+     ]
+    },
+    {
+     "cut": "e201_sc",
+     "ko": "",
+     "en": "",
+     "zoom": "none",
+     "tts": {
+      "ko": "가스와 전원을 잠그고,",
+      "en": "shut off the gas and the power,"
+     },
+     "draw": [
+      {
+       "text": {
+        "ko": "저장해 두세요",
+        "en": "SAVE THIS"
+       },
+       "xy": [
+        540,
+        330
+       ],
+       "size": 96,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      },
+      {
+       "text": {
+        "ko": "사이렌이 울리면",
+        "en": "WHEN THE SIREN SOUNDS"
+       },
+       "xy": [
+        540,
+        580
+       ],
+       "size": 62,
+       "fill": [
+        235,
+        200,
+        120
+       ]
+      },
+      {
+       "text": {
+        "ko": "1. 소리부터 듣기",
+        "en": "1. Listen to the sound"
+       },
+       "xy": [
+        540,
+        690
+       ],
+       "size": 48,
+       "fill": [
+        235,
+        235,
+        235
+       ]
+      },
+      {
+       "text": {
+        "ko": "2. 가스와 전원 잠그기",
+        "en": "2. Shut off gas and power"
+       },
+       "xy": [
+        540,
+        775
+       ],
+       "size": 48,
+       "fill": [
+        235,
+        235,
+        235
+       ]
+      }
+     ]
+    },
+    {
+     "cut": "e201_sc",
+     "ko": "",
+     "en": "",
+     "zoom": "none",
+     "tts": {
+      "ko": "계단으로 지하까지,",
+      "en": "take the stairs down underground,"
+     },
+     "draw": [
+      {
+       "text": {
+        "ko": "저장해 두세요",
+        "en": "SAVE THIS"
+       },
+       "xy": [
+        540,
+        330
+       ],
+       "size": 96,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      },
+      {
+       "text": {
+        "ko": "사이렌이 울리면",
+        "en": "WHEN THE SIREN SOUNDS"
+       },
+       "xy": [
+        540,
+        580
+       ],
+       "size": 62,
+       "fill": [
+        235,
+        200,
+        120
+       ]
+      },
+      {
+       "text": {
+        "ko": "1. 소리부터 듣기",
+        "en": "1. Listen to the sound"
+       },
+       "xy": [
+        540,
+        690
+       ],
+       "size": 48,
+       "fill": [
+        235,
+        235,
+        235
+       ]
+      },
+      {
+       "text": {
+        "ko": "2. 가스와 전원 잠그기",
+        "en": "2. Shut off gas and power"
+       },
+       "xy": [
+        540,
+        775
+       ],
+       "size": 48,
+       "fill": [
+        235,
+        235,
+        235
+       ]
+      },
+      {
+       "text": {
+        "ko": "3. 계단으로 지하까지",
+        "en": "3. Stairs, down underground"
+       },
+       "xy": [
+        540,
+        860
+       ],
+       "size": 48,
+       "fill": [
+        235,
+        235,
+        235
+       ]
+      }
+     ]
+    },
+    {
+     "cut": "e201_sc",
+     "ko": "",
+     "en": "",
+     "zoom": "none",
+     "tts": {
+      "ko": "그리고 방송을 믿는다.",
+      "en": "and trust the broadcast."
+     },
+     "draw": [
+      {
+       "text": {
+        "ko": "저장해 두세요",
+        "en": "SAVE THIS"
+       },
+       "xy": [
+        540,
+        330
+       ],
+       "size": 96,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      },
+      {
+       "text": {
+        "ko": "사이렌이 울리면",
+        "en": "WHEN THE SIREN SOUNDS"
+       },
+       "xy": [
+        540,
+        580
+       ],
+       "size": 62,
+       "fill": [
+        235,
+        200,
+        120
+       ]
+      },
+      {
+       "text": {
+        "ko": "1. 소리부터 듣기",
+        "en": "1. Listen to the sound"
+       },
+       "xy": [
+        540,
+        690
+       ],
+       "size": 48,
+       "fill": [
+        235,
+        235,
+        235
+       ]
+      },
+      {
+       "text": {
+        "ko": "2. 가스와 전원 잠그기",
+        "en": "2. Shut off gas and power"
+       },
+       "xy": [
+        540,
+        775
+       ],
+       "size": 48,
+       "fill": [
+        235,
+        235,
+        235
+       ]
+      },
+      {
+       "text": {
+        "ko": "3. 계단으로 지하까지",
+        "en": "3. Stairs, down underground"
+       },
+       "xy": [
+        540,
+        860
+       ],
+       "size": 48,
+       "fill": [
+        235,
+        235,
+        235
+       ]
+      },
+      {
+       "text": {
+        "ko": "4. 소문 말고 방송과 재난문자",
+        "en": "4. Trust the broadcast, not rumors"
+       },
+       "xy": [
+        540,
+        945
+       ],
+       "size": 48,
+       "fill": [
+        235,
+        235,
+        235
+       ]
+      }
+     ]
+    },
+    {
+     "cut": "e208_01",
+     "ko": "몇 개나 알고 있었나요?",
+     "en": "How many did you already know?",
+     "zoom": "push",
+     "sfx": "siren",
+     "draw": [
+      {
+       "text": {
+        "ko": "몇 개 알고 있었나요?",
+        "en": "HOW MANY DID YOU KNOW?"
+       },
+       "xy": [
+        540,
+        330
+       ],
+       "size": 92,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      },
+      {
+       "text": {
+        "ko": "댓글로",
+        "en": "COMMENT"
+       },
+       "xy": [
+        540,
+        470
+       ],
+       "size": 92,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

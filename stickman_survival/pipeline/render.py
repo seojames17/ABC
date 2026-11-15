@@ -208,8 +208,10 @@ def render(spec, lang, assets, out, work):
         n = max(1, end_frames - frames_acc)
         frames_acc = end_frames
         mode = b.get("zoom", "in")
-        z = {"in": "'min(1+0.0012*on,1.08)'", "out": "'max(1.08-0.0012*on,1.0)'",
-             "push": "'min(1+0.004*on,1.25)'"}.get(mode, "1.0")
+        # 줌 속도를 비트 길이에 맞춘다: 짧은 컷은 예전 속도 그대로, 긴 컷은 끝까지 천천히 움직여 정지 화면이 되지 않게
+        r_in, r_push = 0.08 / max(n, 67), 0.25 / max(n, 62)
+        z = {"in": f"'min(1+{r_in:.6f}*on,1.08)'", "out": f"'max(1.08-{r_in:.6f}*on,1.0)'",
+             "push": f"'min(1+{r_push:.6f}*on,1.25)'"}.get(mode, "1.0")
         shake = (",crop=1080:1920:'(in_w-1080)/2+8*sin(n*2.1)':'(in_h-1920)/2+8*cos(n*1.7)',scale=1080:1920"
                  if mode == "shake" else "")
         vf = (f"scale=1620:2895,crop=1620:2880,zoompan=z={z}:d={n}:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'"

@@ -17,14 +17,14 @@
    "en": 5
   }
  },
- "lead_in": 0.2,
- "scene_gap": 0.3,
- "tail": 1.5,
+ "lead_in": 0.0,
+ "scene_gap": 0.25,
+ "tail": 0.4,
  "speed": {
   "ko": 1.2,
   "en": 1.4
  },
- "_note": "11/15 새 형식(조회수 실험 1/3): 질문으로 시작 → 10초 안에 답 → 이야기 → 저장용 요약 카드. '민수의 선택' 회상, 점수판, A/B 화면, 다음 화 예고 없음. 6화 투표 결과가 비어 있어 A(차로 마중 간다)를 이야기에 반영. 투표는 캡션·스토리에서만.",
+ "_note": "11/15 재편집(v2). v1(6비트, 9초에 답이 끝남)은 중간이 비어 게시하지 않음. v2: 실수 먼저 → 세 가지를 하나씩(세 번째를 뒤로 미룸) → 요약 카드가 한 줄씩 → 엄마의 버스. 21비트, 컷당 약 2초. 배터리 표시 없음. 새 그림 없음(4화 라디오 컷 재사용).",
  "refs_legend": {
   "minsu": "3be1e101-6989-4400-9688-7c7c0650c115",
   "grandma": "22c13de9-c43e-404d-8eec-70f1d222a3df",
@@ -32,12 +32,11 @@
  },
  "scenes": [
   {
-   "battery": 100,
    "beats": [
     {
      "cut": "e207_01",
-     "ko": "운전 중에 공습경보가 울리면, 절대 계속 달리지 마세요.",
-     "en": "Never keep driving through an air-raid siren. Here is what to do.",
+     "ko": "운전 중에 공습경보가 울립니다.",
+     "en": "An air-raid siren goes off while you are driving.",
      "zoom": "push",
      "sfx": "siren",
      "draw": [
@@ -60,8 +59,8 @@
       },
       {
        "text": {
-        "ko": "계속 달리면 안 됩니다",
-        "en": "STOP DRIVING"
+        "ko": "이러면 안 됩니다",
+        "en": "DON'T DO THIS"
        },
        "xy": [
         540,
@@ -83,65 +82,110 @@
       "car"
      ],
      "job": "61b6a9a3-542a-476c-b895-aff5e1274224"
-    }
-   ]
-  },
-  {
-   "battery": 100,
-   "beats": [
-    {
-     "cut": "e207_02",
-     "ko": "도로 오른쪽에 차를 세우고, 차에서 내려 대피합니다.",
-     "en": "Pull over to the right side of the road, get out, and take cover.",
-     "zoom": "in",
-     "sfx": "thunk",
-     "key": {
-      "ko": "도로 오른쪽에 정차 후 대피",
-      "en": "PULL OVER RIGHT, TAKE COVER"
-     },
-     "prompt": "Wide view of a city road from behind: the same small dark gray car as the reference stopped neatly against the right-hand curb with the driver's door open, a few other plain cars also stopped in a line along the right curb, the middle of the road completely empty, Minsu (dark brick-red hoodie, big round glasses, no hat) and the grandma (gray hair bun, half-moon glasses, muted ochre cardigan, cane) walking away from the car along the sidewalk toward a stairway going down into an underpass. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
-     "refs": [
-      "minsu",
-      "grandma",
-      "car"
-     ],
-     "job": "99ab69d2-be8e-44b5-beac-ffb28dfabf75"
-    }
-   ]
-  },
-  {
-   "battery": 100,
-   "beats": [
+    },
     {
      "cut": "e207_03",
-     "ko": "사이렌 6일째. 민수는 멈춰 선 버스에 탄 엄마를 마중 가는 길이었어요. 사이렌이 울리자 민수는 오히려 속도를 올렸죠.",
-     "en": "Day six. Minsu was driving out to get Mom from her stalled bus, and when the siren rose, he sped up instead.",
-     "zoom": "push",
-     "sfx": "rumble",
-     "key": {
-      "ko": "사이렌 6일째",
-      "en": "DAY 6"
-     },
-     "tts": {
-      "ko": "사이렌 육 일째. 민수는 멈춰 선 버스에 탄 엄마를 마중 가는 길이었어요. 사이렌이 울리자 민수는 오히려 속도를 올렸죠."
-     },
+     "ko": "대부분은 이렇게 하죠.",
+     "en": "Most people do this.",
+     "zoom": "in",
+     "draw": [
+      {
+       "text": {
+        "ko": "대부분의 선택",
+        "en": "MOST PEOPLE"
+       },
+       "xy": [
+        540,
+        330
+       ],
+       "size": 100,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      }
+     ],
      "prompt": "Inside a small car seen from the back seat: Minsu (dark brick-red hoodie, big round glasses, no hat) gripping the steering wheel with both hands and leaning forward, the grandma (gray hair bun, half-moon glasses, muted ochre cardigan, cane) in the passenger seat turning her head toward him, through the windshield a long empty road and far ahead a single stopped bus. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
      "refs": [
       "minsu",
       "grandma"
      ],
      "job": "467d584b-0953-44e6-b388-115272af4c1f"
+    },
+    {
+     "cut": "e207_03",
+     "ko": "속도를 올립니다.",
+     "en": "They speed up.",
+     "zoom": "shake",
+     "sfx": "rumble",
+     "draw": [
+      {
+       "text": {
+        "ko": "속도를 올린다",
+        "en": "SPEED UP"
+       },
+       "xy": [
+        540,
+        330
+       ],
+       "size": 110,
+       "fill": [
+        230,
+        60,
+        50
+       ],
+       "stroke": 12
+      },
+      {
+       "text": {
+        "ko": "X",
+        "en": "X"
+       },
+       "xy": [
+        540,
+        520
+       ],
+       "size": 200,
+       "fill": [
+        230,
+        60,
+        50
+       ],
+       "stroke": 12
+      }
+     ]
     }
    ]
   },
   {
-   "battery": 100,
+   "beats": [
+    {
+     "cut": "e207_01",
+     "ko": "민수도 그랬어요.",
+     "en": "Minsu did too.",
+     "zoom": "in",
+     "key": {
+      "ko": "사이렌 6일째",
+      "en": "DAY 6"
+     }
+    },
+    {
+     "cut": "e207_03",
+     "ko": "엄마가 탄 버스가 저 앞에 멈춰 있었거든요.",
+     "en": "His mom's bus was stalled just up ahead.",
+     "zoom": "push"
+    }
+   ]
+  },
+  {
    "beats": [
     {
      "cut": "e207_04",
-     "ko": "할머니가 말했어요. 세워라, 오른쪽에. 차는 두고 몸만 간다.",
-     "en": "Grandma said, stop the car, on the right, we leave the car and take only ourselves.",
-     "zoom": "in",
+     "ko": "할머니가 말했어요. 세워라.",
+     "en": "Grandma said, stop the car.",
+     "zoom": "push",
      "sfx": "sting",
      "prompt": "Inside a small car, close view from the driver's side: the grandma (gray hair bun, half-moon glasses, muted ochre cardigan, cane) in the passenger seat calmly pointing with one hand through the windshield toward the right-hand curb, Minsu (dark brick-red hoodie, big round glasses, no hat) at the wheel turning his head to look where she points. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
      "refs": [
@@ -149,18 +193,113 @@
       "grandma"
      ],
      "job": "15a26cff-5c0d-40d7-8d10-92277ba424eb"
+    },
+    {
+     "cut": "e207_04",
+     "ko": "할 일은 세 가지인데,",
+     "en": "There are three things to do,",
+     "zoom": "in",
+     "key": {
+      "ko": "할 일은 세 가지",
+      "en": "THREE THINGS TO DO"
+     }
+    },
+    {
+     "cut": "e207_04",
+     "ko": "세 번째는 다들 빼먹는단다.",
+     "en": "and everyone forgets the third.",
+     "zoom": "shake",
+     "key": {
+      "ko": "세 번째는 다들 빼먹는다",
+      "en": "EVERYONE FORGETS THE THIRD"
+     }
     }
    ]
   },
   {
-   "battery": 100,
    "beats": [
     {
-     "cut": "e207_05",
-     "ko": "민수는 차를 길가에 붙이고, 할머니와 가까운 지하도로 내려갔어요. 엄마의 버스는 아직 저 앞에 있어요.",
-     "en": "Minsu parked at the curb and went down into the nearest underpass with Grandma, while Mom's bus was still somewhere up ahead.",
-     "zoom": "push",
+     "cut": "e207_02",
+     "ko": "하나.",
+     "en": "One.",
+     "zoom": "in",
      "sfx": "click",
+     "draw": [
+      {
+       "text": {
+        "ko": "1",
+        "en": "1"
+       },
+       "xy": [
+        540,
+        360
+       ],
+       "size": 220,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      }
+     ],
+     "prompt": "Wide view of a city road from behind: the same small dark gray car as the reference stopped neatly against the right-hand curb with the driver's door open, a few other plain cars also stopped in a line along the right curb, the middle of the road completely empty, Minsu (dark brick-red hoodie, big round glasses, no hat) and the grandma (gray hair bun, half-moon glasses, muted ochre cardigan, cane) walking away from the car along the sidewalk toward a stairway going down into an underpass. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu",
+      "grandma",
+      "car"
+     ],
+     "job": "99ab69d2-be8e-44b5-beac-ffb28dfabf75"
+    },
+    {
+     "cut": "e207_02",
+     "ko": "도로 오른쪽이나 공터에 차를 세운다.",
+     "en": "Pull over to the right, or into an open lot.",
+     "zoom": "push",
+     "key": {
+      "ko": "오른쪽이나 공터에 정차",
+      "en": "PULL OVER RIGHT"
+     }
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e207_02",
+     "ko": "둘.",
+     "en": "Two.",
+     "zoom": "in",
+     "sfx": "click",
+     "draw": [
+      {
+       "text": {
+        "ko": "2",
+        "en": "2"
+       },
+       "xy": [
+        540,
+        360
+       ],
+       "size": 220,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      }
+     ]
+    },
+    {
+     "cut": "e207_05",
+     "ko": "차는 두고, 몸만 내려서 가까운 지하로 간다.",
+     "en": "Leave the car, take only yourself, and go underground nearby.",
+     "zoom": "push",
+     "key": {
+      "ko": "내려서 가까운 지하로",
+      "en": "GET OUT, GO UNDERGROUND"
+     },
      "prompt": "A stairway going down into a city underpass seen from the top of the stairs: Minsu (dark brick-red hoodie, big round glasses, no hat) holding the arm of the grandma (gray hair bun, half-moon glasses, muted ochre cardigan, cane) as they walk down the steps, she holds the handrail, a few plain stick-figure people in dark gray and navy coats, no glasses, walking down ahead of them, behind them at street level a small dark gray car parked at the curb, only Minsu wears the red hoodie and glasses. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
      "refs": [
       "minsu",
@@ -171,80 +310,67 @@
    ]
   },
   {
-   "battery": 100,
    "beats": [
     {
-     "cut": "e201_sc",
-     "ko": "저장해 두세요. 운전 중 공습경보. 하나, 도로 오른쪽이나 공터에 정차. 둘, 차에서 내려 가까운 지하로. 셋, 라디오로 안내 방송 듣기.",
-     "en": "Save this. If a siren sounds while you are driving: one, pull over to the right or into an open lot. Two, get out and go underground nearby. Three, listen to the radio for instructions.",
-     "zoom": "none",
+     "cut": "e207_05",
+     "ko": "셋. 다들 빼먹는 것.",
+     "en": "Three, the one everyone forgets.",
+     "zoom": "in",
      "sfx": "click",
-     "reuse": "dd6cd6d1-77d3-4349-afe3-47b3ea56c4fe",
      "draw": [
       {
        "text": {
-        "ko": "운전 중 공습경보",
-        "en": "SIREN WHILE DRIVING"
+        "ko": "3",
+        "en": "3"
        },
        "xy": [
         540,
-        580
+        360
        ],
-       "size": 66,
+       "size": 220,
        "fill": [
-        235,
-        200,
-        120
-       ]
-      },
-      {
-       "text": {
-        "ko": "1. 오른쪽이나 공터에 정차",
-        "en": "1. Pull over right"
-       },
-       "xy": [
-        540,
-        700
+        255,
+        230,
+        0
        ],
-       "size": 50,
-       "fill": [
-        235,
-        235,
-        235
-       ]
-      },
-      {
-       "text": {
-        "ko": "2. 내려서 가까운 지하로",
-        "en": "2. Get out, go underground"
-       },
-       "xy": [
-        540,
-        790
-       ],
-       "size": 50,
-       "fill": [
-        235,
-        235,
-        235
-       ]
-      },
-      {
-       "text": {
-        "ko": "3. 라디오로 안내 방송 듣기",
-        "en": "3. Listen to the radio"
-       },
-       "xy": [
-        540,
-        880
-       ],
-       "size": 50,
-       "fill": [
-        235,
-        235,
-        235
-       ]
-      },
+       "stroke": 12
+      }
+     ]
+    },
+    {
+     "cut": "e204_05",
+     "ko": "라디오로 안내 방송을 듣는다.",
+     "en": "Listen to the radio for instructions.",
+     "zoom": "push",
+     "sfx": "radio",
+     "reuse": "f0c3ebd6-22b8-4027-bffb-e170d6c64417",
+     "key": {
+      "ko": "라디오로 안내 방송 듣기",
+      "en": "LISTEN TO THE RADIO"
+     }
+    },
+    {
+     "cut": "e204_05",
+     "ko": "언제 나와도 되는지는 방송이 알려 주니까요.",
+     "en": "The broadcast is what tells you when it is safe to come out.",
+     "zoom": "in"
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e201_sc",
+     "ko": "",
+     "en": "",
+     "zoom": "none",
+     "sfx": "click",
+     "reuse": "dd6cd6d1-77d3-4349-afe3-47b3ea56c4fe",
+     "tts": {
+      "ko": "저장해 두세요. 오른쪽에 세우고,",
+      "en": "Save this for later, pull over to the right,"
+     },
+     "draw": [
       {
        "text": {
         "ko": "저장해 두세요",
@@ -260,11 +386,221 @@
         230,
         0
        ],
-       "stroke": 10
+       "stroke": 12
+      },
+      {
+       "text": {
+        "ko": "운전 중 공습경보",
+        "en": "SIREN WHILE DRIVING"
+       },
+       "xy": [
+        540,
+        580
+       ],
+       "size": 62,
+       "fill": [
+        235,
+        200,
+        120
+       ]
+      },
+      {
+       "text": {
+        "ko": "1. 오른쪽이나 공터에 정차",
+        "en": "1. Pull over right"
+       },
+       "xy": [
+        540,
+        690
+       ],
+       "size": 48,
+       "fill": [
+        235,
+        235,
+        235
+       ]
       }
-     ],
+     ]
+    },
+    {
+     "cut": "e201_sc",
+     "ko": "",
+     "en": "",
+     "zoom": "none",
      "tts": {
-      "en": "Save this for later, if a siren sounds while you are driving, one, pull over to the right or into an open lot, two, get out and go underground nearby, and three, listen to the radio for instructions."
+      "ko": "내려서 지하로,",
+      "en": "get out and go underground,"
+     },
+     "draw": [
+      {
+       "text": {
+        "ko": "저장해 두세요",
+        "en": "SAVE THIS"
+       },
+       "xy": [
+        540,
+        330
+       ],
+       "size": 96,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      },
+      {
+       "text": {
+        "ko": "운전 중 공습경보",
+        "en": "SIREN WHILE DRIVING"
+       },
+       "xy": [
+        540,
+        580
+       ],
+       "size": 62,
+       "fill": [
+        235,
+        200,
+        120
+       ]
+      },
+      {
+       "text": {
+        "ko": "1. 오른쪽이나 공터에 정차",
+        "en": "1. Pull over right"
+       },
+       "xy": [
+        540,
+        690
+       ],
+       "size": 48,
+       "fill": [
+        235,
+        235,
+        235
+       ]
+      },
+      {
+       "text": {
+        "ko": "2. 내려서 가까운 지하로",
+        "en": "2. Get out, go underground"
+       },
+       "xy": [
+        540,
+        775
+       ],
+       "size": 48,
+       "fill": [
+        235,
+        235,
+        235
+       ]
+      }
+     ]
+    },
+    {
+     "cut": "e201_sc",
+     "ko": "",
+     "en": "",
+     "zoom": "none",
+     "tts": {
+      "ko": "그리고 라디오.",
+      "en": "and turn on the radio."
+     },
+     "draw": [
+      {
+       "text": {
+        "ko": "저장해 두세요",
+        "en": "SAVE THIS"
+       },
+       "xy": [
+        540,
+        330
+       ],
+       "size": 96,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      },
+      {
+       "text": {
+        "ko": "운전 중 공습경보",
+        "en": "SIREN WHILE DRIVING"
+       },
+       "xy": [
+        540,
+        580
+       ],
+       "size": 62,
+       "fill": [
+        235,
+        200,
+        120
+       ]
+      },
+      {
+       "text": {
+        "ko": "1. 오른쪽이나 공터에 정차",
+        "en": "1. Pull over right"
+       },
+       "xy": [
+        540,
+        690
+       ],
+       "size": 48,
+       "fill": [
+        235,
+        235,
+        235
+       ]
+      },
+      {
+       "text": {
+        "ko": "2. 내려서 가까운 지하로",
+        "en": "2. Get out, go underground"
+       },
+       "xy": [
+        540,
+        775
+       ],
+       "size": 48,
+       "fill": [
+        235,
+        235,
+        235
+       ]
+      },
+      {
+       "text": {
+        "ko": "3. 라디오로 안내 방송 듣기",
+        "en": "3. Listen to the radio"
+       },
+       "xy": [
+        540,
+        860
+       ],
+       "size": 48,
+       "fill": [
+        235,
+        235,
+        235
+       ]
+      }
+     ]
+    },
+    {
+     "cut": "e207_03",
+     "ko": "엄마의 버스는 아직 저 앞에 있어요.",
+     "en": "Mom's bus is still up ahead.",
+     "zoom": "push",
+     "sfx": "sting",
+     "key": {
+      "ko": "엄마의 버스는 아직 저 앞에",
+      "en": "MOM'S BUS IS STILL AHEAD"
      }
     }
    ]
