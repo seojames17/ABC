@@ -36,21 +36,21 @@
    "beats": [
     {
      "cut": "e207_01",
-     "ko": "운전 중에 공습경보가 울리면, 어떻게 해야 할까요?",
-     "en": "If an air-raid siren goes off while you are driving, what should you do?",
+     "ko": "운전 중에 공습경보가 울리면, 절대 계속 달리지 마세요.",
+     "en": "Never keep driving through an air-raid siren. Here is what to do.",
      "zoom": "push",
      "sfx": "siren",
      "draw": [
       {
        "text": {
-        "ko": "운전 중",
-        "en": "SIREN WHILE"
+        "ko": "운전 중 공습경보",
+        "en": "AIR-RAID SIREN"
        },
        "xy": [
         540,
         330
        ],
-       "size": 130,
+       "size": 120,
        "fill": [
         255,
         230,
@@ -60,14 +60,14 @@
       },
       {
        "text": {
-        "ko": "공습경보가 울리면?",
-        "en": "DRIVING?"
+        "ko": "계속 달리면 안 됩니다",
+        "en": "NEVER KEEP DRIVING"
        },
        "xy": [
         540,
         480
        ],
-       "size": 110,
+       "size": 96,
        "fill": [
         255,
         230,
