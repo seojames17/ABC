@@ -166,8 +166,8 @@
 
 ### S2 7화 — 사이렌 6일째: 운전 중 공습경보 (새 형식 1/3)
 - 설계도 `episodes/s02e07.json`, 설명서 `episodes/s02e07.md`. 배속 ko 1.2 / en 1.4, lead_in 0.2, scene_gap 0.3. 6장면 6비트, 새 그림 5장 + 빈 점수판(요약 카드) 재사용.
-- 영상: ko 47.4초 ZIP media `443cd072-0d51-48cf-92df-45e7930f93df`, en __EN__초 ZIP media `a9120b61-7d7b-4fb4-99f2-08ebd1951bce`, 표지 `fbef30a0-10fc-4687-ad75-badf10cd74d6`(e207_01 컷). 노션 행 https://app.notion.com/p/419295818b0e817b877feb9a29e0dc55
-- 비용: __COST__크레딧(845.9 → __BAL__; 그림 5장, 음성 12줄 + 재녹음 1줄)
-- 제작 메모: 훅 점수 71.8(영어 "Never keep driving through an air-raid siren. Here is what to do."; 질문형 후보는 34~48점). 그림 5장·한국어 음성 6줄 한 번에 통과. 영어 6번(요약 카드)은 짧은 첫 문장 "Save this."가 빠지고 4.7초 정적이 생겨 한 문장으로 이어 재녹음.
+- 영상: ko 47.4초 ZIP media `443cd072-0d51-48cf-92df-45e7930f93df`, en 40.9초 ZIP media `6058631f-724e-4ffe-9b55-f95c818596bc`, 표지 `fbef30a0-10fc-4687-ad75-badf10cd74d6`(e207_01 컷). 노션 행 https://app.notion.com/p/419295818b0e817b877feb9a29e0dc55
+- 비용: 10.7크레딧(845.9 → 835.2; 그림 5장, 음성 12줄 + 재녹음 1줄)
+- 제작 메모: 훅 점수 71.8(영어 "Never keep driving through an air-raid siren. Here is what to do."; 질문형 후보는 34~48점). 그림 5장·한국어 음성 6줄 한 번에 통과. 영어 6번(요약 카드)은 짧은 첫 문장 "Save this."가 빠지고 4.7초 정적이 생겨 한 문장으로 이어 재녹음. 영어 첫 화면 큰 글자("AIR-RAID SIREN / NEVER KEEP DRIVING")가 화면 밖으로 잘려 "AIR RAID / STOP DRIVING"으로 줄여 다시 렌더링 → 큰 글자(draw)는 영어가 한국어보다 넓으니 영어 문구를 짧게 쓰고, 업로드 전에 첫 화면을 꼭 본다. 수정한 설계도를 raw.githubusercontent.com에서 바로 받으면 캐시된 옛 파일이 온다(쿼리스트링도 소용없음) → 푸시 직후에는 `curl -H "Accept: application/vnd.github.raw" https://api.github.com/repos/seojames17/ABC/contents/<경로>?ref=claude/stickman-survival`로 받는다. 잘못 올라간 영어판 media `a9120b61…`, `56419cc5…`는 쓰지 않는다.
 - 투표(캡션·스토리만): A 걸어서 버스까지 간다 / B 해제 방송까지 기다린다. 투표 결과: (사용자에게 받아서 기록)
 - 8화 입력: DAY 7. 엄마와 만나는 화. 지식은 공식 문구 확인 후에만. 새 형식 2/3.
