@@ -176,7 +176,7 @@
     {
      "cut": "e201_sc",
      "ko": "저장해 두세요. 운전 중 공습경보. 하나, 도로 오른쪽이나 공터에 정차. 둘, 차에서 내려 가까운 지하로. 셋, 라디오로 안내 방송 듣기.",
-     "en": "Save this. A siren while driving. One, pull over to the right or into an open lot. Two, get out and go underground nearby. Three, listen to the radio for instructions.",
+     "en": "Save this. If a siren sounds while you are driving: one, pull over to the right or into an open lot. Two, get out and go underground nearby. Three, listen to the radio for instructions.",
      "zoom": "none",
      "sfx": "click",
      "reuse": "dd6cd6d1-77d3-4349-afe3-47b3ea56c4fe",
@@ -262,7 +262,10 @@
        ],
        "stroke": 10
       }
-     ]
+     ],
+     "tts": {
+      "en": "Save this for later, if a siren sounds while you are driving, one, pull over to the right or into an open lot, two, get out and go underground nearby, and three, listen to the radio for instructions."
+     }
     }
    ]
   }
