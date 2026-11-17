@@ -18,7 +18,7 @@
  "scene_gap": 0.25,
  "tail": 0.4,
  "speed": {
-  "ko": 1.2,
+  "ko": 1.3,
   "en": 1.4
  },
  "_note": "11/17. 새 형식 3/3, 이야기형(7화 v2 구조). 실수 먼저 → 찾는 법 세 가지(세 번째를 뒤로) → 엄마와 만남 → 다음 화 떡밥 → 요약 카드 한 컷(약 3초) + '부모님께 보내 주세요'. 배터리 표시 없음.",
@@ -46,7 +46,7 @@
         540,
         330
        ],
-       "size": 120,
+       "size": 104,
        "fill": [
         255,
         230,
@@ -63,7 +63,7 @@
         540,
         480
        ],
-       "size": 96,
+       "size": 90,
        "fill": [
         255,
         230,
@@ -158,7 +158,7 @@
      "sfx": "click",
      "key": {
       "ko": "엄마: 어디로 가니?",
-      "en": "MOM: WHERE DO I GO?"
+      "en": "MOM: WHERE TO?"
      },
      "tts": {
       "ko": "지하도에 있던 민수에게 문자가 왔어요, 어디로 가니,",
@@ -189,7 +189,7 @@
      "sfx": "sting",
      "key": {
       "ko": "찾는 법은 세 가지",
-      "en": "THREE WAYS TO FIND ONE"
+      "en": "THREE WAYS"
      },
      "tts": {
       "ko": "할머니가 말했어요, 찾는 법은 세 가지인데,"
@@ -209,7 +209,7 @@
      "zoom": "shake",
      "key": {
       "ko": "세 번째는 오늘 해 둘 것",
-      "en": "DO THE THIRD TODAY"
+      "en": "DO #3 TODAY"
      }
     }
    ]
@@ -254,7 +254,7 @@
      "zoom": "push",
      "key": {
       "ko": "대피소 표지판이 붙은 지하",
-      "en": "FOLLOW THE SHELTER SIGN"
+      "en": "FOLLOW THE SIGN"
      }
     }
    ]
@@ -293,8 +293,8 @@
      "en": "No sign? A subway station, an underground garage, or a big building's basement.",
      "zoom": "push",
      "key": {
-      "ko": "지하철역, 지하 주차장, 큰 건물 지하",
-      "en": "SUBWAY, GARAGE, BASEMENT"
+      "ko": "지하철역, 주차장, 건물 지하",
+      "en": "SUBWAY OR GARAGE"
      },
      "prompt": "Stairs going down into a subway station seen from the top of the stairs in daylight: Minsu's mother (a woman in her late fifties, short dark bob haircut, dark blue padded jacket, small gray backpack, round glasses, no hat) walking down the steps holding the handrail, a few plain stick-figure people in dark gray and brown coats, no glasses, walking down ahead of her, a blank rectangular yellow sign plate with nothing written on it on the wall, nobody wears a red hoodie. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
      "refs": [
@@ -355,7 +355,7 @@
      "zoom": "in",
      "key": {
       "ko": "부모님 동네도 같이",
-      "en": "YOUR PARENTS' AREA TOO"
+      "en": "YOUR PARENTS TOO"
      }
     }
    ]
@@ -389,7 +389,7 @@
      "sfx": "sting",
      "key": {
       "ko": "엄마 가방에 약이 없다",
-      "en": "NO MEDICINE IN HER BAG"
+      "en": "NO MEDICINE"
      }
     }
    ]
