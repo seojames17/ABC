@@ -1,0 +1,497 @@
+{
+ "title": {
+  "ko": "1203호 S2 9화 — 사이렌 7일째: 낯선 동네의 대피소",
+  "en": "Unit 1203 S2 Ep.9 — Day 7: A Shelter in a Strange Town"
+ },
+ "badge": {
+  "ko": "1203호 S2 | DAY 7",
+  "en": "UNIT 1203 S2 | DAY 7"
+ },
+ "font": "serif",
+ "voice": {
+  "model": "text2speech_v2",
+  "variant": "elevenlabs",
+  "voice_id": "3c9d6053-6334-592c-8997-4e325286af3f",
+  "voice_name": "Holden"
+ },
+ "lead_in": 0.0,
+ "scene_gap": 0.25,
+ "tail": 0.4,
+ "speed": {
+  "ko": 1.2,
+  "en": 1.4
+ },
+ "_note": "11/17. 새 형식 3/3, 이야기형(7화 v2 구조). 실수 먼저 → 찾는 법 세 가지(세 번째를 뒤로) → 엄마와 만남 → 다음 화 떡밥 → 요약 카드 한 컷(약 3초) + '부모님께 보내 주세요'. 배터리 표시 없음.",
+ "refs_legend": {
+  "minsu": "3be1e101-6989-4400-9688-7c7c0650c115",
+  "grandma": "22c13de9-c43e-404d-8eec-70f1d222a3df",
+  "mom": "cd568527-e674-4262-849e-22cf13c0880a"
+ },
+ "scenes": [
+  {
+   "beats": [
+    {
+     "cut": "e209_01",
+     "ko": "낯선 동네에서 공습경보가 울립니다.",
+     "en": "An air-raid siren, in a town you don't know.",
+     "zoom": "push",
+     "sfx": "siren",
+     "draw": [
+      {
+       "text": {
+        "ko": "낯선 동네, 공습경보",
+        "en": "AIR RAID"
+       },
+       "xy": [
+        540,
+        330
+       ],
+       "size": 120,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      },
+      {
+       "text": {
+        "ko": "어디로 가야 할까요",
+        "en": "WHERE TO GO?"
+       },
+       "xy": [
+        540,
+        480
+       ],
+       "size": 96,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      }
+     ],
+     "prompt": "A wide unfamiliar city street in daylight: a stopped city bus with its front door open at the curb, and beside it Minsu's mother (a woman in her late fifties, short dark bob haircut, dark blue padded jacket, small gray backpack, round glasses, no hat) standing alone on the sidewalk holding a smartphone and looking around at plain shop fronts and gray buildings, a tall pole with a round siren loudspeaker above the street, nobody wears a red hoodie. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu"
+     ],
+     "job": "cd568527-e674-4262-849e-22cf13c0880a"
+    },
+    {
+     "cut": "e209_02",
+     "ko": "대부분은 눈앞의 건물로 뛰어듭니다.",
+     "en": "Most people run into the nearest building.",
+     "zoom": "shake",
+     "sfx": "rumble",
+     "draw": [
+      {
+       "text": {
+        "ko": "눈앞의 건물로",
+        "en": "ANY DOOR"
+       },
+       "xy": [
+        540,
+        330
+       ],
+       "size": 110,
+       "fill": [
+        230,
+        60,
+        50
+       ],
+       "stroke": 12
+      },
+      {
+       "text": {
+        "ko": "X",
+        "en": "X"
+       },
+       "xy": [
+        540,
+        520
+       ],
+       "size": 200,
+       "fill": [
+        230,
+        60,
+        50
+       ],
+       "stroke": 12
+      }
+     ],
+     "prompt": "City sidewalk in daylight seen from across the street: Minsu's mother (a woman in her late fifties, short dark bob haircut, dark blue padded jacket, small gray backpack, round glasses, no hat) hurrying toward the wide glass front door of a plain ground-floor shop with large glass windows, one hand reaching for the door handle, a stopped bus behind her, nobody wears a red hoodie. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "mom"
+     ],
+     "job": "b7663006-92ee-44ff-8d06-da1f6491373f"
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e209_02",
+     "ko": "민수 엄마도 그랬어요.",
+     "en": "Minsu's mom did too.",
+     "zoom": "in",
+     "key": {
+      "ko": "사이렌 7일째",
+      "en": "DAY 7"
+     }
+    },
+    {
+     "cut": "e209_01",
+     "ko": "밤새 멈춰 있던 버스에서 내린 곳은, 처음 와 본 동네였거든요.",
+     "en": "Her bus had been stuck all night, and she got off in a town she had never seen.",
+     "zoom": "push"
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e209_03",
+     "ko": "지하도에 있던 민수에게 문자가 왔어요. 어디로 가니?",
+     "en": "In the underpass, Minsu got her text, where do I go?",
+     "zoom": "push",
+     "sfx": "click",
+     "key": {
+      "ko": "엄마: 어디로 가니?",
+      "en": "MOM: WHERE DO I GO?"
+     },
+     "tts": {
+      "ko": "지하도에 있던 민수에게 문자가 왔어요, 어디로 가니,",
+      "en": "In the underpass, Minsu got her text, where do I go,"
+     },
+     "prompt": "Inside a city pedestrian underpass used as a shelter: Minsu (dark brick-red hoodie, big round glasses, no hat) sitting on the floor against the tiled wall staring down at a smartphone held in both hands, the grandma (gray hair bun, half-moon glasses, muted ochre cardigan, cane) sitting beside him with a small battery radio on her lap, two backpacks at their feet, a few plain stick-figure people in dark gray and navy coats, no glasses, sitting further along the wall, only Minsu wears the red hoodie and glasses. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), one warm amber light source in a dim underpass, faces clearly visible, soft shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu",
+      "grandma"
+     ],
+     "job": "b7ec2b23-e361-4308-b224-34de89869658"
+    },
+    {
+     "cut": "e209_03",
+     "ko": "민수는 대답을 못 했어요.",
+     "en": "Minsu had no answer.",
+     "zoom": "in"
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e209_04",
+     "ko": "할머니가 말했어요. 찾는 법은 세 가지인데,",
+     "en": "Grandma said, there are three ways to find one,",
+     "zoom": "push",
+     "sfx": "sting",
+     "key": {
+      "ko": "찾는 법은 세 가지",
+      "en": "THREE WAYS TO FIND ONE"
+     },
+     "tts": {
+      "ko": "할머니가 말했어요, 찾는 법은 세 가지인데,"
+     },
+     "prompt": "Inside a city pedestrian underpass, close view: the grandma (gray hair bun, half-moon glasses, muted ochre cardigan, cane) sitting against the tiled wall, calmly raising one hand as she speaks, looking at Minsu (dark brick-red hoodie, big round glasses, no hat) who sits beside her holding a smartphone and looking up at her, a small battery radio on her lap. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), one warm amber light source in a dim underpass, faces clearly visible, soft shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu",
+      "grandma",
+      "e209_03"
+     ],
+     "job": "058c3d99-b8b0-47a2-837f-7d6ccb07ba53"
+    },
+    {
+     "cut": "e209_04",
+     "ko": "세 번째는 오늘 해 둬야 한단다.",
+     "en": "and the third you have to do today.",
+     "zoom": "shake",
+     "key": {
+      "ko": "세 번째는 오늘 해 둘 것",
+      "en": "DO THE THIRD TODAY"
+     }
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e209_05",
+     "ko": "하나.",
+     "en": "One.",
+     "zoom": "in",
+     "sfx": "click",
+     "draw": [
+      {
+       "text": {
+        "ko": "1",
+        "en": "1"
+       },
+       "xy": [
+        540,
+        360
+       ],
+       "size": 220,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      }
+     ],
+     "prompt": "A city sidewalk in daylight with a subway station entrance: stairs going down under a simple canopy, on the wall beside the stairs a blank rectangular yellow sign plate with nothing written on it, Minsu's mother (a woman in her late fifties, short dark bob haircut, dark blue padded jacket, small gray backpack, round glasses, no hat) standing on the sidewalk a few steps away looking at the yellow sign plate, plain shop fronts behind, nobody wears a red hoodie. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "mom"
+     ],
+     "job": "359d2fcf-9b72-4e51-bf63-efb4a6ddeda4"
+    },
+    {
+     "cut": "e209_05",
+     "ko": "대피소 표지판이 붙은 지하로 간다.",
+     "en": "Go underground where you see a shelter sign.",
+     "zoom": "push",
+     "key": {
+      "ko": "대피소 표지판이 붙은 지하",
+      "en": "FOLLOW THE SHELTER SIGN"
+     }
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e209_05",
+     "ko": "둘.",
+     "en": "Two.",
+     "zoom": "in",
+     "sfx": "click",
+     "draw": [
+      {
+       "text": {
+        "ko": "2",
+        "en": "2"
+       },
+       "xy": [
+        540,
+        360
+       ],
+       "size": 220,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      }
+     ]
+    },
+    {
+     "cut": "e209_07",
+     "ko": "표지판이 안 보이면 지하철역, 지하 주차장, 큰 건물 지하.",
+     "en": "No sign? A subway station, an underground garage, or a big building's basement.",
+     "zoom": "push",
+     "key": {
+      "ko": "지하철역, 지하 주차장, 큰 건물 지하",
+      "en": "SUBWAY, GARAGE, BASEMENT"
+     },
+     "prompt": "Stairs going down into a subway station seen from the top of the stairs in daylight: Minsu's mother (a woman in her late fifties, short dark bob haircut, dark blue padded jacket, small gray backpack, round glasses, no hat) walking down the steps holding the handrail, a few plain stick-figure people in dark gray and brown coats, no glasses, walking down ahead of her, a blank rectangular yellow sign plate with nothing written on it on the wall, nobody wears a red hoodie. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "mom",
+      "e209_05"
+     ],
+     "job": "30afacd6-5338-48cb-8d19-d7f884273b27"
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e209_07",
+     "ko": "세 번째, 오늘 해 둘 것.",
+     "en": "Three, the one to do today.",
+     "zoom": "in",
+     "sfx": "click",
+     "draw": [
+      {
+       "text": {
+        "ko": "3",
+        "en": "3"
+       },
+       "xy": [
+        540,
+        360
+       ],
+       "size": 220,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      }
+     ]
+    },
+    {
+     "cut": "e209_06",
+     "ko": "지도 앱에서 민방위 대피소를 검색해 둔다.",
+     "en": "Search for shelters in your map app, before you need one.",
+     "zoom": "push",
+     "key": {
+      "ko": "지도 앱에서 민방위 대피소 검색",
+      "en": "SEARCH YOUR MAP APP"
+     },
+     "prompt": "Close-up of a stick-figure hand in a dark brick-red hoodie sleeve holding a smartphone upright: on the screen a simple plain street map with gray streets and three small yellow location pins, no words on the screen, blurred underpass tiles behind. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), one warm amber light source in a dim underpass, faces clearly visible, soft shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu"
+     ],
+     "job": "91273154-7b39-4066-a626-6cafb9c6795e"
+    },
+    {
+     "cut": "e209_06",
+     "ko": "부모님 동네도 같이요.",
+     "en": "Your parents' neighborhood too.",
+     "zoom": "in",
+     "key": {
+      "ko": "부모님 동네도 같이",
+      "en": "YOUR PARENTS' AREA TOO"
+     }
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e209_07",
+     "ko": "엄마는 표지판을 따라 지하철역으로 내려갔고,",
+     "en": "Mom followed the sign down into the station,",
+     "zoom": "in"
+    },
+    {
+     "cut": "e209_08",
+     "ko": "해제 방송이 나온 뒤, 민수는 걸어서 엄마를 만났어요.",
+     "en": "and after the all-clear broadcast, Minsu walked to her.",
+     "zoom": "push",
+     "prompt": "A city sidewalk in daylight beside a subway station entrance: Minsu (dark brick-red hoodie, big round glasses, no hat) and Minsu's mother (a woman in her late fifties, short dark bob haircut, dark blue padded jacket, small gray backpack, round glasses, no hat) standing face to face holding each other's hands, the grandma (gray hair bun, half-moon glasses, muted ochre cardigan, cane) standing a step behind Minsu leaning on her cane, a calm empty street behind them, only Minsu wears the red hoodie and glasses. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu",
+      "grandma",
+      "mom"
+     ],
+     "job": "132ccd9c-d0c8-44a4-85ac-c153d78752e4"
+    },
+    {
+     "cut": "e209_08",
+     "ko": "그런데 엄마 가방에는, 약이 없었습니다.",
+     "en": "But there was no medicine in Mom's bag.",
+     "zoom": "shake",
+     "sfx": "sting",
+     "key": {
+      "ko": "엄마 가방에 약이 없다",
+      "en": "NO MEDICINE IN HER BAG"
+     }
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e201_sc",
+     "ko": "",
+     "en": "",
+     "zoom": "in",
+     "sfx": "click",
+     "reuse": "dd6cd6d1-77d3-4349-afe3-47b3ea56c4fe",
+     "tts": {
+      "ko": "저장하고, 부모님께 보내 주세요.",
+      "en": "Save this, and send it to your parents."
+     },
+     "draw": [
+      {
+       "text": {
+        "ko": "저장해 두세요",
+        "en": "SAVE THIS"
+       },
+       "xy": [
+        540,
+        330
+       ],
+       "size": 96,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      },
+      {
+       "text": {
+        "ko": "낯선 곳에서 대피소 찾기",
+        "en": "FIND A SHELTER"
+       },
+       "xy": [
+        540,
+        580
+       ],
+       "size": 62,
+       "fill": [
+        235,
+        200,
+        120
+       ]
+      },
+      {
+       "text": {
+        "ko": "1. 대피소 표지판이 붙은 지하",
+        "en": "1. Follow the shelter sign"
+       },
+       "xy": [
+        540,
+        690
+       ],
+       "size": 48,
+       "fill": [
+        235,
+        235,
+        235
+       ]
+      },
+      {
+       "text": {
+        "ko": "2. 지하철역, 지하 주차장, 큰 건물 지하",
+        "en": "2. Subway, garage, basement"
+       },
+       "xy": [
+        540,
+        775
+       ],
+       "size": 48,
+       "fill": [
+        235,
+        235,
+        235
+       ]
+      },
+      {
+       "text": {
+        "ko": "3. 지도 앱에서 민방위 대피소 검색",
+        "en": "3. Search your map app today"
+       },
+       "xy": [
+        540,
+        860
+       ],
+       "size": 48,
+       "fill": [
+        235,
+        235,
+        235
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
