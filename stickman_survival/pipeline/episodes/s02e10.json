@@ -1,0 +1,486 @@
+{
+ "title": {
+  "ko": "1203호 S2 10화 — 사이렌 8일째: 재난가방 속 약",
+  "en": "Unit 1203 S2 Ep.10 — Day 8: Medicine in the Go Bag"
+ },
+ "badge": {
+  "ko": "1203호 S2 | DAY 8",
+  "en": "UNIT 1203 S2 | DAY 8"
+ },
+ "font": "serif",
+ "voice": {
+  "model": "text2speech_v2",
+  "variant": "elevenlabs",
+  "voice_id": "3c9d6053-6334-592c-8997-4e325286af3f",
+  "voice_name": "Holden"
+ },
+ "lead_in": 0.0,
+ "scene_gap": 0.25,
+ "tail": 0.4,
+ "speed": {
+  "ko": 1.3,
+  "en": 1.4
+ },
+ "_note": "11/18. 인스타 스킬 점검 뒤 첫 화. 훅을 구체물(가방 속 약) + 뒤집기(상비약만으론 부족)로, 끝을 '빠진 건 몇 번? 댓글에 번호' 퀴즈로. 화면 표현은 '재난가방'. 구조는 9화(실수 먼저 → 세 가지, 세 번째를 뒤로 → 떡밥 → 카드 한 컷). 한국어 음성은 silenceremove 후 배속 1.3.",
+ "refs_legend": {
+  "minsu": "3be1e101-6989-4400-9688-7c7c0650c115",
+  "grandma": "22c13de9-c43e-404d-8eec-70f1d222a3df",
+  "mom": "cd568527-e674-4262-849e-22cf13c0880a"
+ },
+ "scenes": [
+  {
+   "beats": [
+    {
+     "cut": "e210_01",
+     "ko": "재난가방에 소화제랑 밴드만 넣으셨나요?",
+     "en": "Did you pack only antacids and band-aids in your go bag?",
+     "zoom": "push",
+     "sfx": "click",
+     "draw": [
+      {
+       "text": {
+        "ko": "재난가방 속 약",
+        "en": "GO BAG MEDS"
+       },
+       "xy": [
+        540,
+        330
+       ],
+       "size": 120,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      },
+      {
+       "text": {
+        "ko": "이것만 넣으면 부족합니다",
+        "en": "NOT ENOUGH"
+       },
+       "xy": [
+        540,
+        480
+       ],
+       "size": 84,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      }
+     ],
+     "prompt": "Top-down close view of an open small gray backpack lying on a wooden street bench in daylight: inside and beside it only a few things, one small plain medicine box, one strip of adhesive bandages, one water bottle and a folded scarf, two stick-figure hands in dark blue padded jacket sleeves holding the bag open, the inside of the bag looks mostly empty. Same simple thick black line doodle drawing style as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no comic symbols, cinematic vertical composition, every package and label completely blank, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "mom"
+     ],
+     "job": "b3e72b9e-96e5-49a0-9cd1-09b883e7c384"
+    },
+    {
+     "cut": "e210_04",
+     "ko": "대부분은 상비약만 넣습니다.",
+     "en": "Most people pack only first-aid basics.",
+     "zoom": "shake",
+     "sfx": "rumble",
+     "draw": [
+      {
+       "text": {
+        "ko": "상비약만?",
+        "en": "BASICS ONLY?"
+       },
+       "xy": [
+        540,
+        330
+       ],
+       "size": 110,
+       "fill": [
+        230,
+        60,
+        50
+       ],
+       "stroke": 12
+      },
+      {
+       "text": {
+        "ko": "X",
+        "en": "X"
+       },
+       "xy": [
+        540,
+        520
+       ],
+       "size": 200,
+       "fill": [
+        230,
+        60,
+        50
+       ],
+       "stroke": 12
+      }
+     ],
+     "prompt": "Top-down flat lay on a gray cloth in daylight: a neat row of first-aid supplies, two plain pill boxes, a small brown antiseptic bottle, a roll of white bandage, a strip of adhesive bandages, small scissors and tweezers, nothing else. Same simple thick black line doodle drawing style as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no comic symbols, cinematic vertical composition, every package and label completely blank, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "mom"
+     ],
+     "job": "b84e233d-644c-4791-8e6d-d8f6a69af893"
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e210_02",
+     "ko": "민수 엄마도 그랬어요.",
+     "en": "Minsu's mom did too.",
+     "zoom": "in",
+     "key": {
+      "ko": "사이렌 8일째",
+      "en": "DAY 8"
+     },
+     "prompt": "A wooden bench on a city sidewalk in daylight beside a subway station entrance: Minsu's mother (a woman in her late fifties, short dark bob haircut, dark blue padded jacket, small gray backpack, round glasses, no hat) sitting on the bench with her small gray backpack open on her lap, looking down into it with one hand inside, Minsu (dark brick-red hoodie, big round glasses, no hat) sitting next to her leaning over to look into the bag, a calm empty street behind, only Minsu wears a red hoodie. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu",
+      "mom"
+     ],
+     "job": "617693a5-84b5-4202-8015-6ddc11844c3d"
+    },
+    {
+     "cut": "e210_02",
+     "ko": "매일 먹는 혈압약이, 가방에 없었거든요.",
+     "en": "Her daily blood pressure pills were not in the bag.",
+     "zoom": "push",
+     "key": {
+      "ko": "매일 먹는 약이 없다",
+      "en": "NO DAILY PILLS"
+     }
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e210_03",
+     "ko": "할머니가 말했어요. 가방 속 약은 세 가지를 본단다.",
+     "en": "Grandma said, check three things about the medicine in your bag,",
+     "zoom": "push",
+     "sfx": "sting",
+     "key": {
+      "ko": "약은 세 가지를 본다",
+      "en": "THREE CHECKS"
+     },
+     "tts": {
+      "ko": "할머니가 말했어요, 가방 속 약은 세 가지를 본단다,"
+     },
+     "prompt": "Close view on a city sidewalk bench in daylight: the grandma (gray hair bun, half-moon glasses, muted ochre cardigan, cane) sitting on the bench, calmly raising one hand as she speaks, her own small ochre cloth bag on her lap, beside her Minsu's mother (a woman in her late fifties, short dark bob haircut, dark blue padded jacket, small gray backpack, round glasses, no hat) turning her head to listen, a subway station entrance behind. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "grandma",
+      "mom"
+     ],
+     "job": "1cd644b1-f86c-45dc-bfa0-b447ac766e7d"
+    },
+    {
+     "cut": "e210_03",
+     "ko": "세 번째는 다들 잊어버려.",
+     "en": "and everyone forgets the third.",
+     "zoom": "shake",
+     "key": {
+      "ko": "세 번째는 다들 잊는다",
+      "en": "#3 IS FORGOTTEN"
+     }
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e210_04",
+     "ko": "하나.",
+     "en": "One.",
+     "zoom": "in",
+     "sfx": "click",
+     "draw": [
+      {
+       "text": {
+        "ko": "1",
+        "en": "1"
+       },
+       "xy": [
+        540,
+        360
+       ],
+       "size": 220,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      }
+     ]
+    },
+    {
+     "cut": "e210_04",
+     "ko": "해열진통제, 소화제, 소독제, 붕대 같은 상비약.",
+     "en": "First-aid basics, like pain relievers, antacids, antiseptic, and bandages.",
+     "zoom": "push",
+     "key": {
+      "ko": "상비약",
+      "en": "FIRST-AID BASICS"
+     }
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e210_05",
+     "ko": "둘.",
+     "en": "Two.",
+     "zoom": "in",
+     "sfx": "click",
+     "draw": [
+      {
+       "text": {
+        "ko": "2",
+        "en": "2"
+       },
+       "xy": [
+        540,
+        360
+       ],
+       "size": 220,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      }
+     ],
+     "prompt": "Close-up in daylight: a stick-figure hand in a muted ochre cardigan sleeve holding up a clear zip bag, inside the bag a weekly pill organizer with seven small compartments holding white pills and one folded sheet of completely blank white paper, a sidewalk bench blurred behind. Same simple thick black line doodle drawing style as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no comic symbols, cinematic vertical composition, every package and label completely blank, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "grandma"
+     ],
+     "job": "d25594c2-5164-4900-952b-fb9c67ec4cd9"
+    },
+    {
+     "cut": "e210_05",
+     "ko": "매일 먹는 약, 그리고 최신 처방전.",
+     "en": "The pills you take every day, and your latest prescription.",
+     "zoom": "push",
+     "key": {
+      "ko": "매일 먹는 약 + 최신 처방전",
+      "en": "DAILY PILLS + RX"
+     }
+    },
+    {
+     "cut": "e210_05",
+     "ko": "약 이름을 몰라도, 처방전이 말해 주니까요.",
+     "en": "The prescription names them, even if you can't.",
+     "zoom": "in"
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e210_06",
+     "ko": "세 번째, 다들 잊는 것.",
+     "en": "Three, the one everyone forgets.",
+     "zoom": "in",
+     "sfx": "click",
+     "draw": [
+      {
+       "text": {
+        "ko": "3",
+        "en": "3"
+       },
+       "xy": [
+        540,
+        360
+       ],
+       "size": 220,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      }
+     ],
+     "prompt": "Close-up in daylight: two stick-figure hands in dark brick-red hoodie sleeves turning a small plain medicine box over to look at its bottom edge, an open small gray backpack on a bench below with a few plain medicine boxes inside. Same simple thick black line doodle drawing style as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no comic symbols, cinematic vertical composition, every package and label completely blank, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu"
+     ],
+     "job": "f9ed1a24-b402-4395-b98f-e5833b07d819"
+    },
+    {
+     "cut": "e210_06",
+     "ko": "유통기한. 주기적으로 확인하고 바꿔 넣는다.",
+     "en": "Expiry dates. Check them regularly and swap them out.",
+     "zoom": "push",
+     "key": {
+      "ko": "유통기한 확인하고 교체",
+      "en": "CHECK EXPIRY DATES"
+     }
+    },
+    {
+     "cut": "e210_06",
+     "ko": "부모님 가방도 같이 봐 드리세요.",
+     "en": "Check your parents' bag too.",
+     "zoom": "in",
+     "key": {
+      "ko": "부모님 가방도 같이",
+      "en": "YOUR PARENTS' BAG"
+     }
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e210_02",
+     "ko": "민수는 엄마와 약국부터 찾기로 했어요.",
+     "en": "Minsu and Mom went to find a pharmacy first.",
+     "zoom": "in"
+    },
+    {
+     "cut": "e210_07",
+     "ko": "그런데 약국 셔터는, 내려가 있었습니다.",
+     "en": "But the pharmacy shutter was down.",
+     "zoom": "shake",
+     "sfx": "sting",
+     "key": {
+      "ko": "약국 문이 닫혀 있다",
+      "en": "PHARMACY CLOSED"
+     },
+     "prompt": "A city street in daylight seen from behind three figures: Minsu (dark brick-red hoodie, big round glasses, no hat), Minsu's mother (a woman in her late fifties, short dark bob haircut, dark blue padded jacket, small gray backpack, round glasses, no hat) and the grandma (gray hair bun, half-moon glasses, muted ochre cardigan, cane) standing side by side on the sidewalk facing a small shop whose gray metal roller shutter is fully pulled down, above the shutter a plain green cross sign with nothing written on it, the street empty, only Minsu wears a red hoodie. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu",
+      "grandma",
+      "mom"
+     ],
+     "job": "ad3f8d58-8d67-4abc-91e7-b8b88bddaee9"
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e201_sc",
+     "ko": "",
+     "en": "",
+     "zoom": "in",
+     "sfx": "click",
+     "reuse": "dd6cd6d1-77d3-4349-afe3-47b3ea56c4fe",
+     "tts": {
+      "ko": "여러분 가방엔 몇 번이 빠져 있나요? 댓글에 번호로 남겨 주세요.",
+      "en": "Which one is missing from your bag? Comment the number."
+     },
+     "draw": [
+      {
+       "text": {
+        "ko": "빠진 건 몇 번?",
+        "en": "WHICH IS MISSING?"
+       },
+       "xy": [
+        540,
+        330
+       ],
+       "size": 96,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      },
+      {
+       "text": {
+        "ko": "재난가방 속 약",
+        "en": "GO BAG MEDICINE"
+       },
+       "xy": [
+        540,
+        580
+       ],
+       "size": 62,
+       "fill": [
+        235,
+        200,
+        120
+       ]
+      },
+      {
+       "text": {
+        "ko": "1. 상비약",
+        "en": "1. First-aid basics"
+       },
+       "xy": [
+        540,
+        690
+       ],
+       "size": 48,
+       "fill": [
+        235,
+        235,
+        235
+       ]
+      },
+      {
+       "text": {
+        "ko": "2. 매일 먹는 약 + 최신 처방전",
+        "en": "2. Daily pills + prescription"
+       },
+       "xy": [
+        540,
+        775
+       ],
+       "size": 48,
+       "fill": [
+        235,
+        235,
+        235
+       ]
+      },
+      {
+       "text": {
+        "ko": "3. 유통기한 확인하고 교체",
+        "en": "3. Check expiry dates"
+       },
+       "xy": [
+        540,
+        860
+       ],
+       "size": 48,
+       "fill": [
+        235,
+        235,
+        235
+       ]
+      },
+      {
+       "text": {
+        "ko": "댓글에 번호로",
+        "en": "COMMENT THE NUMBER"
+       },
+       "xy": [
+        540,
+        1010
+       ],
+       "size": 70,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 10
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
