@@ -76,7 +76,8 @@
      "prompt": "Extreme close-up in daylight: an open stick-figure hand in a dark blue padded jacket sleeve holding one small plain round white pill in the middle of the palm, behind it out of focus a plain clinic desk with a completely blank sheet of paper and a pen. Same simple thick black line doodle drawing style as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no comic symbols, cinematic vertical composition, every sign, screen, paper, package and label completely blank, no text, no letters, no numbers, no watermark",
      "refs": [
       "mom"
-     ]
+     ],
+     "job": "49ce1e1c-c1ca-43e9-9289-872a97ab1aa7"
     },
     {
      "cut": "e211_08",
@@ -143,7 +144,8 @@
       "mom",
       "minsu",
       "clinic"
-     ]
+     ],
+     "job": "41c493ec-3983-4198-80c5-9c8965025f94"
     },
     {
      "cut": "e212_02",
@@ -176,7 +178,8 @@
      "refs": [
       "grandma",
       "clinic"
-     ]
+     ],
+     "job": "ddbea7a4-4640-482c-8975-3a895ea02ea3"
     }
    ]
   },
@@ -210,7 +213,8 @@
      "prompt": "Close-up in daylight: two stick-figure hands in dark blue padded jacket sleeves holding a smartphone upright, on its screen a simple list of five plain pale rounded rows, each row with only a small capsule pill icon on the left and an empty gray bar, nothing written anywhere, a clinic desk blurred behind. Same simple thick black line doodle drawing style as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no comic symbols, cinematic vertical composition, every sign, screen, paper, package and label completely blank, no text, no letters, no numbers, no watermark",
      "refs": [
       "mom"
-     ]
+     ],
+     "job": "6d5cdc7b-bd56-462d-ba58-4b5ccd670712"
     },
     {
      "cut": "e212_04",
@@ -267,7 +271,8 @@
      "prompt": "Close-up at a small pharmacy counter in daylight: a stick-figure hand in a dark brick-red hoodie sleeve holding a smartphone above a single completely blank white sheet of paper lying on the counter, taking a photo of it, the phone screen shows the same blank sheet, on the far side of the counter a pharmacist's open hand in a white coat sleeve waiting to receive the paper, plain shelves with blank boxes blurred behind. Same simple thick black line doodle drawing style as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no comic symbols, cinematic vertical composition, every sign, screen, paper, package and label completely blank, no text, no letters, no numbers, no watermark",
      "refs": [
       "minsu"
-     ]
+     ],
+     "job": "847a9f26-cd2a-4dc1-a4c6-2e6ef1bdf492"
     },
     {
      "cut": "e212_05",
@@ -321,7 +326,8 @@
      "prompt": "Close-up in daylight: a small gray backpack lying open on a wooden floor, a stick-figure hand in a dark blue padded jacket sleeve placing into it a clear plastic zip bag that holds a plain weekly pill organizer with seven small compartments each filled with one white pill and a folded completely blank sheet of paper, a water bottle with a blank label beside the backpack. Same simple thick black line doodle drawing style as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no comic symbols, cinematic vertical composition, every sign, screen, paper, package and label completely blank, no text, no letters, no numbers, no watermark",
      "refs": [
       "mom"
-     ]
+     ],
+     "job": "2b540c0c-ae11-4927-9faa-4456dacefe85"
     },
     {
      "cut": "e212_06",
@@ -360,7 +366,8 @@
       "mom",
       "minsu",
       "clinic"
-     ]
+     ],
+     "job": "df46c495-e7d5-46dc-b3c8-da5534c38bd3"
     },
     {
      "cut": "e212_08",
@@ -380,7 +387,8 @@
       "mom",
       "minsu",
       "grandma"
-     ]
+     ],
+     "job": "50eb1b1c-3b58-4e8d-91d0-c8838b86d8fc"
     }
    ]
   },
