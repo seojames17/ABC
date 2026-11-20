@@ -40,7 +40,7 @@
       {
        "text": {
         "ko": "약국이 닫혔다면",
-        "en": "PHARMACY SHUT?"
+        "en": "PHARMACY"
        },
        "xy": [
         540,
@@ -57,7 +57,7 @@
       {
        "text": {
         "ko": "걷기 전에 물어볼 3곳",
-        "en": "ASK 3 PLACES FIRST"
+        "en": "SHUT? ASK 3 PLACES"
        },
        "xy": [
         540,
