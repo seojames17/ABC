@@ -1,0 +1,507 @@
+{
+ "title": {
+  "ko": "1203호 S2 12화 — 사이렌 10일째: 이름 모르는 약",
+  "en": "Unit 1203 S2 Ep.12 — Day 10: The Pill With No Name"
+ },
+ "badge": {
+  "ko": "1203호 S2 | DAY 10",
+  "en": "UNIT 1203 S2 | DAY 10"
+ },
+ "font": "serif",
+ "voice": {
+  "model": "text2speech_v2",
+  "variant": "elevenlabs",
+  "voice_id": "3c9d6053-6334-592c-8997-4e325286af3f",
+  "voice_name": "Holden"
+ },
+ "lead_in": 0.0,
+ "scene_gap": 0.25,
+ "tail": 0.4,
+ "speed": {
+  "ko": 1.3,
+  "en": 1.4
+ },
+ "_note": "11/20. 11화 투표 결과가 비어 있어 민수의 선택 B(휴대폰으로 엄마의 투약 기록을 찾음). 영상에 선택 화면 없음. 훅은 구체물(하얀 알약) + 숫자(3가지), 끝은 댓글 번호 퀴즈. 구조는 10·11화와 같음. 한국어·영어 음성 모두 silenceremove 후 배속.",
+ "refs_legend": {
+  "minsu": "3be1e101-6989-4400-9688-7c7c0650c115",
+  "grandma": "22c13de9-c43e-404d-8eec-70f1d222a3df",
+  "mom": "cd568527-e674-4262-849e-22cf13c0880a",
+  "clinic": "7e2fc0f1-6ed3-481f-bca0-00d9dd0ca176"
+ },
+ "scenes": [
+  {
+   "beats": [
+    {
+     "cut": "e212_01",
+     "ko": "하얀 알약 하나, 이름은 모릅니다. 의사가 묻기 전에 찾는 법, 세 가지.",
+     "en": "One white pill, no name. Three ways to find it before the doctor asks.",
+     "zoom": "push",
+     "sfx": "click",
+     "draw": [
+      {
+       "text": {
+        "ko": "이름 모르는 약",
+        "en": "PILL NAME?"
+       },
+       "xy": [
+        540,
+        330
+       ],
+       "size": 116,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      },
+      {
+       "text": {
+        "ko": "의사가 묻기 전에 찾는 법 3가지",
+        "en": "3 WAYS TO FIND IT"
+       },
+       "xy": [
+        540,
+        480
+       ],
+       "size": 72,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      }
+     ],
+     "prompt": "Extreme close-up in daylight: an open stick-figure hand in a dark blue padded jacket sleeve holding one small plain round white pill in the middle of the palm, behind it out of focus a plain clinic desk with a completely blank sheet of paper and a pen. Same simple thick black line doodle drawing style as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no comic symbols, cinematic vertical composition, every sign, screen, paper, package and label completely blank, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "mom"
+     ]
+    },
+    {
+     "cut": "e211_08",
+     "reuse": "7e2fc0f1-6ed3-481f-bca0-00d9dd0ca176",
+     "ko": "대부분은 이렇게 말합니다. 하얗고 작은 약이요.",
+     "en": "Most people just say, the small white one.",
+     "zoom": "shake",
+     "sfx": "rumble",
+     "tts": {
+      "ko": "대부분은 이렇게 말합니다, 하얗고 작은 약이요."
+     },
+     "draw": [
+      {
+       "text": {
+        "ko": "하얗고 작은 약?",
+        "en": "WHITE ONE?"
+       },
+       "xy": [
+        540,
+        330
+       ],
+       "size": 110,
+       "fill": [
+        230,
+        60,
+        50
+       ],
+       "stroke": 12
+      },
+      {
+       "text": {
+        "ko": "X",
+        "en": "X"
+       },
+       "xy": [
+        540,
+        520
+       ],
+       "size": 200,
+       "fill": [
+        230,
+        60,
+        50
+       ],
+       "stroke": 12
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e212_02",
+     "ko": "민수 엄마도 그랬어요.",
+     "en": "Minsu's mom said that too,",
+     "zoom": "in",
+     "key": {
+      "ko": "사이렌 10일째",
+      "en": "DAY 10"
+     },
+     "prompt": "Close two-shot inside a small plain clinic room in daylight from a window: Minsu's mother (a woman in her late fifties, short dark bob haircut, dark blue padded jacket, small gray backpack, round glasses, no hat) sitting on a stool looking down at her own empty open hands, Minsu (dark brick-red hoodie, big round glasses, no hat) standing right behind her looking forward with a worried still face, a plain wall behind them, only Minsu wears a red hoodie. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "mom",
+      "minsu",
+      "clinic"
+     ]
+    },
+    {
+     "cut": "e212_02",
+     "ko": "의사는 고개를 저었습니다.",
+     "en": "and the doctor shook her head.",
+     "zoom": "push",
+     "key": {
+      "ko": "색으로는 못 찾는다",
+      "en": "COLOR WON'T HELP"
+     }
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e212_03",
+     "ko": "할머니가 말했어요. 이름을 찾는 길이 세 가지 있단다. 세 번째는 미리 해 둬야 해.",
+     "en": "Grandma said, there are three ways to find the name, and the third you do ahead of time.",
+     "zoom": "push",
+     "sfx": "sting",
+     "key": {
+      "ko": "찾는 길 세 가지",
+      "en": "THREE WAYS"
+     },
+     "tts": {
+      "ko": "할머니가 말했어요, 이름을 찾는 길이 세 가지 있단다, 세 번째는 미리 해 둬야 해."
+     },
+     "prompt": "Inside a small plain clinic room in daylight from a window: the grandma (gray hair bun, half-moon glasses, muted ochre cardigan, cane) standing and calmly holding up in one hand a clear plastic zip bag that contains a folded completely blank sheet of paper and a small blank white paper pharmacy envelope, looking toward the viewer's right, a plain wall and the edge of a desk behind her, no character wearing a red hoodie. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "grandma",
+      "clinic"
+     ]
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e212_04",
+     "ko": "하나.",
+     "en": "One.",
+     "zoom": "in",
+     "sfx": "click",
+     "draw": [
+      {
+       "text": {
+        "ko": "1",
+        "en": "1"
+       },
+       "xy": [
+        540,
+        360
+       ],
+       "size": 220,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      }
+     ],
+     "prompt": "Close-up in daylight: two stick-figure hands in dark blue padded jacket sleeves holding a smartphone upright, on its screen a simple list of five plain pale rounded rows, each row with only a small capsule pill icon on the left and an empty gray bar, nothing written anywhere, a clinic desk blurred behind. Same simple thick black line doodle drawing style as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no comic symbols, cinematic vertical composition, every sign, screen, paper, package and label completely blank, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "mom"
+     ]
+    },
+    {
+     "cut": "e212_04",
+     "ko": "휴대폰. 건강보험심사평가원의 내가 먹는 약 한눈에.",
+     "en": "Your phone. Korea's health insurance agency has a page called My Medicines at a Glance.",
+     "zoom": "push",
+     "key": {
+      "ko": "내가 먹는 약 한눈에",
+      "en": "MY MEDS RECORD"
+     }
+    },
+    {
+     "cut": "e212_04",
+     "ko": "최근 1년 동안 받은 약이 모두 나옵니다.",
+     "en": "It lists every prescription you filled in the past year.",
+     "zoom": "in",
+     "key": {
+      "ko": "최근 1년 치 약",
+      "en": "THE PAST YEAR"
+     },
+     "tts": {
+      "ko": "최근 일 년 동안 받은 약이 모두 나옵니다."
+     }
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e212_05",
+     "ko": "둘.",
+     "en": "Two.",
+     "zoom": "in",
+     "sfx": "click",
+     "draw": [
+      {
+       "text": {
+        "ko": "2",
+        "en": "2"
+       },
+       "xy": [
+        540,
+        360
+       ],
+       "size": 220,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      }
+     ],
+     "prompt": "Close-up at a small pharmacy counter in daylight: a stick-figure hand in a dark brick-red hoodie sleeve holding a smartphone above a single completely blank white sheet of paper lying on the counter, taking a photo of it, the phone screen shows the same blank sheet, on the far side of the counter a pharmacist's open hand in a white coat sleeve waiting to receive the paper, plain shelves with blank boxes blurred behind. Same simple thick black line doodle drawing style as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no comic symbols, cinematic vertical composition, every sign, screen, paper, package and label completely blank, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu"
+     ]
+    },
+    {
+     "cut": "e212_05",
+     "ko": "처방전. 한 장만 받았다면, 약국에 내고 나면 안 남아요.",
+     "en": "The prescription. If you got only one copy, the pharmacy keeps it.",
+     "zoom": "push",
+     "key": {
+      "ko": "약국에 내면 안 남는다",
+      "en": "PHARMACY KEEPS IT"
+     }
+    },
+    {
+     "cut": "e212_05",
+     "ko": "내기 전에, 사진을 찍어 둡니다.",
+     "en": "So take a photo before you hand it over.",
+     "zoom": "in",
+     "key": {
+      "ko": "내기 전에 사진",
+      "en": "PHOTO IT FIRST"
+     }
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e212_06",
+     "ko": "세 번째, 미리 해 둘 일.",
+     "en": "Three, the one you do ahead of time.",
+     "zoom": "in",
+     "sfx": "click",
+     "draw": [
+      {
+       "text": {
+        "ko": "3",
+        "en": "3"
+       },
+       "xy": [
+        540,
+        360
+       ],
+       "size": 220,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      }
+     ],
+     "prompt": "Close-up in daylight: a small gray backpack lying open on a wooden floor, a stick-figure hand in a dark blue padded jacket sleeve placing into it a clear plastic zip bag that holds a plain weekly pill organizer with seven small compartments each filled with one white pill and a folded completely blank sheet of paper, a water bottle with a blank label beside the backpack. Same simple thick black line doodle drawing style as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no comic symbols, cinematic vertical composition, every sign, screen, paper, package and label completely blank, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "mom"
+     ]
+    },
+    {
+     "cut": "e212_06",
+     "ko": "대피할 때는, 먹는 약을 최소 3일에서 7일분 챙깁니다.",
+     "en": "When you evacuate, carry at least three to seven days of your pills.",
+     "zoom": "push",
+     "key": {
+      "ko": "최소 3일에서 7일분",
+      "en": "3 TO 7 DAYS"
+     },
+     "tts": {
+      "ko": "대피할 때는, 먹는 약을 최소 삼 일에서 칠 일분 챙깁니다."
+     }
+    },
+    {
+     "cut": "e212_06",
+     "ko": "부모님 약 이름을 모른다면, 가족 단톡방에 보내 주세요.",
+     "en": "Send this to your family group chat.",
+     "zoom": "in",
+     "key": {
+      "ko": "가족 단톡방에 보내기",
+      "en": "SEND TO FAMILY"
+     }
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e212_07",
+     "ko": "엄마의 휴대폰에 1년 치 약이 떴고, 의사는 그 이름을 받아 적었어요.",
+     "en": "On Mom's phone, a year of medicine came up, and the doctor wrote the name down.",
+     "zoom": "in",
+     "tts": {
+      "ko": "엄마의 휴대폰에 일 년 치 약이 떴고, 의사는 그 이름을 받아 적었어요."
+     },
+     "prompt": "Inside a small plain clinic room in daylight from a window: Minsu's mother (a woman in her late fifties, short dark bob haircut, dark blue padded jacket, small gray backpack, round glasses, no hat) sitting on a stool holding her smartphone out across the desk with its blank glowing screen turned toward a doctor (a woman in her forties, black hair tied back, white coat, no glasses, no hat) who sits at the desk leaning forward to look at the phone while writing with a pen on a completely blank sheet of paper, Minsu (dark brick-red hoodie, big round glasses, no hat) standing behind his mother, only Minsu wears a red hoodie. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "mom",
+      "minsu",
+      "clinic"
+     ]
+    },
+    {
+     "cut": "e212_08",
+     "ko": "그런데 약을 받고 나오던 엄마가 말했습니다. 나, 집에 가고 싶다.",
+     "en": "But walking out with the pills, Mom said, I want to go home.",
+     "zoom": "shake",
+     "sfx": "sting",
+     "key": {
+      "ko": "집에 가고 싶다",
+      "en": "WANT TO GO HOME"
+     },
+     "tts": {
+      "ko": "그런데 약을 받고 나오던 엄마가 말했습니다, 나, 집에 가고 싶다."
+     },
+     "prompt": "A quiet city sidewalk in daylight outside a small clinic with an open glass door and a plain green cross sign with nothing written on it: Minsu's mother (a woman in her late fifties, short dark bob haircut, dark blue padded jacket, small gray backpack, round glasses, no hat) standing in the foreground holding a small plain white paper bag in both hands and looking far away down the empty street, a few steps behind her Minsu (dark brick-red hoodie, big round glasses, no hat) and the grandma (gray hair bun, half-moon glasses, muted ochre cardigan, cane) standing still and watching her, shops with gray shutters pulled down along the street, only Minsu wears a red hoodie. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "mom",
+      "minsu",
+      "grandma"
+     ]
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e201_sc",
+     "ko": "",
+     "en": "",
+     "zoom": "in",
+     "sfx": "click",
+     "reuse": "dd6cd6d1-77d3-4349-afe3-47b3ea56c4fe",
+     "tts": {
+      "ko": "몇 번을 알고 계셨나요? 댓글에 번호로 남겨 주세요.",
+      "en": "Which ones did you know? Comment the number."
+     },
+     "draw": [
+      {
+       "text": {
+        "ko": "알고 있던 건 몇 번?",
+        "en": "DID YOU KNOW?"
+       },
+       "xy": [
+        540,
+        330
+       ],
+       "size": 96,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      },
+      {
+       "text": {
+        "ko": "약 이름을 모를 때",
+        "en": "PILL NAME UNKNOWN"
+       },
+       "xy": [
+        540,
+        580
+       ],
+       "size": 62,
+       "fill": [
+        235,
+        200,
+        120
+       ]
+      },
+      {
+       "text": {
+        "ko": "1. 휴대폰 내가 먹는 약 한눈에",
+        "en": "1. Phone: HIRA meds record"
+       },
+       "xy": [
+        540,
+        690
+       ],
+       "size": 48,
+       "fill": [
+        235,
+        235,
+        235
+       ]
+      },
+      {
+       "text": {
+        "ko": "2. 처방전은 내기 전에 사진",
+        "en": "2. Photo the prescription"
+       },
+       "xy": [
+        540,
+        775
+       ],
+       "size": 48,
+       "fill": [
+        235,
+        235,
+        235
+       ]
+      },
+      {
+       "text": {
+        "ko": "3. 약은 최소 3일에서 7일분",
+        "en": "3. Carry 3 to 7 days of pills"
+       },
+       "xy": [
+        540,
+        860
+       ],
+       "size": 48,
+       "fill": [
+        235,
+        235,
+        235
+       ]
+      },
+      {
+       "text": {
+        "ko": "댓글에 번호로",
+        "en": "COMMENT THE NUMBER"
+       },
+       "xy": [
+        540,
+        1010
+       ],
+       "size": 70,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 10
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
