@@ -576,7 +576,7 @@
      "sfx": "click",
      "reuse": "dd6cd6d1-77d3-4349-afe3-47b3ea56c4fe",
      "tts": {
-      "ko": "불 끄고, 잠그고, 계단으로 지하.",
+      "ko": "불을 끄고, 가스를 잠그고, 계단으로 지하까지.",
       "en": "Lights off, gas off, stairs down. Come out when the broadcast says so."
      },
      "draw": [
