@@ -1,0 +1,359 @@
+{
+ "title": {
+  "ko": "1203호 S2 3화 — 사이렌 3일째: 엘리베이터 대신 계단",
+  "en": "Unit 1203 S2 Ep.3 — Day 3: Take the Stairs"
+ },
+ "badge": {
+  "ko": "1203호 S2 | DAY 3",
+  "en": "UNIT 1203 S2 | DAY 3"
+ },
+ "font": "serif",
+ "voice": {
+  "model": "seed_audio",
+  "voice_id": "1ad38ba4-9cc4-4f2f-9fde-b0fefdf67ae5",
+  "voice_name": "Gideon",
+  "speech_rate": {
+   "ko": 10,
+   "en": 5
+  }
+ },
+ "lead_in": 0.4,
+ "scene_gap": 0.4,
+ "tail": 2.0,
+ "speed": {
+  "ko": 1.2,
+  "en": 1.4
+ },
+ "_note": "2화 투표 결과가 비어 있어 A(할머니를 먼저 모시러 간다)를 '민수의 선택'으로. 효과음은 sting/rumble/siren/radio/click/thunk/hum만. 짧은 줄은 음성 사고가 나므로 장면당 한두 문장을 이어 쓴다.",
+ "refs_legend": {
+  "minsu": "3be1e101-6989-4400-9688-7c7c0650c115",
+  "grandma": "22c13de9-c43e-404d-8eec-70f1d222a3df",
+  "room": "9dfc12e7-7856-454f-864a-e2dc11227adb",
+  "hall": "f91485a0-acfc-4bfe-883d-f80f0c82f54c"
+ },
+ "scenes": [
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e203_01",
+     "ko": "사이렌 3일째 밤. 이번엔 소리가 평탄하지 않았어요.",
+     "en": "Day three, night. This time the siren did not stay flat.",
+     "zoom": "push",
+     "sfx": "siren",
+     "key": {
+      "ko": "사이렌 3일째 밤",
+      "en": "DAY 3, NIGHT"
+     },
+     "tts": {
+      "ko": "사이렌 삼 일째 밤. 이번엔 소리가 평탄하지 않았어요."
+     },
+     "prompt": "Minsu (dark brick-red hoodie, big round glasses, no hat) sitting bolt upright on a floor mattress in a dark bedroom at night, head turned toward a window covered by a thick blanket, a thin line of pale light at the blanket's edge, a small radio and a packed backpack on the floor beside him. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, dark brick red, muted ochre, one warm amber light source), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu",
+      "room"
+     ],
+     "job": "3516addb-3281-4afd-81b9-3b7dc4a3f3b0"
+    },
+    {
+     "cut": "e203_01",
+     "ko": "오르내리는 소리는 공습경보, 바로 지하로 가라는 뜻이죠.",
+     "en": "A siren that rises and falls is an air-raid warning, and it means go underground now.",
+     "zoom": "in",
+     "key": {
+      "ko": "오르내림 = 공습경보",
+      "en": "RISE AND FALL = AIR RAID"
+     }
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e203_02",
+     "ko": "민수의 선택은 A, 할머니부터. 현관 옆 가방을 메고 1204호로 갔어요.",
+     "en": "Minsu's choice was A, Grandma first, so he took the bag by the door and went to unit 1204.",
+     "zoom": "push",
+     "sfx": "click",
+     "key": {
+      "ko": "민수의 선택: A",
+      "en": "MINSU'S CHOICE: A"
+     },
+     "tts": {
+      "ko": "민수의 선택은 에이, 할머니부터. 현관 옆 가방을 메고 천이백사 호로 갔어요.",
+      "en": "Minsu's choice was A, Grandma first, so he took the bag by the door and went to unit twelve oh four."
+     },
+     "prompt": "Minsu (dark brick-red hoodie, big round glasses, no hat) in a dark apartment entryway at night, swinging a packed dark backpack onto one shoulder while pulling the front door open, a dim amber emergency light from the hallway falling in through the door gap. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, dark brick red, muted ochre, one warm amber light source), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu",
+      "room"
+     ],
+     "job": "c49836f1-8a6a-450c-8fab-cea9258dcda2"
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e203_03",
+     "ko": "할머니는 벌써 신발을 신고 서 있었어요. 그리고 물었죠. 가스는 잠갔니?",
+     "en": "Grandma was already standing there with her shoes on, and she asked him, did you shut off the gas?",
+     "zoom": "push",
+     "prompt": "A dim apartment hallway at night lit by one amber emergency light, the grandma (gray hair bun, half-moon glasses, muted ochre cardigan, cane) standing ready in her open doorway wearing a small backpack, calm, looking up at Minsu (dark brick-red hoodie, big round glasses, no hat) who has just arrived with his backpack on. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, dark brick red, muted ochre, one warm amber light source), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu",
+      "grandma",
+      "hall"
+     ],
+     "job": "7b9c30f5-7ac4-46e2-95c3-5e5a93b8746f"
+    },
+    {
+     "cut": "e203_04",
+     "ko": "민수는 다시 뛰어 들어갔어요. 나가기 전에 가스 밸브, 그리고 전원.",
+     "en": "Minsu ran back inside, because before you leave, you shut off the gas and the power.",
+     "zoom": "in",
+     "sfx": "thunk",
+     "key": {
+      "ko": "나가기 전: 가스·전원 차단",
+      "en": "BEFORE YOU GO: GAS AND POWER OFF"
+     },
+     "prompt": "Close view in a dark kitchen at night: Minsu (dark brick-red hoodie, big round glasses, no hat) reaching up and turning the small lever of a gas valve on the wall pipe above a stove, lit only by a small flashlight in his other hand. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, dark brick red, muted ochre, one warm amber light source), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu",
+      "room"
+     ],
+     "job": "5c2f25b1-e3dd-4c27-b390-4b8f478c77fd"
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e203_05",
+     "ko": "여긴 12층. 민수는 할머니 다리를 생각해서 엘리베이터 버튼을 눌렀어요.",
+     "en": "They were on the twelfth floor, and thinking of Grandma's legs, Minsu pressed the elevator button.",
+     "zoom": "push",
+     "sfx": "click",
+     "tts": {
+      "ko": "여긴 십이 층. 민수는 할머니 다리를 생각해서 엘리베이터 버튼을 눌렀어요."
+     },
+     "prompt": "A dim apartment hallway at night, Minsu (dark brick-red hoodie, big round glasses, no hat) with a backpack pressing the call button beside closed metal elevator doors, the button glowing amber, the grandma (gray hair bun, half-moon glasses, muted ochre cardigan, cane) standing just behind him with a small backpack, watching him. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, dark brick red, muted ochre, one warm amber light source), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu",
+      "grandma",
+      "hall"
+     ],
+     "job": "c4206fc4-0b41-4cd4-aa56-fe283648b790"
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e203_06",
+     "ko": "할머니가 지팡이로 계단 문을 가리켰어요. 전기가 끊기면 엘리베이터는 멈추니까요.",
+     "en": "Grandma pointed her cane at the stairwell door, because when the power goes, the elevator stops.",
+     "zoom": "push",
+     "sfx": "sting",
+     "key": {
+      "ko": "엘리베이터 대신 비상계단",
+      "en": "STAIRS, NOT THE ELEVATOR"
+     },
+     "prompt": "A dim apartment hallway at night, the grandma (gray hair bun, half-moon glasses, muted ochre cardigan, cane) holding her cane out straight, pointing it at a heavy gray fire door with a small blank green glowing exit light above it, Minsu (dark brick-red hoodie, big round glasses, no hat) beside her turning his head from the elevator toward that door. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, dark brick red, muted ochre, one warm amber light source), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu",
+      "grandma",
+      "hall"
+     ],
+     "job": "83037c54-2df3-494b-95bb-f637f540e089"
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e203_07",
+     "ko": "가방 두 개는 민수가 메고, 할머니는 난간을 잡았어요. 한 층씩, 천천히.",
+     "en": "Minsu carried both bags and Grandma held the rail, one floor at a time, slowly.",
+     "zoom": "push",
+     "sfx": "rumble",
+     "prompt": "A concrete apartment stairwell at night lit by weak amber emergency lights, seen from above looking down the turning flights, Minsu (dark brick-red hoodie, big round glasses, no hat) wearing one backpack on his back and one on his chest walking one step below the grandma (gray hair bun, half-moon glasses, muted ochre cardigan, cane) who grips the handrail with one hand and her cane with the other, a few small plain stick-figure neighbors in dark coats standing aside against the wall on the landing to let them pass. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, dark brick red, muted ochre, one warm amber light source), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu",
+      "grandma"
+     ],
+     "job": "0c816aa2-d847-45f6-aed4-2f2646e4f972"
+    },
+    {
+     "cut": "e203_07",
+     "ko": "이웃들이 벽 쪽으로 붙어 길을 내줬어요. 노인과 아이가 먼저니까요.",
+     "en": "The neighbors stepped to the wall to let them pass, because the old and the young go first.",
+     "zoom": "in",
+     "key": {
+      "ko": "어린이·노약자 먼저",
+      "en": "CHILDREN AND ELDERLY FIRST"
+     }
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e203_08",
+     "ko": "지하 2층 주차장. 할머니가 라디오를 켰어요. 대피소에선 방송을 듣고 안내를 따릅니다.",
+     "en": "In the parking garage, two floors underground, Grandma turned on the radio, because in a shelter you listen and follow instructions.",
+     "zoom": "push",
+     "sfx": "radio",
+     "key": {
+      "ko": "대피소: 방송 듣고 안내 따르기",
+      "en": "SHELTER: LISTEN, FOLLOW INSTRUCTIONS"
+     },
+     "tts": {
+      "ko": "지하 이 층 주차장. 할머니가 라디오를 켰어요. 대피소에선 방송을 듣고 안내를 따릅니다."
+     },
+     "prompt": "A wide underground parking garage at night with thick concrete pillars and a low ceiling, weak amber lights, small groups of plain stick-figure residents in dark coats sitting quietly on the floor along the pillars with bags and blankets, in the foreground the grandma (gray hair bun, half-moon glasses, muted ochre cardigan, cane) seated on a folded blanket holding a small radio and Minsu (dark brick-red hoodie, big round glasses, no hat) setting two backpacks down beside her, a few parked cars in the dim background. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, dark brick red, muted ochre, one warm amber light source), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu",
+      "grandma"
+     ],
+     "job": "e4ef9299-1eb5-40ef-adad-645e4f8e05bb"
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e203_06",
+     "ko": "오늘 할 수 있는 일 한 가지. 우리 집 비상계단을 한 번 걸어서 내려가 보기.",
+     "en": "One thing you can do today is walk down your own emergency stairs, just once.",
+     "zoom": "in",
+     "key": {
+      "ko": "오늘 할 일: 비상계단 한 번 걸어 보기",
+      "en": "TODAY: WALK YOUR STAIRS ONCE"
+     }
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e201_sc",
+     "ko": "민수의 준비 점수는 65점이 됐어요.",
+     "en": "Minsu's readiness score went up to sixty-five.",
+     "zoom": "push",
+     "sfx": "sting",
+     "reuse": "dd6cd6d1-77d3-4349-afe3-47b3ea56c4fe",
+     "tts": {
+      "ko": "민수의 준비 점수는 육십오 점이 됐어요.",
+      "en": "And tonight, Minsu's readiness score went up to sixty-five points."
+     },
+     "draw": [
+      {
+       "text": "65",
+       "xy": [
+        540,
+        760
+       ],
+       "size": 260,
+       "fill": [
+        235,
+        200,
+        120
+       ]
+      },
+      {
+       "text": "/ 100",
+       "xy": [
+        540,
+        930
+       ],
+       "size": 70,
+       "fill": [
+        200,
+        200,
+        200
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e203_ab",
+     "ko": "주차장 구석엔 민수의 차가 있어요. 민수는, A, 차 안에서 밤을 보낸다. B, 사람들 곁 바닥에 앉는다. 댓글로.",
+     "en": "Minsu's car is parked in the corner. Minsu: A, spends the night in the car. B, sits on the floor with everyone. Comment below.",
+     "zoom": "none",
+     "sfx": "click",
+     "tts": {
+      "ko": "주차장 구석엔 민수의 차가 있어요. 민수는, 에이, 차 안에서 밤을 보낸다. 비, 사람들 곁 바닥에 앉는다. 댓글로 알려 주세요.",
+      "en": "Minsu's car is parked in the corner, so does Minsu choose A, and spend the night in the car, or B, and sit on the floor with everyone? Comment below."
+     },
+     "draw": [
+      {
+       "text": "A",
+       "xy": [
+        270,
+        300
+       ],
+       "size": 170,
+       "fill": [
+        235,
+        200,
+        120
+       ]
+      },
+      {
+       "text": "B",
+       "xy": [
+        810,
+        300
+       ],
+       "size": 170,
+       "fill": [
+        235,
+        200,
+        120
+       ]
+      }
+     ],
+     "prompt": "Split vertical composition divided by a thin vertical line on a dark slate background, both halves inside the same dim underground parking garage: left half, Minsu (dark brick-red hoodie, big round glasses, no hat) sitting alone in the driver's seat of a small parked car seen through the side window, a faint amber dome light inside; right half, Minsu (dark brick-red hoodie, big round glasses, no hat) sitting on the concrete floor against a thick pillar next to the grandma (gray hair bun, half-moon glasses, muted ochre cardigan, cane) and a few plain stick-figure neighbors sharing a blanket around a small radio. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, dark brick red, muted ochre, one warm amber light source), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu",
+      "grandma"
+     ],
+     "job": "859c91bb-27f9-43ff-91b0-df23cba4af1d"
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e203_08",
+     "ko": "다음 화, 사이렌 3일째, 대피소에서 보내는 첫 밤.",
+     "en": "Next time, still day three, the first night in the shelter.",
+     "zoom": "out",
+     "sfx": "sting",
+     "key": {
+      "ko": "NEXT: 대피소의 첫 밤",
+      "en": "NEXT: FIRST NIGHT IN THE SHELTER"
+     },
+     "tts": {
+      "ko": "다음 화, 사이렌 삼 일째, 대피소에서 보내는 첫 밤."
+     }
+    }
+   ]
+  }
+ ]
+}
