@@ -1,6 +1,6 @@
 import io, os, sys, tempfile, contextlib
 sys.path.insert(0, os.path.dirname(__file__))
-from render import check, plan, warn_length
+from render import check, plan, warn_length, ff_ok
 
 SAMPLE = {"title": "t", "voice": {"voice_id": "x", "speed": 1.25}, "scenes": [
     {"type": "art", "image": "b000_01", "title": "몇 kg?", "say": "a"},
@@ -35,6 +35,15 @@ def test_long_warning():
     with contextlib.redirect_stderr(buf):
         warn_length(46.0); warn_length(30.0)
     assert buf.getvalue().count("45초 초과") == 1
+
+
+def test_ffmpeg_failure_exits():
+    try:
+        ff_ok(1)
+    except SystemExit:
+        ff_ok(0)
+        return
+    raise AssertionError("ffmpeg 실패가 그냥 지나감")
 
 
 if __name__ == "__main__":

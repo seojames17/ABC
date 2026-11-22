@@ -79,6 +79,26 @@ def test_safe_area():
         assert x0 >= 90 and x1 <= 990 and y0 >= 240 and y1 <= 1500, (x0, y0, x1, y1)
 
 
+def _raises(f):
+    try:
+        f()
+    except ValueError:
+        return True
+    return False
+
+
+def test_bars_overflow_raises():
+    assert _raises(lambda: bars_frame([(f"항목{i}", i + 1.0) for i in range(12)], 1.0, "kg", 1, title="두 줄이 되는 아주 긴 제목입니다 정말로"))
+
+
+def test_checklist_marks_mismatch_raises():
+    assert _raises(lambda: checklist_frame(["a", "b"], 1.0, ["o"], 1))
+
+
+def test_checklist_text_too_long_raises():
+    assert _raises(lambda: checklist_frame(["가" * 80], 1.0, ["o"], 1))
+
+
 if __name__ == "__main__":
     fails = 0
     for k, f in list(globals().items()):
