@@ -16,12 +16,17 @@ def check(spec, assets):
     for i, s in enumerate(spec["scenes"], 1):
         if s["type"] == "art" and not os.path.exists(os.path.join(assets, "cut", s["image"] + ".png")):
             miss.append(f"cut/{s['image']}.png")
-        if not os.path.exists(os.path.join(assets, "aud", f"{i}.mp3")):
+        if "voice" in spec and not os.path.exists(os.path.join(assets, "aud", f"{i}.mp3")):
             miss.append(f"aud/{i}.mp3")
     return miss
 
 
 def plan(spec, durations):
+    if "voice" not in spec:  # 무음: 장면 길이를 그대로 이어 붙임
+        starts, t = [], 0.0
+        for d in durations:
+            starts.append(round(t, 4)); t += d
+        return starts
     speed = spec["voice"].get("speed", 1.0)
     starts, t = [], 0.0
     for d in durations:
@@ -85,7 +90,44 @@ def _art_frame(src, t, title, shift=0):
     return img
 
 
-def scene_frame(s, t_scene, seed, art_cache):
+YELLOW = (255, 214, 0)
+
+
+def _header(img, text):
+    """화면 위 고정 제목(노란 상자). 중간에 들어온 사람도 무슨 영상인지 안다."""
+    if not text:
+        return img
+    d = ImageDraw.Draw(img)
+    lines, size = fit_text(text, FONT_BHS, 820, 64, 44)
+    f = _font(FONT_BHS, size)
+    h = len(lines) * (size + 8) + 28
+    d.rectangle([110, 250, 970, 250 + h], fill=YELLOW)
+    for k, l in enumerate(lines):
+        d.text((W // 2, 264 + k * (size + 8)), l, font=f, fill=INK["ink"], anchor="mt")
+    return img
+
+
+def _big_text(img, text):
+    """사진 위 큰 글자(흰 글자, 검은 테두리). 줄바꿈은 \n 또는 자동."""
+    if not text:
+        return img
+    d = ImageDraw.Draw(img)
+    out = []
+    for part in text.split("
+"):
+        lines, size = fit_text(part, FONT_BHS, 880, 96, 60)
+        out += [(l, size) for l in lines]
+    size = min(s for _, s in out)
+    f = _font(FONT_BHS, size)
+    total = len(out) * (size + 14)
+    y0 = 1330 - total // 2
+    for k, (l, _) in enumerate(out):
+        d.text((W // 2, y0 + k * (size + 14)), l, font=f, fill=(255, 255, 255), anchor="mt",
+               stroke_width=10, stroke_fill=(20, 20, 20))
+    return img
+
+
+def scene_frame(s, t_scene, seed, art_cache, header=None):
     """t_scene: 장면 안 진행도 0~1. 그래픽은 앞 70% 동안 0→1."""
     tg = min(1.0, t_scene / 0.7)
     title = s.get("title")
@@ -99,15 +141,51 @@ def scene_frame(s, t_scene, seed, art_cache):
         img = checklist_frame(s["items"], tg, s["marks"], seed, title=title)
     else:
         raise ValueError(f"모르는 장면 종류: {s['type']}")
+    img = _big_text(img, s.get("text"))
+    img = _header(img, header)
     return _subtitle(img, s.get("say"))
+
+
+def _encode(spec, assets, out, audio, lens):
+    art = {s["image"]: Image.open(os.path.join(assets, "cut", s["image"] + ".png")).convert("RGB").resize((W, H))
+           for s in spec["scenes"] if s["type"] == "art"}
+    ff = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}",
+                           "-r", str(FPS), "-i", "-", "-i", audio, "-c:v", "libx264", "-pix_fmt", "yuv420p",
+                           "-preset", "veryfast", "-crf", "20", "-c:a", "aac", "-b:a", "160k", "-shortest", out],
+                          stdin=subprocess.PIPE)
+    for idx, s in enumerate(spec["scenes"]):
+        n = max(1, round(lens[idx] * FPS))
+        last = None
+        for k in range(n):
+            t_scene = k / n
+            if s["type"] != "art" and t_scene >= 0.7 and last is not None:
+                ff.stdin.write(last); continue
+            frame = scene_frame(s, t_scene, idx + 1, art, spec.get("header")).tobytes()
+            last = frame
+            ff.stdin.write(frame)
+    ff.stdin.close()
+    ff_ok(ff.wait())
+
+
+def _render_silent(spec, assets, out, work):
+    lens = [float(s["dur"]) for s in spec["scenes"]]
+    total = sum(lens)
+    warn_length(total)
+    audio = os.path.join(work, "a.wav")
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo", "-t", str(total), audio], check=True)
+    _encode(spec, assets, out, audio, lens)
+    print(f"{out} {total:.1f}s")
+    return total
 
 
 def render(spec, assets, out):
     miss = check(spec, assets)
     if miss:
         sys.exit("빠진 파일: " + ", ".join(miss))
-    speed = spec["voice"].get("speed", 1.0)
     work = tempfile.mkdtemp()
+    if "voice" not in spec:
+        return _render_silent(spec, assets, out, work)
+    speed = spec["voice"].get("speed", 1.0)
     parts, durs = [], []
     for i in range(1, len(spec["scenes"]) + 1):
         p = os.path.join(work, f"{i}.wav")
@@ -127,25 +205,7 @@ def render(spec, assets, out):
             fh.write(f"file '{p}'\nfile '{sil}'\n")
     audio = os.path.join(work, "a.wav")
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", lst, audio], check=True)
-    art = {s["image"]: Image.open(os.path.join(assets, "cut", s["image"] + ".png")).convert("RGB").resize((W, H))
-           for s in spec["scenes"] if s["type"] == "art"}
-    ff = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}",
-                           "-r", str(FPS), "-i", "-", "-i", audio, "-c:v", "libx264", "-pix_fmt", "yuv420p",
-                           "-preset", "veryfast", "-crf", "20", "-c:a", "aac", "-b:a", "160k", "-shortest", out],
-                          stdin=subprocess.PIPE)
-    for idx, s in enumerate(spec["scenes"]):
-        n = max(1, round(lens[idx] * FPS))
-        last = None
-        for k in range(n):
-            t_scene = k / n
-            # 그래픽은 70% 지나면 멈춤 → 마지막 프레임 재사용으로 시간 절약
-            if s["type"] != "art" and t_scene >= 0.7 and last is not None:
-                ff.stdin.write(last); continue
-            frame = scene_frame(s, t_scene, idx + 1, art).tobytes()
-            last = frame
-            ff.stdin.write(frame)
-    ff.stdin.close()
-    ff_ok(ff.wait())
+    _encode(spec, assets, out, audio, lens)
     print(f"{out} {total:.1f}s")
     return total
 
