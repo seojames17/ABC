@@ -9,8 +9,8 @@ mkdir -p ~/bj/fonts ~/bj/episodes ~/bj/assets/aud ~/bj/assets/cut && cd ~/bj/fon
 curl -sfL -o BlackHanSans.ttf "https://cdn.jsdelivr.net/gh/google/fonts@main/ofl/blackhansans/BlackHanSans-Regular.ttf"
 curl -sfL -o NotoSansKR.ttf "https://cdn.jsdelivr.net/gh/google/fonts@main/ofl/notosanskr/NotoSansKR%5Bwght%5D.ttf"
 ```
-파일은 GitHub API로 받는다. **브랜치 이름 대신 커밋 SHA를 `ref`로** 넣는다(브랜치 ref는 캐시된 옛 파일이 온다):
-`curl -sf -H "Accept: application/vnd.github.raw" -o render.py "https://api.github.com/repos/seojames17/ABC/contents/banjang/render.py?ref=<SHA>"` (graphics.py, test_*.py, episodes/bNNN.json 도 같은 방식)
+파일은 **커밋 SHA로 고정한 raw 주소**로 받는다(브랜치 이름은 캐시된 옛 파일이 오고, GitHub API는 시간당 60회 제한에 걸려 조용히 실패한다):
+`curl -sf -o render.py "https://raw.githubusercontent.com/seojames17/ABC/<SHA>/banjang/render.py"` (graphics.py, test_*.py, episodes/bNNN.json 도 같은 방식). 받은 뒤 `grep`으로 새 내용이 들어왔는지 확인한다.
 
 ## 1. 주제 고르기
 - "지금 누구에게 보낼 영상인가"가 바로 떠오를 것(7화 교훈). 숫자 하나와 상식 뒤집기 하나가 있을 것.
