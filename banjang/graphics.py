@@ -102,12 +102,14 @@ def _stagger(t, i, n, lag):
 
 
 def _title(d, text, y=260):
+    """제목을 그리고 제목 아래 y를 돌려준다(제목 없으면 y)."""
     if not text:
-        return
+        return y
     lines, size = fit_text(text, FONT_BHS, 860, 96, 56)
     f = _font(FONT_BHS, size)
     for i, l in enumerate(lines):
         d.text((W // 2, y + i * (size + 10)), l, font=f, fill=255, anchor="mt")
+    return y + len(lines) * (size + 10)
 
 
 def _clip_label(d, text, f, max_w):
@@ -119,24 +121,24 @@ def _clip_label(d, text, f, max_w):
 def bars_frame(items, t, unit, seed, title=None):
     om = np.zeros((H, W)); tm = np.zeros((H, W))
     ink = Image.new("L", (W, H), 0); d = ImageDraw.Draw(ink)
-    _title(d, title)
+    top = max(BAR_TOP, _title(d, title) + 50)
     vmax = max([v for _, v in items] + [1e-9])
-    lf, vf = _font(FONT_NOTO, 40), _font(FONT_BHS, 52)
-    rows = [(l, v) for i, (l, v) in enumerate(items) if BAR_TOP + (i + 1) * BAR_ROW <= SAFE[3]]
+    lf, vf = _font(FONT_BHS, 46), _font(FONT_BHS, 60)
+    rows = [(l, v) for i, (l, v) in enumerate(items) if top + (i + 1) * BAR_ROW <= SAFE[3]]
     n = len(rows)
     dots = _halftone(np.full((H, W), 0.35))
     for i, (label, v) in enumerate(rows):
-        y0 = BAR_TOP + i * BAR_ROW
+        y0 = top + i * BAR_ROW
         ti = _stagger(t, i, n, 0.6)
+        by = y0 + BAR_ROW // 2 - 14
         if ti > 0:
-            bw = max(8, int((BAR_X1 - BAR_X0) * 0.68 * (v / vmax) * ti))
-            by = y0 + BAR_ROW // 2 - 22
-            om[by:by + 44, BAR_X0:BAR_X0 + bw] = 1
-            tm[by + 10:by + 44, BAR_X0:BAR_X0 + bw] = dots[by + 10:by + 44, BAR_X0:BAR_X0 + bw]
+            bw = max(8, int((BAR_X1 - BAR_X0) * 0.66 * (v / vmax) * ti))
+            om[by:by + 58, BAR_X0:BAR_X0 + bw] = 1
+            tm[by + 14:by + 58, BAR_X0:BAR_X0 + bw] = dots[by + 14:by + 58, BAR_X0:BAR_X0 + bw]
             val = count_text(v, ti) + unit
-            vx = min(BAR_X0 + bw + 16, SAFE[2] - d.textlength(val, font=vf))
-            d.text((vx, y0 + BAR_ROW // 2), val, font=vf, fill=255, anchor="lm")
-        d.text((BAR_X0, y0 + 2), _clip_label(d, label, lf, BAR_X1 - BAR_X0), font=lf, fill=255, anchor="lt")
+            vx = min(BAR_X0 + bw + 18, SAFE[2] - d.textlength(val, font=vf))
+            d.text((vx, by + 29), val, font=vf, fill=255, anchor="lm")
+        d.text((BAR_X0, by - 8), _clip_label(d, label, lf, BAR_X1 - BAR_X0), font=lf, fill=255, anchor="lb")
     return _compose(om, tm, ink, seed)
 
 
@@ -168,17 +170,21 @@ def scale_frame(value, t, unit, seed, title=None, vmax=None):
 def checklist_frame(items, t, marks, seed, title=None):
     om = np.zeros((H, W)); tm = np.zeros((H, W))
     ink = Image.new("L", (W, H), 0); d = ImageDraw.Draw(ink)
-    _title(d, title)
+    top = max(460, _title(d, title) + 60)
     n = len(items)
-    row = min(150, (SAFE[3] - 460) // max(n, 1))
-    f, sf = _font(FONT_BHS, 64), _font(FONT_BHS, 70)
+    row = min(180, (SAFE[3] - top) // max(n, 1))
+    sf = _font(FONT_BHS, 70)
     shown = []
     for i, (txt, mk) in enumerate(zip(items, marks)):
         if _stagger(t, i, n, 0.7) <= 0:
             continue
-        y = 460 + i * row
+        y = top + i * row
         (om if mk == "x" else tm)[y:y + 90, 130:220] = 1
-        d.text((260, y + 45), _clip_label(d, txt, f, SAFE[2] - 260), font=f, fill=255, anchor="lm")
+        lines, size = fit_text(txt, FONT_BHS, SAFE[2] - 260, 64, 40)
+        f = _font(FONT_BHS, size)
+        y_text = y + 45 - (len(lines) - 1) * (size + 6) // 2
+        for k, l in enumerate(lines[:2]):
+            d.text((260, y_text + k * (size + 6)), l, font=f, fill=255, anchor="lm")
         shown.append((y, mk))
     img = _compose(om, tm, ink, seed)
     dd = ImageDraw.Draw(img)
