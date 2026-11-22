@@ -111,6 +111,12 @@ def _big_text(img, text):
     """사진 위 큰 글자(흰 글자, 검은 테두리). 줄바꿈은 | 또는 자동."""
     if not text:
         return img
+    # 글자 뒤 아래쪽을 어둡게(최대 60%) 해서 어떤 사진 위에서도 읽히게
+    grad = Image.linear_gradient("L").resize((W, 700)).point(lambda v: int(v * 0.6))
+    mask = Image.new("L", (W, H), 0)
+    mask.paste(grad, (0, 980))
+    mask.paste(int(255 * 0.6), (0, 1680, W, H))
+    img = Image.composite(Image.new("RGB", (W, H), (0, 0, 0)), img, mask)
     d = ImageDraw.Draw(img)
     out = []
     for part in text.split("|"):  # 줄바꿈은 | 로 표시
