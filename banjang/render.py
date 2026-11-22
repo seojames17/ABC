@@ -108,13 +108,12 @@ def _header(img, text):
 
 
 def _big_text(img, text):
-    """사진 위 큰 글자(흰 글자, 검은 테두리). 줄바꿈은 \n 또는 자동."""
+    """사진 위 큰 글자(흰 글자, 검은 테두리). 줄바꿈은 | 또는 자동."""
     if not text:
         return img
     d = ImageDraw.Draw(img)
     out = []
-    for part in text.split("
-"):
+    for part in text.split("|"):  # 줄바꿈은 | 로 표시
         lines, size = fit_text(part, FONT_BHS, 880, 96, 60)
         out += [(l, size) for l in lines]
     size = min(s for _, s in out)
