@@ -46,6 +46,19 @@ def test_ffmpeg_failure_exits():
     raise AssertionError("ffmpeg 실패가 그냥 지나감")
 
 
+SILENT = {"title": "s", "header": "저장해 두세요", "scenes": [
+    {"type": "art", "image": "b000_01", "text": "카드 포인트", "dur": 3.0},
+    {"type": "art", "image": "b000_01", "text": "현금으로", "dur": 2.5}]}
+
+
+def test_silent_check_ignores_audio():
+    assert check(SILENT, assets_with_aud()) == []
+
+
+def test_silent_plan_uses_dur():
+    assert plan(SILENT, [3.0, 2.5]) == [0.0, 3.0]
+
+
 if __name__ == "__main__":
     fails = 0
     for k, f in list(globals().items()):
