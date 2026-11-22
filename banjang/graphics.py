@@ -54,7 +54,7 @@ def fit_text(text, font_path, max_w, start, min_size):
 
 def _paper(seed):
     rng = np.random.default_rng(seed)
-    grain = np.kron(rng.normal(0, 5, (H // 4, W // 4)), np.ones((4, 4)))[:H, :W]
+    grain = np.kron(np.clip(rng.normal(0, 5, (H // 4, W // 4)), -12, 12), np.ones((4, 4)))[:H, :W]
     return np.clip(np.array(INK["paper"], float) + grain[..., None], 0, 255)
 
 
