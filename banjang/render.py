@@ -60,7 +60,7 @@ def _art_frame(src, t, title, shift=0):
     w, h = int(W * z), int(H * z)
     img = src.resize((w, h), Image.LANCZOS).crop(((w - W) // 2, (h - H) // 2, (w - W) // 2 + W, (h - H) // 2 + H))
     if shift:
-        base = Image.new("RGB", (W, H), INK["paper"])
+        base = Image.new("RGB", (W, H), src.getpixel((8, 8)))  # 그림 자체의 종이색으로 채워 이음새가 안 보이게
         base.paste(img, (0, shift))
         img = base
     if title:
