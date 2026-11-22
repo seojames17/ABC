@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+<style>
+@font-face { font-family: "Pretendard"; font-weight: 500; src: url("assets/fonts/Pretendard-Medium.woff2") format("woff2"); }
+@font-face { font-family: "Pretendard"; font-weight: 700; src: url("assets/fonts/Pretendard-Bold.woff2") format("woff2"); }
+@font-face { font-family: "Pretendard"; font-weight: 800; src: url("assets/fonts/Pretendard-ExtraBold.woff2") format("woff2"); }
+:root { --ground: #0b0b0c; --ink: #f4f1ea; --accent: #f2c14e; --font-display: "Pretendard"; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--ground); }
+#root { position: relative; width: 1080px; height: 1920px; font-family: var(--font-display); color: var(--ink); overflow: hidden; }
+.shot { position: absolute; inset: 0; width: 1080px; height: 1920px; object-fit: cover; }
+.shade { position: absolute; left: 0; right: 0; bottom: 0; height: 1100px; background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.82) 100%); }
+.topshade { position:absolute; left:0; right:0; top:0; height:520px; background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0)); }
+.dim { position:absolute; inset:0; background: rgba(8,8,10,0.78); }
+.kicker { position: absolute; left: 120px; top: 300px; font-weight: 700; font-size: 30px; letter-spacing: 0.18em; text-shadow: 0 2px 12px rgba(0,0,0,0.6); }
+.kicker b { color: var(--accent); font-weight: 800; }
+.line { position: absolute; left: 120px; right: 192px; font-weight: 800; font-size: 82px; line-height: 1.18; letter-spacing: -0.035em; }
+.line .w { display: inline-block; margin-right: 0.22em; }
+.acc { color: var(--accent); }
+.sub { position: absolute; left: 120px; right: 192px; font-weight: 500; font-size: 36px; line-height: 1.45; opacity: 0.85; letter-spacing: -0.01em; }
+.endbg { position: absolute; inset: 0; background: var(--ground); }
+.rule { position: absolute; left: 120px; top: 760px; width: 96px; height: 6px; background: var(--accent); }
+.appcard { position:absolute; left:120px; top:470px; width:840px; display:flex; align-items:center; gap:40px; }
+.appcard img { width:220px; height:220px; border-radius:50px; box-shadow: 0 30px 80px rgba(0,0,0,0.55); }
+.appname { font-weight:800; font-size:64px; letter-spacing:-0.03em; }
+.appmeta { font-weight:500; font-size:32px; opacity:0.75; margin-top:10px; }
+.pill { position:absolute; left:120px; top:1110px; padding:22px 34px; border-radius:999px; background: rgba(242,193,78,0.14); border:2px solid rgba(242,193,78,0.6); font-weight:700; font-size:40px; color: var(--accent); }
+</style>
+
+<style>
+.bignum { position:absolute; left:110px; top:560px; font-weight:800; font-size:360px; letter-spacing:-0.06em; line-height:1; color: transparent; -webkit-text-stroke: 4px var(--accent); }
+.sms { position:absolute; left:120px; right:200px; top:520px; }
+.sms .to { font-weight:700; font-size:34px; opacity:0.7; margin-bottom:28px; }
+.sms .bubble { display:inline-block; background:#2f7cf6; color:#fff; font-weight:500; font-size:42px; line-height:1.4; padding:28px 36px; border-radius:40px 40px 8px 40px; max-width:760px; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="24.8" data-width="1080" data-height="1920">
+  <audio id="vo" class="clip" src="assets/vo.mp3" data-start="0.2" data-volume="1" data-track-index="9"></audio>
+  <audio id="bgm" class="clip" src="assets/bgm.mp3" data-start="0" data-duration="24.8" data-volume="0.14" data-fade-out="1.2" data-track-index="10"></audio>
+
+  <video id="v1" class="clip shot" src="assets/c1.mp4" muted playsinline data-start="0" data-duration="4.2" data-playback-rate="0.72" data-track-index="0"></video>
+  <div id="card1" class="clip endbg" data-start="4.2" data-duration="3.2" data-track-index="0"></div>
+  <video id="v2" class="clip shot" src="assets/c2.mp4" muted playsinline data-start="7.4" data-duration="4.7" data-playback-rate="0.64" data-track-index="0"></video>
+  <video id="v3" class="clip shot" src="assets/c3.mp4" muted playsinline data-start="12.1" data-duration="5" data-playback-rate="0.6" data-track-index="0"></video>
+  <div id="card2" class="clip endbg" data-start="17.1" data-duration="4.5" data-track-index="0"></div>
+  <video id="v4" class="clip shot" src="assets/c4.mp4" muted playsinline data-start="21.6" data-duration="3.2" data-playback-rate="0.94" data-track-index="0"></video>
+
+  <div id="shade" class="clip shade" data-start="0" data-duration="24.8" data-track-index="2"></div>
+  <div id="topshade" class="clip topshade" data-start="0" data-duration="24.8" data-track-index="2"></div>
+  <div id="kick" class="clip kicker" data-start="0" data-duration="24.8" data-track-index="3"><b>모르면 손해</b> &nbsp;/&nbsp; 말 없는 112</div>
+
+  <div id="t1" class="clip line" style="top:1000px" data-start="0" data-duration="4.2" data-track-index="4">
+    <span class="w">말하면</span><span class="w">위험한</span><span class="w">순간,</span><br><span class="w acc">112는?</span></div>
+  <div id="num" class="clip bignum" data-start="4.2" data-duration="3.2" data-track-index="5">112</div>
+  <div id="t2" class="clip line" style="top:1000px" data-start="4.3" data-duration="3.1" data-track-index="4">
+    <span class="w">전화를</span><span class="w">못</span><span class="w">걸면</span><br><span class="w acc">포기한다?</span></div>
+  <div id="t3" class="clip line" style="top:960px" data-start="7.4" data-duration="4.7" data-track-index="4">
+    <span class="w">말</span><span class="w">대신</span><br><span class="w acc">숫자</span><span class="w acc">버튼만</span><span class="w">눌러도</span></div>
+  <div id="s3" class="clip sub" style="top:1180px" data-start="7.9" data-duration="4.1" data-track-index="6">112에 걸고, 경찰관 안내에 따라 누르면 신고 접수</div>
+  <div id="t4" class="clip line" style="top:960px" data-start="12.1" data-duration="5" data-track-index="4">
+    <span class="w">링크를</span><span class="w">누르면</span><br><span class="w acc">위치와</span><span class="w acc">영상</span><span class="w">전송</span></div>
+  <div id="s4" class="clip sub" style="top:1180px" data-start="12.6" data-duration="4.4" data-track-index="6">경찰이 보낸 「보이는 112」 링크 · 알뜰폰도 가능</div>
+  <div id="sms" class="clip sms" data-start="17.2" data-duration="4.4" data-track-index="5">
+    <div class="to">받는 사람 &nbsp;112</div>
+    <div class="bubble">○○아파트 3동 1203호<br>누가 문을 열려고 해요</div>
+  </div>
+  <div id="t5" class="clip line" style="top:1000px" data-start="17.1" data-duration="4.5" data-track-index="4">
+    <span class="w">전화가</span><span class="w">어렵다면</span><br><span class="w acc">문자로</span><span class="w">112</span></div>
+  <div id="s5" class="clip sub" style="top:1220px" data-start="17.6" data-duration="4" data-track-index="6">위치와 상황을 적어서 보내세요</div>
+  <div id="t6" class="clip line" style="top:1000px" data-start="21.6" data-duration="3.2" data-track-index="4">
+    <span class="w">혼자</span><span class="w">사는</span><span class="w">가족에게</span><br><span class="w acc">보내</span><span class="w acc">주세요</span></div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+function words(sel, at) { tl.fromTo(sel + " .w", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.32, ease: "expo.out", stagger: 0.08 }, at); }
+function outw(sel, at) { tl.to(sel + " .w", { opacity: 0, filter: "blur(8px)", duration: 0.18, ease: "power3.in", stagger: 0.03 }, at); }
+function sub(sel, at, out) { tl.fromTo(sel, { opacity: 0, filter: "blur(6px)" }, { opacity: 0.85, filter: "blur(0px)", duration: 0.3, ease: "expo.out" }, at); tl.to(sel, { opacity: 0, duration: 0.18 }, out); }
+tl.fromTo("#v1", { scale: 1.05 }, { scale: 1.0, duration: 4.2, ease: "power2.out" }, 0);
+tl.fromTo("#kick", { opacity: 0, y: -8 }, { opacity: 1, y: 0, duration: 0.5, ease: "expo.out" }, 0.1);
+words("#t1", 0.1); outw("#t1", 3.95);
+tl.fromTo("#num", { opacity: 0, scale: 0.92, filter: "blur(14px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.6, ease: "expo.out" }, 4.2);
+tl.to("#num", { opacity: 0, filter: "blur(10px)", duration: 0.2, ease: "power3.in" }, 7.15);
+words("#t2", 4.5); outw("#t2", 7.15);
+words("#t3", 7.5); outw("#t3", 11.85); sub("#s3", 7.95, 11.85);
+words("#t4", 12.2); outw("#t4", 16.85); sub("#s4", 12.7, 16.85);
+tl.fromTo("#sms .to", { opacity: 0 }, { opacity: 0.7, duration: 0.3 }, 17.2);
+tl.fromTo("#sms .bubble", { opacity: 0, y: 30, scale: 0.94, transformOrigin: "right bottom" }, { opacity: 1, y: 0, scale: 1, duration: 0.5, ease: "back.out(1.4)" }, 17.45);
+tl.to("#sms", { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power3.in" }, 21.35);
+words("#t5", 17.3); outw("#t5", 21.35); sub("#s5", 17.8, 21.35);
+words("#t6", 21.7);
+window.__timelines["main"] = tl;
+tl.seek(0);
+</script>
+</body>
+</html>

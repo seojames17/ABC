@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+<style>
+@font-face { font-family: "Pretendard"; font-weight: 500; src: url("assets/fonts/Pretendard-Medium.woff2") format("woff2"); }
+@font-face { font-family: "Pretendard"; font-weight: 700; src: url("assets/fonts/Pretendard-Bold.woff2") format("woff2"); }
+@font-face { font-family: "Pretendard"; font-weight: 800; src: url("assets/fonts/Pretendard-ExtraBold.woff2") format("woff2"); }
+:root { --ground: #0b0b0c; --ink: #f4f1ea; --accent: #f2c14e; --font-display: "Pretendard"; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--ground); }
+#root { position: relative; width: 1080px; height: 1920px; font-family: var(--font-display); color: var(--ink); overflow: hidden; }
+.shot { position: absolute; inset: 0; width: 1080px; height: 1920px; object-fit: cover; }
+.shade { position: absolute; left: 0; right: 0; bottom: 0; height: 1100px; background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.82) 100%); }
+.topshade { position:absolute; left:0; right:0; top:0; height:520px; background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0)); }
+.dim { position:absolute; inset:0; background: rgba(8,8,10,0.78); }
+.kicker { position: absolute; left: 120px; top: 300px; font-weight: 700; font-size: 30px; letter-spacing: 0.18em; text-shadow: 0 2px 12px rgba(0,0,0,0.6); }
+.kicker b { color: var(--accent); font-weight: 800; }
+.line { position: absolute; left: 120px; right: 192px; font-weight: 800; font-size: 82px; line-height: 1.18; letter-spacing: -0.035em; }
+.line .w { display: inline-block; margin-right: 0.22em; }
+.acc { color: var(--accent); }
+.sub { position: absolute; left: 120px; right: 192px; font-weight: 500; font-size: 36px; line-height: 1.45; opacity: 0.85; letter-spacing: -0.01em; }
+.endbg { position: absolute; inset: 0; background: var(--ground); }
+.rule { position: absolute; left: 120px; top: 760px; width: 96px; height: 6px; background: var(--accent); }
+.appcard { position:absolute; left:120px; top:470px; width:840px; display:flex; align-items:center; gap:40px; }
+.appcard img { width:220px; height:220px; border-radius:50px; box-shadow: 0 30px 80px rgba(0,0,0,0.55); }
+.appname { font-weight:800; font-size:64px; letter-spacing:-0.03em; }
+.appmeta { font-weight:500; font-size:32px; opacity:0.75; margin-top:10px; }
+.pill { position:absolute; left:120px; top:1110px; padding:22px 34px; border-radius:999px; background: rgba(242,193,78,0.14); border:2px solid rgba(242,193,78,0.6); font-weight:700; font-size:40px; color: var(--accent); }
+</style>
+
+<style>
+:root { --warn: #ff6b5b; }
+.bignum { position:absolute; left:110px; top:560px; font-weight:800; font-size:360px; letter-spacing:-0.06em; line-height:1; color: transparent; -webkit-text-stroke: 4px var(--accent); }
+.ban { position:absolute; left:120px; top:560px; }
+.ban .item { position:relative; display:block; font-weight:800; font-size:120px; letter-spacing:-0.04em; line-height:1.15; color: var(--ink); }
+.ban .strike { position:absolute; left:-6px; top:54%; height:10px; width:0; background: var(--warn); }
+.warn { color: var(--warn); }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="22.6" data-width="1080" data-height="1920">
+  <audio id="vo" class="clip" src="assets/vo.mp3" data-start="0.2" data-volume="1" data-track-index="9"></audio>
+  <audio id="bgm" class="clip" src="assets/bgm.mp3" data-start="0" data-duration="22.6" data-volume="0.14" data-fade-out="1.2" data-track-index="10"></audio>
+
+  <video id="v1" class="clip shot" src="assets/c1.mp4" muted playsinline data-start="0" data-duration="3.6" data-playback-rate="0.84" data-track-index="0"></video>
+  <video id="v2" class="clip shot" src="assets/c2.mp4" muted playsinline data-start="3.6" data-duration="5.1" data-playback-rate="0.59" data-track-index="0"></video>
+  <video id="v3" class="clip shot" src="assets/c3.mp4" muted playsinline data-start="8.7" data-duration="3.9" data-playback-rate="0.77" data-track-index="0"></video>
+  <div id="card1" class="clip endbg" data-start="12.6" data-duration="2.9" data-track-index="0"></div>
+  <video id="v4" class="clip shot" src="assets/c4.mp4" muted playsinline data-start="15.5" data-duration="3.1" data-playback-rate="0.97" data-track-index="0"></video>
+  <div id="card2" class="clip endbg" data-start="18.6" data-duration="4" data-track-index="0"></div>
+
+  <div id="shade" class="clip shade" data-start="0" data-duration="22.6" data-track-index="2"></div>
+  <div id="topshade" class="clip topshade" data-start="0" data-duration="22.6" data-track-index="2"></div>
+  <div id="kick" class="clip kicker" data-start="0" data-duration="22.6" data-track-index="3"><b>모르면 손해</b> &nbsp;/&nbsp; 수도 동파</div>
+
+  <div id="t1" class="clip line" style="top:1000px" data-start="0" data-duration="3.6" data-track-index="4">
+    <span class="w">오늘</span><span class="w">밤</span><span class="w acc">영하</span><span class="w acc">10도면,</span><br><span class="w">이것부터</span></div>
+  <div id="t2" class="clip line" style="top:1000px" data-start="3.6" data-duration="2.9" data-track-index="4">
+    <span class="w">계량기함에</span><br><span class="w acc">헌</span><span class="w acc">옷,</span><span class="w acc">뽁뽁이</span></div>
+  <div id="t2b" class="clip line" style="top:1000px" data-start="6.5" data-duration="2.2" data-track-index="4">
+    <span class="w">위는</span><span class="w acc">비닐로</span><br><span class="w">막기</span></div>
+  <div id="t3" class="clip line" style="top:1000px" data-start="8.7" data-duration="3.9" data-track-index="4">
+    <span class="w">물</span><span class="w">안</span><span class="w">쓰는</span><span class="w">밤엔</span><br><span class="w acc">수도꼭지</span><span class="w acc">조금</span></div>
+  <div id="ban" class="clip ban" data-start="12.6" data-duration="2.9" data-track-index="5">
+    <span class="item">드라이기<span class="strike" id="k1"></span></span>
+    <span class="item">토치<span class="strike" id="k2"></span></span>
+  </div>
+  <div id="t4" class="clip line" style="top:1000px" data-start="12.7" data-duration="2.8" data-track-index="4">
+    <span class="w">얼었을</span><span class="w">땐</span><br><span class="w warn">쓰지</span><span class="w warn">마세요</span></div>
+  <div id="t5" class="clip line" style="top:1000px" data-start="15.5" data-duration="3.1" data-track-index="4">
+    <span class="w">따뜻한</span><span class="w acc">물수건으로</span><br><span class="w">천천히</span></div>
+  <div id="num" class="clip bignum" data-start="18.6" data-duration="4" data-track-index="5">120</div>
+  <div id="t6" class="clip line" style="top:1000px; right:300px" data-start="18.7" data-duration="3.9" data-track-index="4">
+    <span class="w">터졌다면</span><span class="w acc">120</span><br><span class="w">수도사업소</span></div>
+  <div id="s6" class="clip sub" style="top:1260px; right:300px" data-start="19.4" data-duration="3.2" data-track-index="6">첫 한파 전에 저장해 두세요</div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+function words(sel, at) { tl.fromTo(sel + " .w", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.32, ease: "expo.out", stagger: 0.08 }, at); }
+function outw(sel, at) { tl.to(sel + " .w", { opacity: 0, filter: "blur(8px)", duration: 0.18, ease: "power3.in", stagger: 0.03 }, at); }
+tl.fromTo("#v1", { scale: 1.05 }, { scale: 1.0, duration: 3.6, ease: "power2.out" }, 0);
+tl.fromTo("#kick", { opacity: 0, y: -8 }, { opacity: 1, y: 0, duration: 0.5, ease: "expo.out" }, 0.1);
+words("#t1", 0.1); outw("#t1", 3.35);
+words("#t2", 3.7); outw("#t2", 6.25);
+words("#t2b", 6.6); outw("#t2b", 8.45);
+words("#t3", 8.8); outw("#t3", 12.35);
+tl.fromTo("#ban .item", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.35, ease: "expo.out", stagger: 0.12 }, 12.65);
+tl.to("#k1", { width: 520, duration: 0.35, ease: "power3.out" }, 13.2);
+tl.to("#k2", { width: 300, duration: 0.3, ease: "power3.out" }, 13.45);
+tl.to("#ban", { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power3.in" }, 15.25);
+words("#t4", 12.9); outw("#t4", 15.25);
+words("#t5", 15.6); outw("#t5", 18.35);
+tl.fromTo("#num", { opacity: 0, scale: 0.92, filter: "blur(14px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.6, ease: "expo.out" }, 18.6);
+words("#t6", 18.8);
+tl.fromTo("#s6", { opacity: 0 }, { opacity: 0.85, duration: 0.4 }, 19.45);
+window.__timelines["main"] = tl;
+tl.seek(0);
+</script>
+</body>
+</html>
