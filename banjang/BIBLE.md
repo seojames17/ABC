@@ -22,4 +22,6 @@
 - 주황 `#FF6A13`, 청록 `#0E7C7B`, 종이 `#F3EEE2`, 먹 `#1E2A2A`.
 
 ## 목소리
-- (Task 2에서 사용자 선택 후 기록)
+- **Helena** `3c2b83c0-2e0a-5ae8-998a-a5fe71b7eccd` (preset, `text2speech_v2` variant elevenlabs). 11/22 사용자 선택(후보 Hana·Vera·Helena·Nora, 받아쓰기 모두 100%).
+- 렌더러가 장면별로 `silenceremove`(stop_duration 0.45, stop_silence 0.3) 후 배속 적용. 기본 배속 1.15.
+- 숫자는 녹음용 `tts`에서 한글로 풀어 쓴다("11.4킬로" → "십일 점 사 킬로").
