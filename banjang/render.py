@@ -54,10 +54,15 @@ def _subtitle(img, text):
     return img
 
 
-def _art_frame(src, t, title):
+def _art_frame(src, t, title, shift=0):
+    """shift: 그림을 아래로 내려 위쪽을 종이로 비운다(제목이 얼굴을 가리지 않게)."""
     z = 1.0 + 0.06 * t
     w, h = int(W * z), int(H * z)
     img = src.resize((w, h), Image.LANCZOS).crop(((w - W) // 2, (h - H) // 2, (w - W) // 2 + W, (h - H) // 2 + H))
+    if shift:
+        base = Image.new("RGB", (W, H), INK["paper"])
+        base.paste(img, (0, shift))
+        img = base
     if title:
         d = ImageDraw.Draw(img)
         lines, size = fit_text(title, FONT_BHS, 860, 110, 60)
@@ -73,7 +78,7 @@ def scene_frame(s, t_scene, seed, art_cache):
     tg = min(1.0, t_scene / 0.7)
     title = s.get("title")
     if s["type"] == "art":
-        img = _art_frame(art_cache[s["image"]], t_scene, title)
+        img = _art_frame(art_cache[s["image"]], t_scene, title, s.get("shift", 0))
     elif s["type"] == "scale":
         img = scale_frame(s["value"], tg, s.get("unit", ""), seed, title=title, vmax=s.get("max"))
     elif s["type"] == "bars":
