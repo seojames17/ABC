@@ -35,6 +35,11 @@ def warn_length(total):
         print(f"경고: 영상 {total:.1f}초, 45초 초과", file=sys.stderr)
 
 
+def ff_ok(code):
+    if code:
+        sys.exit(f"ffmpeg 실패(종료 코드 {code})")
+
+
 def _dur(path):
     return float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", path],
                                 capture_output=True, text=True, check=True).stdout)
@@ -139,7 +144,8 @@ def render(spec, assets, out):
             frame = scene_frame(s, t_scene, idx + 1, art).tobytes()
             last = frame
             ff.stdin.write(frame)
-    ff.stdin.close(); ff.wait()
+    ff.stdin.close()
+    ff_ok(ff.wait())
     print(f"{out} {total:.1f}s")
     return total
 

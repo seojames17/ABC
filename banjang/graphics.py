@@ -125,6 +125,8 @@ def bars_frame(items, t, unit, seed, title=None):
     vmax = max([v for _, v in items] + [1e-9])
     lf, vf = _font(FONT_BHS, 46), _font(FONT_BHS, 60)
     rows = [(l, v) for i, (l, v) in enumerate(items) if top + (i + 1) * BAR_ROW <= SAFE[3]]
+    if len(rows) < len(items):
+        raise ValueError(f"막대 {len(items)}개 중 {len(rows)}개만 화면에 들어감. 항목을 줄이거나 제목을 짧게")
     n = len(rows)
     dots = _halftone(np.full((H, W), 0.35))
     for i, (label, v) in enumerate(rows):
@@ -170,6 +172,8 @@ def scale_frame(value, t, unit, seed, title=None, vmax=None):
 def checklist_frame(items, t, marks, seed, title=None):
     om = np.zeros((H, W)); tm = np.zeros((H, W))
     ink = Image.new("L", (W, H), 0); d = ImageDraw.Draw(ink)
+    if len(marks) != len(items):
+        raise ValueError(f"체크리스트 items {len(items)}개, marks {len(marks)}개")
     top = max(460, _title(d, title) + 60)
     n = len(items)
     row = min(180, (SAFE[3] - top) // max(n, 1))
@@ -181,6 +185,8 @@ def checklist_frame(items, t, marks, seed, title=None):
         y = top + i * row
         (om if mk == "x" else tm)[y:y + 90, 130:220] = 1
         lines, size = fit_text(txt, FONT_BHS, SAFE[2] - 260, 64, 40)
+        if len(lines) > 2:
+            raise ValueError(f"체크리스트 항목이 두 줄을 넘음: {txt[:20]}")
         f = _font(FONT_BHS, size)
         y_text = y + 45 - (len(lines) - 1) * (size + 6) // 2
         for k, l in enumerate(lines[:2]):
