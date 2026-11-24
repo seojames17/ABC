@@ -1,0 +1,12 @@
+{"title": "모르면 손해 2 — 말 못 할 때 112 신고",
+ "header": "말 없이 112 신고하는 법",
+ "_note": "무음. 근거: 정책브리핑 '말 없는 112' https://www.korea.kr/multi/visualNewsView.do?newsId=148907462 / 119 문자·사진·영상 신고 https://www.korea.kr/news/policyNewsView.do?newsId=148929801 (소방청 안내 인용)",
+ "scenes": [
+  {"type": "art", "image": "m002_01", "job": "9f8e8346-4a13-4f2d-9136-7aaba8786eb5", "text": "말하면 위험한 상황,|112는 어떻게?", "dur": 3.0},
+  {"type": "art", "image": "m002_01", "text": "대부분은 전화를 못 거니까|포기합니다", "dur": 2.5},
+  {"type": "art", "image": "m002_02", "job": "f95964ae-568a-44d5-8c83-263bdce312d0", "text": "112에 걸고,|말 대신 숫자 버튼만 똑똑", "dur": 3.5},
+  {"type": "art", "image": "m002_03", "job": "6ad12fec-559d-41a3-a671-7888d50d1f89", "text": "경찰이 보낸 링크를 누르면|위치와 영상이 전송", "dur": 3.5},
+  {"type": "art", "image": "m002_03", "text": "전화도 어렵다면|112에 위치와 상황을 문자로", "dur": 3.0},
+  {"type": "art", "image": "m002_02", "text": "119도 문자, 사진, 영상으로|신고됩니다", "dur": 3.0},
+  {"type": "art", "image": "m002_04", "job": "f12d68eb-b172-4ec8-8932-928053a2f6ab", "text": "혼자 사는 가족에게|보내 주세요", "dur": 3.0}
+ ]}

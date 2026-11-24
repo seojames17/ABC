@@ -1,0 +1,349 @@
+{
+ "title": {
+  "ko": "1203호 S2 4화 — 사이렌 3일째: 사이렌이 멈춘 밤",
+  "en": "Unit 1203 S2 Ep.4 — Day 3: The Night the Siren Stopped"
+ },
+ "badge": {
+  "ko": "1203호 S2 | DAY 3",
+  "en": "UNIT 1203 S2 | DAY 3"
+ },
+ "font": "serif",
+ "voice": {
+  "model": "seed_audio",
+  "voice_id": "1ad38ba4-9cc4-4f2f-9fde-b0fefdf67ae5",
+  "voice_name": "Gideon",
+  "speech_rate": {
+   "ko": 10,
+   "en": 5
+  }
+ },
+ "lead_in": 0.4,
+ "scene_gap": 0.4,
+ "tail": 2.0,
+ "speed": {
+  "ko": 1.2,
+  "en": 1.4
+ },
+ "_note": "3화 투표 결과가 비어 있어 A(차 안에서 밤을 보낸다)를 '민수의 선택'으로. 효과음은 sting/rumble/siren/radio/click/thunk/hum만.",
+ "refs_legend": {
+  "minsu": "3be1e101-6989-4400-9688-7c7c0650c115",
+  "grandma": "22c13de9-c43e-404d-8eec-70f1d222a3df",
+  "garage": "e4ef9299-1eb5-40ef-adad-645e4f8e05bb",
+  "car": "859c91bb-27f9-43ff-91b0-df23cba4af1d"
+ },
+ "scenes": [
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e204_01",
+     "ko": "사이렌 3일째 밤, 지하 2층. 사이렌이 멈췄어요.",
+     "en": "Day three, two floors underground. The siren stopped,",
+     "zoom": "push",
+     "sfx": "hum",
+     "key": {
+      "ko": "사이렌 3일째 밤",
+      "en": "DAY 3, NIGHT"
+     },
+     "tts": {
+      "ko": "사이렌 삼 일째 밤, 지하 이 층. 사이렌이 멈췄어요."
+     },
+     "prompt": "Wide view of the same dim underground parking garage as the reference, thick concrete pillars, low ceiling, weak amber lights at night, small groups of plain stick-figure neighbors in dark gray and navy coats, no glasses sitting on the floor along the pillars with bags and blankets, all of them lifting their heads toward the ceiling and listening in sudden silence, the grandma (gray hair bun, half-moon glasses, muted ochre cardigan, cane) seated on a folded blanket in the middle holding a small radio, a small parked car in the far corner with a faint light inside, only Minsu wears the red hoodie and glasses. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, dark brick red, muted ochre, one warm amber light source), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "grandma",
+      "garage"
+     ],
+     "job": "e7255902-1d60-46e3-b35b-3cad3ecd3059"
+    },
+    {
+     "cut": "e204_01",
+     "ko": "하지만 그건 끝났다는 뜻이 아니었죠.",
+     "en": "but that does not mean it is over.",
+     "zoom": "in"
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e204_02",
+     "ko": "민수의 선택은 A, 차 안이었어요. 문을 닫으니 조용했고, 할머니의 라디오 소리도 들리지 않았죠.",
+     "en": "Minsu's choice was A, the car, and with the door shut it was quiet, too quiet to hear Grandma's radio.",
+     "zoom": "push",
+     "sfx": "thunk",
+     "key": {
+      "ko": "민수의 선택: A",
+      "en": "MINSU'S CHOICE: A"
+     },
+     "tts": {
+      "ko": "민수의 선택은 에이, 차 안이었어요. 문을 닫으니 조용했고, 할머니의 라디오 소리도 들리지 않았죠."
+     },
+     "prompt": "Seen from outside through the closed side window of a small parked car in the same dim underground parking garage as the reference, thick concrete pillars, low ceiling, weak amber lights: Minsu (dark brick-red hoodie, big round glasses, no hat) sitting alone in the driver's seat with a blanket over his knees, a faint amber dome light inside the car, far behind the car small groups of plain stick-figure neighbors in dark gray and navy coats, no glasses sitting around a tiny glowing radio, only Minsu wears the red hoodie and glasses. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, dark brick red, muted ochre, one warm amber light source), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu",
+      "garage"
+     ],
+     "job": "685f92b0-2061-4939-8005-e5755949a153"
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e204_03",
+     "ko": "소리가 멈추자 민수는 다 끝났다고 생각했어요. 차에서 내려 계단 쪽으로 걸어갔죠.",
+     "en": "When the sound stopped, Minsu thought it was all over, so he got out and walked toward the stairs.",
+     "zoom": "push",
+     "sfx": "click",
+     "prompt": "In the same dim underground parking garage as the reference, thick concrete pillars, low ceiling, weak amber lights at night, Minsu (dark brick-red hoodie, big round glasses, no hat) with a backpack on walking away from a small parked car whose door is still open, heading toward a heavy gray stairwell door with a small blank green glowing exit light above it, seen from behind at a slight angle. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, dark brick red, muted ochre, one warm amber light source), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu",
+      "garage"
+     ],
+     "job": "82b78b44-a0b8-4069-8e15-93ca0ebe6d68"
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e204_04",
+     "ko": "할머니가 지팡이로 길을 막고 말했어요. 사이렌이 멈췄다고 끝난 게 아니란다.",
+     "en": "Grandma blocked his way with her cane and said, a siren that stops does not mean it is over.",
+     "zoom": "push",
+     "sfx": "sting",
+     "key": {
+      "ko": "사이렌이 멈춰도 끝이 아니다",
+      "en": "A SILENT SIREN IS NOT ALL CLEAR"
+     },
+     "prompt": "In the same dim underground parking garage as the reference, thick concrete pillars, low ceiling, weak amber lights at night, the grandma (gray hair bun, half-moon glasses, muted ochre cardigan, cane) seated on a folded blanket holding her cane out sideways like a barrier across the path of Minsu (dark brick-red hoodie, big round glasses, no hat) who has stopped mid-step with a backpack on, she looks up at him calmly, a small radio beside her on the blanket, a gray stairwell door in the dim background. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, dark brick red, muted ochre, one warm amber light source), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu",
+      "grandma",
+      "garage"
+     ],
+     "job": "f2fb0819-b7cf-49e9-a417-8b8dfb21cd51"
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e204_05",
+     "ko": "해제는 사이렌이 아니라 사람 목소리, 방송으로 알려 주니까요.",
+     "en": "The all clear does not come as a siren, it comes as a voice, a broadcast.",
+     "zoom": "in",
+     "sfx": "radio",
+     "key": {
+      "ko": "경보 해제 = 음성 방송",
+      "en": "ALL CLEAR = A VOICE BROADCAST"
+     },
+     "prompt": "Close-up of a small old battery radio with a blank dial and a raised antenna held in the grandma's two simple hands (muted ochre cardigan sleeves), the dial glowing warm amber, dark concrete floor and a folded blanket behind it. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, dark brick red, muted ochre, one warm amber light source), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "grandma"
+     ],
+     "job": "f0c3ebd6-22b8-4027-bffb-e170d6c64417"
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "beats": [
+    {
+     "cut": "e204_06",
+     "ko": "민수는 차 문을 잠그고 사람들 곁에 앉았어요. 대피소에선 방송을 듣고 안내를 따르니까요.",
+     "en": "Minsu locked the car and sat down with everyone, because in a shelter you listen and follow instructions.",
+     "zoom": "push",
+     "sfx": "thunk",
+     "key": {
+      "ko": "방송이 들리는 자리로",
+      "en": "SIT WHERE YOU CAN HEAR"
+     },
+     "prompt": "In the same dim underground parking garage as the reference, thick concrete pillars, low ceiling, weak amber lights at night, Minsu (dark brick-red hoodie, big round glasses, no hat) sitting cross-legged on the concrete floor right next to the grandma (gray hair bun, half-moon glasses, muted ochre cardigan, cane) who holds a small glowing radio, two backpacks beside them, a few plain stick-figure neighbors in dark gray and navy coats, no glasses sitting close around them sharing a blanket, the small parked car dark and closed in the background, only Minsu wears the red hoodie and glasses. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, dark brick red, muted ochre, one warm amber light source), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu",
+      "grandma",
+      "garage"
+     ],
+     "job": "52515e28-7dfd-443e-86af-60a6e4890b01"
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "badge": {
+    "ko": "1203호 S2 | DAY 4",
+    "en": "UNIT 1203 S2 | DAY 4"
+   },
+   "beats": [
+    {
+     "cut": "e204_07",
+     "ko": "새벽 다섯 시, 라디오에서 목소리가 나왔어요. 경보가 해제되었습니다. 그래도 방송은 계속 켜 둡니다.",
+     "en": "At five in the morning a voice came from the radio and said the warning is lifted, but they kept the radio on.",
+     "zoom": "push",
+     "sfx": "radio",
+     "key": {
+      "ko": "해제 뒤에도 방송 계속 듣기",
+      "en": "AFTER THE ALL CLEAR: KEEP LISTENING"
+     },
+     "prompt": "In the same dim underground parking garage as the reference, thick concrete pillars, low ceiling, weak amber lights at dawn, a pale gray-blue light coming down the car ramp in the background, Minsu (dark brick-red hoodie, big round glasses, no hat) and the grandma (gray hair bun, half-moon glasses, muted ochre cardigan, cane) sitting side by side leaning toward a small glowing radio on the blanket between them, around them plain stick-figure neighbors in dark gray and navy coats, no glasses slowly standing up and folding blankets, only Minsu wears the red hoodie and glasses. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, dark brick red, muted ochre, one warm amber light source), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu",
+      "grandma",
+      "garage"
+     ],
+     "job": "058f38fa-2887-4a39-8e41-8423d3ea59d9"
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "badge": {
+    "ko": "1203호 S2 | DAY 4",
+    "en": "UNIT 1203 S2 | DAY 4"
+   },
+   "beats": [
+    {
+     "cut": "e204_01",
+     "ko": "오늘 할 수 있는 일 한 가지. 지도 앱에서 우리 동네 대피소를 한 곳만 찾아 두기.",
+     "en": "One thing you can do today is open a map app and find one shelter near your home.",
+     "zoom": "in",
+     "key": {
+      "ko": "오늘 할 일: 가까운 대피소 한 곳 찾아 두기",
+      "en": "TODAY: FIND ONE SHELTER NEAR YOU"
+     }
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "badge": {
+    "ko": "1203호 S2 | DAY 4",
+    "en": "UNIT 1203 S2 | DAY 4"
+   },
+   "beats": [
+    {
+     "cut": "e201_sc",
+     "ko": "오늘 밤 민수의 준비 점수는 70점으로 올랐어요.",
+     "en": "Minsu's readiness score went up to seventy.",
+     "zoom": "push",
+     "sfx": "sting",
+     "reuse": "dd6cd6d1-77d3-4349-afe3-47b3ea56c4fe",
+     "tts": {
+      "ko": "오늘 밤 민수의 준비 점수는 칠십 점으로 올랐어요.",
+      "en": "And tonight, Minsu's readiness score went up to seventy points."
+     },
+     "draw": [
+      {
+       "text": "70",
+       "xy": [
+        540,
+        760
+       ],
+       "size": 260,
+       "fill": [
+        235,
+        200,
+        120
+       ]
+      },
+      {
+       "text": "/ 100",
+       "xy": [
+        540,
+        930
+       ],
+       "size": 70,
+       "fill": [
+        200,
+        200,
+        200
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "badge": {
+    "ko": "1203호 S2 | DAY 4",
+    "en": "UNIT 1203 S2 | DAY 4"
+   },
+   "beats": [
+    {
+     "cut": "e204_ab",
+     "ko": "해제 방송은 나왔어요. 민수는, A, 집으로 올라간다. B, 또 울릴까 봐 하루 더 머문다. 댓글로.",
+     "en": "The all clear came. Minsu: A, goes back up home. B, stays one more day in case it sounds again. Comment below.",
+     "zoom": "none",
+     "sfx": "click",
+     "tts": {
+      "ko": "해제 방송은 나왔어요. 민수는, 에이, 집으로 올라간다. 비, 또 울릴까 봐 하루 더 머문다. 댓글로 알려 주세요.",
+      "en": "The all clear came, so does Minsu choose A, and go back up home, or B, and stay one more day in case it sounds again? Comment below."
+     },
+     "draw": [
+      {
+       "text": "A",
+       "xy": [
+        270,
+        300
+       ],
+       "size": 170,
+       "fill": [
+        235,
+        200,
+        120
+       ]
+      },
+      {
+       "text": "B",
+       "xy": [
+        810,
+        300
+       ],
+       "size": 170,
+       "fill": [
+        235,
+        200,
+        120
+       ]
+      }
+     ],
+     "prompt": "Split vertical composition divided by a thin vertical line on a dark slate background: left half, Minsu (dark brick-red hoodie, big round glasses, no hat) carrying two backpacks and the grandma (gray hair bun, half-moon glasses, muted ochre cardigan, cane) holding the handrail climbing up a concrete stairwell toward pale dawn light above; right half, Minsu (dark brick-red hoodie, big round glasses, no hat) and the grandma (gray hair bun, half-moon glasses, muted ochre cardigan, cane) still sitting on a blanket on the floor of a dim underground parking garage beside a thick pillar with two backpacks and a small glowing radio. Leave the top quarter of both halves empty and dark. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (dark blue, slate gray, dark brick red, muted ochre, one warm amber light source), soft heavy shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu",
+      "grandma"
+     ],
+     "job": "22cb2eac-9c9a-4d76-8afa-2889977f2959"
+    }
+   ]
+  },
+  {
+   "battery": 100,
+   "badge": {
+    "ko": "1203호 S2 | DAY 4",
+    "en": "UNIT 1203 S2 | DAY 4"
+   },
+   "beats": [
+    {
+     "cut": "e204_07",
+     "ko": "다음 화, 사이렌 4일째, 엄마에게 걸리지 않는 전화.",
+     "en": "Next time, day four, a call to Mom that will not go through.",
+     "zoom": "out",
+     "sfx": "sting",
+     "key": {
+      "ko": "NEXT: 걸리지 않는 전화",
+      "en": "NEXT: THE CALL THAT WON'T CONNECT"
+     },
+     "tts": {
+      "ko": "다음 화, 사이렌 사 일째, 엄마에게 걸리지 않는 전화."
+     }
+    }
+   ]
+  }
+ ]
+}

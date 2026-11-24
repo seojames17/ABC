@@ -1,0 +1,6 @@
+{"title": "샘플", "voice": {"voice_id": "3c2b83c0-2e0a-5ae8-998a-a5fe71b7eccd", "speed": 1.15},
+ "scenes": [
+  {"type": "art", "image": "b000_01", "title": "공식 목록대로 싸면 몇 kg?", "say": "공식 목록대로 다 싸면, 몇 킬로일까요?"},
+  {"type": "scale", "value": 11.4, "unit": "kg", "title": "대표 제품 스펙 기준", "say": "11.4킬로입니다. 생수가 절반이에요."},
+  {"type": "list", "items": ["2L 생수 3병", "500ml 생수 12병"], "marks": ["x", "o"], "title": "나눠 담기", "say": "물은 작은 병으로 나눠 담으세요."}
+ ]}

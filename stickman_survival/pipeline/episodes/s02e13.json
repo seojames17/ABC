@@ -1,0 +1,806 @@
+{
+ "title": {
+  "ko": "1203호 — 사이렌 울릴 때 하면 안 되는 4가지",
+  "en": "Unit 1203 — 4 Siren Mistakes"
+ },
+ "badge": {
+  "ko": "1203호 생존툰",
+  "en": "UNIT 1203"
+ },
+ "font": "serif",
+ "voice": {
+  "model": "text2speech_v2",
+  "variant": "elevenlabs",
+  "voice_id": "3c9d6053-6334-592c-8997-4e325286af3f",
+  "voice_name": "Holden"
+ },
+ "lead_in": 0.0,
+ "scene_gap": 0.15,
+ "tail": 0.4,
+ "speed": {
+  "ko": 1.28,
+  "en": 1.4
+ },
+ "_note": "11/21. '당신이라면' 틀 1편째(사용자 결정: 연재를 내려놓고 터진 릴스의 구조를 따른다). 결론 먼저 → 당신의 상황 → 틀린 행동 X와 바른 행동 O를 2~3초씩 네 번 → 중간에 '더 위험한 건 따로' → 요약 카드. 민수는 이름 없이 틀린 행동을 해 보이는 졸라맨. 날짜·가족·투표·다음 화 떡밥 없음. 화면 위 제목 고정(모든 비트 draw). 새 그림 없음(1·3·4·8화 컷 재사용). 음악은 올릴 때 인스타에서 넣는다.",
+ "scenes": [
+  {
+   "beats": [
+    {
+     "cut": "e208_01",
+     "ko": "결론부터 말합니다.",
+     "en": "Here is the bottom line.",
+     "zoom": "push",
+     "draw": [
+      {
+       "text": {
+        "ko": "사이렌 울릴 때 하면 안 되는 4가지",
+        "en": "4 SIREN MISTAKES"
+       },
+       "xy": [
+        540,
+        235
+       ],
+       "size": 54,
+       "fill": "white",
+       "box": true
+      },
+      {
+       "text": {
+        "ko": "본능대로 움직이면",
+        "en": "YOUR INSTINCTS"
+       },
+       "xy": [
+        540,
+        400
+       ],
+       "size": 100,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      },
+      {
+       "text": {
+        "ko": "위험합니다",
+        "en": "ARE WRONG"
+       },
+       "xy": [
+        540,
+        530
+       ],
+       "size": 100,
+       "fill": [
+        240,
+        70,
+        60
+       ],
+       "stroke": 12
+      }
+     ],
+     "reuse": "2e15755e-6c4d-4d14-b198-b7def1190f66",
+     "sfx": "siren"
+    },
+    {
+     "cut": "e208_01",
+     "ko": "사이렌이 울릴 때 본능대로 움직이면 위험합니다.",
+     "en": "When the siren sounds, your instincts can get you hurt.",
+     "zoom": "shake",
+     "draw": [
+      {
+       "text": {
+        "ko": "사이렌 울릴 때 하면 안 되는 4가지",
+        "en": "4 SIREN MISTAKES"
+       },
+       "xy": [
+        540,
+        235
+       ],
+       "size": 54,
+       "fill": "white",
+       "box": true
+      },
+      {
+       "text": {
+        "ko": "본능대로 움직이면",
+        "en": "YOUR INSTINCTS"
+       },
+       "xy": [
+        540,
+        400
+       ],
+       "size": 100,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      },
+      {
+       "text": {
+        "ko": "위험합니다",
+        "en": "ARE WRONG"
+       },
+       "xy": [
+        540,
+        530
+       ],
+       "size": 100,
+       "fill": [
+        240,
+        70,
+        60
+       ],
+       "stroke": 12
+      }
+     ],
+     "reuse": "2e15755e-6c4d-4d14-b198-b7def1190f66"
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e203_01",
+     "ko": "당신은 지금 아파트 12층. 밤입니다.",
+     "en": "You are on the twelfth floor. It is night, and the siren is wailing.",
+     "zoom": "push",
+     "draw": [
+      {
+       "text": {
+        "ko": "사이렌 울릴 때 하면 안 되는 4가지",
+        "en": "4 SIREN MISTAKES"
+       },
+       "xy": [
+        540,
+        235
+       ],
+       "size": 54,
+       "fill": "white",
+       "box": true
+      },
+      {
+       "text": {
+        "ko": "당신은 지금 12층",
+        "en": "YOU: 12TH FLOOR"
+       },
+       "xy": [
+        540,
+        400
+       ],
+       "size": 92,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      }
+     ],
+     "reuse": "3516addb-3281-4afd-81b9-3b7dc4a3f3b0",
+     "tts": {
+      "ko": "당신은 지금 아파트 십이 층. 밤입니다."
+     }
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e201_03",
+     "ko": "첫째, 불을 켠 채 창가에 선다.",
+     "en": "One. Standing at the window with the lights on.",
+     "zoom": "in",
+     "draw": [
+      {
+       "text": {
+        "ko": "사이렌 울릴 때 하면 안 되는 4가지",
+        "en": "4 SIREN MISTAKES"
+       },
+       "xy": [
+        540,
+        235
+       ],
+       "size": 54,
+       "fill": "white",
+       "box": true
+      },
+      {
+       "text": {
+        "ko": "X 불 켠 채 창가",
+        "en": "X LIGHTS ON"
+       },
+       "xy": [
+        540,
+        400
+       ],
+       "size": 92,
+       "fill": [
+        240,
+        70,
+        60
+       ],
+       "stroke": 12
+      }
+     ],
+     "reuse": "d692a3e0-ebeb-4269-bb72-fb77d65e41b7",
+     "sfx": "thunk"
+    },
+    {
+     "cut": "e201_08",
+     "ko": "불빛부터 가립니다.",
+     "en": "At night, block the light first.",
+     "zoom": "push",
+     "draw": [
+      {
+       "text": {
+        "ko": "사이렌 울릴 때 하면 안 되는 4가지",
+        "en": "4 SIREN MISTAKES"
+       },
+       "xy": [
+        540,
+        235
+       ],
+       "size": 54,
+       "fill": "white",
+       "box": true
+      },
+      {
+       "text": {
+        "ko": "O 불빛부터 가리기",
+        "en": "O BLOCK LIGHT"
+       },
+       "xy": [
+        540,
+        400
+       ],
+       "size": 92,
+       "fill": [
+        110,
+        220,
+        130
+       ],
+       "stroke": 12
+      }
+     ],
+     "reuse": "7807dc04-a99f-4c79-aae3-1c7f9b020a10",
+     "sfx": "click"
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e208_04",
+     "ko": "둘째, 가스와 전기를 두고 나간다.",
+     "en": "Two. Walking out with the gas and power still on.",
+     "zoom": "in",
+     "draw": [
+      {
+       "text": {
+        "ko": "사이렌 울릴 때 하면 안 되는 4가지",
+        "en": "4 SIREN MISTAKES"
+       },
+       "xy": [
+        540,
+        235
+       ],
+       "size": 54,
+       "fill": "white",
+       "box": true
+      },
+      {
+       "text": {
+        "ko": "X 가스 전기 그대로",
+        "en": "X GAS LEFT ON"
+       },
+       "xy": [
+        540,
+        400
+       ],
+       "size": 92,
+       "fill": [
+        240,
+        70,
+        60
+       ],
+       "stroke": 12
+      }
+     ],
+     "reuse": "15592b29-78e2-4f9a-acea-30bd6ed18983",
+     "sfx": "thunk"
+    },
+    {
+     "cut": "e203_04",
+     "ko": "잠그고 나갑니다.",
+     "en": "Shut them off before you leave.",
+     "zoom": "push",
+     "draw": [
+      {
+       "text": {
+        "ko": "사이렌 울릴 때 하면 안 되는 4가지",
+        "en": "4 SIREN MISTAKES"
+       },
+       "xy": [
+        540,
+        235
+       ],
+       "size": 54,
+       "fill": "white",
+       "box": true
+      },
+      {
+       "text": {
+        "ko": "O 잠그고 내리기",
+        "en": "O SHUT OFF"
+       },
+       "xy": [
+        540,
+        400
+       ],
+       "size": 92,
+       "fill": [
+        110,
+        220,
+        130
+       ],
+       "stroke": 12
+      }
+     ],
+     "reuse": "5c2f25b1-e3dd-4c27-b390-4b8f478c77fd",
+     "sfx": "click"
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e203_05",
+     "ko": "셋째, 엘리베이터를 탄다.",
+     "en": "Three. Taking the elevator.",
+     "zoom": "in",
+     "draw": [
+      {
+       "text": {
+        "ko": "사이렌 울릴 때 하면 안 되는 4가지",
+        "en": "4 SIREN MISTAKES"
+       },
+       "xy": [
+        540,
+        235
+       ],
+       "size": 54,
+       "fill": "white",
+       "box": true
+      },
+      {
+       "text": {
+        "ko": "X 엘리베이터",
+        "en": "X ELEVATOR"
+       },
+       "xy": [
+        540,
+        400
+       ],
+       "size": 92,
+       "fill": [
+        240,
+        70,
+        60
+       ],
+       "stroke": 12
+      }
+     ],
+     "reuse": "c4206fc4-0b41-4cd4-aa56-fe283648b790",
+     "sfx": "thunk"
+    },
+    {
+     "cut": "e203_07",
+     "ko": "비상계단입니다.",
+     "en": "Take the emergency stairs.",
+     "zoom": "push",
+     "draw": [
+      {
+       "text": {
+        "ko": "사이렌 울릴 때 하면 안 되는 4가지",
+        "en": "4 SIREN MISTAKES"
+       },
+       "xy": [
+        540,
+        235
+       ],
+       "size": 54,
+       "fill": "white",
+       "box": true
+      },
+      {
+       "text": {
+        "ko": "O 비상계단",
+        "en": "O STAIRS"
+       },
+       "xy": [
+        540,
+        400
+       ],
+       "size": 92,
+       "fill": [
+        110,
+        220,
+        130
+       ],
+       "stroke": 12
+      }
+     ],
+     "reuse": "0c816aa2-d847-45f6-aed4-2f2646e4f972",
+     "sfx": "click"
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e203_08",
+     "ko": "더 위험한 건 따로 있습니다.",
+     "en": "But the most dangerous one is this.",
+     "zoom": "shake",
+     "draw": [
+      {
+       "text": {
+        "ko": "사이렌 울릴 때 하면 안 되는 4가지",
+        "en": "4 SIREN MISTAKES"
+       },
+       "xy": [
+        540,
+        235
+       ],
+       "size": 54,
+       "fill": "white",
+       "box": true
+      },
+      {
+       "text": {
+        "ko": "더 위험한 건 따로",
+        "en": "THE WORST ONE"
+       },
+       "xy": [
+        540,
+        400
+       ],
+       "size": 92,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      }
+     ],
+     "reuse": "e4ef9299-1eb5-40ef-adad-645e4f8e05bb",
+     "sfx": "sting"
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e204_03",
+     "ko": "넷째, 사이렌이 멈추자 올라간다.",
+     "en": "Four. Going back up when the siren stops.",
+     "zoom": "in",
+     "draw": [
+      {
+       "text": {
+        "ko": "사이렌 울릴 때 하면 안 되는 4가지",
+        "en": "4 SIREN MISTAKES"
+       },
+       "xy": [
+        540,
+        235
+       ],
+       "size": 54,
+       "fill": "white",
+       "box": true
+      },
+      {
+       "text": {
+        "ko": "X 멈췄다고 올라가기",
+        "en": "X GOING BACK UP"
+       },
+       "xy": [
+        540,
+        400
+       ],
+       "size": 84,
+       "fill": [
+        240,
+        70,
+        60
+       ],
+       "stroke": 12
+      }
+     ],
+     "reuse": "82b78b44-a0b8-4069-8e15-93ca0ebe6d68",
+     "sfx": "thunk"
+    },
+    {
+     "cut": "e204_05",
+     "ko": "해제는 방송으로 알립니다.",
+     "en": "The all-clear comes by broadcast, not by silence.",
+     "zoom": "push",
+     "draw": [
+      {
+       "text": {
+        "ko": "사이렌 울릴 때 하면 안 되는 4가지",
+        "en": "4 SIREN MISTAKES"
+       },
+       "xy": [
+        540,
+        235
+       ],
+       "size": 54,
+       "fill": "white",
+       "box": true
+      },
+      {
+       "text": {
+        "ko": "O 해제는 방송으로",
+        "en": "O BROADCAST"
+       },
+       "xy": [
+        540,
+        400
+       ],
+       "size": 92,
+       "fill": [
+        110,
+        220,
+        130
+       ],
+       "stroke": 12
+      }
+     ],
+     "reuse": "f0c3ebd6-22b8-4027-bffb-e170d6c64417",
+     "sfx": "radio"
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e201_sc",
+     "ko": "",
+     "en": "",
+     "zoom": "in",
+     "sfx": "click",
+     "reuse": "dd6cd6d1-77d3-4349-afe3-47b3ea56c4fe",
+     "tts": {
+      "ko": "불을 끄고, 가스를 잠그고, 계단으로 지하까지.",
+      "en": "Lights off, gas off, stairs down. Come out when the broadcast says so."
+     },
+     "draw": [
+      {
+       "text": {
+        "ko": "사이렌 울릴 때 하면 안 되는 4가지",
+        "en": "4 SIREN MISTAKES"
+       },
+       "xy": [
+        540,
+        235
+       ],
+       "size": 54,
+       "fill": "white",
+       "box": true
+      },
+      {
+       "text": {
+        "ko": "저장해 두세요",
+        "en": "SAVE THIS"
+       },
+       "xy": [
+        540,
+        400
+       ],
+       "size": 92,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      },
+      {
+       "text": {
+        "ko": "1. 불빛부터 가린다",
+        "en": "1. Block the light"
+       },
+       "xy": [
+        540,
+        640
+       ],
+       "size": 50,
+       "fill": [
+        235,
+        235,
+        235
+       ]
+      },
+      {
+       "text": {
+        "ko": "2. 가스와 전기를 잠근다",
+        "en": "2. Gas and power off"
+       },
+       "xy": [
+        540,
+        720
+       ],
+       "size": 50,
+       "fill": [
+        235,
+        235,
+        235
+       ]
+      },
+      {
+       "text": {
+        "ko": "3. 비상계단으로 지하까지",
+        "en": "3. Stairs to the basement"
+       },
+       "xy": [
+        540,
+        800
+       ],
+       "size": 50,
+       "fill": [
+        235,
+        235,
+        235
+       ]
+      },
+      {
+       "text": {
+        "ko": "4. 해제 방송이 나올 때까지",
+        "en": "4. Wait for the broadcast"
+       },
+       "xy": [
+        540,
+        880
+       ],
+       "size": 50,
+       "fill": [
+        235,
+        235,
+        235
+       ]
+      }
+     ]
+    },
+    {
+     "cut": "e201_sc",
+     "ko": "",
+     "en": "",
+     "zoom": "none",
+     "reuse": "dd6cd6d1-77d3-4349-afe3-47b3ea56c4fe",
+     "tts": {
+      "ko": "몇 개나 하고 있었나요? 저장해 두세요.",
+      "en": "How many were you doing? Save this."
+     },
+     "draw": [
+      {
+       "text": {
+        "ko": "사이렌 울릴 때 하면 안 되는 4가지",
+        "en": "4 SIREN MISTAKES"
+       },
+       "xy": [
+        540,
+        235
+       ],
+       "size": 54,
+       "fill": "white",
+       "box": true
+      },
+      {
+       "text": {
+        "ko": "저장해 두세요",
+        "en": "SAVE THIS"
+       },
+       "xy": [
+        540,
+        400
+       ],
+       "size": 92,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      },
+      {
+       "text": {
+        "ko": "1. 불빛부터 가린다",
+        "en": "1. Block the light"
+       },
+       "xy": [
+        540,
+        640
+       ],
+       "size": 50,
+       "fill": [
+        235,
+        235,
+        235
+       ]
+      },
+      {
+       "text": {
+        "ko": "2. 가스와 전기를 잠근다",
+        "en": "2. Gas and power off"
+       },
+       "xy": [
+        540,
+        720
+       ],
+       "size": 50,
+       "fill": [
+        235,
+        235,
+        235
+       ]
+      },
+      {
+       "text": {
+        "ko": "3. 비상계단으로 지하까지",
+        "en": "3. Stairs to the basement"
+       },
+       "xy": [
+        540,
+        800
+       ],
+       "size": 50,
+       "fill": [
+        235,
+        235,
+        235
+       ]
+      },
+      {
+       "text": {
+        "ko": "4. 해제 방송이 나올 때까지",
+        "en": "4. Wait for the broadcast"
+       },
+       "xy": [
+        540,
+        880
+       ],
+       "size": 50,
+       "fill": [
+        235,
+        235,
+        235
+       ]
+      },
+      {
+       "text": {
+        "ko": "몇 개나 하고 있었나요?",
+        "en": "HOW MANY DID YOU DO?"
+       },
+       "xy": [
+        540,
+        1040
+       ],
+       "size": 66,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 10
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

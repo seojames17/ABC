@@ -1,0 +1,527 @@
+{
+ "title": {
+  "ko": "1203호 S2 11화 — 사이렌 9일째: 닫힌 약국",
+  "en": "Unit 1203 S2 Ep.11 — Day 9: The Closed Pharmacy"
+ },
+ "badge": {
+  "ko": "1203호 S2 | DAY 9",
+  "en": "UNIT 1203 S2 | DAY 9"
+ },
+ "font": "serif",
+ "voice": {
+  "model": "text2speech_v2",
+  "variant": "elevenlabs",
+  "voice_id": "3c9d6053-6334-592c-8997-4e325286af3f",
+  "voice_name": "Holden"
+ },
+ "lead_in": 0.0,
+ "scene_gap": 0.25,
+ "tail": 0.4,
+ "speed": {
+  "ko": 1.3,
+  "en": 1.4
+ },
+ "_note": "11/20. 10화 투표 결과가 비어 있어 민수의 선택 A(다른 약국을 찾아 걷기 시작) → 할머니가 세움. 영상에 선택 화면 없음. 훅은 구체물(닫힌 약국) + 숫자(3곳) + 뒤집기(걷기 전에 묻는다), 끝은 댓글 번호 퀴즈. 구조는 10화와 같음(실수 먼저 → 세 가지, 세 번째를 뒤로 → 떡밥 → 카드 한 컷). 한국어 음성은 silenceremove 후 배속 1.3.",
+ "refs_legend": {
+  "minsu": "3be1e101-6989-4400-9688-7c7c0650c115",
+  "grandma": "22c13de9-c43e-404d-8eec-70f1d222a3df",
+  "mom": "cd568527-e674-4262-849e-22cf13c0880a"
+ },
+ "scenes": [
+  {
+   "beats": [
+    {
+     "cut": "e211_01",
+     "ko": "약국 문이 닫혀 있나요? 걷기 전에 물어볼 곳, 세 군데.",
+     "en": "Pharmacy closed? Three places to ask before you walk.",
+     "zoom": "push",
+     "sfx": "click",
+     "draw": [
+      {
+       "text": {
+        "ko": "약국이 닫혔다면",
+        "en": "PHARMACY"
+       },
+       "xy": [
+        540,
+        330
+       ],
+       "size": 116,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      },
+      {
+       "text": {
+        "ko": "걷기 전에 물어볼 3곳",
+        "en": "SHUT? ASK 3 PLACES"
+       },
+       "xy": [
+        540,
+        480
+       ],
+       "size": 84,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      }
+     ],
+     "prompt": "Close view of a small closed pharmacy shopfront on a city sidewalk in daylight: a gray metal roller shutter fully pulled down, above it a plain green cross sign with nothing written on it, in the foreground a stick-figure hand in a dark brick-red hoodie sleeve holding up a smartphone whose screen is dark and completely blank, the street empty. Same simple thick black line doodle drawing style as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no comic symbols, cinematic vertical composition, every sign, screen, package and label completely blank, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu"
+     ],
+     "job": "616412f8-d732-49f7-b155-9ebd0767e45c"
+    },
+    {
+     "cut": "e211_02",
+     "ko": "대부분은 무작정 걷습니다.",
+     "en": "Most people just start walking.",
+     "zoom": "shake",
+     "sfx": "rumble",
+     "draw": [
+      {
+       "text": {
+        "ko": "무작정 걷기?",
+        "en": "JUST WALK?"
+       },
+       "xy": [
+        540,
+        330
+       ],
+       "size": 110,
+       "fill": [
+        230,
+        60,
+        50
+       ],
+       "stroke": 12
+      },
+      {
+       "text": {
+        "ko": "X",
+        "en": "X"
+       },
+       "xy": [
+        540,
+        520
+       ],
+       "size": 200,
+       "fill": [
+        230,
+        60,
+        50
+       ],
+       "stroke": 12
+      }
+     ],
+     "prompt": "A long empty city sidewalk in daylight seen from behind: Minsu (dark brick-red hoodie, big round glasses, no hat) walking away quickly down the sidewalk with his back to the viewer, far behind him near a shop with a gray roller shutter pulled down stand Minsu's mother (a woman in her late fifties, short dark bob haircut, dark blue padded jacket, small gray backpack, round glasses, no hat) and the grandma (gray hair bun, half-moon glasses, muted ochre cardigan, cane) watching him go, closed shops along the street, only Minsu wears a red hoodie. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu",
+      "mom",
+      "grandma"
+     ],
+     "job": "50980a4b-b00f-4269-a1c3-5405f9c85364"
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e210_07",
+     "reuse": "ad3f8d58-8d67-4abc-91e7-b8b88bddaee9",
+     "ko": "민수도 그랬어요.",
+     "en": "Minsu did too.",
+     "zoom": "in",
+     "key": {
+      "ko": "사이렌 9일째",
+      "en": "DAY 9"
+     }
+    },
+    {
+     "cut": "e210_07",
+     "ko": "엄마의 혈압약을 구해야 했거든요.",
+     "en": "He had to find his mom's blood pressure pills.",
+     "zoom": "push",
+     "key": {
+      "ko": "엄마의 혈압약이 없다",
+      "en": "MOM NEEDS PILLS"
+     }
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e211_03",
+     "ko": "할머니가 붙잡았어요. 걷기 전에, 물어볼 곳이 세 군데 있단다.",
+     "en": "Grandma stopped him and said, before you walk, there are three places to ask,",
+     "zoom": "push",
+     "sfx": "sting",
+     "key": {
+      "ko": "물어볼 곳 세 군데",
+      "en": "THREE PLACES"
+     },
+     "tts": {
+      "ko": "할머니가 붙잡았어요, 걷기 전에, 물어볼 곳이 세 군데 있단다,"
+     },
+     "prompt": "Close two-shot on a city sidewalk in daylight: the grandma (gray hair bun, half-moon glasses, muted ochre cardigan, cane) holding the sleeve of Minsu (dark brick-red hoodie, big round glasses, no hat) with one hand to stop him, calmly looking up at him, Minsu half turned back toward her, a shop with a gray roller shutter pulled down behind them, only Minsu wears a red hoodie. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "grandma",
+      "minsu"
+     ],
+     "job": "9e06d424-69f8-4971-bc8e-f7e4efb2f5c5"
+    },
+    {
+     "cut": "e211_03",
+     "ko": "세 번째는 다들 몰라.",
+     "en": "and nobody knows the third.",
+     "zoom": "shake",
+     "key": {
+      "ko": "세 번째는 다들 모른다",
+      "en": "NOBODY KNOWS #3"
+     }
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e211_04",
+     "ko": "하나.",
+     "en": "One.",
+     "zoom": "in",
+     "sfx": "click",
+     "draw": [
+      {
+       "text": {
+        "ko": "1",
+        "en": "1"
+       },
+       "xy": [
+        540,
+        360
+       ],
+       "size": 220,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      }
+     ],
+     "prompt": "Close-up in daylight: a stick-figure hand in a dark brick-red hoodie sleeve holding a smartphone upright, on its screen a simple large telephone handset icon above twelve plain empty round keypad buttons, nothing written anywhere, a blurred sidewalk behind. Same simple thick black line doodle drawing style as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no comic symbols, cinematic vertical composition, every sign, screen, package and label completely blank, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu"
+     ],
+     "job": "25d04b1f-ff2b-413c-bb33-af0584a85102"
+    },
+    {
+     "cut": "e211_04",
+     "ko": "전화. 119는 구급차만 부르는 번호가 아니에요.",
+     "en": "The phone. In Korea, 119 is not only for ambulances.",
+     "zoom": "push",
+     "key": {
+      "ko": "119는 구급차만?",
+      "en": "119 DOES MORE"
+     },
+     "tts": {
+      "ko": "전화. 일일구는 구급차만 부르는 번호가 아니에요.",
+      "en": "The phone. In Korea, one one nine is not only for ambulances."
+     }
+    },
+    {
+     "cut": "e211_04",
+     "ko": "문 연 병원과 약국을 알려 줍니다. 129와 120도요.",
+     "en": "It tells you which clinics and pharmacies are open. So do 129 and 120.",
+     "zoom": "in",
+     "key": {
+      "ko": "129, 119, 120",
+      "en": "129, 119, 120"
+     },
+     "tts": {
+      "ko": "문 연 병원과 약국을 알려 줍니다. 일이구와 일이공도요.",
+      "en": "It tells you which clinics and pharmacies are open, and so do one two nine and one two zero."
+     }
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e211_05",
+     "ko": "둘.",
+     "en": "Two.",
+     "zoom": "in",
+     "sfx": "click",
+     "draw": [
+      {
+       "text": {
+        "ko": "2",
+        "en": "2"
+       },
+       "xy": [
+        540,
+        360
+       ],
+       "size": 220,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      }
+     ],
+     "prompt": "Close-up in daylight: two stick-figure hands in dark blue padded jacket sleeves holding a smartphone, on its screen a very simple street map made of a few pale gray lines with three small green cross markers and one round dot in the middle, nothing written anywhere, a sidewalk bench blurred behind. Same simple thick black line doodle drawing style as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no comic symbols, cinematic vertical composition, every sign, screen, package and label completely blank, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "mom"
+     ],
+     "job": "6077c2b4-a626-4a67-97c7-a4bf53bedd6f"
+    },
+    {
+     "cut": "e211_05",
+     "ko": "지도. 응급의료포털 이젠에서, 내 주변에 문 연 약국을 찾습니다.",
+     "en": "The map. Korea's emergency medical portal, E-Gen, shows open pharmacies near you.",
+     "zoom": "push",
+     "key": {
+      "ko": "응급의료포털 E-Gen",
+      "en": "E-GEN PORTAL MAP"
+     },
+     "tts": {
+      "en": "The map. Korea's emergency medical portal, E Gen, shows open pharmacies near you."
+     }
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e211_06",
+     "ko": "세 번째, 다들 모르는 것.",
+     "en": "Three, the one nobody knows.",
+     "zoom": "in",
+     "sfx": "click",
+     "draw": [
+      {
+       "text": {
+        "ko": "3",
+        "en": "3"
+       },
+       "xy": [
+        540,
+        360
+       ],
+       "size": 220,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      }
+     ],
+     "prompt": "Inside an underground parking garage used as a shelter, lit by one warm amber lamp: a plain folding table used as a help desk with a blank clipboard and a small lamp on it, behind the table a seated shelter staff member (a man in his forties, short black hair, olive green vest over a gray sweater, no glasses, no hat), in front of the table stands Minsu's mother (a woman in her late fifties, short dark bob haircut, dark blue padded jacket, small gray backpack, round glasses, no hat) holding a small empty weekly pill organizer in one hand and talking to him, in the background a few people in gray and brown coats sitting on mats beside concrete pillars, no character wearing a red hoodie. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), one warm amber light source with clear visibility, soft shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "mom"
+     ],
+     "job": "7f9d249d-3d19-4222-aaf0-11912013e8c6"
+    },
+    {
+     "cut": "e211_06",
+     "ko": "대피소에 머물 때는, 안내데스크나 담당자에게 알립니다.",
+     "en": "If you are staying in a shelter, tell the help desk or the staff,",
+     "zoom": "push",
+     "key": {
+      "ko": "대피소 안내데스크",
+      "en": "SHELTER HELP DESK"
+     }
+    },
+    {
+     "cut": "e211_06",
+     "ko": "약이 떨어진 뒤가 아니라, 떨어지기 전에요.",
+     "en": "before you run out, not after.",
+     "zoom": "in",
+     "key": {
+      "ko": "약 떨어지기 전에 미리",
+      "en": "TELL THEM EARLY"
+     }
+    },
+    {
+     "cut": "e211_06",
+     "ko": "약 드시는 부모님께 보내 주세요.",
+     "en": "Send this to a parent who takes daily pills.",
+     "zoom": "push",
+     "key": {
+      "ko": "약 드시는 부모님께",
+      "en": "SEND TO A PARENT"
+     }
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e211_07",
+     "ko": "민수는 119에 물어, 문 연 병원을 찾았어요.",
+     "en": "Minsu called 119 and found an open clinic.",
+     "zoom": "in",
+     "tts": {
+      "ko": "민수는 일일구에 물어, 문 연 병원을 찾았어요.",
+      "en": "Minsu called one one nine and found an open clinic."
+     },
+     "prompt": "A small neighborhood clinic entrance on a quiet city street in daylight seen from behind three figures: Minsu (dark brick-red hoodie, big round glasses, no hat), Minsu's mother (a woman in her late fifties, short dark bob haircut, dark blue padded jacket, small gray backpack, round glasses, no hat) and the grandma (gray hair bun, half-moon glasses, muted ochre cardigan, cane) walking toward an open glass door with warm amber light inside, above the door a plain green cross sign with nothing written on it, the shops on both sides have gray shutters pulled down, only Minsu wears a red hoodie. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "minsu",
+      "mom",
+      "grandma"
+     ],
+     "job": "8ca85c8a-c492-4830-9592-a8ef85fb5394"
+    },
+    {
+     "cut": "e211_08",
+     "ko": "그런데 의사가 물었습니다. 무슨 약을 드시죠? 엄마는, 약 이름을 몰랐어요.",
+     "en": "But the doctor asked, what medicine do you take? And Mom did not know the name.",
+     "zoom": "shake",
+     "sfx": "sting",
+     "key": {
+      "ko": "약 이름을 모른다",
+      "en": "WHAT MEDICINE?"
+     },
+     "tts": {
+      "ko": "그런데 의사가 물었습니다, 무슨 약을 드시죠, 엄마는, 약 이름을 몰랐어요.",
+      "en": "But the doctor asked, what medicine do you take, and Mom did not know the name."
+     },
+     "prompt": "Inside a small plain clinic room in daylight from a window: a doctor (a woman in her forties, black hair tied back, white coat, no glasses, no hat) sitting at a desk holding a pen over a completely blank sheet of paper and looking at Minsu's mother (a woman in her late fifties, short dark bob haircut, dark blue padded jacket, small gray backpack, round glasses, no hat) who sits on a stool across the desk with her hands on her lap and her head slightly lowered, Minsu (dark brick-red hoodie, big round glasses, no hat) standing behind his mother with one hand on her shoulder, only Minsu wears a red hoodie. Same simple thick black line stick-figure character design as the reference, drawn quietly and seriously: muted palette (slate gray, dark blue, dark brick red, muted ochre), overcast gray daylight with clear visibility, soft shadows, no exaggerated expressions, no sweat drops, no motion lines, no comic symbols, cinematic vertical composition, no text, no letters, no numbers, no watermark",
+     "refs": [
+      "mom",
+      "minsu"
+     ],
+     "job": "7e2fc0f1-6ed3-481f-bca0-00d9dd0ca176"
+    }
+   ]
+  },
+  {
+   "beats": [
+    {
+     "cut": "e201_sc",
+     "ko": "",
+     "en": "",
+     "zoom": "in",
+     "sfx": "click",
+     "reuse": "dd6cd6d1-77d3-4349-afe3-47b3ea56c4fe",
+     "tts": {
+      "ko": "몇 번을 알고 계셨나요? 댓글에 번호로 남겨 주세요.",
+      "en": "Which ones did you know? Comment the number."
+     },
+     "draw": [
+      {
+       "text": {
+        "ko": "알고 있던 건 몇 번?",
+        "en": "DID YOU KNOW?"
+       },
+       "xy": [
+        540,
+        330
+       ],
+       "size": 96,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 12
+      },
+      {
+       "text": {
+        "ko": "약국이 닫혔을 때",
+        "en": "PHARMACY CLOSED"
+       },
+       "xy": [
+        540,
+        580
+       ],
+       "size": 62,
+       "fill": [
+        235,
+        200,
+        120
+       ]
+      },
+      {
+       "text": {
+        "ko": "1. 전화 129, 119, 120",
+        "en": "1. Call 129, 119, 120"
+       },
+       "xy": [
+        540,
+        690
+       ],
+       "size": 48,
+       "fill": [
+        235,
+        235,
+        235
+       ]
+      },
+      {
+       "text": {
+        "ko": "2. 지도 응급의료포털 E-Gen",
+        "en": "2. Map: E-Gen portal"
+       },
+       "xy": [
+        540,
+        775
+       ],
+       "size": 48,
+       "fill": [
+        235,
+        235,
+        235
+       ]
+      },
+      {
+       "text": {
+        "ko": "3. 대피소 담당자에게 미리",
+        "en": "3. Tell shelter staff early"
+       },
+       "xy": [
+        540,
+        860
+       ],
+       "size": 48,
+       "fill": [
+        235,
+        235,
+        235
+       ]
+      },
+      {
+       "text": {
+        "ko": "댓글에 번호로",
+        "en": "COMMENT THE NUMBER"
+       },
+       "xy": [
+        540,
+        1010
+       ],
+       "size": 70,
+       "fill": [
+        255,
+        230,
+        0
+       ],
+       "stroke": 10
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
